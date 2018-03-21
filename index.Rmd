@@ -1,0 +1,25 @@
+--- 
+author: "Januar Harianto"
+site: bookdown::bookdown_site
+documentclass: memoir
+classoption: oneside, a4paper
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike
+link-citations: yes
+# Fonts (these are all paid fonts):
+mainfont: Minion Pro
+sansfont: Myriad Pro
+mathfont: Minion Pro
+---
+
+```{r include=FALSE}
+# automatically create a bib database for R packages
+knitr::write_bib(c(
+  .packages(), 'bookdown', 'knitr', 'rmarkdown'
+), 'packages.bib')
+```
+
+
+# General Introduction
+
+Ocean warming and acidification in South-Eastern Australia

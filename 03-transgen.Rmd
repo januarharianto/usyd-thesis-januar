@@ -1,3 +1,7 @@
 # Methods
 
-We describe our methods in this chapter.
+Temperature is the most important stressor in determining urchin survival (chapter 2), regardless of pH (chapter 3). However, long term experiments aside, there is a need to understand transgen effects.
+
+In this chapter we used spawned urchins.
+Yeah!
+

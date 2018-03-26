@@ -35,7 +35,7 @@ snipR::pkgs(
 
 ```
 
-# Quantifying the response of the sea urchin *Heliocidaris erythrogramma* under future warming and acidification
+# Long-term exposure to ocean warming and acidification reduce the survival and energy budget of the sea urchin, *Heliocidaris erythrogramma*
 \chaptermark{\textit{Heliocidaris erythrogramma} under future warming and acidification}
 
 ## Abstract{-}
@@ -49,26 +49,66 @@ snipR::pkgs(
 <!-- - hypothesis -->
 
 
-Many of the key challenges in predicting the ecological impacts of climate change stem from the fact that most ecosystems are confronted with multiple chemical, physical and biological stressors, which often interact (refs).
-<!-- For the oceans, both $CO_2$-induced warming and direct absorption of anthropogenic $CO_2$ emissions, which reduces pH (i.e. ocean acidification), occur concurrently (ref). -->
-For the world's oceans, both $CO_2$-induced warming and ocean acidification exert their effects simultaneously, due to approximately 25\% of anthropogenic $CO_2$ emissions being directly absorbed by seawater (refs).
-Ocean warming (OA) increases the body temperature of marine ectotherms, affecting almost all the biological rates of physiological processes (Brown et al. 2014, Hochachka and Somero 2002). Increased ocean $CO_2$ causes ocean acidification (OA) and decreases seawater pH, reducing carbonate saturation states in sea water. 
-Common physiological processes that depend on extracting minerals from sea water, such as calcification and skeletogenesis, are thus affected (Wood, Spicer, and Widdicombe 2008).
-In addition, the metabolic demands in maintaining acid-base balance to support these very processes are also elevated (Melzner et al. 2009; Pörtner, Bock, and Reipschlager 2000, Collard et al. 2013; chk).
+Many of the key challenges in predicting the ecological consequences of climate change stem from the fact that most ecosystems are confronted with multiple chemical, physical and biological stressors, which often interact (Byrne et al. 2013; Przeslawski et al. 2015, Goldenberg et al. 2017).
+For the world's oceans, the impacts of both global warming and ocean acidification are intricately linked as more than 90% of the Earth's heat and 25\% of anthropogenic $CO_2$ emissions are absorbed directly into the ocean (Mikaloff Fletcher et al. 2006; Wanninkhof et al. 2013, Gattuso et al 2015).
 
-While both OW and OA are now known to drive population shifts worldwide (refs), predicting how they interact and affect marine biota has proven to be a complex undertaking (reviews).
-Many subtle changes have been documented in multistressor experiments that investigate both stressors simultaneously, reflecting interactive effects which would not necessarily be predicted from investigating the stressors in isolation. 
-For example, 
+Ocean warming increases the body temperature of marine ectotherms, affecting metabolism and almost all biological processes (Brown et al. 2014, Hochachka and Somero 2002). 
+Concurrently, ocean acidification alters the balance of carbonate saturation states in sea water, increasing the metabolic costs associated with acid–base regulation, calcification and skeletogenesis (Doney et al. 2009, Hofmann et al. 2010, Kroeker et al. 2013, Portner 2008).
+Given that both stressors influence important metabolic processes, they may interact in unexpected ways.
+<!-- biological responses which would not necessarily be predicted from investigating the stressors in isolation. -->
+<!-- where the overall effects are likely to be dependent on location and species (Henson et al. 2017, Pecl et al. 2017, Poloczanska et al. 2016). -->
+For example, ocean warming affects both oxygen demand and the supply of oxygen in water (Schulte 2015, Pörtner et al. 2010, Christensen et al. 2011), and may limit oxygen delivery which restricts metabolism despite the elevated energetic demands necessary to respond to the negative effects of ocean acidification (Lefevre 2016). 
+Current evidence suggests that exposure to the combined effects of both stressors are additive or synergistic, as seen in the reduced development of marine bivalves (Talmage and Gobler 2011), increased metabolism in urchins (Carey et al. 2016) and reduced fertilisation in cnidarians (Albright and Mason 2013). 
+However, in other cases, positive or neutral responses have been observed, such as in the development and thermal windows of echinoderm larvae (Byrne et al. 2010, Karelitz et al. 2017). 
+These results highlight the subtle and complex uncertainty surrounding our understanding of the drivers of ecosystem change.
+Comprehending the effects of ocean warming and acidification on marine ecosytems at large remains a complex endeavour, and is compounded by the difficulties of conducting multi-factorial experiments with respect to time and resources (Collins et al. 2009).
+<!-- A synthesis of marine invertebrate responses to multistressors, including ocean warming and acidification, can be found in Przeslawski et al. (2013) and Byrne and Przeslawski (2015). -->
 
-such as mitigating decreased growth (Byrne et al 2011), 
+<!-- Calcifying organisms, such as echinoderms, are at high risk to the impacts of ocean warming and acidification (reviewed by Przeslawski et al. 2015).  -->
+Echinoderms are marine calcifiers, and are ecologically important in many marine environments as ecosystem engineers through herbivory and bioturbation (Steneck 2013).
+Studies have shown that they are at high risk to the impacts of both ocean warming and ocean acidification (Przeslawski et al. 2015), with varying effects on larval growth \& development (Byrne et al. 2011, Sewell and Young 1999), behaviour (Manríquez et al. 2017), immune defense (Brothers et al. 2016, Sweet et al. 2016), metabolism (Carey et al. 2017) and reproductive success (Delorme and Sewell 2016).
+Despite the common occurrence of studies investigating the impacts of warming and ocean acidification on echinoderms, critical gaps remain in out knowledge with regards to their ability to acclimate to stressful conditions, especially in the adult life stages.
+<!-- , with most experiments exposing specimens to acute stress with short acclimation times (e.g. 16 days; Catarino et al. 2012, 45 days; Uthicke et al. 2013). -->
+There is compelling evidence that we need to conduct longer-term experiments to realistically incorporate acclimation and/or adaptation to stressful conditions, and the few recent studies that did so revealed subtle responses that would not have been identified in acute experiments.
+Long-term warming and acidification experiments on the antarctic sea urchin *Sterechinus neumayeri* showed that the negative effects of increased temperature ($+2^\circ C$) and decreased pH ($-0.3$ to $-0.5$ units) on metabolism and reproduction are diminished over time of up to more than two years (Suckling et al. 2014, Morley et al. 2016).
+<!-- Long-term (90-day) acclimation to temperature  -->
+Seebacher et al. (2015) showed that acclimation generaly decreases thermal sensitivity, reflecting increased resilience to the effects of elevated temperature.
+Acclimation time is thus a crucial factor to consider when conducting experiments that investigate responses to environmental stress, and should be tested by repeating measurements at different time periods where possible (e.g. Carey et al. 2016, Suckling et al 2014).
+
+<!-- In addition, studies are increasingly measuring multiple physiological and biological responses . -->
+
+Here, we examined the combined effects of prolonged exposure to increased temperature and elevated $pCO_2$ on the survival and physiological responses of the subtidal sea urchin, *Heliocidaris erythrogramma*. 
+Experiments incorporated ecologically realistic conditions that involved the slow adjustment to treatment conditions over weeks, and then an acclimation period conforming to a temperature protocol that included mean-ambient conditions based on in situ loggers deployed in their habitat in Sydney Harbour.
+Metabolic rate, feeding, assimilation efficiency and excretion were all measured to evaluate the responses of *H. erythrogramma* after long-term (155 day) exposure to conditions of increased temperature and decreased pH.
+As maintaining energy is key to long-term survival, we calculated the rate and efficiency at which *H. erythrogramma* allocates energy using the scope for growth (SfG) model, a physiological index commonly used in aquaculture to quantify the energy budgets of living organisms to optimise feeding strategies (ref). 
+Using SfG allows us to examine how environmental stressors affect *H. erythrogramma* based on changes in its energy budget, and provides a single bioenergetics-based index to determine the overall fitness of the sea urchin in the long term.
 
 
-and a framework that can appropriately estimate overall responses to multiple stressors remain lacking.
 
-Given that 
+<!-- Calcifying organisms, such as echinoderms, are at high risk to the impacts of OW and OA (reviewed by Przeslawski et al. 2015), but understanding how the stressors interact remains a complex endeavour (reviews). -->
 
-As maintaining energy surplus is the key for long-term survival, bioenergetics-based models can be used to examine how environmental stressors affect the fitness and survival of marine organisms by changing their energy budget.
+<!-- For echinoderms, synergistic and additive effects have been documented on larval development (refs), metabolism (Carey et al. 2016) and immune response (Brothers et al. 2016) which have largely been negative. -->
+<!-- However, positive or neutral responses have also been observed, likely due to antagonistic interactions between temperature and pH (Karelitz et al 2017; more refs). -->
+<!-- As we continue to understand the response of echinoderms to multiple stressors, of particular relevance in their ability to adapt or acclimate to a changing climate is the speed at which they are exposed to these drivers of environmental stress. -->
+<!-- Our understanding of the long-term, chronic impacts of OW and OA has lagged far behind our knowledge of acute responses. -->
+<!-- In part, this is because there is considerable difficulty in maintaining and incubating  -->
 
+<!-- all of which are excarbated as anthropogenic carbon emissions are expected to increase under all mitigation scenarios projected for the near future (IPCC 201X). -->
+<!-- (Representative Concentration Pathways, RCP2.6 -- RCP8.5, IPCC 201X). -->
+
+
+
+<!-- For the adult Antarctic sea urchin, *Sterechinus neumayeri*, longer term experiments have   -->
+ <!-- implying some uncertainty surrounding the ability of echinoderms to adapt or acclimate to change (refs). -->
+
+
+<!-- As our understanding of the impacts of climate change improve, the focus shifts to increasinly multistressor, and longer period, experiments. -->
+
+<!-- Further, many marine organisms are impacted by reduced aerobic capacity when exposed to environmental stressors, and if OW and OA cause long-term reductions in aerobic scope, the fitness and survival of marine organisms may be affected severely. -->
+<!-- Thus, maintaining energy surplus is key for long-term survival.  -->
+<!-- bioenergetics-based models can be used to examine how environmental stressors affect the fitness and survival of marine organisms by changing their energy budget. -->
+
+ 
 
 
 

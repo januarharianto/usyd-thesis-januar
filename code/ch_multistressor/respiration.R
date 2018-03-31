@@ -22,7 +22,7 @@ resp_data <- read_excel("input/ch_multistressor/metabolic_rate.xlsx", sheet = 2)
     Time = factor(week),
     rate
   ) %>%
-  select(Temperature, pH, Time, rate) %>%
+  select(tank, Temperature, pH, Time, rate) %>%
   print()
 
 # Analyse ----

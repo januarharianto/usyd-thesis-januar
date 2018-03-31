@@ -128,14 +128,15 @@ p4 <- ggplot(wks4, aes(factor(temp_fac), rate, fill = factor(ph_fac))) +
     aes(ymax = ..y.., ymin = ..y..), width = .75, linetype = 3, size = .5
   ) +
   cowplot::theme_cowplot() +
-  scale_fill_brewer(name = "", palette = "BrBG", direction = -1) +
+  # scale_fill_brewer(name = "", palette = "BrBG", direction = -1) +
+  scale_fill_manual(name = "", values =c("white", "grey")) +
   scale_x_discrete(labels = c("Ambient", expression("+2"~degree~C),
     expression("+3"~degree~C))) +
   ggtitle("4 weeks") +
   xlab(" ") +
   ylab(expression("Metabolic Rate (" ~ mg ~ O[2] ~~ h ^ -1 ~~ kg ^ -1 * ")")) +
   geom_blank()
-
+p4
 
 p12 <- ggplot(wks12, aes(factor(temp_fac), rate, fill = factor(ph_fac))) +
   geom_boxplot(position = position_dodge(.8), alpha = .25) +
@@ -144,7 +145,8 @@ p12 <- ggplot(wks12, aes(factor(temp_fac), rate, fill = factor(ph_fac))) +
     aes(ymax = ..y.., ymin = ..y..), width = .75, linetype = 3, size = .5
   ) +
   cowplot::theme_cowplot() +
-  scale_fill_brewer(name = "", palette = "BrBG", direction = -1) +
+  # scale_fill_brewer(name = "", palette = "Greys", direction = -1) +
+  scale_fill_manual(name = "", values =c("white", "grey")) +
   scale_x_discrete(labels = c("Ambient", expression("+2"~degree~C),
     expression("+3"~degree~C))) +
   ggtitle("12 weeks") +

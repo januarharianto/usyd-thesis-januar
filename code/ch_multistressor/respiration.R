@@ -30,46 +30,28 @@ resp_data <- read_excel("input/ch_multistressor/metabolic_rate.xlsx", sheet = 2)
 # Perform a three-way analysis of variance using temperature (+0, +2, +3), pH
 # (8.0, 7.6) and time (4 weeks, 12 weeks) as fixed factors.
 resp_anova <- lm(rate ~ Temperature * pH * Time, data = resp_data) %>%
-  Anova(type = 3, contrasts=list(topic=contr.sum, sys=contr.sum)) %>%
-  print()
+  Anova(type = 3, contrasts=list(topic=contr.sum, sys=contr.sum))
 
-lm(rate ~ Temperature * pH * Time, data = resp_data) %>%
-  summary()
+lm(rate ~ Temperature*pH*Time - Temperature:pH:Time, data = resp_data) %>%
+  Anova(type = 3, contrasts=list(topic=contr.sum, sys=contr.sum))
 
-# Generate posthoc
-resp_posthoc <- emmeans(
-  lm(rate ~ Temperature * pH * Time, data = resp_data),
-  ~ Temperature:pH:Time
-) %>%
-  # cld(alpha = 0.05, Letters = "||||||||||||") %>%
+## Run ANOVA
+model <- lm(rate ~ Temperature*pH*Time - Temperature:pH:Time, data = resp_data)
+Anova(model, type = 3, contrasts=list(topic=contr.sum, sys=contr.sum))
+
+## Post Hoc
+## include all
+emmeans(model, ~ Temperature:pH:Time) %>%
   cld(alpha = 0.05, Letters = letters) %>%
   print()
 
-# Remove 3-way interaction
-lm(
-  rate ~ Temperature + pH + Time + Temperature * pH + Temperature * Time + pH * Time,
-  data = resp_data
-) %>%
-  Anova() %>%
-  print()
+## separate time
+emmeans(model, pairwise ~ Temperature:pH | Time) %>%
+  cld()
 
-# Two-way interactions
-lm(rate ~ Temperature:pH + Temperature:Time + pH:Time, data = resp_data) %>%
-  Anova() %>%
-  print()
 
-# Main effects only
-lm(rate ~ Temperature + pH + Time, data = resp_data) %>%
-  Anova() %>%
-  print()
+# PLOTS ------------------------------------------------------------------------
 
-# posthoc
-chosen_model <- lm(rate~ Temperature + pH + Time + Temperature:pH + Temperature:Time + pH:Time, data = resp_data)
-Anova(chosen_model)
-hsd <- emmeans(chosen_model, pairwise~Temperature:pH | Time)
-hsd
-grps <- cld(hsd)
-grps
 # load data
 rplot_data <- read_excel("input/ch_multistressor/metabolic_rate.xlsx", sheet = 2) %>%
   filter(!is.na(rate)) %>%
@@ -130,8 +112,10 @@ p4 <- ggplot(wks4, aes(factor(temp_fac), rate, fill = factor(ph_fac))) +
   cowplot::theme_cowplot() +
   # scale_fill_brewer(name = "", palette = "BrBG", direction = -1) +
   scale_fill_manual(name = "", values =c("white", "grey")) +
-  scale_x_discrete(labels = c("Ambient", expression("+2"~degree~C),
-    expression("+3"~degree~C))) +
+  # scale_x_discrete(labels = c("Ambient", expression("+2"~degree~C),
+  #   expression("+3"~degree~C))) +
+  scale_x_discrete(labels = c("Ambient\n(16.6 °C)", "+2\n(18.6 °C)", 
+    "+3\n(19.6 °C)")) +
   ggtitle("4 weeks") +
   xlab(" ") +
   ylab(expression("Metabolic Rate (" ~ mg ~ O[2] ~~ h ^ -1 ~~ kg ^ -1 * ")")) +
@@ -147,8 +131,10 @@ p12 <- ggplot(wks12, aes(factor(temp_fac), rate, fill = factor(ph_fac))) +
   cowplot::theme_cowplot() +
   # scale_fill_brewer(name = "", palette = "Greys", direction = -1) +
   scale_fill_manual(name = "", values =c("white", "grey")) +
-  scale_x_discrete(labels = c("Ambient", expression("+2"~degree~C),
-    expression("+3"~degree~C))) +
+  # scale_x_discrete(labels = c("Ambient", expression("+2"~degree~C),
+  #   expression("+3"~degree~C))) +
+  scale_x_discrete(labels = c("Ambient\n(20.7 °C)", "+2\n(22.7 °C)", 
+    "+3\n(23.7 °C)")) +
   ggtitle("12 weeks") +
   xlab("") +
   ylab(expression("Metabolic Rate (" ~ mg ~ O[2] ~~ h ^ -1 ~~ kg ^ -1 * ")")) +

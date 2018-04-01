@@ -40,6 +40,8 @@ nh_plot <- ggplot(plot_dt, aes(factor(temp), ammonia)) +
   # make facet labels bold:
   theme(strip.text = element_text(face = "bold")) +
   xlab("") +
+  scale_x_discrete(labels = c("Ambient\n(20.7 °C)", "+2\n(22.7 °C)", 
+    "+3\n(23.7 °C)")) +
   ylab((expression("Ammonia excretion rate ("*mu*g ~~ kg ^ -1 ~~ h ^ -1 * ")"))) +
   geom_blank()
 

@@ -2,27 +2,27 @@ bookdown::gitbook:
   css: style.css
   config:
     download: ["pdf", "epub"]
-    
+
+
 bookdown::pdf_book:
   includes:
     in_header:
       - settings.tex
       - preamble.tex
     before_body:
-      - fm01_frontpage.tex
-      - fm02_abstract.tex
-      - fm03_acknowledgements.tex
+      - 001_frontpage.tex
+      - 002_abstract.tex
+      - 003_acknowledgements.tex
   latex_engine: xelatex
   citation_package: natbib
   keep_tex: yes
 
 
-    
-
 #bookdown::epub_book: default
 
-#bookdown::word_document2:
-#  fig_caption: true
-#  reference_docx: template.docx
+
+bookdown::word_document2:
+  fig_caption: true
+  reference_docx: template.docx
 
 

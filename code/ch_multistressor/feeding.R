@@ -34,35 +34,77 @@ correction <-
   unlist() %>% # then, convert to vector
   print()
 
-# Apply correction to consumed, and then calculate rate
+# Apply correction to consumed, and then calculate rate. Also, calculate dry
+# feeding rate.
 feeding_rate <-
-  read_excel("input/ch_multistressor/feeding.xlsx", sheet = "main", skip = 1) %>%
-  select(treatment, temp, ph, grp, specimen, consumed) %>% # select columns
+  read_excel("input/ch_multistressor/feeding.xlsx", sheet = "main", 
+    skip = 1) %>%
+  select(treatment, temp, ph, tank, grp, specimen, consumed) %>% # select cols
   mutate(corrected = consumed - abs(correction)) %>% # apply correction
   mutate(rate = corrected / specimen) %>% # convert to rate, g/day/g
   mutate(rate_dry = rate * abs(m) + abs(c)) %>% # convert to dry, g/day/g
   arrange(desc(ph)) %>%
   mutate(ph = factor(ph, levels = c("pH 8.0","pH 7.6"))) %>%
-  print()
-
-# Just checking summary stats
-feeding_summary <-
-  feeding_rate %>%
+  mutate(tank = factor(tank),
+    temp = factor(temp, levels = c("amb", "med", "high")),
+    ph = factor(ph, levels = c("pH 8.0", "pH 7.6"))) %>%
   group_by(treatment, temp, ph) %>%
-  summarise(
-    mean = mean(rate_dry),
-    sd = sd(rate_dry),
-    se = sd / sqrt(length(temp))
-  ) %>%
-  mutate(energy_sd = sd * 12.674) %>%
+  # summarise()
   print()
 
-# ggplot(feeding_summary, aes(treatment, mean)) +
-#   geom_bar(stat = "identity") +
-#   geom_errorbar(aes(ymin = mean - se, ymax = mean + se))
+# ANALYSE DATA -----------------------------------------------------------------
+## Select required columns from dataset for easier ID and analysis.
+fd <- feeding_rate %>%
+  select(temp, ph, tank, grp, rate = rate_dry) %>%
+  filter(grp == 2) %>%
+  select(-grp) %>%
+  print()
 
-# Plot
-feeding_plot <- ggplot(feeding_rate, aes(temp, rate)) +
+## Generate linear mixed model
+mxmodel <- lmer(rate ~ temp*ph + (1|tank) + (temp|tank) + (ph|tank), 
+  data = fd) %>% 
+  print()
+Anova(mxmodel)
+
+## Update to remove interaction since it is not significant
+mxmodel <- lmer(rate ~ temp*ph - temp:ph + (1|tank) + (temp|tank) + (ph|tank), 
+  data = fd) %>% 
+  print()
+Anova(mxmodel)
+## Test for random effects:
+rand(mxmodel)
+## No effect of tank, temp|tank or ph|tank
+## Remove the random
+
+## Update to switch to usual linear model
+model <- lm(rate ~ temp*ph - temp:ph, data = fd) %>% print()
+Anova(model)
+## Summary:
+## Significant effect of temp, but not pH.
+
+## Ok let's do multiple pairwise comparisons
+## Tukey HSD
+library(emmeans)
+emmeans(model, ~temp:ph)
+
+hsd <- emmeans(model, pairwise~temp|ph) # use this since we have no effect of pH
+hsd
+xtable::xtable(hsd$emmeans)
+pander::pander(hsd$emmeans)
+
+grps <- cld(hsd)
+grps
+
+
+## check assumptions
+hist(residuals(model))  # looks normal
+shapiro.test(feeding_rate$rate_dry) # test for normality
+plot(fitted(model), residuals(model)) # residuals look ok
+bartlett.test(rate_dry ~ interaction(temp, ph), feeding_rate) # pass
+fligner.test(rate_dry ~ interaction(temp, ph), feeding_rate) # pass
+
+# PLOT -------------------------------------------------------------------------
+feeding_plot <- ggplot(feeding_rate, aes(temp, rate_dry)) +
   facet_wrap(~ ph) +
   cowplot::theme_cowplot() +
   # geom_violin() +
@@ -81,7 +123,7 @@ feeding_plot <- ggplot(feeding_rate, aes(temp, rate)) +
   theme(strip.text = element_text(face = "bold")) +
   scale_fill_brewer(palette = "Greys", labels = c("+0", "+2", "+3")) +
   # change x axis labels:
-  scale_x_discrete(labels = c("Ambient", "+ 2 °C", "+ 3 °C")) +
+  scale_x_discrete(labels = c("Ambient\n(20.1 °C)", "+2\n(22.1 °C)", "+3 \n(23.1°C)")) +
   # legend title
   labs(fill = "Temp") +
   guides(fill = FALSE) +
@@ -92,47 +134,6 @@ feeding_plot <- ggplot(feeding_rate, aes(temp, rate)) +
   geom_blank()
 feeding_plot
 
-# statistics
-### 2 way anova with repeated measures!!!
-library(lme4)
-library(lmerTest)
-library(car)
-model <- lmer(rate ~ temp + ph + temp*ph + (1|grp), data = feeding_rate)
-Anova(model)
-rand(model)
-difflsmeans(model, "temp:ph")  # ONLY IF random effects are significant
-
-# no nesting term
-feed_model <- lm(rate ~ temp * ph, data = feeding_rate)
-feed_anova <- car::Anova(feed_model) %>% print()
-
-
-## Tukey HSD
-library(emmeans)
-emmeans(feed_model, ~temp:ph)
-
-hsd <- emmeans(feed_model, pairwise~temp|ph) # use this since we have no effect of pH
-hsd
-grps <- cld(hsd)
-grps
-
-rm(agar_dt, agar_plot, fit)
-
-# check assumptions
-hist(residuals(model))  # not that normal... but should be fine
-shapiro.test(feeding_rate$rate_dry) # yup, data is normal
-
-plot(fitted(model), residuals(model)) # residuals look ok
-bartlett.test(rate_dry ~ interaction(temp, ph), feeding_rate) # pass
-fligner.test(rate_dry ~ interaction(temp, ph), feeding_rate) # pass
-
-
-# Create a new tibble that will be used to insert post-hoc results into boxplot
-# fac <- levels(factor(feed.df$treatment))
-# pos <- boxplot(rate ~ treatment, feed.df)$stats[5, ]
-# # phoc <- tibble(fac = as.factor(fac), pos, grp=posthoc$.group)
-# phoc <- tibble(fac = as.factor(fac), pos, grp=c("b","a","a","a","a","a"))
-
 # Export plot
 cowplot::save_plot(
   "figs/ch_multistressor/feed_plot.png", feeding_plot,
@@ -141,3 +142,8 @@ cowplot::save_plot(
 # UNCOMMENT TO SAVE, BUT REMEMBER TO CLEAR ENVIRONMENT
 save.image(file ="output/ch_multistressor/feeding.RData")
 
+# Create a new tibble that will be used to insert post-hoc results into boxplot
+# fac <- levels(factor(feed.df$treatment))
+# pos <- boxplot(rate ~ treatment, feed.df)$stats[5, ]
+# # phoc <- tibble(fac = as.factor(fac), pos, grp=posthoc$.group)
+# phoc <- tibble(fac = as.factor(fac), pos, grp=c("b","a","a","a","a","a"))

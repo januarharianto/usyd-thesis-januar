@@ -77,7 +77,8 @@ rand(mxmodel)
 ## Remove the random
 
 ## Update to switch to usual linear model
-model <- lm(rate ~ temp*ph - temp:ph, data = fd) %>% print()
+model <- lm(rate ~ temp*ph - temp:ph, data = fd)
+midel
 Anova(model)
 ## Summary:
 ## Significant effect of temp, but not pH.
@@ -140,7 +141,7 @@ cowplot::save_plot(
   base_height = 8, base_width = 8
 )
 # UNCOMMENT TO SAVE, BUT REMEMBER TO CLEAR ENVIRONMENT
-save.image(file ="output/ch_multistressor/feeding.RData")
+save.image(file = "output/ch_multistressor/feeding.RData")
 
 # Create a new tibble that will be used to insert post-hoc results into boxplot
 # fac <- levels(factor(feed.df$treatment))

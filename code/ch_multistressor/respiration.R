@@ -25,18 +25,25 @@ resp_data <- read_excel("input/ch_multistressor/metabolic_rate.xlsx", sheet = 2)
   select(tank, Temperature, pH, Time, rate) %>%
   print()
 
-# Analyse ----
+# Analyse ----------------------------------------------------------------------
+
+# Let's load the same dataset but with specific columns for analysis
+resp_df <- read_excel("input/ch_multistressor/metabolic_rate.xlsx", sheet = 2) %>%
+  filter(!is.na(rate)) %>%
+  filter(week %in% c(4, 12)) %>%
+  mutate(Temperature = temp_text,
+    pH = ph_fac,
+    Time = factor(week_text, levels = c("4 weeks", "12 weeks"))) %>%
+  select(tank, Temperature, pH, Time, rate) %>%
+  print()
 
 # Perform a three-way analysis of variance using temperature (+0, +2, +3), pH
 # (8.0, 7.6) and time (4 weeks, 12 weeks) as fixed factors.
-resp_anova <- lm(rate ~ Temperature * pH * Time, data = resp_data) %>%
-  Anova(type = 3, contrasts=list(topic=contr.sum, sys=contr.sum))
-
-lm(rate ~ Temperature*pH*Time - Temperature:pH:Time, data = resp_data) %>%
+resp_anova <- lm(rate ~ Temperature * pH * Time, data = resp_df) %>%
   Anova(type = 3, contrasts=list(topic=contr.sum, sys=contr.sum))
 
 ## Run ANOVA
-model <- lm(rate ~ Temperature*pH*Time - Temperature:pH:Time, data = resp_data)
+model <- lm(rate ~ Temperature*pH*Time - Temperature:pH:Time, data = resp_df)
 Anova(model, type = 3, contrasts=list(topic=contr.sum, sys=contr.sum))
 
 ## Post Hoc
@@ -46,9 +53,38 @@ emmeans(model, ~ Temperature:pH:Time) %>%
   print()
 
 ## separate time
-emmeans(model, pairwise ~ Temperature:pH | Time) %>%
-  cld()
+emmeans(model, pairwise ~ Temperature:pH | Time)
+cld(emmeans(model, pairwise ~ Temperature:pH | Time))
 
+## put this somewhere else later, but we are plotting a graph!
+library(huxtable)
+phresp <- emmeans(model, pairwise ~ Temperature:pH | Time)
+as_huxtable(phresp$emmeans)
+
+
+# Check interactions with a plot
+interaction <- emmip(model, Temperature~pH | Time)
+interaction
+# VERY interesting. Let's refine the plot
+interaction_plot <- 
+  interaction + 
+  cowplot::theme_cowplot() +
+  scale_x_discrete(limits=c("pH 8.0", "pH 7.6")) +
+  theme(
+    panel.border = element_rect(color = "black", fill = NA, size = .5),
+    strip.background = element_rect(colour = "black", fill = NA)
+  ) +
+  # make facet labels bold:
+  theme(strip.text = element_text(face = "bold"), legend.position = "bottom") +
+  scale_colour_manual(labels = c("+0°C", "+2°C", "+3°C"), values = (c("blue","orange","firebrick"))) +
+  geom_blank()
+interaction_plot
+
+## This should be shown! Put into appendix. Export
+cowplot::save_plot(
+  "figs/ch_multistressor/resp_interaction.png", interaction_plot,
+  base_height = 8, base_width = 8
+)
 
 # PLOTS ------------------------------------------------------------------------
 

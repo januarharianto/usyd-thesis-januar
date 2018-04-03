@@ -23,6 +23,7 @@ plot_dt <- ammo %>%
   mutate(temp = factor(tempv, levels = c("Ambient","+2 °C","+3 °C"))) %>%
   print()
 
+# PLOTS ------------------------------------------------------------------------
 # plot ammonia data:
 nh_plot <- ggplot(plot_dt, aes(factor(temp), ammonia)) +
   facet_wrap(~ ph) +
@@ -45,16 +46,29 @@ nh_plot <- ggplot(plot_dt, aes(factor(temp), ammonia)) +
   ylab((expression("Ammonia excretion rate ("*mu*g ~~ kg ^ -1 ~~ h ^ -1 * ")"))) +
   geom_blank()
 
-# Data analysis
+# ANALYSE DATA -----------------------------------------------------------------
+
+## Let's refine the dataset
+adt <- ammo %>%
+  mutate(Temperature = factor(temp),
+    pH = factor(ph)) %>%
+  select(Temperature, pH, ammonia) %>%
+  print()
+
+
 # first, generate model (linear)
-model <- lm(ammonia ~ factor(temp) * factor(ph), data = ammo)
+model <- lm(ammonia ~ Temperature*pH, data = adt)
 
 # perform Type 2 ANOVA
 car::Anova(model) # temp significant, pH not significant, no interactions
 
+# No interactions! Refine model - take out temp*ph
+model <- lm(ammonia ~ Temperature + pH, data = adt)
+car::Anova(model)
+
 # check assumptions
 hist(residuals(model))  # not that normal... but should be fine
-shapiro.test(ammo$ammonia) # yup, data is normal
+shapiro.test(ammo$ammonia) # yup, data is normal.. at least from this test
 
 plot(fitted(model), residuals(model)) # residuals look ok
 bartlett.test(ammonia ~ interaction(temp, ph), ammo) # pass
@@ -62,10 +76,10 @@ fligner.test(ammonia ~ interaction(temp, ph), ammo) # pass
 
 # perform posthoc
 library(emmeans)
-emmeans(model, ~temp:ph)
-emmeans(model, pairwise~temp:ph) # view overall results
-hsd <- emmeans(model, pairwise~temp|ph) # use this since we have no effect of pH
-emmeans(model, pairwise~temp, by = ph) # use this since we have no effect of pH
+emmeans(model, ~Temperature:pH)
+emmeans(model, pairwise~Temperature:pH) # view overall results
+hsd <- emmeans(model, pairwise~Temperature|pH) # use this since we have no effect of pH
+emmeans(model, pairwise~Temperature, by = pH) # use this since we have no effect of pH
 grps <- cld(hsd)
 hsd$contrasts
 grps$contrasts

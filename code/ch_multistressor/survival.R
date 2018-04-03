@@ -60,7 +60,7 @@ init_plot <- ggsurvplot(s, size = .75,
 )
 init_plot
 
-s1 <- 3.5
+s1 <- 4
 # Add on to the plot!
 surv_plot <- init_plot$plot +
   ggplot2::annotate("text", x = 170, y = .933, label = "A  (0A)", size = s1) +

@@ -8,7 +8,7 @@
 \PassOptionsToPackage{expansion=false,final}{microtype}
 
 % Activate colours to use in the book.
-\usepackage[usenames,dvipsnames,svgnames]{xcolor}
+\usepackage[usenames,dvipsnames,svgnames, table]{xcolor}
 
 % COLOR DEFINITIONS ------------------------------------------------------------
 \definecolor{smartgray}{gray}{0.55}
@@ -38,6 +38,11 @@
 % MARGIN -----------------------------------------------------------------------
 
 \usepackage{ragged2e} % for marginnote
+
+% test - make figures float on clear pages?
+\makeatletter
+\@fpsep\textheight
+\makeatother
 
 % FONT OPTIONS -----------------------------------------------------------------
 \usepackage{fontspec}
@@ -73,7 +78,7 @@
 \newsubfloat{figure}% Create subfloat in figure environment
 \newsubfloat{table}% Create subfloat in table environment
 
-\renewcommand{\floatpagefraction}{0.1}% figures appear on different page
+\renewcommand{\floatpagefraction}{0.1} % figures appear on different page
 
 % COLOPHON ---------------------------------------------------------------------
 \makeatletter
@@ -272,6 +277,25 @@
 \pgfplotsset{cycle list name=smart}
 
 
+% HUXTABLE
+% \usepackage{array}
+\usepackage{float}
+\floatstyle{plaintop}
+\restylefloat{table}
+\usepackage[tableposition=top]{caption}
+% %\usepackage{graphicx}
+% \usepackage{siunitx}
+% %\usepackage[table]{xcolor}
+% %\usepackage{multirow}
+% \usepackage{hhline}
+% \usepackage{calc}
+% \usepackage{tabularx}
+
+% APPENDIX ---------------------------------------------------------------------
+
+% load appendix package
+\usepackage{appendix}
+
 % PAGE LAYOUT ------------------------------------------------------------------
 \settypeblocksize{23.45cm}{11.85cm}{*} % original settings
 % \settypeblocksize{23.45cm}{13.85cm}{*} % expanded, since we are not using margin
@@ -282,6 +306,7 @@
 \setmarginnotes{0.8cm}{3.5cm}{1cm}
 \checkandfixthelayout
 
+% let's not use hypenation in the text:
 \pretolerance=5000
 \tolerance=9000
 \emergencystretch=0pt

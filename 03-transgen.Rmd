@@ -1,7 +1,31 @@
-# Methods
+# Transgenerational plasticity in temperate sea urchins -- maternal effects mediate the physiological effects of increased temperature and acidification 
 
 Temperature is the most important stressor in determining urchin survival (chapter 2), regardless of pH (chapter 3). However, long term experiments aside, there is a need to understand transgen effects.
 
 In this chapter we used spawned urchins.
 Yeah!
 
+
+## Abstract {-}
+
+## Introduction
+
+## Methods
+
+### Collection
+
+### Adults -- experimental setup and maintenance
+
+### Adjustment to conditions
+
+### Acclimation and spawning
+
+### Larvae -- experimental setup and maintenance
+
+### Metabolic rate measurements
+
+### Statistical analyses
+
+## Results
+
+## Discussion

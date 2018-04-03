@@ -34,9 +34,32 @@ library(kableExtra) # enhance kable with pipes
 
 # Supplementary Material for Chapter 3
 
-
 (ref:multisetup) Diagram of experimental setup used to control temperature and pH in flowthrough filtered seawater.
 
 ```{r multisetup, fig.cap = "(ref:multisetup)"}
 knitr::include_graphics("figs/ch_multistressor/experimental_design.png")
 ```
+
+(ref:respinteract) Interaction plot.
+
+```{r respinteract, fig.cap = "(ref:respinteract)"}
+knitr::include_graphics("figs/ch_multistressor/resp_interaction.png")
+```
+
+```{r mrcontrasts}
+load("output/ch_multistressor/respiration.RData")
+as.data.frame(phresp$contrasts) %>%
+  mutate(sig = p_stars(p.value)) %>%
+  kable(booktabs = TRUE, caption = "Contrasts") %>%
+  kable_styling(font_size = 10) %>%
+  group_rows(index = c("4 weeks" = 15, "12 weeks" = 15))
+```
+
+
+```{r mrgroups}
+as.data.frame(cld(phresp)$emmeans)  %>%
+  rename(Group = .group) %>%
+  kable(booktabs = TRUE, caption = "Groups") %>%
+  kable_styling(font_size = 10)
+```
+

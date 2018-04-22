@@ -158,8 +158,9 @@ sfgplot <- ggplot(sfg, aes(temp, sfg)) +
   # Labels (title, x & y)
   xlab("") +
   ylab(expression("SfG ("*kJ~h^{-1}~kg^{-1}*")")) +
+  # change x axis labels:
+  # scale_x_discrete(labels = c("Ambient\n(20.1 °C)", "+2\n(22.1 °C)", "+3 \n(23.1°C)")) +
   # Legend
-
   geom_blank()
 # END ggplot
 sfgplot
@@ -171,4 +172,19 @@ cowplot::save_plot(
 )
 
 save.image(file ="output/ch_multistressor/sfg.RData")
+
+library(knitr)
+library(kableExtra)
+sfg %>%
+  select(treatment, A, Ce, Re, Ue, sfg) %>%
+  mutate(Treatment = c("+0 °C; pH 7.6", "+0 °C; pH 8.0", "+2 °C; pH 7.6", 
+    "+2 °C; pH 8.0", "+3 °C; pH 7.6", "+3 °C; pH 8.0")) %>%
+  mutate(Treatment = factor(Treatment, 
+    levels = c("+0 °C; pH 8.0", "+0 °C; pH 7.6",  "+2 °C; pH 8.0",
+      "+2 °C; pH 7.6", "+3 °C; pH 8.0", "+3 °C; pH 7.6"))) %>%
+  arrange(Treatment) %>%
+  rename("AE (%)" = A, Feeding = Ce, Respiration = Re, Excretion = Ue,
+    SfG = sfg) %>%
+  select(7,2,3,4,5,6) %>%
+  kable(booktabs = TRUE, caption = "(ref:sfgtab)")
 

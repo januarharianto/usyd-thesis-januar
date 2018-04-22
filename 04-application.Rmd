@@ -81,9 +81,19 @@ This streamlines the reporting of analytical methods and allows reviewers or oth
 Other functions useful in processing respirometry data are available and are described in more detail in our online html vignette (https://januarharianto.github.io/respR/).
 The utility of the `respR` package is shown here using  data collected for closed, intermittent and flow-through respirometry. We show how `respR` might be used to determine $MO_{2,max}$, $MO_{2,min}$, and $P_{crit}$.
 
-```{r Table-1, echo=F, results='asis'}
-pander(listfunctions, caption = "Main functions available in `respR`.",
+(ref:tb1) Main functions available in `respR`.
+
+```{r Table-1, echo=F, warning=F, results='asis'}
+pander(listfunctions, caption = "(ref:tb1)",
   split.cells = 50, split.table = 80, floating = FALSE)
+
+# tb1 <- 
+#   kable(listfunctions, booktabs = TRUE, escape = TRUE, 
+#     caption = "(ref:tb1)") %>%
+#   kable_styling(latex_options = "striped") %>%
+#   column_spec(2, width = "21em")
+# 
+# tb1
 ```
 
 
@@ -108,7 +118,7 @@ To illustrate the main features of the package, four example datasets, `sardine.
 
 (ref:fig1) Diagram showing steps in a typical workflow in the analysis of respirometry data using `respR`. **(A)** Data are first checked for errors before **(B)** main functions are used to extract and analyse segments of the data. **(C)** Summarised results and diagnostic plots provide immediate visual feedback on the outcome of the analyses. **(D)** Once the rate estimates are obtained, they can be converted into volume and/or mass-specific rates.
 
-```{r fig1, out.extra='angle=90',out.width='120%', fig.cap="(ref:fig1)", echo=F, , fig.pos = "p"}
+```{r fig1,out.width='120%', fig.cap="(ref:fig1)", echo=F, fig.pos = "p"}
 knitr::include_graphics("figs/ch_methods/fig1.png")
 ```
 

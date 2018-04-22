@@ -53,14 +53,11 @@ emmeans(model, ~ Temperature:pH:Time) %>%
   print()
 
 ## separate time
+emmeans(model, pairwise ~ Temperature:pH:Time)
 emmeans(model, pairwise ~ Temperature:pH | Time)
 cld(emmeans(model, pairwise ~ Temperature:pH | Time))
 
-## put this somewhere else later, but we are plotting a graph!
-library(huxtable)
-phresp <- emmeans(model, pairwise ~ Temperature:pH | Time)
-as_huxtable(phresp$emmeans)
-
+pairs(emmeans(model, ~ Temperature*pH*Time), simple = "Time", combine = T)
 
 # Check interactions with a plot
 interaction <- emmip(model, Temperature~pH | Time)
@@ -175,7 +172,7 @@ p12 <- ggplot(wks12, aes(factor(temp_fac), rate, fill = factor(ph_fac))) +
   xlab("") +
   ylab(expression("Metabolic Rate (" ~ mg ~ O[2] ~~ h ^ -1 ~~ kg ^ -1 * ")")) +
   geom_blank()
-
+p12
 
 legend <- cowplot::get_legend(p4 + theme(legend.position="bottom"))
 resp_plot <- cowplot::plot_grid(

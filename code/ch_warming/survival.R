@@ -48,8 +48,8 @@ xsurvplot <-
   ggsurvplot(
     model,
     palette = "RdBu",
-    linetype = "strata",
-    size = .5,
+    # linetype = "strata",
+    # size = .8,
     pval = T,
     pval.coord = c(0, .7),
     legend.title = "",
@@ -73,7 +73,9 @@ survplot <- xsurvplot$plot +
       data = summs,
       aes(x = 100, y = perc, label = c("a", "a", "b", "b")),
       fontface = "bold"
-    )
+    ) +
+  theme(legend.text=element_text(size=rel(1))) +
+  guides(color = guide_legend(override.aes = list(size = 5)))
 survplot
 
 ## This stopped working but I need it to at some point.
@@ -130,5 +132,7 @@ ggcoxzph(cox.zph(cox))  # plot of the residuals.
 
 cowplot::ggsave(
   filename = "figs/ch_warming/survival.png",
+  plot = survplot,
   height = 6, width = 6 * 1.3
 )
+

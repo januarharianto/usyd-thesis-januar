@@ -2,7 +2,7 @@
 author: "Januar Harianto"
 site: bookdown::bookdown_site
 documentclass: memoir
-classoption: oneside, a4paper
+classoption: oneside, 11pt, a4paper
 bibliography: [book.bib, packages.bib]
 biblio-style: apalike
 link-citations: yes
@@ -11,6 +11,7 @@ mainfont: Minion Pro
 sansfont: Myriad Pro
 mathfont: Minion Pro
 ---
+<!-- \OnehalfSpacing -->
 
 ```{r include=FALSE}
 # automatically create a bib database for R packages
@@ -19,7 +20,36 @@ knitr::write_bib(c(
 ), 'packages.bib')
 ```
 
-
 # General Introduction
 
+## Welcome to the Anthropocene
+
 Ocean warming and acidification in South-Eastern Australia
+
+## A multistressor world
+
+## Transgenerational plasticity 
+
+## A framework for multiple responses to climate change
+
+### Measuring physiology
+
+### Energy budgets
+
+### Scope for growth
+
+## Analysing biological rates
+
+### Data sizes are increasing
+
+### Measuring metabolic rate data
+
+### Open-source and open access
+
+### Reproducibility
+
+## Thesis outline
+
+### Study organism
+
+### Aims and outline

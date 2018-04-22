@@ -72,8 +72,18 @@
 
 
 % FIGURES ----------------------------------------------------------------------
+% make sure floats do not appear before references
+\usepackage{flafter}
+
 \captionstyle{\small}
-\captionnamefont{\slshape\color{caption}}
+% \captionnamefont{\slshape\color{caption}}
+% \captiondelim{\null\newline}
+\captionnamefont{\small\bfseries\color{smartred}}
+\captiontitlefont{\small\linespread{.84}\selectfont}
+% \captionstyle[\raggedright]{}
+\normalcaptionwidth
+% \captiontitlefinal{.}
+\setlength\belowcaptionskip{2.5ex}
 
 \newsubfloat{figure}% Create subfloat in figure environment
 \newsubfloat{table}% Create subfloat in table environment
@@ -195,7 +205,7 @@
 \makeatletter
 \center
 \vspace*{22 mm}
-{\Huge \textcolor{smartblue}{\@title}\\}
+{\Huge \textcolor{tangoblue}{\@title}\\}
 \vfill
 {\Large \@author\\}
 \vspace{5 mm}
@@ -231,6 +241,9 @@
 
 % Provides inclusion of graphics and a proper interface.
 \usepackage{graphicx} 
+
+% Loading this exclusively for the \degree symbol!!
+\usepackage{gensymb}
 
 % Provides control over list environments. Supersedes 'enumerate', which gives 
 % enumerate environment an optional argument which determines the style in which
@@ -282,7 +295,7 @@
 \usepackage{float}
 \floatstyle{plaintop}
 \restylefloat{table}
-\usepackage[tableposition=top]{caption}
+% \usepackage[tableposition=top]{caption}
 % %\usepackage{graphicx}
 % \usepackage{siunitx}
 % %\usepackage[table]{xcolor}

@@ -1,6 +1,7 @@
-# The effect of warming on mortality, metabolic rate, heat-shock protein response and gonad growth in thermally acclimated sea urchins (*Heliocidaris erythrogramma*) {#ch2}
+# The effect of warming on mortality, metabolic rate, heat-shock protein response and gonad growth in thermally acclimated sea urchins (*Heliocidaris erythrogramma*)[^published2] {#ch2}
 \chaptermark{Effect of warming on \textit{Heliocidaris erythrogramma}}
 
+[^published2]: This chapter is published as "Harianto J, Nguyen HD, Holmes SP and Byrne M (2018). The effect of warming on mortality, metabolic rate, heat-shock protein response and gonad growth in thermally acclimated sea urchins (*Heliocidaris erythrogramma*). *Marine Biology* XXXX"
 
 <!-- You can label chapter and section titles using `{#label}` after them, e.g., we can reference Chapter \@ref(intro). If you do not manually label them, there will be automatic labels anyway, e.g., Chapter \@ref(methods). -->
 
@@ -71,9 +72,9 @@ The synthesis of HSPs is energetically costly and the increased thermal resistan
 We investigated the effects of long-term acclimation to elevated temperatures on the sea urchin *Heliocidaris erythrogramma* through determination of survivorship, metabolic rate, HSP$70$ expression, gonad index and gonad histology. 
 To place our experiment in an ecologically relevant context, we characterised the thermal environment of the source populations of *H. erythrogramma* in Sydney Harbour by compiling in situ temperature data over $5$ years.
 This region is located in an ocean warming hotspot due to warming of the continent and climate-driven intensified, poleward flow of the East Australian Current (Hill et al. 2008; Hobday 2011; IPCC 2013; Lenton et al. 2015). 
-In the Sydney region, H. erythrogramma has a $6$-month spawning season from October/November to March/April with episodic gamete release (Laegdsgaard et al. 1991; Byrne, pers comm). 
+In the Sydney region, *H. erythrogramma* has a $6$-month spawning season from October/November to March/April with episodic gamete release (Laegdsgaard et al. 1991; Byrne, pers comm). 
 We collected the urchins when the seawater was $18^{\circ}C$ and maintained them in ambient flow-through aquaria for a week.
-The urchins were then gradually introduced to the experimental temperatures, by incremental increase over several weeks, to $20^{\circ}C$ (annual median, and mean spring temperature) as the control, and to $22 ^{\circ}C$, $24 ^{\circ}C$ and $26  ^{\circ}C$, representing elevated temperatures predicted for the years 2070, 2100 and far future (IPCC 2014; $+2$, $+4$ and $+6 ^{\circ}C$, respectively).
+The urchins were then gradually introduced to the experimental temperatures, by incremental increase over several weeks, to $20^{\circ}C$ (annual median, and mean spring temperature) as the control, and to $22 ^{\circ}C$, $24 ^{\circ}C$ and $26 ^{\circ}C$, representing elevated temperatures predicted for the years 2070, 2100 and far future (IPCC 2014; $+2$, $+4$ and $+6 ^{\circ}C$, respectively).
 It was predicted that *H. erythrogramma* exposed to elevated temperature would exhibit: (1) an increase in metabolic rate up to its upper critical thermal limit, i.e. in line with would be expected for an ectotherm; (2) an increase in HSP$70$ expression with chronic exposure to increased temperature; (3) decreased survival; and (4) failure to develop gonads as reported for a closely-related echinoid following extended exposure to increased temperature (Delorme and Sewell 2016).
 
 ## Materials and methods
@@ -106,7 +107,7 @@ Treatment stability was monitored by checking temperatures daily using a tempera
 Temperature loggers (IBCod Type G, Alpha Mach, Bombardier, Quebec, Canada) were also randomly deployed between 6 treatment tanks. 
 These were checked every two weeks and redeployed at random. 
 No major deviations from set temperature points were observed during the experiment.
-Urchins were fed $ad libitum$ on fresh $Sargassum$ spp. collected from their habitat.
+Urchins were fed *ad libitum* on fresh *Sargassum* spp. collected from their habitat.
 All tanks were cleaned daily and uneaten food and faeces were siphoned off every $2$ days. 
 
 ### Survival
@@ -115,7 +116,7 @@ Treatment tanks were monitored daily for mortality during the acclimation period
 A few urchins ($n = 4$) that displayed signs of stress (e.g. dropped spines, reduced movement) were promptly removed.
 
 ### Metabolic rate
-After 12 weeks of acclimation, the weight-specific metabolic rate ($MO_2$; $mg\ O_2\ h^{-1}\ g^{-1}$) of the urchins was determined using constant volume respirometry. 
+After $12$ weeks of acclimation, the weight-specific metabolic rate ($MO_2$; $mg\ O_2\ h^{-1}\ g^{-1}$) of the urchins was determined using constant volume respirometry. 
 For every tank, four random urchins were measured for metabolic rate and the mean $MO_2$ used for statistical analysis ($n = 6\ treatment^{-1}$).
 Urchins were starved for $3$ days and then transferred to stirred $2\ L$ respirometry chambers, supplied with treatment water, so that each urchin was maintained at its respective experimental temperature level during respirometry measurements.
 Dissolved oxygen (DO) was recorded using an optical fluorescence quenching probe (Vernier ODO-BTA) until a decrease of $\sim 15\%$ in oxygen concentration was achieved. 
@@ -137,15 +138,18 @@ This has been done previously in Nguyen et al. (2013) and ensures that sufficien
 Small pieces of the frozen gonad ($\sim 10\ mm$) were placed in $10\ mL$ of Radio-Immuno-Precipitation Assay (RIPA buffer; $150\ mM$ NaCl, $1 \%$ IGEPAL CA-630, $0.5 \%$ sodium deoxycholate, $0.1 \%$ SDS, and $50\ mM$ Tris, pH $8.0$) containing a protease inhibitor tablet (Thermo Scientific, Catalog. No. 88266).
 The mix was homogenised with a glass micro pestle, left on ice for $15$ minutes, and then centrifuged at $13200$ $\times g$ for $10$ minutes. 
 The supernatant protein sample was extracted from below the lipid layer, and protein content was estimated using the Pierce BCA Protein Assay (Thermo Scientific, Catalog. No. 23225) according to manufacturer instructions.
-Based on protein content estimates, we prepared protein samples to a concentration of $2\ mg\ mL^{−1}$, by dilution in buffer ($50\ mM$ Tris-HCl pH 6.8, $2 \%$ SDS w/v, $10 \%$ glycerol and 5% beta-mercaptoethanol).
+Based on protein content estimates, we prepared protein samples to a concentration of $2\ mg\ mL^{−1}$, by dilution in buffer ($50\ mM$ Tris-HCl pH $6.8$, $2 \%$ SDS w/v, $10 \%$ glycerol and $5\%$ beta-mercaptoethanol).
 Samples containing 40 µg of total protein were loaded in $4$ to $20 \%$ Tris-Glycine pre-cast gels and separated via gel electrophoresis at $250\ V$ for $35$ min using a Mini Protean III system (Bio-Rad Laboratories, Gladesville, New South Wales, Australia).
-A recombinant rat $70 kDa$ heat shock protein (Stressgen, Catalog. ID ADI-SSP-758, Sapphire Bioscience Pty. Ltd., Redfern, New South Wales, Australia), diluted to 1:100, was loaded as a positive control.
+A recombinant rat $70 kDa$ heat shock protein (Stressgen, Catalog. ID ADI-SSP-758, Sapphire Bioscience Pty. Ltd., Redfern, New South Wales, Australia), diluted to $1:100$, was loaded as a positive control.
 A pre-stained protein molecular weight marker (Invitrogen Catalog. No.10748-010, Invitrogen, Carlsbad, California, USA) was also loaded to each gel ($7\ \mu L$) to monitor protein separation during gel electrophoresis and to enable evaluation of western transfer efficiency.
 Following electrophoresis, separated proteins were transferred to Polyvinylidene Difluoride (PVDF) membranes ($0.45\ \mu m$ pore size) using a Mini Trans-Blot Cell (Bio-Rad Laboratories). 
 Each membrane was cut into two horizontal strips, for the detection of HSP$70$ and $\beta$-actin (loading control), respectively.
 The membranes were blocked in $5 \%$ non-fat milk powder in phosphate-buffered saline (PBS) for $20$ min to prevent nonspecific binding.
-After blocking, the membranes were incubated for 1 hour in a solution of the appropriate primary antibody, either mouse monoclonal anti-HSP$70$ antibody (Sigma-Aldrich, Catalog. No. H5147, Sigma Aldrich, St. Louis, Missouri, USA) or mouse monoclonal anti $\beta$-actin (Sigma-Aldrich, Catalog. No. A1978) diluted at $1:1000$ in antibody buffer ($1 \%$ w/v gelatin in PBS) for $1$ hour. Membranes were quickly rinsed twice ($2 s$) with PBS containing $0.05 \%$ (v/v) Tween-20 (TPBS) then given a further four washes in TPBS, with each wash lasting for $5$ min. 
-After washing, membranes were incubated for $1$ hour with a secondary antibody, an anti-mouse IgG conjugated with horseradish peroxidase (Santa Cruz Biotechnology, Catalog. No. sc-516102, Santa Cruz Biotechnology, Dallas, Texas, United States) diluted at 1:10000 in antibody buffer. The membranes were rinsed and washed in TPBS as before. Finally, membranes were incubated in SuperSignal West Pico chemiluminescent substrate (Pierce, Catalog. No. 34080, Thermo Fisher) for 1 minute and the chemiluminescent signal was detected using an imaging densitometer (ChemiDocMP System, Bio-Rad Laboratories, Inc.). Image analysis to determine relative HSP70 levels in arbitrary units (AU) was done using ImageJ (Abràmoff et al. 2004). Band densities of the samples were normalised to β-actin and the positive control to account for differences in total protein loaded in the gels and to allow for comparisons between blots.
+After blocking, the membranes were incubated for $1$ hour in a solution of the appropriate primary antibody, either mouse monoclonal anti-HSP$70$ antibody (Sigma-Aldrich, Catalog. No. H5147, Sigma Aldrich, St. Louis, Missouri, USA) or mouse monoclonal anti $\beta$-actin (Sigma-Aldrich, Catalog. No. A1978) diluted at $1:1000$ in antibody buffer ($1 \%$ w/v gelatin in PBS) for $1$ hour. Membranes were quickly rinsed twice ($2 s$) with PBS containing $0.05 \%$ (v/v) Tween-20 (TPBS) then given a further four washes in TPBS, with each wash lasting for $5$ min. 
+After washing, membranes were incubated for $1$ hour with a secondary antibody, an anti-mouse IgG conjugated with horseradish peroxidase (Santa Cruz Biotechnology, Catalog. No. sc-516102, Santa Cruz Biotechnology, Dallas, Texas, United States) diluted at $1:10000$ in antibody buffer. 
+The membranes were rinsed and washed in TPBS as before. Finally, membranes were incubated in SuperSignal West Pico chemiluminescent substrate (Pierce, Catalog. No. 34080, Thermo Fisher) for $1$ minute and the chemiluminescent signal was detected using an imaging densitometer (ChemiDocMP System, Bio-Rad Laboratories, Inc.). 
+Image analysis to determine relative HSP$70$ levels in arbitrary units (AU) was done using ImageJ (Abràmoff et al. 2004).
+Band densities of the samples were normalised to β-actin and the positive control to account for differences in total protein loaded in the gels and to allow for comparisons between blots.
 
 
 

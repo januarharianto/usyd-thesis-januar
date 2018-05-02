@@ -1,6 +1,6 @@
-# respR -- an R package for the analysis of respirometry data[^published]
+# respR -- an R package for the analysis of respirometry data[^published5]
 
-[^published]: This chapter is published as "Harianto J, Carey N and Byrne M (2018). respR -- an R package for the analysis of respirometry data. *Methods in Ecology and Evolution* XXXX"
+[^published5]: This chapter is published as "Harianto J, Carey N and Byrne M (2018). respR -- an R package for the analysis of respirometry data. *Methods in Ecology and Evolution* XXXX"
 
 ```{r, echo=FALSE}
 library(knitr)

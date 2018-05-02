@@ -281,9 +281,9 @@ Ammonia excretion rate, $U$ ($\mu g\ kg^{-1}\ h^{-1}$) was calculated according 
   U = \frac{N_c}{W \cdot T}
   (\#eq:u)
 \end{equation}
-
 where $N_c$ is the concentration of ammonia ($\mu g\ at\mbox{-}N\ L^{-1}$), $W$ is the weight of the specimen in $kg$ and $T$ is the time elapsed in hours. 
 Ammonia concentration, $N_c$ is determined following Parsons et al. (1984) and is summarised in the equation:
+
 \begin{equation} 
   N_c = \frac{3 \cdot V}{\Delta E}
   (\#eq:nc)
@@ -571,7 +571,6 @@ sfgtab
 
 ```
 
-
 (ref:sfg) Scope for growth ($\pm s.d.$) in the sea urchin, *H. erythrogramma* acclimated to conditions of increased temperature ($+0, +2, +3 ^\circ C$) and decreased pH (8.0, 7.6). $n = 10$.
 
 ```{r sfg, fig.cap = "(ref:sfg)", fig.pos = "p"}
@@ -580,8 +579,16 @@ knitr::include_graphics("figs/ch_multistressor/sfg_plot.png")
 
 ## Discussion
 
-Our study revealed significant long-term impacts of warming and OA on *H. erythrogramma*.
-Increased temperature appeared to affect the urchin the most, as shown by 
+Our study revealed significant long-term impacts of warming and OA on *H. erythogramma*. 
+In particular, we found that regardless of pH treatment, prolonged ($\sim 12$-week) exposure to increased temperature reduced the overall energy budget and at $+3^{\circ}C$, significantly reduced the survival of the sea urchin. 
+
+
+In addition, there was strong evidence of acclimation of acclimation to
+We also showed that 
+
+In this study, we used scope for growth as an indicator for the amount of energy
+
+
 Here, we showed that contrary to theory (REFERENCES), while long-term acclimation to low pH increased metabolism significantly, it also increased feeding rates, resulting in an increase in energy budget shown by the increase in scope for growth.
 
 - Results appear to be similar to other studies (e.g. Carey et al. 2016) at 4 weeks of acclimation, where the relationship between temperature and pH on metabolic rate was additive. Maybe discuss this separately as all other results are 12-13 weeks.

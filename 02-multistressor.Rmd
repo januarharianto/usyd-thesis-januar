@@ -45,8 +45,7 @@ Here we present a long-term study on the effects of these stressors on the physi
 Urchins collected in winter were slowly-adjusted over 7 weeks to conditions of elevated temperature (ambient $+0$, $+2$, $+3^\circ C$) and decreased pH (ambient $-0$, $-0.4$ pH units) conditions, before they were maintained and the baseline temperature was adjusted weekly to mimic the seasonal change expected over time. 
 Metabolic rate was measured at weeks 4 and 12, ammonia excretion rate at week 12, feeding rate at week 13, and survival for up to 22 weeks. 
 Results showed that at $+3^\circ C$ and regardless of pH, urchins were stressed, with low survival (37 – 45%), decreased feeding and increased ammonium excretion at 12 -- 13 weeks of acclimation.
-In addition, acclimation time significantly influenced metabolic rate data, with contrasting results at 4 or 12 weeks of acclimation.
-While both warming and acidification increased metabolic rates significantly at 4 weeks of acclimation, their effects were diminished at 12 weeks of acclimation as the surviving sea urchins appeared to have acclimated to the new environmental conditions.
+In addition, while both warming and acidification increased metabolic rates significantly at 4 weeks of acclimation, their effects were diminished at 12 weeks of acclimation as the surviving sea urchins appeared to have acclimated to the new environmental conditions.
 The potential to acclimate to environmental stress emphasises the importance of continuous, long-term studies in predicting the consequences of climate change on study organisms.
 
 <!-- **Keywords:** ocean warming; ocean acidification; multistressor; physiology; scope for growth -->
@@ -61,7 +60,7 @@ The potential to acclimate to environmental stress emphasises the importance of 
 
 
 Many of the key challenges in predicting the ecological consequences of climate change stem from the fact that most ecosystems are confronted with multiple chemical, physical and biological stressors, which often interact (Byrne et al. 2013; Przeslawski et al. 2015, Goldenberg et al. 2017).
-For the world's oceans, the impacts of both global warming and ocean acidification are intricately linked as more than $90\%$ of the Earth's heat and $25\%$ of anthropogenic $CO_2$ emissions are absorbed directly into the ocean (Mikaloff Fletcher et al. 2006; Wanninkhof et al. 2013, Gattuso et al 2015).
+For the world's oceans, the impacts of both global warming and ocean acidification are intricately linked as approximately $90\%$ of the Earth's heat and $25\%$ of anthropogenic $CO_2$ emissions are absorbed directly into the ocean (Mikaloff Fletcher et al. 2006; Wanninkhof et al. 2013, Gattuso et al 2015).
 
 Ocean warming increases the body temperature of marine ectotherms, affecting metabolism and almost all biological processes (Brown et al. 2014, Hochachka and Somero 2002). 
 Concurrently, ocean acidification alters the balance of carbonate saturation states in sea water, increasing the metabolic costs associated with acid–base regulation, calcification and skeletogenesis (Doney et al. 2009, Hofmann et al. 2010, Kroeker et al. 2013, Portner 2008).
@@ -340,7 +339,7 @@ Thus, the nested tank parameter was removed from all models and data were analys
 To test for fixed effects, ANOVA was performed on the models, using Type III sums of squares when interactions were present, or Type II sums of squares when they were not (Langsrud 2003).
 
 For metabolic rate data, there were no significant interactions between acclimation time, temperature and pH ($F_{2,104}= 2.37$, $p = 0.098$), thus, the three-way interaction term was removed from the model and the data re-analysed to only test for two-way interactions using ANOVA.
-For feeding and ammonia excretion rate data, there were no significant interactions between temperature and pH ($F_{2,47} = 1.07$, $p = 0.35$ and $F_{2,54} = 2.31$, $p = 0.11$, respectively), so the temperature:pH interaction terms were removed from the models before an ANOVA was performed on the model.
+For feeding and ammonia excretion rate data, there were no significant interactions between temperature and pH ($F_{2,47} = 1.07$, $p = 0.35$ and $F_{2,54} = 2.31$, $p = 0.11$, respectively), so the temperature:pH interaction terms were removed before ANOVA was performed on each model.
 
 All ANOVA analyses were tested for normality using the Shapiro-Wilk test of normality (Royston 1982), and homogeneity of variances using the Fligner-Killeen Test (Conover et al. 1981).
 <!-- Check ?shapiro.test and ?fligner.test for references -->
@@ -371,7 +370,7 @@ knitr::include_graphics("figs/ch_multistressor/surv_plot.png")
 
 ### Metabolic rate
 
-The 3-way ANOVA showed that there were significant two-way interactions for acclimation time$\times$pH ($F_{1,107}= 11.25$, $p = .001$), temperature$\times$pH ($F_{2,107} = 3.58$, $p = 0.031$), and acclimation time$\times$temperature ($F_{2,107}= 14.1$, $p < 0.001$).
+There were significant two-way interactions for acclimation time$\times$pH ($F_{1,107}= 11.25$, $p = .001$), temperature$\times$pH ($F_{2,107} = 3.58$, $p = 0.031$), and acclimation time$\times$temperature ($F_{2,107}= 14.1$, $p < 0.001$).
 <!-- As single stressors, increased temperature ($F_{2,106} = 14.1$, $p < .001$) and decreased pH ($F_{1,106}= 22.8$, $p < .001$) significantly influenced metabolic rate.  -->
 At 4 weeks of acclimation, metabolic rate increased additively with increased temperature, low pH, or a combination of both (Figure \@ref(fig:resp) A; Appendix Figure \@ref(fig:respinteract)). 
 However, after 12 weeks of acclimation, increased temperature interacted with low pH resulting in decreasing metabolic rate with increasing temperature when pH was $7.6$ (Figure \@ref(fig:resp) B; Appendix Figure \@ref(fig:respinteract)).

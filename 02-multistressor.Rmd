@@ -88,7 +88,7 @@ For example, exposure to long-term warming and acidification on the Antarctic se
 Dupont et al. (2013) showed that although four months of exposure to inreased $pCO_2$ affected female fecundity in *Strongylocentrotus droebachiensis*, there was no effect for sea urchins acclimated to a longer, 16-month period.
 <!-- Long-term (90-day) acclimation to temperature  -->
 In general, acclimation decreases thermal sensitivity over time (Seebacher et al. 2015), reflecting increased resilience to the effects of elevated temperature.
-Acclimation time is thus a crucial factor to consider when conducting experiments that investigate responses to climate change and should be tested by assessing responses over different time periods (e.g. Carey et al. 2016, Suckling et al 2014, more please).
+Acclimation time is thus a crucial factor to consider when conducting experiments that investigate responses to climate change and can be tested by assessing responses over different time periods (e.g. Carey et al. 2016, Suckling et al 2014, more please).
 
 <!-- In addition, studies are increasingly measuring multiple physiological and biological responses . -->
 
@@ -199,7 +199,7 @@ Header tanks were cleaned of algal growth once a month.
 ### Survival
 
 Survival was recorded by measuring the survival time of individual specimens for 155 days (Aug--Dec 2014). 
-Specimens were observed daily for mortality, and dead urchins were removed immediately.
+Specimens were observed daily for mortality, and dead urchins were removed immediately. 
 
 
 ### Metabolic rate
@@ -332,11 +332,14 @@ The fitted Cox regression met the assumption of proportional hazards (Schoenfeld
 As no interactions were found between temperature and pH (Cox regression, $z =$ 0.61, $d.f. =$ 3, $p =$ 0.54), the interaction term was removed and the analysis was repeated with only the main effects tested.
 *Post-hoc* tests for the differences between treatments were determined using pairwise tests of significance corrected using the Benjamini-Hochberg (BH) false discovery rate method (Benjamini and Hochberg, 1995).
 
-Metabolic rate data were first analysed by constructing a generalised linear mixed model of metabolic rate as a function of relative temperature ($+0^{\circ}C$,  $+2^{\circ}C$,  $+3^{\circ}C$), pH ($8.0$, $7.6$) and absolute time ($4\ weeks$, $12\ weeks$).
+Metabolic rate data were first analysed by constructing a generalised linear mixed model of metabolic rate as a function of relative temperature ($+0^{\circ}C$,  $+2^{\circ}C$,  $+3^{\circ}C$), pH ($8.0$, $7.6$) and absolute time ($4$ weeks, $12$ weeks).
 Feeding rate and ammonia excretion rate data were also analysed as above with the response variable as a function of temperature and pH.
 For all analyses, the nested effects of tank, temperature within tank and pH within tank were added as a random parameter in the models, and then tested using a likelihood ratio test on random effects, which were all not significant ($p \geq 0.9$ for all tests).
 Thus, the nested tank parameter was removed from all models and data were analysed individually using simple linear models.
 To test for fixed effects, ANOVA was performed on the models, using Type III sums of squares when interactions were present, or Type II sums of squares when they were not (Langsrud 2003).
+
+<!-- It is important to note that at week 12, metabolic rate data was collected from a smaller sample population due to high mortality in some treatments (see results).  -->
+<!-- Thus, we analysed the data separately for each period by constructing a generalised linear mixed model of metabolic rate as a function of relative temperature ($+0^{\circ}C$,  $+2^{\circ}C$,  $+3^{\circ}C$) and pH ($8.0$, $7.6$). -->
 
 For metabolic rate data, there were no significant interactions between acclimation time, temperature and pH ($F_{2,104}= 2.37$, $p = 0.098$), thus, the three-way interaction term was removed from the model and the data re-analysed to only test for two-way interactions using ANOVA.
 For feeding and ammonia excretion rate data, there were no significant interactions between temperature and pH ($F_{2,47} = 1.07$, $p = 0.35$ and $F_{2,54} = 2.31$, $p = 0.11$, respectively), so the temperature:pH interaction terms were removed before ANOVA was performed on each model.
@@ -370,11 +373,11 @@ knitr::include_graphics("figs/ch_multistressor/surv_plot.png")
 
 ### Metabolic rate
 
-There were significant two-way interactions for acclimation time$\times$pH ($F_{1,107}= 11.25$, $p = .001$), temperature$\times$pH ($F_{2,107} = 3.58$, $p = 0.031$), and acclimation time$\times$temperature ($F_{2,107}= 14.1$, $p < 0.001$).
+There were significant two-way interactions for acclimation time $\times$ pH ($F_{1,107}= 11.25$, $p = .001$), temperature $\times$ pH ($F_{2,107} = 3.58$, $p = 0.031$), and acclimation time $\times$ temperature ($F_{2,107}= 14.1$, $p < 0.001$).
 <!-- As single stressors, increased temperature ($F_{2,106} = 14.1$, $p < .001$) and decreased pH ($F_{1,106}= 22.8$, $p < .001$) significantly influenced metabolic rate.  -->
 At 4 weeks of acclimation, metabolic rate increased additively with increased temperature, low pH, or a combination of both (Figure \@ref(fig:resp) A; Appendix Figure \@ref(fig:respinteract)). 
 However, after 12 weeks of acclimation, increased temperature interacted with low pH resulting in decreasing metabolic rate with increasing temperature when pH was $7.6$ (Figure \@ref(fig:resp) B; Appendix Figure \@ref(fig:respinteract)).
-*Post-hoc* analyses using Tukey's HSD showed that at 4 weeks of acclimation, metabolic rate was significantly different between groups that were subject to elevated temperature ($p = < 0.0001$--$0.08$) or decreased pH ($p < 0.001$), with no interactions observed (Appendix Table \@ref(tab:mrcontrasts)).
+*Post-hoc* analyses using Tukey's HSD showed that at 4 weeks of acclimation, metabolic rate was significantly different between groups that were subject to elevated temperature ($p = < 0.0001$) or decreased pH ($p < 0.001$), compared to control treatments, with no interactions observed (Appendix Table \@ref(tab:mrcontrasts)).
 However, at 12 weeks of acclimation, there were no significant differences between any treatment groups ($p > 0.1$; Appendix Table \@ref(tab:mrgroups)).
 
 <!-- ```{r anovaresp, results = "asis"} -->
@@ -578,17 +581,27 @@ knitr::include_graphics("figs/ch_multistressor/sfg_plot.png")
 
 ## Discussion
 
-Our study revealed significant long-term impacts of warming and OA on *H. erythogramma*. 
-In particular, we found that regardless of pH treatment, prolonged ($\sim 12$-week) exposure to increased temperature reduced the overall energy budget and at $+3^{\circ}C$, significantly reduced the survival of the sea urchin. 
+
+Our study revealed significant long-term impacts of experimental ocean warming (OW) and ocean acidification (OA) on the physiological responses of *H. erythogramma*.
+In particular, prolonged ($\sim 12$-week) exposure to OW and OA reduced the overall energy budget of the urchins. 
+We found that regardless of pH, survival was reduced significantly with more than two-thirds of specimens lost at the $+3^{\circ}C$ treatments after 22 weeks of acclimation.
+
+Metabolic rate increased with OW and OA, and the interaction of temperature and pH resulted in an additive response at 4 weeks of acclimation (Fig. \@ref(fig:resp)A). 
+This is expected due to the effects of thermodynamics on reaction rates (Hochachka and Somero 2002) and the increased energetic demands for acid-base balance (REFS) which are crucial in the maintenance of many physiological processes (REFS).
+The additive interaction is consistent with 
+<!-- Temperature appears to be the dominant stressor affecting survival, since  -->
+In contrast, after 12 weeks of acclimation, the surviving urchins appeared to have compensated for the combined effects of experimental OW and OA and showed reduced sensitivity to either stressor as seen by overall reduced metabolic rates.
+An antagonistic interaction between temperature and pH was also observed, where metabolic rate decresed with increasing OW and OA conditions (Fig. \@ref(fig:resp)B).
+
+It is important to note that due to mortality, the metabolic rates recorded were obtained from a smaller sample population of surviving urchins. 
+At 12 weeks when all our other physiological parameter were recorded, approximately 25\% of the urchins in both $+ 3 ^\circ C$ treatments had been removed from the experiments.
 
 
-In addition, there was strong evidence of acclimation of acclimation to
-We also showed that 
+<!-- It is important to note that at week 12, metabolic rate data was collected from a smaller sample population due to high mortality in some treatments (see results).  -->
 
-In this study, we used scope for growth as an indicator for the amount of energy
+<!-- In particular, with increasing temperature and decreased pH, metabolic rate decreased at week 12, a reversal of the positive effects observed at week 4. -->
 
-
-Here, we showed that contrary to theory (REFERENCES), while long-term acclimation to low pH increased metabolism significantly, it also increased feeding rates, resulting in an increase in energy budget shown by the increase in scope for growth.
+<!-- Here, we showed that contrary to theory (REFERENCES), while long-term acclimation to low pH increased metabolism significantly, it also increased feeding rates, resulting in an increase in energy budget shown by the increase in scope for growth. -->
 
 - Results appear to be similar to other studies (e.g. Carey et al. 2016) at 4 weeks of acclimation, where the relationship between temperature and pH on metabolic rate was additive. Maybe discuss this separately as all other results are 12-13 weeks.
 - At 12 weeks, there are interactions.

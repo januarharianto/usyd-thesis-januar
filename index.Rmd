@@ -33,7 +33,8 @@ Ocean warming and acidification in South-Eastern Australia
 ## A framework for multiple responses to climate change
 
 ### Measuring physiology
-
+From 
+<!-- An increase of temperature in an ectotherm system has two major effects at the molecular level: firstly, it will result in an increase in the proportion of molecules possessing sufficient kinetic energy to achieve the activation level for any given reaction, and secondly it will influence the equilibrium constant of reactions, especially those involving weak chemical bonds Ž Hochachka, 1991 . . Q 10 values for individual biochemical functions can fall anywhere from one through to very high vales, although the Q 10 for purely physical processes such as diffusion is typically around 1.5 or lower. Many studies however report Q 10 values in the range 2–3 for whole animal physiological processes under normal conditions Ž Clarke, 1983; Clarke and Johnston, 1999 . . The maintenance of whole organism Q 10 values within this range as a result of evolutionary adjustment allows for the integration of enzyme-mediated biochemical reactions with physical processes which are essential to physiology Ž Hochachka, 1991 . . -->
 ### Energy budgets
 
 ### Scope for growth

@@ -596,11 +596,11 @@ It is important to note that due to mortality, the metabolic rates recorded were
 At 12 weeks when all our other physiological parameter were recorded, approximately 25\% of the urchins in both $+ 3 ^\circ C$ treatments had been removed from the experiments.
 
 
-<!-- It is important to note that at week 12, metabolic rate data was collected from a smaller sample population due to high mortality in some treatments (see results).  -->
+It is important to note that at week 12, metabolic rate data was collected from a smaller sample population due to high mortality in some treatments (see results).
 
-<!-- In particular, with increasing temperature and decreased pH, metabolic rate decreased at week 12, a reversal of the positive effects observed at week 4. -->
+In particular, with increasing temperature and decreased pH, metabolic rate decreased at week 12, a reversal of the positive effects observed at week 4.
 
-<!-- Here, we showed that contrary to theory (REFERENCES), while long-term acclimation to low pH increased metabolism significantly, it also increased feeding rates, resulting in an increase in energy budget shown by the increase in scope for growth. -->
+Here, we showed that contrary to theory (REFERENCES), while long-term acclimation to low pH increased metabolism significantly, it also increased feeding rates, resulting in an increase in energy budget shown by the increase in scope for growth.
 
 - Results appear to be similar to other studies (e.g. Carey et al. 2016) at 4 weeks of acclimation, where the relationship between temperature and pH on metabolic rate was additive. Maybe discuss this separately as all other results are 12-13 weeks.
 - At 12 weeks, there are interactions.

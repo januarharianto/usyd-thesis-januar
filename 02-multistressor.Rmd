@@ -602,13 +602,13 @@ In particular, with increasing temperature and decreased pH, metabolic rate decr
 
 Here, we showed that contrary to theory (REFERENCES), while long-term acclimation to low pH increased metabolism significantly, it also increased feeding rates, resulting in an increase in energy budget shown by the increase in scope for growth.
 
-- Results appear to be similar to other studies (e.g. Carey et al. 2016) at 4 weeks of acclimation, where the relationship between temperature and pH on metabolic rate was additive. Maybe discuss this separately as all other results are 12-13 weeks.
-- At 12 weeks, there are interactions.
-- It is possible that the interactions are due to acclimation, but we cannot ignore that it might also be due to temeprature differences between the two period. [Need referecens to back up..]
-- Maintaining energy surplus is key to survival. Increased temperature reduced assimilation efficiency, affected by reduced feeding rate.
+<!-- - Results appear to be similar to other studies (e.g. Carey et al. 2016) at 4 weeks of acclimation, where the relationship between temperature and pH on metabolic rate was additive. Maybe discuss this separately as all other results are 12-13 weeks. -->
+<!-- - At 12 weeks, there are interactions. -->
+<!-- - It is possible that the interactions are due to acclimation, but we cannot ignore that it might also be due to temeprature differences between the two period. [Need referecens to back up..] -->
+<!-- - Maintaining energy surplus is key to survival. Increased temperature reduced assimilation efficiency, affected by reduced feeding rate. -->
 <!-- - It is possible that higher temperatures have an effect on the results, but whatever that effect was, acclimation diminished the effects. Evidence: controls were no diferent from each other at 4 or 12 weeks despite an increase in overall temperatures. -->
-- Acclimation time is important, obviously, but it may be difficult to determine the appropriate period to incubate study organisms. Plus, it's so specific to the animal that it may also complicate comparisons between different experiments.
-- Scope for growth showed that despite the range of conditions, urchins generally still had net positive energy for growth.
-- But low survival in the +3 °C treatments indicate that physiological processes may still be hindered despite availability of energy reserves (talk more).
+<!-- - Acclimation time is important, obviously, but it may be difficult to determine the appropriate period to incubate study organisms. Plus, it's so specific to the animal that it may also complicate comparisons between different experiments. -->
+<!-- - Scope for growth showed that despite the range of conditions, urchins generally still had net positive energy for growth. -->
+<!-- - But low survival in the +3 °C treatments indicate that physiological processes may still be hindered despite availability of energy reserves (talk more). -->
 
 

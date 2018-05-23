@@ -588,7 +588,7 @@ We found that regardless of pH, survival was reduced significantly with more tha
 
 Metabolic rate increased with OW and OA, and the interaction of temperature and pH resulted in an additive response at 4 weeks of acclimation (Fig. \@ref(fig:resp)A). 
 This is expected due to the effects of thermodynamics on reaction rates (Hochachka and Somero 2002) and the increased energetic demands for acid-base balance (REFS) which are crucial in the maintenance of many physiological processes (REFS).
-<!-- Temperature appears to be the dominant stressor affecting survival, since  -->
+Temperature appears to be the dominant stressor affecting survival, since
 In contrast, after 12 weeks of acclimation, the surviving urchins appeared to have compensated for the combined effects of experimental OW and OA and showed reduced sensitivity to either stressor as seen by overall reduced metabolic rates.
 An antagonistic interaction between temperature and pH was also observed, where metabolic rate decresed with increasing OW and OA conditions (Fig. \@ref(fig:resp)B).
 

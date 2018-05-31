@@ -602,7 +602,7 @@ In particular, with increasing temperature and decreased pH, metabolic rate decr
 
 Here, we showed that contrary to theory (REFERENCES), while long-term acclimation to low pH increased metabolism significantly, it also increased feeding rates, resulting in an increase in energy budget shown by the increase in scope for growth.
 
-<!-- - Results appear to be similar to other studies (e.g. Carey et al. 2016) at 4 weeks of acclimation, where the relationship between temperature and pH on metabolic rate was additive. Maybe discuss this separately as all other results are 12-13 weeks. -->
+- Results appear to be similar to other studies (e.g. Carey et al. 2016) at 4 weeks of acclimation, where the relationship between temperature and pH on metabolic rate was additive. Maybe discuss this separately as all other results are 12-13 weeks.
 <!-- - At 12 weeks, there are interactions. -->
 <!-- - It is possible that the interactions are due to acclimation, but we cannot ignore that it might also be due to temeprature differences between the two period. [Need referecens to back up..] -->
 <!-- - Maintaining energy surplus is key to survival. Increased temperature reduced assimilation efficiency, affected by reduced feeding rate. -->

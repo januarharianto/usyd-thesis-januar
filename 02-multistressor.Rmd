@@ -2,7 +2,7 @@
 ```{r, echo = FALSE, include = FALSE}
 # Settings
 knitr::opts_chunk$set(echo=FALSE, fig.height=6, fig.width=6, out.width='100%', comment="#>")
-
+chooseCRANmirror(graphics = FALSE, ind = 1)
 options(knitr.kable.NA = '') # this will hide missing values in the kable table
 ```
 
@@ -589,9 +589,9 @@ sfgtab
 
 
 Our study showed significant long-term impacts of experimental ocean warming (OW) and ocean acidification (OA) on the physiological responses of *H. erythogramma*.
-In particular, prolonged ($\sim 12$-week) exposure to OW and OA reduced the overall energy budget of the urchins. 
-The reduced SfG was primarily influenced by decreased energy acquisition as a result of significantly reduced feeding rates.
-We found that temperature was the principal stressor affecting survival, regardless of pH, with highest mortality in more than two-thirds of specimens for both $+3^{\circ}C$ treatments after 22 weeks of acclimation. 
+In particular, prolonged ($\sim 12$-week) exposure to OW and OA reduced the overall energy budget of the urchins, primarily due to the decreased contribution of energy from feeding.
+
+We found that temperature was the principal stressor affecting survival regardless of pH, where mortality was highest for both $+3^{\circ}C$ treatments after 22 weeks of acclimation. 
 In comparison, no significant mortality occurred over the same period when *H.erythrogramma* was acclimation to OA conditions only.
 Similary, feeding decreased at higher acclimation temperatures, but wasn't significantly affected by increased OA conditions.
 

@@ -2,7 +2,7 @@
 ```{r, echo = FALSE, include = FALSE}
 # Settings
 knitr::opts_chunk$set(echo=FALSE, fig.height=6, fig.width=6, out.width='100%', comment="#>")
-chooseCRANmirror(graphics = FALSE, ind = 1)
+
 options(knitr.kable.NA = '') # this will hide missing values in the kable table
 ```
 
@@ -44,7 +44,7 @@ The warming and acidification of the world’s oceans affect nearly all aspects 
 Here we present a long-term study on the effects of these stressors on the physiological responses of the sea urchin, *Heliocidaris erythrogramma*, a species that resides in the south-east Australian ocean warming hotspot. 
 Urchins collected in winter were slowly-adjusted over 7 weeks to conditions of elevated temperature (ambient $+0$, $+2$, $+3^\circ C$) and decreased pH (ambient $-0$, $-0.4$ pH units) conditions, before they were maintained and the baseline temperature was adjusted weekly to mimic the seasonal change expected over time. 
 Metabolic rate was measured at weeks 4 and 12, ammonia excretion rate at week 12, feeding rate at week 13, and survival for up to 22 weeks. 
-Results showed that at $+3^\circ C$ and regardless of pH, urchins were stressed, with low survival (37 – 45%), decreased feeding and increased ammonium excretion at 12 -- 13 weeks of acclimation.
+Results showed that at $+3^\circ C$ and regardless of pH, urchins were stressed, with low survival (37 – 45%), decreased feeding and increased rates of excretion at 12 -- 13 weeks of acclimation.
 <!-- In addition, while both warming and acidification increased metabolic rates significantly at 4 weeks of acclimation, their effects were diminished at 12 weeks of acclimation as the surviving sea urchins appeared to have acclimated to the new environmental conditions. -->
 In addition, while both warming and acidification increased metabolic rates significantly at 4 weeks of acclimation, their effects were diminished at 12 weeks for urchins that survived, suggesting that acclimation had an influence on persistence in their stressful environments.
 The potential to acclimate to environmental stress emphasises the importance of continuous, long-term studies in predicting the consequences of climate change on study organisms.
@@ -359,10 +359,10 @@ Thus, the SfG model was constructed as an indicative assessment of the impacts o
 
 There was a significant effect of treatment on survival (*logrank test*, $\chi_2$ = 61.23, $d.f. =$ 3, $p$ < 0.001).
 As single stressors, decreased pH did not significantly affect survival ($p\ = 0.296$, HR: 0.46, 95\% CI: 0.10 -- 1.99), neither did a $+2 ^{\circ}C$ increase in temperature ($p = 0.146$, HR: 2.68, 95\% CI: 0.71 -- 10.09).
-For these treatments, survival was $>80\%$ after 155 days. 
+For these treatments, survival was $>80\%$ after 22 weeks. 
 At $+3 ^{\circ}C$, survival decreased significantly ($p < 0.001$, HR: 17.2, 95\% CI: 5.27 -- 56.25) regardless of pH level.
 <!-- (pH 8.0: 40\%; pH 7.6: 33\%). -->
-These $+3^{\circ}C$ treatments intersected the median surival threshold after 155 days (Figure \@ref(fig:surv)). 
+These $+3^{\circ}C$ treatments intersected the median surival threshold after 14 to 20 weeks (Figure \@ref(fig:surv)). 
 *Post-hoc* results (pairwise tests, BH-corrected) showed that urchins acclimated to $+3 ^{\circ}C$ had significantly lower survival compared to all other treatments ($p <$ 0.01 for all pairwise combinations with $+3^{\circ} C$), with no significant differences in all other pairwise comparisons.
 At 155 days, urchins acclimated to $+3^{\circ} C$ and pH $7.6$ had the lowest survival at 33\%.
 
@@ -588,19 +588,51 @@ sfgtab
 ## Discussion
 
 
-Our study showed significant long-term impacts of experimental ocean warming (OW) and ocean acidification (OA) on the physiological responses of *H. erythogramma*.
-In particular, prolonged ($\sim 12$-week) exposure to OW and OA reduced the overall energy budget of the urchins, primarily due to the decreased contribution of energy from feeding.
-
-We found that temperature was the principal stressor affecting survival regardless of pH, where mortality was highest for both $+3^{\circ}C$ treatments after 22 weeks of acclimation. 
-In comparison, no significant mortality occurred over the same period when *H.erythrogramma* was acclimation to OA conditions only.
-Similary, feeding decreased at higher acclimation temperatures, but wasn't significantly affected by increased OA conditions.
-
-The metabolic response of *H. erythrogramma* was positively correlated with increased temperature and decreased pH, with additive interactions between the two stressors after 7 weeks of slow adjustment to conditions and 4 weeks of acclimation. 
-However, after 12 weeks in conditions, the  
+Our study showed significant long-term impacts of experimental ocean warming (OW) and ocean acidification (OA) on *H. erythogramma*. 
+Elevated temperature was the principal stressor affecting the survival and feeding rate of our specimens, regardless of pH. 
+In particular, prolonged (12-week) exposure to OW and OA reduced the overall energy budget of the urchins, primarily due to the decreased contribution of energy from lowered feeding rates to SfG.
+However, SfG values were still positive in all experimental situations, indicating energy surplus adequate to support energy demand, although significantly decreased survival by the end of the experiment strongly indicated that other underlying mechanisms were severely compromising fitness, highlighting critical gaps in our study that must be addressed. 
 
 
+<!-- Both elevatend OA and OW are known to be energetically demanding on metabolic processes, both individually () and as combined stressors ().  -->
+<!-- However, when given time to acclimate, the urchins in our study were able to adjust their metabolic processes appropriately and  -->
 
-Bioenergetic models offer an empirical approach to predicting the performance of animals as a function of their environment (Kearny et al. 2010) and this study highlights the potential for studying multiple stressors on the basis that energetics is the common denominator linking an organism to its environment (Sokolova 2013).
+Since maintaining energy balance is fundamental to life, the use of bioenergetic models to study organism responses to climate change has been assumed to be a robust method to predict the cumulative effects of multiple stressors over time (Clements & Darrow, 2018, but check other refs). 
+This is because in the event that energy defecit persists over a long period, energy reserves can be used used to sustain critical biological functions such as growth, development, reproduction and thermal regulation.
+However, significantly decreased survival by the end of the experiment strongly indicated that other underlying mechanisms were severely compromising fitness, highlighting critical gaps in our study that must be addressed. 
+
+
+(conclusion part)
+The use of bioenergetic models can provide an empirical approach for studying multiple stressors based on the hypothesis that bioenergetics is the common denominator that determines an organism's response to a changing environment. Although we recognise that the SfG data we presented here is simplified, it showed a clear indication that 
+
+
+
+
+
+
+
+
+<!-- The relationship has often -->
+
+<!-- While studies on the response of echinoderms to OW and OA are common in the literature, most did not study long term effects (but see Morley et al. 2016, Suckling et al. 2015) or did so with only one stressor (OA; Morley et al. 2013). -->
+
+
+
+<!-- Prolonged ($\sim 12$-week) exposure to OW and OA also reduced the overall energy budget of the urchins. -->
+
+<!-- Regardless, SfG values were still positive in all experimental situations indicating energy surplus adequate to support energy demand. -->
+<!-- However, we also revealed that regardless of pH, prolonged exposure to our highest temperature treatment ($+3 ^{\circ}C$) significantly diminished the survival of the sea urchin, with 25\% mortality at 12 weeks of acclimation and less than half of our specimens surviving at 22 weeks of acclimation. -->
+<!-- This revealed that while energy supply was adequate to support energy demand, other underlying mechanisms were -->
+
+
+<!-- Similary, feeding decreased at higher acclimation temperatures, but wasn't significantly affected by increased OA conditions. -->
+
+<!-- The metabolic response of *H. erythrogramma* was positively correlated with increased temperature and decreased pH, with additive interactions between the two stressors after 7 weeks of slow adjustment to conditions and 4 weeks of acclimation.  -->
+<!-- However, after 12 weeks in conditions, the   -->
+
+
+
+<!-- Bioenergetic models offer an empirical approach to predicting the performance of animals as a function of their environment (Kearny et al. 2010) and this study highlights the potential for studying multiple stressors on the basis that energetics is the common denominator linking an organism to its environment (Sokolova 2013). -->
 
 
 

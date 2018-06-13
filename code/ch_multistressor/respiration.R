@@ -54,7 +54,7 @@ emmeans(model, ~ Temperature:pH:Time) %>%
 
 ## separate time
 emmeans(model, pairwise ~ Temperature:pH:Time)
-emmeans(model, pairwise ~ Temperature:pH | Time)
+phresp <- emmeans(model, pairwise ~ Temperature:pH | Time)
 cld(emmeans(model, pairwise ~ Temperature:pH | Time))
 
 pairs(emmeans(model, ~ Temperature*pH*Time), simple = "Time", combine = T)
@@ -82,6 +82,46 @@ cowplot::save_plot(
   "figs/ch_multistressor/resp_interaction.png", interaction_plot,
   base_height = 8, base_width = 8
 )
+
+### SEPARATE ANALYSES - it is likely that the results are confounded by survival (i.e. urchins measured at week 12 survived the high mortality), so it's not time that affected the data but mortality.
+
+
+# Let's load the same dataset but with specific columns for analysis
+resp_df <- read_excel("input/ch_multistressor/metabolic_rate.xlsx", sheet = 2) %>%
+  filter(!is.na(rate)) %>%
+  filter(week %in% c(4, 12)) %>%
+  mutate(Temperature = temp_text,
+    pH = ph_fac,
+    Time = factor(week_text, levels = c("4 weeks", "12 weeks"))) %>%
+  select(tank, Temperature, pH, Time, rate) %>%
+  print()
+
+# Do some filtering so that week 4 and 12 can be measured separately
+
+resp_w4 <- resp_df %>% 
+  filter(Time == "4 weeks") %>%
+  print()
+
+resp_w12 <- resp_df %>% 
+  filter(Time == "12 weeks") %>%
+  print()
+
+# Analyse week 4
+lm(rate ~ Temperature * pH, data = resp_w4) %>%
+  Anova() %>%
+  print()
+# No interaction - remove temp*pH
+anova_wk4 <-
+  lm(rate ~ Temperature + pH, data = resp_w4) %>%
+  Anova() %>%
+  print()
+
+# Analyse week 12
+anova_wk12 <-
+  lm(rate ~ Temperature * pH, data = resp_w12) %>%
+  Anova() %>%
+  print()
+#Anova(model, type = 3, contrasts=list(topic=contr.sum, sys=contr.sum))
 
 # PLOTS ------------------------------------------------------------------------
 

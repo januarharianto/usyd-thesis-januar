@@ -1,8 +1,8 @@
 
 ```{r, echo = FALSE, include = FALSE}
 # Settings
-knitr::opts_chunk$set(echo=FALSE, fig.height=6, fig.width=6, out.width='100%', comment="#>")
-
+knitr::opts_chunk$set(echo=FALSE, fig.height=6, fig.width=6, out.width='100%', 
+  comment="#>")
 options(knitr.kable.NA = '') # this will hide missing values in the kable table
 ```
 
@@ -28,6 +28,7 @@ panderOptions('big.mark', ",")
 panderOptions('keep.trailing.zeros', TRUE)
 
 # library(pander)     # table output
+options(kableExtra.latex.load_packages = FALSE)
 library(kableExtra) # enhance kable with pipes
 # library(stargazer)  # table output for models
 # library(texreg)     # output for models
@@ -42,43 +43,38 @@ library(kableExtra) # enhance kable with pipes
 
 The warming and acidification of the world’s oceans affect nearly all aspects of physiology in marine organisms, and it is important to consider both stressors when predicting biological responses to a changing climate.
 Here we present a long-term study on the effects of these stressors on the physiological responses of the sea urchin, *Heliocidaris erythrogramma*, a species that resides in the south-east Australian ocean warming hotspot. 
-Urchins collected in winter were slowly-adjusted over 7 weeks to conditions of elevated temperature (ambient $+0$, $+2$, $+3^\circ C$) and decreased pH (ambient $-0$, $-0.4$ pH units) conditions, before they were maintained and the baseline temperature was adjusted weekly to mimic the seasonal change expected over time. 
-Metabolic rate was measured at weeks 4 and 12, ammonia excretion rate at week 12, feeding rate at week 13, and survival for up to 22 weeks. 
-Results showed that at $+3^\circ C$ and regardless of pH, urchins were stressed, with low survival (37 – 45%), decreased feeding and increased rates of excretion at 12 -- 13 weeks of acclimation.
-<!-- In addition, while both warming and acidification increased metabolic rates significantly at 4 weeks of acclimation, their effects were diminished at 12 weeks of acclimation as the surviving sea urchins appeared to have acclimated to the new environmental conditions. -->
-In addition, while both warming and acidification increased metabolic rates significantly at 4 weeks of acclimation, their effects were diminished at 12 weeks for urchins that survived, suggesting that acclimation had an influence on persistence in their stressful environments.
+Urchins collected in winter were slowly-adjusted over 7 weeks to conditions of elevated temperature (ambient $+0$, $+2$, $+3^\circ C$) and decreased pH (ambient $-0$, $-0.4$ pH units) conditions, before they were maintained at variable temperature and fixed pH where the baseline temperature was adjusted weekly to mimic the temmperature change expected over time from winter to summer. 
+<!-- As this was the first multi-stressor study on echinoderms that incorporated seasonal change in temperature over time, sea urchins  -->
+Metabolic rate was measured at 4 and 12 weeks of acclimation, feeding rate and ammonia excretion rate at 12 weeks, and survival for 22 weeks. 
+Assimilation efficiency was also determined between weeks 12 and 13 to calculate scope for growth.
+Results showed that at $+3^\circ C$ and regardless of pH, urchins were stressed, as demonstrated by low survival (37 – 45% at 22 weeks), decreased feeding rate and increased rates of excretion, whereas $+ 2 ^\circ C$ had no observable effect on survival.
+While metabolic rate increased additively with temperature and low pH at 4 weeks, urchins demonstrated evidence of physiological compensation as there were no detectable differences in metabolic rate between all treatments at 12 weeks of acclimation. 
+<!-- In addition, while both warming and acidification increased metabolic rates significantly at 4 weeks of acclimation, their effects were diminished at 12 weeks for urchins that survived, suggesting that acclimation had an influence on persistence in their stressful environments. -->
 The potential to acclimate to environmental stress emphasises the importance of continuous, long-term studies in predicting the consequences of climate change on study organisms.
 
 <!-- **Keywords:** ocean warming; ocean acidification; multistressor; physiology; scope for growth -->
 
 ## Introduction
 
-<!-- - intro about multiple stressors -->
-<!-- - southeastern australia -->
-<!-- - temperature and pH, and the importance of temperature? -->
-<!-- - the need to use models? -->
-<!-- - hypothesis -->
-
-
 Many of the key challenges in predicting the ecological consequences of climate change stem from the fact that most ecosystems are confronted with multiple chemical, physical and biological stressors, which often interact (Byrne et al. 2013; Przeslawski et al. 2015, Goldenberg et al. 2017).
-For the world's oceans, the impacts of both global warming and ocean acidification are intricately linked as approximately $90\%$ of the Earth's heat and $25\%$ of anthropogenic $CO_2$ emissions are absorbed directly into the ocean (Mikaloff Fletcher et al. 2006; Wanninkhof et al. 2013, Gattuso et al 2015).
+For the world's oceans, the impacts of both global warming and ocean acidification (OA) are intricately linked as approximately $90\%$ of the Earth's heat and $25\%$ of anthropogenic $CO_2$ emissions are absorbed directly into the ocean (Mikaloff Fletcher et al. 2006; Wanninkhof et al. 2013, Gattuso et al 2015).
 
-Ocean warming increases the body temperature of marine ectotherms, affecting metabolism and almost all biological processes (Brown et al. 2014, Hochachka and Somero 2002). 
-Concurrently, ocean acidification alters the balance of carbonate saturation states in sea water, increasing the metabolic costs associated with acid–base regulation, calcification and skeletogenesis (Doney et al. 2009, Hofmann et al. 2010, Kroeker et al. 2013, Portner 2008).
+Ocean warming (OW) increases the body temperature of marine ectotherms, affecting metabolism and almost all biological processes (Brown et al. 2014, Hochachka and Somero 2002). 
+Concurrently, OA alters the balance of carbonate saturation states in sea water, increasing the metabolic costs associated with acid–base regulation, calcification and skeletogenesis (Doney et al. 2009, Hofmann et al. 2010, Kroeker et al. 2013, Portner 2008).
 Given that both stressors influence important metabolic processes, interaction is inevitable and can affect biological responses in unexpected ways, highlighting the uncertainty surrounding our understanding of the drivers of ecosystem change.
 <!-- biological responses which would not necessarily be predicted from investigating the stressors in isolation. -->
 <!-- where the overall effects are likely to be dependent on location and species (Henson et al. 2017, Pecl et al. 2017, Poloczanska et al. 2016). -->
 For example, ocean warming affects both oxygen demand and the supply of oxygen in water (Schulte 2015, Pörtner et al. 2010, Christensen et al. 2011), and may limit oxygen delivery which restricts metabolism, despite increased energetic demands associated with ocean acidification (Lefevre 2016). 
 
 Current evidence suggests that exposure to the combined effects of ocean warming and acidification are additive or synergistic, as seen in the reduced development of marine bivalves (Talmage and Gobler 2011) and increased metabolism in sea urchins (Carey et al. 2016).
-However, in other cases, positive or neutral responses have been observed, such as in the development and thermal windows of echinoderm larvae (Byrne et al. 2010, Karelitz et al. 2017), growth of juvenile and adult sea urchins (Dworjanyn and Byrne, 2018) and ONE MORE EXAMPLE HERE. 
+However, in other cases, positive or neutral responses have been observed, such as in the development and thermal windows of echinoderm larvae (Byrne et al. 2010, Karelitz et al. 2017), growth of juvenile and adult sea urchins (Dworjanyn and Byrne, 2018), growth in mussell (Keppel et al. 2015) and reproduction in crustaceans, macroalgae and autotrophs (Harvey et al. 2013). 
 <!-- These results highlight the subtle and complex uncertainty surrounding our understanding of the drivers of ecosystem change. -->
-Understanding the effects of ocean warming and acidification on marine ecosytems in an ecologically relevant context remains a challenge (Byrne et al. 2013, MORE REFS) that is compounded by the difficulties of conducting multi-factorial experiments with respect to time and resources (Collins et al. 2009).
+Understanding the effects of ocean warming and acidification on marine ecosytems in an ecologically relevant context remains a challenge (Byrne et al. 2013, Gaylord et al. 2015, Queirós et al. 2015) that is compounded by the difficulties of conducting multi-factorial experiments with respect to time and resources (Collins et al. 2009, Frusher et al. 2012, ).
 <!-- A synthesis of marine invertebrate responses to multistressors, including ocean warming and acidification, can be found in Przeslawski et al. (2013) and Byrne and Przeslawski (2015). -->
 
 <!-- Calcifying organisms, such as echinoderms, are at high risk to the impacts of ocean warming and acidification (reviewed by Przeslawski et al. 2015).  -->
 Echinoderms are marine calcifiers, and are important in many marine environments as ecosystem engineers through their roles in herbivory and bioturbation (Steneck 2013).
-These animals at risk to the impacts of ocean warming and acidification (Przeslawski et al. 2015), with varying deleterious effects on larval and adult growth \& development (Byrne et al. 2011, Sewell and Young 1999), juvenile behaviour (Manríquez et al. 2017), adult immune defence (Brothers et al. 2016, Sweet et al. 2016), metabolism (Carey et al. 2017) and reproductive success (Delorme and Sewell 2016, BETTER REF).
+These animals at risk to the impacts of ocean warming and acidification (Przeslawski et al. 2015), with varying deleterious effects on larval and adult growth \& development (Byrne et al. 2011, Sewell and Young 1999), juvenile behaviour (Manríquez et al. 2017), adult immune defence (Brothers et al. 2016, Sweet et al. 2016), metabolism (Carey et al. 2017) and reproductive success (Delorme and Sewell 2016).
 
 Despite the plethora of studies on the effects of warming and ocean acidification on echinoderms as individual stressors and a few that consider both stressors (Manríquez et al. 2017 ,Morley et al. 2016, Karelitz et al. 2016, Carey et al. 2016, Brothers et al. 2016, Suckling et al. 2015), critical gaps remain in our knowledge with regards to the ability to acclimate or adapt to global change stressors, especially considering that many observations were based on non-lethal responses.
 <!-- If they are introduced to stress immediately, as is often done in many acute type of experiments, they may respond differently as they are unlikely to acclimate to their new conditions appropriately. -->
@@ -90,7 +86,7 @@ Dupont et al. (2013) showed that although four months of exposure to inreased $p
 <!-- Long-term (90-day) acclimation to temperature  -->
 
 In general, acclimation decreases thermal sensitivity over time (Seebacher et al. 2015), reflecting increased resilience to the effects of elevated temperature.
-Acclimation time is thus a crucial factor to consider when conducting experiments that investigate responses to climate change and can be tested by assessing responses over different time periods (e.g. Carey et al. 2016, Suckling et al 2014, more please).
+Acclimation time is thus a crucial factor to consider when conducting experiments that investigate responses to climate change and can be tested by assessing responses over different time periods (e.g. Suckling et al 2014, Morley et al. 2016, Carey et al. 2016).
 
 <!-- In addition, studies are increasingly measuring multiple physiological and biological responses . -->
 
@@ -102,7 +98,8 @@ Feeding, assimilation efficiency, excretion and survival were also recorded at 1
 As maintaining energy is key to long-term survival, we incorporated multiple physiological metrics and calculated the rate and efficiency at which *H. erythrogramma* allocates energy in the different treatment conditions using the scope for growth (SfG) model, a physiological index used to quantify the energy budgets of living organisms to optimise feeding strategies, including sea urchins (e.g. Stumpp et al. 2011, Orr et al. 2014, Rubilar et al. 2016, Delorme and Sewell, 2016).
 Using SfG allows us to explore the effect of ocean warming and acidification on *H. erythrogramma* based on changes in its energy budget, and provides a single bioenergetics-based framework to empirically determine the overall performance of the sea urchin in the long term.
 This is important, as integrating multiple physiological traits has been shown to better predict vulnerability to global change effects (Magozzi and Calosi, 2015).
-We hypothesised that over the acclimation period, (1) the response variables metabolic rate, feeding rate and ammonia excretion rate will differ between ambient and increased temperature/decreased pH conditions; and (2) survival will decrease under increased temperature/decreased pH conditions. 
+<!-- We hypothesised that over the acclimation period, (1) the response variables metabolic rate, feeding rate and ammonia excretion rate will differ between ambient and warming/decreased pH conditions; (2) survival will decrease under increased temperature/decreased pH conditions; and (3)  -->
+We hypothesised that: (1) warming and low pH will interact to affect metabolic rate, feeding rate and ammonia excretion rate; and (2) under a long-term acclimation period of 22 weeks, survival will decrease with warming and low pH.
 
 <!-- Calcifying organisms, such as echinoderms, are at high risk to the impacts of OW and OA (reviewed by Przeslawski et al. 2015), but understanding how the stressors interact remains a complex endeavour (reviews). -->
 
@@ -334,11 +331,12 @@ The fitted Cox regression met the assumption of proportional hazards (Schoenfeld
 As no interactions were found between temperature and pH (Cox regression, $z =$ 0.61, $d.f. =$ 3, $p =$ 0.54), the interaction term was removed and the analysis was repeated with only the main effects tested.
 *Post-hoc* tests for the differences between treatments were determined using pairwise tests of significance corrected using the Benjamini-Hochberg (BH) false discovery rate method (Benjamini and Hochberg, 1995).
 
-Metabolic rate data were first analysed by constructing a generalised linear mixed model of metabolic rate as a function of relative temperature ($+0^{\circ}C$,  $+2^{\circ}C$,  $+3^{\circ}C$), pH ($8.0$, $7.6$) and absolute time ($4$ weeks, $12$ weeks).
+<!-- Metabolic rate data were first analysed by constructing a generalised linear mixed model of metabolic rate as a function of relative temperature ($+0^{\circ}C$,  $+2^{\circ}C$,  $+3^{\circ}C$), pH ($8.0$, $7.6$) and absolute time ($4$ weeks, $12$ weeks). -->
+Metabolic rate data were first analysed by constructing a generalised linear mixed model of metabolic rate as a function of relative temperature ($+0^{\circ}C$,  $+2^{\circ}C$,  $+3^{\circ}C$) and pH ($8.0$, $7.6$).
 Feeding rate and ammonia excretion rate data were also analysed as above with the response variable as a function of temperature and pH.
-For all analyses, the nested effects of tank, temperature within tank and pH within tank were added as a random parameter in the models, and then tested using a likelihood ratio test on random effects, which were all not significant ($p \geq 0.9$ for all tests).
+For all analyses, the nested effects of tank, temperature within tank and pH within tank were added as a random parameter in the models, and then tested using a likelihood ratio test on random effects, which were all not significant ($p \geq 0.9$ for all tests, Appendix).
 Thus, the nested tank parameter was removed from all models and data were analysed individually using simple linear models.
-To test for fixed effects, ANOVA was performed on the models, using Type III sums of squares when interactions were present, or Type II sums of squares when they were not (Langsrud 2003).
+To test for fixed effects, ANOVA was performed on the linear models, using Type III sums of squares when interactions were present, or Type II sums of squares when they were not (Langsrud 2003).
 
 <!-- It is important to note that at week 12, metabolic rate data was collected from a smaller sample population due to high mortality in some treatments (see results).  -->
 <!-- Thus, we analysed the data separately for each period by constructing a generalised linear mixed model of metabolic rate as a function of relative temperature ($+0^{\circ}C$,  $+2^{\circ}C$,  $+3^{\circ}C$) and pH ($8.0$, $7.6$). -->
@@ -375,12 +373,15 @@ knitr::include_graphics("figs/ch_multistressor/surv_plot.png")
 
 ### Metabolic rate
 
-There were significant two-way interactions for acclimation time $\times$ pH ($F_{1,107}= 11.25$, $p = .001$), temperature $\times$ pH ($F_{2,107} = 3.58$, $p = 0.031$), and acclimation time $\times$ temperature ($F_{2,107}= 14.1$, $p < 0.001$).
+<!-- There were significant two-way interactions for acclimation time $\times$ pH ($F_{1,107}= 11.25$, $p = .001$), temperature $\times$ pH ($F_{2,107} = 3.58$, $p = 0.031$), and acclimation time $\times$ temperature ($F_{2,107}= 14.1$, $p < 0.001$). -->
 <!-- As single stressors, increased temperature ($F_{2,106} = 14.1$, $p < .001$) and decreased pH ($F_{1,106}= 22.8$, $p < .001$) significantly influenced metabolic rate.  -->
+Metabolic rate was significantly affected by temperature ($F_{2,54}= 15.9$, $p < .001$) or pH ($F_{1,54}= 23.4$, $p < .001$), with no observable interactions between the two factors.
 At 4 weeks of acclimation, metabolic rate increased additively with increased temperature, low pH, or a combination of both (Figure \@ref(fig:resp) A; Appendix Figure \@ref(fig:respinteract)). 
-However, after 12 weeks of acclimation, increased temperature interacted with low pH resulting in decreasing metabolic rate with increasing temperature when pH was $7.6$ (Figure \@ref(fig:resp) B; Appendix Figure \@ref(fig:respinteract)).
+<!-- After 12 weeks of acclimation, increased temperature interacted with low pH, showing decreasing metabolic rate with increasing temperature when pH was $7.6$ (Figure \@ref(fig:resp) B; Appendix Figure \@ref(fig:respinteract)). -->
+At 12 weeks of acclimation, interactions between temperature and pH resulted in decreased metabolic rate with increased temperature and low pH ($F_{2,51}= 10.5$, $p < .001$; Figure \@ref(fig:resp) B; Appendix Figure \@ref(fig:respinteract)).
+As single stressors, neither temperature ($F_{2,51}= 1.1$, $p = 0.3$) nor pH ($F_{1,51}= 1.6$, $p = 0.2$) were significant.
 *Post-hoc* analyses using Tukey's HSD showed that at 4 weeks of acclimation, metabolic rate was significantly different between groups that were subject to elevated temperature ($p = < 0.0001$) or decreased pH ($p < 0.001$), compared to control treatments, with no interactions observed (Appendix Table \@ref(tab:mrcontrasts)).
-However, at 12 weeks of acclimation, there were no significant differences between any treatment groups ($p > 0.1$; Appendix Table \@ref(tab:mrgroups)).
+However, at 12 weeks of acclimation, no significant differences between any treatment groups were observed ($p > 0.1$; Appendix Table \@ref(tab:mrgroups)).
 
 <!-- ```{r anovaresp, results = "asis"} -->
 <!-- load("output/ch_multistressor/respiration.RData") -->
@@ -427,7 +428,6 @@ table_rav <-
 table_rav
 ```
 
-
 (ref:resp) Metabolic rate ($mg\ O_2\ h^{-1}\ kg^{-1}$) of *H. erythrogramma* acclimated for 12 weeks in six treatments of three temperatures ($+0, +2, +3 ^\circ C$) and two pH levels (8.0, 7.6). The top and bottom of the boxes represent the interquartile range (IQR) between the 25th and 75th percentile (Q1 and Q3, respectively). The horizontal line represents the median (Q2), the horizontal dotted line represents the mean, and the vertical lines (whiskers) represent the range of the data computed as follows: Q1 − 1.5IQR (bottom whisker); greater than Q3 + 1.5 IQR (top whisker).
 
 ```{r resp, fig.cap = "(ref:resp)"}
@@ -437,7 +437,7 @@ knitr::include_graphics("figs/ch_multistressor/resp_plot.png")
 ### Feeding rate 
 <!-- and assimilation efficiency -->
 
-The 2-way ANOVA showed that feeding rate was significantly influenced by elevated temperature ($F_{2,49} = 13.5$, $p < 0.001$), but not pH ($F_{1,49} = 1.25$, $p = 0.27$). 
+Feeding rate was significantly influenced by elevated temperature (ANOVA, $F_{2,49} = 13.5$, $p < 0.001$), but not pH ($F_{1,49} = 1.25$, $p = 0.27$). 
 There were also no statistically significant interactions between temperature and pH ($F_{2,47} = 1.15$, $p < 0.35$).
 Pairwise comparisons using Tukey's HSD showed that the general trend was that feeding decreased with increasing temperature, and specimens acclimated to increased temperature of $+2 ^\circ C$ and $+3 ^\circ C$ had significantly decreased feeding at pH $7.6$ ($p = 0.001$ and $p = 0.008$, respectively), but not at pH 8.0.
 No other significant differences between treatment groups were detected.
@@ -502,7 +502,7 @@ knitr::include_graphics("figs/ch_multistressor/feed_plot.png")
 ### Ammonia excretion rate
 <!-- TODO fix this -->
 
-Urchins acclimated to elevated temperature treatments had significantly higher ammonia excretion rates (ANOVA, $F_{2, 56} = 8.94$, $p < 0.001$; Figure). 
+Urchins acclimated to elevated temperature treatments had significantly higher ammonia excretion rates (ANOVA, $F_{2, 56} = 8.94$, $p < 0.001$; Figure \@ref(fig:nitrogen)). 
 Decreased pH had no significant effect ($F_{1, 56} = 0.91$, $p < 0.34$), and both temperature and pH did not significantly interact ($F_{1, 56} = 0.67$, $p = 0.42$). 
 *Post-hoc* using Tukey's HSD ($p = 0.05$) showed that at ambient pH (8.0), acclimation to $+2 ^\circ C$ increased ammonia excretion by 1.3-fold ($d.f. =$ 54, $p =$ 0.016), but not at $+3 ^\circ C$ ($p =$ 0.099). At low pH (7.6), acclimation to $+2 ^\circ C$ did not significantly affect ammonia excretion ($p =$ 0.29), but at $+3 ^\circ C$, excretion increased by 1.5-fold ($p =$ 0.016).  
 
@@ -518,7 +518,7 @@ anovanhtab <-
   select(Source, "Sum Sq", Df, "F value", p) %>%
   mutate(" " = snipR::p_stars(p)) %>%
   kable(booktabs = TRUE, caption = "(ref:anovanhtab)") %>%
-  # kable_styling(latex_options = "striped") %>%
+  kable_styling(latex_options = "striped") %>%
   row_spec(0, bold = TRUE)
 
 anovanhtab
@@ -576,7 +576,7 @@ sfgtab <- sfg %>%
     SfG = sfg) %>%
   select(7,2,3,4,5,6) %>%
   kable(booktabs = TRUE, caption = "(ref:sfgtab)") %>%
-  # kable_styling(latex_options = "striped") %>%
+  kable_styling(latex_options = "striped") %>%
   row_spec(0, bold = TRUE)
 
 
@@ -588,80 +588,24 @@ sfgtab
 ## Discussion
 
 
-Our study showed significant long-term impacts of experimental ocean warming (OW) and ocean acidification (OA) on *H. erythogramma*. 
-Elevated temperature was the principal stressor affecting the survival and feeding rate of our specimens, regardless of pH. 
-In particular, prolonged (12-week) exposure to OW and OA reduced the overall energy budget of the urchins, primarily due to the decreased contribution of energy from lowered feeding rates to SfG.
-However, SfG values were still positive in all experimental situations, indicating energy surplus adequate to support energy demand, although significantly decreased survival by the end of the experiment strongly indicated that other underlying mechanisms were severely compromising fitness, highlighting critical gaps in our study that must be addressed. 
+<!-- This is the first long-term multi-stressor study on echinoderms that used data from loggers to recreate seasonal change over time under realistic conditions. -->
+<!-- Because treatment temperatures were altered weekly, specimens were exposed to a gradually increasing temperature profile stimulating the transition from winter to summer. -->
 
+We observed significant long-term impacts of acclimation to experimental OW and ocean acidification (OA) conditions on *H. erythrogramma*.
+Regardless of whether the sea urchin was exposed to OA (pH 7.6) conditions, or not, acclimation to elevated temperature reduced the survival and feeding rate of the sea urchin, but increased ammonia excretion rate.
+The combined effects of increased temperature and low pH did not have an interactive effect on any of the responses measured, except for metabolic rate (see below).
+Overall, the energy budget of the sea urchin appeared to be reduced after 12 weeks of acclimation, primarily due to the decreased contribution of energy toward SfG from significantly reduced feeding (Table #).
+Regardless, SfG values were still positive in all experimental situations indicating energy surplus adequate to support energy demand and suggests that other underlying mechanisms were involved to compromised fitness.
 
-<!-- Both elevatend OA and OW are known to be energetically demanding on metabolic processes, both individually () and as combined stressors ().  -->
-<!-- However, when given time to acclimate, the urchins in our study were able to adjust their metabolic processes appropriately and  -->
-
-Since maintaining energy balance is fundamental to life, the use of bioenergetic models to study organism responses to climate change has been assumed to be a robust method to predict the cumulative effects of multiple stressors over time (Clements & Darrow, 2018, but check other refs). 
-This is because in the event that energy defecit persists over a long period, energy reserves can be used used to sustain critical biological functions such as growth, development, reproduction and thermal regulation.
-However, significantly decreased survival by the end of the experiment strongly indicated that other underlying mechanisms were severely compromising fitness, highlighting critical gaps in our study that must be addressed. 
-
-
-(conclusion part)
-The use of bioenergetic models can provide an empirical approach for studying multiple stressors based on the hypothesis that bioenergetics is the common denominator that determines an organism's response to a changing environment. Although we recognise that the SfG data we presented here is simplified, it showed a clear indication that 
+At 4 weeks of acclimation, metabolic rate increased additively with increased temperature and decreased pH.
+However, at 12 weeks of acclimation, antagonistic interactions between temperature and pH were observed, resulting in decreased metabolic rate with simultaneous exposure to OW and OA conditions.
+As there was high mortality in urchins subject to the highest warming treatments ($+3 ^\circ C$) we believe that
 
 
 
 
-
-
-
-
-<!-- The relationship has often -->
-
-<!-- While studies on the response of echinoderms to OW and OA are common in the literature, most did not study long term effects (but see Morley et al. 2016, Suckling et al. 2015) or did so with only one stressor (OA; Morley et al. 2013). -->
-
-
-
-<!-- Prolonged ($\sim 12$-week) exposure to OW and OA also reduced the overall energy budget of the urchins. -->
-
-<!-- Regardless, SfG values were still positive in all experimental situations indicating energy surplus adequate to support energy demand. -->
-<!-- However, we also revealed that regardless of pH, prolonged exposure to our highest temperature treatment ($+3 ^{\circ}C$) significantly diminished the survival of the sea urchin, with 25\% mortality at 12 weeks of acclimation and less than half of our specimens surviving at 22 weeks of acclimation. -->
-<!-- This revealed that while energy supply was adequate to support energy demand, other underlying mechanisms were -->
-
-
-<!-- Similary, feeding decreased at higher acclimation temperatures, but wasn't significantly affected by increased OA conditions. -->
-
-<!-- The metabolic response of *H. erythrogramma* was positively correlated with increased temperature and decreased pH, with additive interactions between the two stressors after 7 weeks of slow adjustment to conditions and 4 weeks of acclimation.  -->
-<!-- However, after 12 weeks in conditions, the   -->
-
-
-
-<!-- Bioenergetic models offer an empirical approach to predicting the performance of animals as a function of their environment (Kearny et al. 2010) and this study highlights the potential for studying multiple stressors on the basis that energetics is the common denominator linking an organism to its environment (Sokolova 2013). -->
-
-
-
-<!-- Metabolic rate increased with OW and OA, and the interaction of temperature and pH resulted in an additive response at 4 weeks of acclimation (Fig. \@ref(fig:resp)A).  -->
-<!-- This may be explained by the combined effects of thermodynamics on reaction rates (Hochachka and Somero 2002) and the increased energetic demands for acid-base balance (REFS), which are crucial in the maintenance of many physiological processes (REFS). -->
-
-
-<!-- In contrast, after 12 weeks of acclimation, the surviving urchins appeared to have compensated for the combined effects of experimental OW and OA and showed reduced sensitivity to either stressor as seen by overall reduced metabolic rates. -->
-<!-- An antagonistic interaction between temperature and pH was also observed, where metabolic rate decresed with increasing OW and OA conditions (Fig. \@ref(fig:resp)B). -->
-
-<!-- It is important to note that due to mortality, the metabolic rates recorded were obtained from a smaller sample population of surviving urchins.  -->
-<!-- At 12 weeks when all our other physiological parameter were recorded, approximately 25\% of the urchins in both $+ 3 ^\circ C$ treatments had been removed from the experiments. -->
-
-
-
-
-<!-- It is important to note that at week 12, metabolic rate data was collected from a smaller sample population due to high mortality in some treatments (see results). -->
-
-<!-- In particular, with increasing temperature and decreased pH, metabolic rate decreased at week 12, a reversal of the positive effects observed at week 4. -->
-
-<!-- Here, we showed that contrary to theory (REFERENCES), while long-term acclimation to low pH increased metabolism significantly, it also increased feeding rates, resulting in an increase in energy budget shown by the increase in scope for growth. -->
-
-<!-- - Results appear to be similar to other studies (e.g. Carey et al. 2016) at 4 weeks of acclimation, where the relationship between temperature and pH on metabolic rate was additive. Maybe discuss this separately as all other results are 12-13 weeks. -->
-<!-- - At 12 weeks, there are interactions. -->
-<!-- - It is possible that the interactions are due to acclimation, but we cannot ignore that it might also be due to temeprature differences between the two period. [Need referecens to back up..] -->
-<!-- - Maintaining energy surplus is key to survival. Increased temperature reduced assimilation efficiency, affected by reduced feeding rate. -->
-<!-- - It is possible that higher temperatures have an effect on the results, but whatever that effect was, acclimation diminished the effects. Evidence: controls were no diferent from each other at 4 or 12 weeks despite an increase in overall temperatures. -->
-<!-- - Acclimation time is important, obviously, but it may be difficult to determine the appropriate period to incubate study organisms. Plus, it's so specific to the animal that it may also complicate comparisons between different experiments. -->
-<!-- - Scope for growth showed that despite the range of conditions, urchins generally still had net positive energy for growth. -->
-<!-- - But low survival in the +3 °C treatments indicate that physiological processes may still be hindered despite availability of energy reserves (talk more). -->
-
-
+<!-- As the first long-term multi-stressor study on echinoderms that used data from loggers to recreate seasonal change over time under realistic conditions,  -->
+In this study, *H. erythrogramma* was exposed to a temperature profile which stimulated the transition of increasing temperature from winter to summer.
+This influenced survival greatly, especially as temperatures approached sublethal limits over the acclimation period. 
+By the end of the experiment at 22 weeks of acclimation, our $+3 ^\circ C$ treatments ($25.8 `^\circ C$) were close to the maximum thermal threshold of *H. erythrogramma* ($26 ^\circ C$, Harianto et al. 2018, Byrne et al. 2010), but a few individuals were able to tolerate the high temperature.
+The ability to remodel for the effects of environmental stress is species-specific and depends on individual plasticity (Wilson and Franklin, 2002), with thermal compensation often measured by quantifying phyiological rates such as metabolic rate () and feeding performance ()

@@ -69,7 +69,7 @@ For example, ocean warming affects both oxygen demand and the supply of oxygen i
 Current evidence suggests that exposure to the combined effects of ocean warming and acidification are additive or synergistic, as seen in the reduced development of marine bivalves (Talmage and Gobler 2011) and increased metabolism in sea urchins (Carey et al. 2016).
 However, in other cases, positive or neutral responses have been observed, such as in the development and thermal windows of echinoderm larvae (Byrne et al. 2010, Karelitz et al. 2017), growth of juvenile and adult sea urchins (Dworjanyn and Byrne, 2018), growth in mussell (Keppel et al. 2015) and reproduction in crustaceans, macroalgae and autotrophs (Harvey et al. 2013). 
 <!-- These results highlight the subtle and complex uncertainty surrounding our understanding of the drivers of ecosystem change. -->
-Understanding the effects of ocean warming and acidification on marine ecosytems in an ecologically relevant context remains a challenge (Byrne et al. 2013, Gaylord et al. 2015, Queirós et al. 2015) that is compounded by the difficulties of conducting multi-factorial experiments with respect to time and resources (Collins et al. 2009, Frusher et al. 2012, ).
+Understanding the effects of ocean warming and acidification on marine ecosytems in an ecologically relevant context remains a challenge (Byrne et al. 2013, Gaylord et al. 2015, Queirós et al. 2015) that is compounded by the difficulties of conducting multi-factorial experiments with respect to time and resources (Collins et al. 2009, Frusher et al. 2012).
 <!-- A synthesis of marine invertebrate responses to multistressors, including ocean warming and acidification, can be found in Przeslawski et al. (2013) and Byrne and Przeslawski (2015). -->
 
 <!-- Calcifying organisms, such as echinoderms, are at high risk to the impacts of ocean warming and acidification (reviewed by Przeslawski et al. 2015).  -->
@@ -78,7 +78,7 @@ These animals at risk to the impacts of ocean warming and acidification (Przesla
 
 Despite the plethora of studies on the effects of warming and ocean acidification on echinoderms as individual stressors and a few that consider both stressors (Manríquez et al. 2017 ,Morley et al. 2016, Karelitz et al. 2016, Carey et al. 2016, Brothers et al. 2016, Suckling et al. 2015), critical gaps remain in our knowledge with regards to the ability to acclimate or adapt to global change stressors, especially considering that many observations were based on non-lethal responses.
 <!-- If they are introduced to stress immediately, as is often done in many acute type of experiments, they may respond differently as they are unlikely to acclimate to their new conditions appropriately. -->
-If they are introduced to stress immediately, as is often done in many acute type of experiments, they may respond differently as they are not provided the opportunity to acclimate to their new conditions.
+When introduced to stress immediately, as is often done in many acute type of experiments, they may respond differently as they are not provided the opportunity to acclimate to their new conditions.
 <!-- , with most experiments exposing specimens to acute stress with short acclimation times (e.g. 16 days; Catarino et al. 2012, 45 days; Uthicke et al. 2013). -->
 There is compelling evidence that we need to conduct longer-term experiments to realistically incorporate acclimation and/or adaptation to stressful conditions in the face of a changing climate, and the few studies that did so revealed responses that would not have been identified in short-term experiments.
 For example, exposure to long-term warming and acidification on the Antarctic sea urchin *Sterechinus neumayeri* revealed that the negative effects of increased temperature ($+2^\circ C$) and decreased pH ($-0.3$ to $-0.5$ units) on metabolism and reproduction diminished within two years (Suckling et al. 2014, Morley et al. 2016).
@@ -90,11 +90,20 @@ Acclimation time is thus a crucial factor to consider when conducting experiment
 
 <!-- In addition, studies are increasingly measuring multiple physiological and biological responses . -->
 
-In this study, we examined the combined effects of prolonged exposure to increased temperature and elevated $pCO_2$ on the survival and physiological responses of the subtidal sea urchin, *Heliocidaris erythrogramma*.
-Our experiments incorporated ecologically realistic conditions that involved the slow introduction to treatment conditions over $7$ weeks. 
+In this study, we examined the combined effects of prolonged exposure to increased temperature and elevated $pCO_2$ on the survival and physiological responses of the subtidal sea urchin, *Heliocidaris erythrogramma*, with the expectation for greater tolerance to the stressors over time.
+The sea urchin is abundant in the shallow subtidal kelp habitats of south-east Australia and plays an important role in structuring benthic communities (Wright et al. 2005; Keesing 2013).
+Past studies on adult *H. erythrogramma* indicated that the sea urchin had some capacity to acclimate to warming, but struggled to survive at $26 ^{\circ}C$ with significant mortality when kept for 14 weeks (Harianto et al. 2018).
+Carey et al. (2016) acclimated *H. erythrogramma* for 8 weeks and showed that both warming and acidification increased metabolism, but feeding rates did not increase in response to higher energetic costs.
+<!-- The sea urchin also appeared to be able to adjust its immune response in response to the pathogen, *Vibrio anguillarum* over time, although warming and acidification . -->
+The sea urchin also reduced its immune response in response to the pathogen, *Vibrio anguillarum*, under both warming and acidification conditions, although immune function showed signs of recovery after 30 days (Brothers et al. 2016).
+<!-- Here, we undertook slow acclimation to achieve temperature thresholds of up to $26 ^{\circ}C$ with respect to the natural patterns of temperature increase in nature, and thereby expected a greater tolerance for $26 ^{\circ}C$. -->
+
+Here we incorporated ecologically realistic conditions that involved the slow introduction to treatment conditions over $7$ weeks. 
 Then, urchins were acclimated for up to another $22$ weeks under constant pH ($8.0$, $7.6$) and variable weekly temperature, based on the temperature profile of their habitat in Sydney Harbour at distinct warming levels (ambient $+0$, $+2$, $+3^\circ C$).
+
 Metabolic rate was measured at $4$ and $12$ weeks to evaluate differences in physiological responses over two acclimation periods, and survival recorded over 22 weeks.
 Feeding, assimilation efficiency, excretion and survival were also recorded at 12 -- 13 weeks of acclimation to evaluate fitness of *H. erythrogramma* to increased temperature and decreased pH conditions predicted for the near-future (REF).
+
 As maintaining energy is key to long-term survival, we incorporated multiple physiological metrics and calculated the rate and efficiency at which *H. erythrogramma* allocates energy in the different treatment conditions using the scope for growth (SfG) model, a physiological index used to quantify the energy budgets of living organisms to optimise feeding strategies, including sea urchins (e.g. Stumpp et al. 2011, Orr et al. 2014, Rubilar et al. 2016, Delorme and Sewell, 2016).
 Using SfG allows us to explore the effect of ocean warming and acidification on *H. erythrogramma* based on changes in its energy budget, and provides a single bioenergetics-based framework to empirically determine the overall performance of the sea urchin in the long term.
 This is important, as integrating multiple physiological traits has been shown to better predict vulnerability to global change effects (Magozzi and Calosi, 2015).
@@ -204,11 +213,13 @@ Specimens were observed daily for mortality, and dead urchins were removed immed
 ### Metabolic rate
 
 Routine weight-specific metabolic rate, $MO_2$ was estimated by intermittent-flow respirometry at two time-points (at 4 and 12 weeks of acclimation), from a random subsample of 10 specimens from each tank.
+By 4 weeks survival was high with some mortality ensuing (see below), therefore the caveat with respect to the 12-qweek measurement is that we did this on the survivors.
 At 4 weeks, the temeperature levels were at $16.6$, $18.6$ and $19.6^\circ C$ and at 12 weeks, the temperature levels were at $20.7$, $22.7$ and $23.7^\circ C$ for the control $+0$, $+2$ and $+3 ^\circ C$ treatments, respectively.
 The specimens were not fed for 5 days prior to measurements and transferred individually into $1\ L$ respirometry chambers.
 Each respirometry chamber was kept in an individual water bath and contained an oxygen sensor spot (SP-PSt3-NAU, PreSens GmbH, Germany) for the detection of dissolved oxygen concentration using an external multi-channel sensor (OXY-10-mini, PreSens Gmbh, Germany). 
 A magnetic stirrer ensured even mixing of water.
 The specimens were allowed to adjust to the chambers under flow-through conditions for 30 minutes prior to respirometry measures.
+
 
 To measure oxygen uptake, chambers were sealed and dissolved oxygen (DO, $mgO_2\ L^{-1}$) was measured every 10 seconds until a 10\% decrease in DO was recorded. 
 The chamber was then flushed, and the measurement repeated.

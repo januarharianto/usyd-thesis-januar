@@ -51,7 +51,8 @@ init_plot <- ggsurvplot(s, size = .75,
   legend.title = "",
   legend.labs = c("0A", "0C", "2A", "2C", "3A", "3C"),
   ## x and y axis
-  xlab = "Time in days",
+  xlab = "Days",
+  ylab = "Survival",
   xlim = c(0,180),
   break.time.by = 20
   # surv.median.line = "h"

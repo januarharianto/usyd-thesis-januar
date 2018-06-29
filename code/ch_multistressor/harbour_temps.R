@@ -38,12 +38,33 @@ dt <- read_csv("input/ch_multistressor/cbtemp_2009-16.csv") %>%
   filter(week < 53) %>%
   print()
 
+dt
+
 # Plotting ----
 
 harbour_plot <- ggplot(dt, aes(date, mean)) +
   # Plots
   geom_ribbon(aes(ymax = max, ymin = min), alpha = .2, fill = "grey") +
   geom_errorbar(aes(ymax = mean + sd, ymin = mean - sd), width = .2) +
+  geom_rect(data = dt[1,],
+            aes(linetype = "temp adj."),
+            alpha = .5,
+            xmin = dt$date[26],
+            xmax = dt$date[28],
+            ymin = -Inf,
+            ymax = Inf,
+            fill = "rosybrown1"
+  ) +
+  geom_rect(
+    data = dt[1, ],
+    aes(linetype = "pH adj."),
+    alpha = .5,
+    xmin = dt$date[28],
+    xmax = dt$date[32],
+    ymin = -Inf,
+    ymax = Inf,
+    fill = "slategray1"
+  ) +
   geom_errorbar(
     data = dt[1:2, ],
     width = .2,
@@ -93,11 +114,25 @@ harbour_plot <- ggplot(dt, aes(date, mean)) +
   xlab("") +
   ylab(expression("Mean weekly temperature"~degree~C)) +
   # Legend
-  scale_colour_brewer(
-    palette = "Set1", name = "Exp. period",
-    breaks = c("temp/pH adjustment", "long-term acclimation")
+  scale_linetype_manual(
+    values = c("temp adj." = 0, "pH adj." = 0),
+    breaks = c("temp adj.", "pH adj."), name = "",
+    guide = guide_legend(
+      override.aes = list(fill = c(
+        "rosybrown1", "slategray1"
+      ))
+    )
   ) +
-  theme(legend.position = "bottom") +
+  scale_colour_brewer(
+    palette = "Set1", 
+    # name = "Exp. period:",
+    breaks = c("temp/pH\nadjustment", "long-term\nacclimation")
+  ) +
+  theme(
+    legend.text = element_text(size = 10),
+    legend.title = element_text(size = 10),
+    legend.position = "bottom"
+  ) +
   theme(legend.key.size = unit(2, "lines")) +
   geom_blank()
 # END ggplot
@@ -110,5 +145,4 @@ cowplot::save_plot(
   base_height = 8, base_width = 8
 )
 
-rm(dt)
 save.image("output/ch_multistressor/harbourtemps.RData")

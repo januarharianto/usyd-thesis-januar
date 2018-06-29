@@ -150,9 +150,15 @@ resp_plot <- ggplot(rplot_data, aes(factor(temp_fac), rate, fill = factor(ph_fac
     strip.background = element_rect(colour = "black", fill = NA)
   ) +
   # make facet labels bold:
-  theme(strip.text = element_text(face = "bold"), legend.position = "bottom") +
-  scale_fill_manual(labels = c("pH 8.0", "pH 7.6"), values = c("white", "lightgrey")) +
+  theme(strip.text = element_text(face = "bold"), legend.position = "bottom",
+        legend.text = element_text(size = 15)) +
+  # Don't use colour:
+  # scale_fill_manual(labels = c("pH 8.0", "pH 7.6"), values = c("white", "lightgrey")) +
+  # Alternatively, use colour:
+  scale_fill_manual(labels = c("pH 8.0", "pH 7.6"), values = c("white", "slategray1")) +
+  # Or, use fixed colour scheme:
   # ggsci::scale_fill_jco(labels = c("4 weeks", "12 weeks")) +
+  
   # change x axis labels:
   scale_x_discrete(labels = c(
     "Ambient", expression("+2"~degree~C),
@@ -165,8 +171,11 @@ resp_plot <- ggplot(rplot_data, aes(factor(temp_fac), rate, fill = factor(ph_fac
   geom_blank()
 resp_plot
 
+resp_plot +  theme(legend.key.width = unit(2, "line"),
+                   legend.key.height=unit(2,"line"))
 
-# plot without facets
+
+# plot without facets ---------------------------------------------------------
 ## first prep the data - filter to 4 or 12 weeks
 wks4 <- rplot_data %>%
   dplyr::filter(week == 4) %>% print()
@@ -184,7 +193,7 @@ p4 <- ggplot(wks4, aes(factor(temp_fac), rate, fill = factor(ph_fac))) +
   ) +
   cowplot::theme_cowplot() +
   # scale_fill_brewer(name = "", palette = "BrBG", direction = -1) +
-  scale_fill_manual(name = "", values =c("white", "grey")) +
+  scale_fill_manual(name = "", values =c("white", "steelblue3")) +
   # scale_x_discrete(labels = c("Ambient", expression("+2"~degree~C),
   #   expression("+3"~degree~C))) +
   scale_x_discrete(labels = c("Ambient\n(16.6 °C)", "+2\n(18.6 °C)", 
@@ -203,7 +212,7 @@ p12 <- ggplot(wks12, aes(factor(temp_fac), rate, fill = factor(ph_fac))) +
   ) +
   cowplot::theme_cowplot() +
   # scale_fill_brewer(name = "", palette = "Greys", direction = -1) +
-  scale_fill_manual(name = "", values =c("white", "grey")) +
+  scale_fill_manual(name = "", values =c("white", "steelblue3")) +
   # scale_x_discrete(labels = c("Ambient", expression("+2"~degree~C),
   #   expression("+3"~degree~C))) +
   scale_x_discrete(labels = c("Ambient\n(20.7 °C)", "+2\n(22.7 °C)", 
@@ -214,7 +223,9 @@ p12 <- ggplot(wks12, aes(factor(temp_fac), rate, fill = factor(ph_fac))) +
   geom_blank()
 p12
 
-legend <- cowplot::get_legend(p4 + theme(legend.position="bottom"))
+legend <- cowplot::get_legend(p4 + theme(legend.position="bottom",
+                                         legend.key.width = unit(2, "line"),
+                                         legend.key.height=unit(2,"line")))
 resp_plot <- cowplot::plot_grid(
   p4 + theme(legend.position="none"),
   p12 + theme(legend.position="none"),

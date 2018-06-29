@@ -141,20 +141,23 @@ sfg %>%
 
 
 ## Plot sfg - but don't use this for the manuscript. Just do the table.
-sfgplot <- ggplot(sfg, aes(temp, sfg)) +
+sfgplot <- ggplot(sfg, aes(temp, sfg, fill = factor(ph))) +
+  # aes(fill = as.factor(ph)) +
   facet_grid(.~ ph) +
   # Plots
-  geom_bar(stat = "identity", fill = "white", colour = "black") +
+  geom_bar(stat = "identity", colour = "black", alpha = .25) +
   geom_errorbar(aes(ymin = (sfg - sfg_se), ymax = (sfg + sfg_se)), width = 0) +
   # Theme
   cowplot::theme_cowplot() +
+  scale_fill_manual(values = c("white", "steelblue3")) +
   # Axes (scale)
   theme(
     panel.border = element_rect(color = "black", fill = NA, size = 1),
     strip.background = element_rect(colour = "black", fill = NA)
   ) +
   # make facet labels bold:
-  theme(strip.text = element_text(face = "bold")) +
+  theme(strip.text = element_text(face = "bold"),
+        legend.position = "none") +
   # Labels (title, x & y)
   xlab("") +
   ylab(expression("SfG ("*kJ~h^{-1}~kg^{-1}*")")) +

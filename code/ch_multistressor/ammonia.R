@@ -25,10 +25,10 @@ plot_dt <- ammo %>%
 
 # PLOTS ------------------------------------------------------------------------
 # plot ammonia data:
-nh_plot <- ggplot(plot_dt, aes(factor(temp), ammonia)) +
+nh_plot <- ggplot(plot_dt, aes(factor(temp), ammonia, fill = factor(ph))) +
   facet_wrap(~ ph) +
   cowplot::theme_cowplot() +
-  geom_boxplot() +
+  geom_boxplot(alpha = .25) +
   stat_summary(
     fun.y = mean, geom = "errorbar", position = position_dodge(width = .8),
     aes(ymax = ..y.., ymin = ..y..), width = .75, linetype = 3, size = .5
@@ -43,8 +43,10 @@ nh_plot <- ggplot(plot_dt, aes(factor(temp), ammonia)) +
   xlab("") +
   scale_x_discrete(labels = c("Ambient\n(20.7 °C)", "+2\n(22.7 °C)", 
     "+3\n(23.7 °C)")) +
+  scale_fill_manual(values = c("white", "steelblue3")) +
   ylab((expression("Ammonia excretion rate ("*mu*g ~~ kg ^ -1 ~~ h ^ -1 * ")"))) +
   geom_blank()
+nh_plot
 
 # ANALYSE DATA -----------------------------------------------------------------
 

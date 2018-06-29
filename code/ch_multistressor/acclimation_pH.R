@@ -49,13 +49,13 @@ phacclim_p <- ggplot(dt) +
   geom_line(aes(date, c)) +
   geom_line(aes(date, a)) +
   ## non-acidified
-  geom_point(aes(date, c1, colour = "0", shape = "8.0 (ambient)")) +
-  geom_point(aes(date, c2, colour = "2", shape = "8.0 (ambient)")) +
-  geom_point(aes(date, c3, colour = "3", shape = "8.0 (ambient)")) +
+  geom_point(aes(date, c1, colour = "0", shape = "8.0")) +
+  geom_point(aes(date, c2, colour = "2", shape = "8.0")) +
+  geom_point(aes(date, c3, colour = "3", shape = "8.0")) +
   ## acidified
-  geom_point(aes(date, a1, colour = "0", shape = "7.6 (acidic)")) +
-  geom_point(aes(date, a2, colour = "2", shape = "7.6 (acidic)")) +
-  geom_point(aes(date, a3, colour = "3", shape = "7.6 (acidic)")) +
+  geom_point(aes(date, a1, colour = "0", shape = "7.6")) +
+  geom_point(aes(date, a2, colour = "2", shape = "7.6")) +
+  geom_point(aes(date, a3, colour = "3", shape = "7.6")) +
   ## extra point for chowder bay (in temp plot, not here)
   # geom_point(aes(colour = "Chowder Bay")) +
   # Theme

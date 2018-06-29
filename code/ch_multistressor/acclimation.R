@@ -46,7 +46,7 @@ tempacclim_p <- ggplot(dt, aes(date, t0)) +
   geom_line(aes(colour = "+0")) +
   geom_line(aes(date, t2, colour = "+2")) +
   geom_line(aes(date, t3, colour = "+3")) +
-  geom_line(aes(colour = "Chowder Bay")) +
+  # geom_line(aes(colour = "Chowder Bay")) +
   geom_point(aes(date, field, shape = "Chowder Bay")) +
   geom_point(aes(date, log0, colour = "+0"), alpha = .6, size = 1) +
   geom_point(aes(date, log2, colour = "+2"), alpha = .6, size = 1) +

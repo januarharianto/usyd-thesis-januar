@@ -105,12 +105,12 @@ bartlett.test(rate_dry ~ interaction(temp, ph), feeding_rate) # pass
 fligner.test(rate_dry ~ interaction(temp, ph), feeding_rate) # pass
 
 # PLOT -------------------------------------------------------------------------
-feeding_plot <- ggplot(feeding_rate, aes(temp, rate_dry)) +
+feeding_plot <- ggplot(feeding_rate, aes(temp, rate_dry, fill = factor(ph))) +
   facet_wrap(~ ph) +
   cowplot::theme_cowplot() +
   # geom_violin() +
-  geom_boxplot() +
-  geom_boxplot(position = position_dodge(0.8)) +
+  # geom_boxplot(alpha = .25) +
+  geom_boxplot(position = position_dodge(0.8), alpha = .25) +
   stat_summary(
     fun.y = mean, geom = "errorbar", position = position_dodge(width = .8),
     aes(ymax = ..y.., ymin = ..y..), width = .75, linetype = 3, size = .5
@@ -122,7 +122,8 @@ feeding_plot <- ggplot(feeding_rate, aes(temp, rate_dry)) +
   ) +
   # make facet labels bold:
   theme(strip.text = element_text(face = "bold")) +
-  scale_fill_brewer(palette = "Greys", labels = c("+0", "+2", "+3")) +
+  # scale_fill_brewer(palette = "Greys", labels = c("+0", "+2", "+3")) +
+  scale_fill_manual(values = c("white", "steelblue3")) +
   # change x axis labels:
   scale_x_discrete(labels = c("Ambient\n(20.1 °C)", "+2\n(22.1 °C)", "+3 \n(23.1°C)")) +
   # legend title

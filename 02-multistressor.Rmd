@@ -421,23 +421,23 @@ However, at 12 weeks of acclimation, no significant differences between any trea
 
 (ref:anovaresptab) ANOVA test on the effects of temperature, pH or acclimation time on the metabolic rate of *H. erythrogramma*, at 4 or 12 weeks of incubation to elevated temperature ($+0$, $+2$, $+3^\circ C$) and decreased pH ($8.0$ , $7.6$). As the three-way interaction term was not significant, it was removed from the model before analysis. $n = 10$
 
-```{r anovaresptab, warning=FALSE}
-load("output/ch_multistressor/respiration.RData")
-table_rav <- 
-  as.data.frame(car::Anova(model)) %>%
-  rename(p = `Pr(>F)`) %>%
-  mutate(Source = c("Temperature", "pH", "Time", 
-    "Temperature:pH", "Temperature:Time", "pH:Time",
-    "Residuals")) %>%
-  select(Source, "Sum Sq", Df, "F value", p) %>%
-  mutate(" " = snipR::p_stars(p)) %>%
-  kable(booktabs = TRUE, linesep = "", caption = "(ref:anovaresptab)") %>%
-  kable_styling(latex_options = "striped") %>%
-  row_spec(0, bold = TRUE) %>%
-  row_spec(3, hline_after = TRUE)
+<!-- ```{r anovaresptab, warning=FALSE} -->
+<!-- load("output/ch_multistressor/respiration.RData") -->
+<!-- table_rav <-  -->
+<!--   as.data.frame(car::Anova(model)) %>% -->
+<!--   rename(p = `Pr(>F)`) %>% -->
+<!--   mutate(Source = c("Temperature", "pH", "Time",  -->
+<!--     "Temperature:pH", "Temperature:Time", "pH:Time", -->
+<!--     "Residuals")) %>% -->
+<!--   select(Source, "Sum Sq", Df, "F value", p) %>% -->
+<!--   mutate(" " = snipR::p_stars(p)) %>% -->
+<!--   kable(booktabs = TRUE, linesep = "", caption = "(ref:anovaresptab)") %>% -->
+<!--   kable_styling(latex_options = "striped") %>% -->
+<!--   row_spec(0, bold = TRUE) %>% -->
+<!--   row_spec(3, hline_after = TRUE) -->
 
-table_rav
-```
+<!-- table_rav -->
+<!-- ``` -->
 
 (ref:resp) Metabolic rate ($mg\ O_2\ h^{-1}\ kg^{-1}$) of *H. erythrogramma* acclimated for 12 weeks in six treatments of three temperatures ($+0, +2, +3 ^\circ C$) and two pH levels (8.0, 7.6). The top and bottom of the boxes represent the interquartile range (IQR) between the 25th and 75th percentile (Q1 and Q3, respectively). The horizontal line represents the median (Q2), the horizontal dotted line represents the mean, and the vertical lines (whiskers) represent the range of the data computed as follows: Q1 − 1.5IQR (bottom whisker); greater than Q3 + 1.5 IQR (top whisker).
 
@@ -603,8 +603,10 @@ sfgtab
 <!-- Because treatment temperatures were altered weekly, specimens were exposed to a gradually increasing temperature profile stimulating the transition from winter to summer. -->
 
 We observed significant long-term impacts of acclimation to experimental OW and ocean acidification (OA) conditions on *H. erythrogramma*.
-Regardless of whether the sea urchin was exposed to OA (pH 7.6) conditions, or not, acclimation to elevated temperature reduced the survival and feeding rate of the sea urchin, but increased ammonia excretion rate.
-The combined effects of increased temperature and low pH did not have an interactive effect on any of the responses measured, except for metabolic rate (see below).
+Regardless of whether the sea urchin was exposed to OA (pH 7.6) conditions, or not, acclimation to elevated temperature reduced the survival rate of the sea urchin.
+In particular, long-term acclimation to +3 $$^\circ C$$
+
+The combined effects of increased temperature and low pH did not have an interactive effect on any of the responses measured, except for metabolic rate.
 Overall, the energy budget of the sea urchin appeared to be reduced after 12 weeks of acclimation, primarily due to the decreased contribution of energy toward SfG from significantly reduced feeding (Table #).
 Regardless, SfG values were still positive in all experimental situations indicating energy surplus adequate to support energy demand and suggests that other underlying mechanisms were involved to compromised fitness.
 

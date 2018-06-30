@@ -336,8 +336,8 @@ All energy-related units are in $kJ\ g^{-1}\ day^{-1}$, while assimilation effic
 ### Statistical analyses
 
 Analyses were performed in R (v 3.4.3). The survival time for each specimen was determined by the number of days from time zero (when the acclimation period started) to the end of the experiment, a total period of 155 days.
-Survival data were analysed using Cox proportional hazards models (Cox, 1972), with right censoring, to determine whether temperature and pH affect survival time. 
-This was done by fitting survival time as a function of temperature and pH.
+Survival data were analysed using Kaplan-Meier logrank analysis, with right censoring, to determine whether temperature and pH affect survival time. 
+In addition, a Cox proportional hazards model (Cox, 1972) was fitted using survival time as a function of temperature and pH to assess the risks of each stressor to survival time.
 The fitted Cox regression met the assumption of proportional hazards (Schoenfeld residual tests, Grambsch and Therneau 1994; $p = 0.673$). 
 As no interactions were found between temperature and pH (Cox regression, $z =$ 0.61, $d.f. =$ 3, $p =$ 0.54), the interaction term was removed and the analysis was repeated with only the main effects tested.
 *Post-hoc* tests for the differences between treatments were determined using pairwise tests of significance corrected using the Benjamini-Hochberg (BH) false discovery rate method (Benjamini and Hochberg, 1995).
@@ -372,6 +372,7 @@ For these treatments, survival was $>80\%$ after 22 weeks.
 At $+3 ^{\circ}C$, survival decreased significantly ($p < 0.001$, HR: 17.2, 95\% CI: 5.27 -- 56.25) regardless of pH level.
 <!-- (pH 8.0: 40\%; pH 7.6: 33\%). -->
 These $+3^{\circ}C$ treatments intersected the median surival threshold after 14 to 20 weeks (Figure \@ref(fig:surv)). 
+Results of the Cox proportional hazards showed that there was a statistically significant effect of temperature, but not pH, in terms of survival risk (hazard ratios of 3.38 and 0.47, respectively).
 *Post-hoc* results (pairwise tests, BH-corrected) showed that urchins acclimated to $+3 ^{\circ}C$ had significantly lower survival compared to all other treatments ($p <$ 0.01 for all pairwise combinations with $+3^{\circ} C$), with no significant differences in all other pairwise comparisons.
 At 155 days, urchins acclimated to $+3^{\circ} C$ and pH $7.6$ had the lowest survival at 33\%.
 
@@ -599,26 +600,58 @@ sfgtab
 ## Discussion
 
 
-<!-- This is the first long-term multi-stressor study on echinoderms that used data from loggers to recreate seasonal change over time under realistic conditions. -->
-<!-- Because treatment temperatures were altered weekly, specimens were exposed to a gradually increasing temperature profile stimulating the transition from winter to summer. -->
 
-We observed significant long-term impacts of acclimation to experimental OW and ocean acidification (OA) conditions on *H. erythrogramma*.
-Regardless of whether the sea urchin was exposed to OA (pH 7.6) conditions, or not, acclimation to elevated temperature reduced the survival rate of the sea urchin.
-In particular, long-term acclimation to +3 $$^\circ C$$
+We observed significant long-term impacts of acclimation to combined OW and OA on *H. erythrogramma* through reductions in survival, feeding and metabolic rates, especially in our highest temperature treatments ($+3 ^\circ C$). In addition, all treatments experienced an overall reduction of available energy primarily due to the decreased contribution of energy to SfG from reduced feeding (Table \@ref(tab:sfgtab)). 
+At 12 weeks, SfG values were still positive in all experimental conditions whicn indicated surplus of energy adequate to support energy demand, but at the end of 22 weeks of acclimation, there was significantly reduced survival in specimens acclimated to $+3 ^\circ C$.
+<!-- and we suggest that further changes in the bioenergetics of the sea urchins may have contributed to the rapid increase in mortality. -->
 
-The combined effects of increased temperature and low pH did not have an interactive effect on any of the responses measured, except for metabolic rate.
-Overall, the energy budget of the sea urchin appeared to be reduced after 12 weeks of acclimation, primarily due to the decreased contribution of energy toward SfG from significantly reduced feeding (Table #).
-Regardless, SfG values were still positive in all experimental situations indicating energy surplus adequate to support energy demand and suggests that other underlying mechanisms were involved to compromised fitness.
+<!-- even as specimens were slow-adjustment to treatment conditions over 7 weeks and experienced a natural transition of temperature for all treatments from winter to summer.  -->
 
-At 4 weeks of acclimation, metabolic rate increased additively with increased temperature and decreased pH.
-However, at 12 weeks of acclimation, antagonistic interactions between temperature and pH were observed, resulting in decreased metabolic rate with simultaneous exposure to OW and OA conditions.
-As there was high mortality in urchins subject to the highest warming treatments ($+3 ^\circ C$) we believe that
+*H. erythrogramma* was highly resilient to OA stress, with no significant effects on survival, metabolic rate, feeding and excretion after 12 weeks of acclimation to decreased pH alone.
+In contrast, increased temperature affected all of the responses above.
+Additionally, exposure to increased temperature was more stressful than exposure to reduced pH, as shown by the greatly increased risk of mortality ($> 330\ \%$).
+Thus, temperature appeared to be the main driver for many of the physiological responses recorded.
+In past studies that considered temperature and ocean acidification in echinoderm species, many were conducted on larvae or early juveniles (e.g. Sheppard Brennand et al. 2010; Byrne et al. 2009, 2010, 2011; Catarino et al, 2012; Ericson et al., 2012)
 
 
+Our study is the first long-term multi-stressor study on echinoderms that slow-adjusted specimens to treatment conditions (7 weeks) and acclimated them to a temperature regime based on a realistic transition from winter to summer.
 
 
-<!-- As the first long-term multi-stressor study on echinoderms that used data from loggers to recreate seasonal change over time under realistic conditions,  -->
-In this study, *H. erythrogramma* was exposed to a temperature profile which stimulated the transition of increasing temperature from winter to summer.
-This influenced survival greatly, especially as temperatures approached sublethal limits over the acclimation period. 
-By the end of the experiment at 22 weeks of acclimation, our $+3 ^\circ C$ treatments ($25.8 `^\circ C$) were close to the maximum thermal threshold of *H. erythrogramma* ($26 ^\circ C$, Harianto et al. 2018, Byrne et al. 2010), but a few individuals were able to tolerate the high temperature.
-The ability to remodel for the effects of environmental stress is species-specific and depends on individual plasticity (Wilson and Franklin, 2002), with thermal compensation often measured by quantifying phyiological rates such as metabolic rate () and feeding performance ()
+
+
+<!-- even as specimens were slow-adjustment to treatment conditions over 7 weeks and experienced a natural transition of temperature for all treatments from winter to summer.  -->
+
+
+ <!-- increased temperature has been shown to be detrimental to *H. erythrogramma* with $24$ to $26 ^\circ C$ -->
+
+<!-- Tolerance of an organism to the effects of OA may be due to its ability to compensate for changes in extracellular pH (citation). -->
+
+
+
+
+
+<!-- The metabolic responses of *H. erythrogramma* differed depending on the duration of acclimation, where at 4 weeks of acclimation, metabolic rate increased additively with increased temperature and decreased pH, but at 12 weeks of acclimation, antagonistic interactions between temperature and pH resulted in decreased metabolic rate. -->
+
+<!-- Overall, the energy budget of the sea urchin appeared to be reduced after 7 weeks of slow adjustment and then 12 weeks of acclimation. -->
+
+
+<!-- The combined effects of increased temperature and low pH did not have an interactive effect on any of the responses measured, except for metabolic rate. -->
+<!-- Overall, the energy budget of the sea urchin appeared to be reduced after 12 weeks of acclimation, primarily due to the decreased contribution of energy toward SfG from significantly reduced feeding (Table #). -->
+<!-- Regardless, SfG values were still positive in all experimental situations indicating energy surplus adequate to support energy demand and suggests that other underlying mechanisms were involved to compromised fitness. -->
+
+<!-- At 4 weeks of acclimation, metabolic rate increased additively with increased temperature and decreased pH. -->
+<!-- However, at 12 weeks of acclimation, antagonistic interactions between temperature and pH were observed, resulting in decreased metabolic rate with simultaneous exposure to OW and OA conditions. -->
+<!-- As there was high mortality in urchins subject to the highest warming treatments ($+3 ^\circ C$) we believe that -->
+
+<!-- REWORD: -->
+<!-- Metabolic suppression has been identiﬁed as an adaptive mechanism by which some organisms cope with hypercapnia, but prolonged metabolic suppression will have consequences on growth and survival (Fabry et al., 2008; Dymowska et al., 2012). In contrast, some species appear to respond to OA by increasing their metabolic rates, although this comes at an energetic cost (Wood et al., 2008; Stumpp et al., 2011). -->
+
+<!-- Variance increased  -->
+
+
+
+<!--As the first long-term multi-stressor study on echinoderms that used data from loggers to recreate seasonal change over time under realistic conditions
+In this study, *H. erythrogramma* was exposed to a temperature profile which stimulated the transition of increasing temperature from winter to summer. -->
+<!-- This influenced survival greatly, especially as temperatures approached sublethal limits over the acclimation period.  -->
+<!-- By the end of the experiment at 22 weeks of acclimation, our $+3 ^\circ C$ treatments ($25.8 `^\circ C$) were close to the maximum thermal threshold of *H. erythrogramma* ($26 ^\circ C$, Harianto et al. 2018, Byrne et al. 2010), but a few individuals were able to tolerate the high temperature. -->
+<!-- The ability to remodel for the effects of environmental stress is species-specific and depends on individual plasticity (Wilson and Franklin, 2002), with thermal compensation often measured by quantifying phyiological rates such as metabolic rate () and feeding performance () -->

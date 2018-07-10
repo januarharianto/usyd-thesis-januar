@@ -39,7 +39,8 @@ nh_plot <- ggplot(plot_dt, aes(factor(temp), ammonia, fill = factor(ph))) +
     strip.background = element_rect(colour = "black", fill = NA)
   ) +
   # make facet labels bold:
-  theme(strip.text = element_text(face = "bold")) +
+  theme(strip.text = element_text(face = "bold"), 
+        legend.position = "none") +
   xlab("") +
   scale_x_discrete(labels = c("Ambient\n(20.7 °C)", "+2\n(22.7 °C)", 
     "+3\n(23.7 °C)")) +

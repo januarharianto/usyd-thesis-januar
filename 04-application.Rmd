@@ -107,7 +107,7 @@ Note, we use $RO_2$ in the text to represent the dimensionless rate of $O_2$ use
 
 Installation of `respR` can be performed directly via the R console using `devtools`:
 
-```{r eval=F}
+```{r installrespr, eval=F}
 # install.packages("devtools")
 devtools::install_github("januarharianto/respR")
 library(respR)

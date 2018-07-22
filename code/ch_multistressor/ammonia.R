@@ -26,7 +26,7 @@ plot_dt <- ammo %>%
 # PLOTS ------------------------------------------------------------------------
 # plot ammonia data:
 nh_plot <- ggplot(plot_dt, aes(factor(temp), ammonia, fill = factor(ph))) +
-  facet_wrap(~ ph) +
+  facet_wrap(~ ph, strip.position = "bottom") +
   cowplot::theme_cowplot() +
   geom_boxplot(alpha = .25) +
   stat_summary(
@@ -39,8 +39,9 @@ nh_plot <- ggplot(plot_dt, aes(factor(temp), ammonia, fill = factor(ph))) +
     strip.background = element_rect(colour = "black", fill = NA)
   ) +
   # make facet labels bold:
-  theme(strip.text = element_text(face = "bold"), 
+  theme(strip.text = element_text(size = 13), 
         legend.position = "none") +
+  theme(strip.background = element_blank(), strip.placement = "outside") +
   xlab("") +
   scale_x_discrete(labels = c("Ambient\n(20.7 °C)", "+2\n(22.7 °C)", 
     "+3\n(23.7 °C)")) +

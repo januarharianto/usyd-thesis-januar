@@ -106,7 +106,7 @@ fligner.test(rate_dry ~ interaction(temp, ph), feeding_rate) # pass
 
 # PLOT -------------------------------------------------------------------------
 feeding_plot <- ggplot(feeding_rate, aes(temp, rate_dry, fill = factor(ph))) +
-  facet_wrap(~ ph) +
+  facet_wrap(~ ph, strip.position = "bottom") +
   cowplot::theme_cowplot() +
   # geom_violin() +
   # geom_boxplot(alpha = .25) +
@@ -121,7 +121,9 @@ feeding_plot <- ggplot(feeding_rate, aes(temp, rate_dry, fill = factor(ph))) +
     strip.background = element_rect(colour = "black", fill = NA)
   ) +
   # make facet labels bold:
-  theme(strip.text = element_text(face = "bold")) +
+  theme(strip.text = element_text(size = 13), 
+        legend.position = "none") +
+  theme(strip.background = element_blank(), strip.placement = "outside") +
   # scale_fill_brewer(palette = "Greys", labels = c("+0", "+2", "+3")) +
   scale_fill_manual(values = c("white", "steelblue3")) +
   # change x axis labels:

@@ -143,7 +143,7 @@ sfg %>%
 ## Plot sfg - but don't use this for the manuscript. Just do the table.
 sfgplot <- ggplot(sfg, aes(temp, sfg, fill = factor(ph))) +
   # aes(fill = as.factor(ph)) +
-  facet_grid(.~ ph) +
+  facet_wrap(.~ ph, strip.position = "bottom") +
   # Plots
   geom_bar(stat = "identity", colour = "black", alpha = .25) +
   geom_errorbar(aes(ymin = (sfg - sfg_se), ymax = (sfg + sfg_se)), width = 0) +
@@ -156,9 +156,11 @@ sfgplot <- ggplot(sfg, aes(temp, sfg, fill = factor(ph))) +
     strip.background = element_rect(colour = "black", fill = NA)
   ) +
   # make facet labels bold:
-  theme(strip.text = element_text(face = "bold"),
-        legend.position = "none") +
+  theme(strip.text = element_text(size = 13),
+  legend.position = "none") +
+  theme(strip.background = element_blank(), strip.placement = "outside") +
   # Labels (title, x & y)
+  # annotate("segment",x=-Inf,xend=-Inf,y=-Inf,yend=-Inf,color="black",lwd=1) +
   xlab("") +
   ylab(expression("SfG ("*kJ~h^{-1}~kg^{-1}*")")) +
   # change x axis labels:

@@ -51,25 +51,28 @@ init_plot <- ggsurvplot(s, size = .75,
   legend.title = "",
   legend.labs = c("0A", "0C", "2A", "2C", "3A", "3C"),
   ## x and y axis
-  xlab = "Days",
+  xscale = 7,
+  xlab = "Weeks",
   ylab = "Survival",
   xlim = c(0,180),
-  break.time.by = 20
+  break.time.by = 7
   # surv.median.line = "h"
   ## colours
   # palette = "npg" # "npg", "aaas", "lancet", "jco", "ucscgb", "uchicago", "simpsons" and "rickandmorty"
 )
 init_plot
 
-s1 <- 4
+s1 <- 4 # label size
 # Add on to the plot!
-surv_plot <- init_plot$plot +
+surv_plot_pre <- init_plot$plot +
   ggplot2::annotate("text", x = 170, y = .933, label = "A  (0A)", size = s1) +
   ggplot2::annotate("text", x = 170, y = .967, label = "A  (0C)", size = s1) +
   ggplot2::annotate("text", x = 170, y = .833, label = "A  (2A)", size = s1) +
   ggplot2::annotate("text", x = 170, y = .900, label = "A  (2C)", size = s1) +
   ggplot2::annotate("text", x = 170, y = .459, label = "B  (3C)", size = s1) +
-  ggplot2::annotate("text", x = 170, y = .376, label = "B  (3A)", size = s1) +
+  ggplot2::annotate("text", x = 170, y = .376, label = "B  (3A)", size = s1)
+surv_plot_pre
+surv_plot <- surv_plot_pre +
   ggsci::scale_color_npg(
     labels = c(
       expression(bold("0A") ~ "(+0"~degree * C * ", pH 7.6)"),
@@ -80,12 +83,12 @@ surv_plot <- init_plot$plot +
       expression(bold("3C") ~ "(+3"~degree * C * ", pH 8.0)")
     )
   ) +
-  geom_hline(yintercept = .5, linetype = 2) +
+  geom_hline(yintercept = .5, linetype = 1, size =.2) +
+  geom_vline(xintercept = 28, linetype = 3, size = .2) +
+  geom_vline(xintercept = 84, linetype = 3, size = .2) +
   cowplot::theme_cowplot() +
   theme(legend.position = "bottom")
 surv_plot
-
-
 
 # Analyse data ----
 ## We hav the model "s" from above
@@ -112,6 +115,7 @@ symnum(pairwise$p.value, cutpoints = c(0, 0.0001, 0.001, 0.01, 0.05, 0.1, 1),
 cox <- coxph(Surv(time, death) ~ temp + pH, data = survdata) %>%
   print()
 summ <- summary(cox)
+summ
 
 coxtable <- summ$coefficients %>%
   as.data.frame() %>%

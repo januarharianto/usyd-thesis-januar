@@ -115,13 +115,18 @@ anova_wk4 <-
   lm(rate ~ Temperature + pH, data = resp_w4) %>%
   Anova() %>%
   print()
-
+wk4_lm <- lm(rate ~ Temperature + pH, data = resp_w4) 
+emmeans(wk4_lm, pairwise~Temperature:pH)
 # Analyse week 12
 anova_wk12 <-
   lm(rate ~ Temperature * pH, data = resp_w12) %>%
   Anova() %>%
   print()
 #Anova(model, type = 3, contrasts=list(topic=contr.sum, sys=contr.sum))
+wk12_lm <- lm(rate ~ Temperature + pH, data = resp_w12) 
+emmeans(wk12_lm, pairwise~Temperature | pH)
+emmeans(wk12_lm, pairwise~pH | Temperature)
+
 
 # PLOTS ------------------------------------------------------------------------
 

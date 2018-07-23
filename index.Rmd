@@ -23,35 +23,57 @@ knitr::write_bib(c(
 
 # General Introduction
 
-## Welcome to the Anthropocene
+## Climate change in the Anthropocene
 
-Ocean warming and acidification in South-Eastern Australia
+In recent years, the terms "Anthropocene" and "Anthropozoikum" have been increasingly mentioned within the broader academic body to illustrate the influence of anthropogenic activity on the global environment (e.g. Crutzen 2006, Steffen et al. 2011, Huges et al. 2018). 
 
-## A multistressor world
 
-## Transgenerational plasticity 
 
-## A framework for multiple responses to climate change
+<!-- The evidence that the Earth is warming is unequivocal, and there is no longer any doubt that the 20th century saw global warming at a scale that  -->
 
-### Measuring physiology
-From 
+
+- A multistressor world
+- Ocean warming and acidification
+- Australia as a hotspot for environmental change
+- Sydney Harbour
+
+<!-- Look into helmuth 2005 -->
+
+
+## Ecophysiology meets climate change
+
+- Detecting the effects of climate change from a physiological context
+- Current methods of measuring physiological stress
+  - Metabolic rate
+  - Feeding, assimilation and excretion
+  - HSP70
+- Bringing it all together: bioenergetics as an integrated ecophysiological approach
+
+## Echinoderms as bioindicators of environmental change 
+
+- Why echinoderms?
+<!-- check Chiarelli 2014 -->
+- Effect of ocean warming
+- Effect of ocean acidification
+- Multistressor impacts
+- Transgenerational effects
+- Study gaps
+  - Future shock
+  - Natural variation
+  - Reproducibility
+
+## Reproducible research 
+
+- Measuring biological rates
+- Are respirometry studies reproducible?
+
+
+
+## Aims and outline
+
+- *Heliocidaris erythrogramma* -- study organism
+- Current knowledge
+- Aims
+
+
 <!-- An increase of temperature in an ectotherm system has two major effects at the molecular level: firstly, it will result in an increase in the proportion of molecules possessing sufficient kinetic energy to achieve the activation level for any given reaction, and secondly it will influence the equilibrium constant of reactions, especially those involving weak chemical bonds Ž Hochachka, 1991 . . Q 10 values for individual biochemical functions can fall anywhere from one through to very high vales, although the Q 10 for purely physical processes such as diffusion is typically around 1.5 or lower. Many studies however report Q 10 values in the range 2–3 for whole animal physiological processes under normal conditions Ž Clarke, 1983; Clarke and Johnston, 1999 . . The maintenance of whole organism Q 10 values within this range as a result of evolutionary adjustment allows for the integration of enzyme-mediated biochemical reactions with physical processes which are essential to physiology Ž Hochachka, 1991 . . -->
-### Energy budgets
-
-### Scope for growth
-
-## Analysing biological rates
-
-### Data sizes are increasing
-
-### Measuring metabolic rate data
-
-### Open-source and open access
-
-### Reproducibility
-
-## Thesis outline
-
-### Study organism
-
-### Aims and outline

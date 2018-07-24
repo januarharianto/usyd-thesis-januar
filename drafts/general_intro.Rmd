@@ -1,0 +1,106 @@
+---
+title: "General Introduction"
+# subtitle: "An implementation in R Markdown"
+# author: "JJ Allaire and Yihui Xie"
+# date: "`r Sys.Date()`"
+output:
+  tufte::tufte_html: 
+    margin_references: false
+  tufte::tufte_handout:
+    citation_package: natbib
+    latex_engine: xelatex
+  tufte::tufte_book:
+    citation_package: natbib
+    latex_engine: xelatex
+bibliography: ../bibliography.bib
+link-citations: yes
+---
+
+```{r setup, include=FALSE}
+library(tufte)
+# invalidate cache when the tufte version changes
+knitr::opts_chunk$set(tidy = FALSE, cache.extra = packageVersion('tufte'))
+options(htmltools.dir.version = FALSE)
+```
+
+
+## Climate change in the Anthropocene
+
+In recent years, the term "Anthropocene" has been used increasingly within the broader academic body to emphasise the global influence of human activity on the Earth's environments [e.g. @Crutzen2006; @Steffen2011; @Hughes2017].
+Because human-environmental interactions are so intertwined in the Anthropocene, anthropogenic activities continue to transform the earth's natural systems where climate change is a driving force for many of the environmental impacts on ecosystems worldwide [@Hoegh-Guldberg2010; @Henson2017]. 
+
+It is now well-understood that increased concentrations of atmospheric carbon dioxide ($pCO_2$) contributes to rising temperatures globally [@IPCC2014]. 
+In addition, our ocean acts as a climate "buffer" that absorbs $25 \%$ to $40 \%$ of $CO_2$ emissions and $90 \%$ of heat, altering its chemistry and physics [@Fletcher2006; @IPCC2014; @Gattuso2015].
+The cascading effects of increased atmospheric $pCO_2$ on the ocean includes changes in temperature [@Mann2017; @Wijffels2016], carbonate chemistry [@Caldeira2003; @Hoegh-Guldberg2017], oxygen availability [@Schmidtko2017] and other abiotic variables, all of which may interact to influence marine environments profoundly.
+
+Many uncertainties still surround the ecological risks associated with climate change [@Gattuso2015; @Howes2015]. 
+Studies have shown significant impacts on oceanic primary productivity [@Behrenfeld2016], trophic interactions [@Ullah2018], species distributions [@Brown2016; @GarciaMolinos2015] and the onset of disease [@Burge2014], but we still know very little about the underlying physiological mechanisms that drive these biological processes [reviewed by @Somero2012; @Gunderson2016].
+Part of the reason for this knowledge gap lies in the difficulty with designing appropriate experiments to assess organismal or community-level performances under future conditions (refs).
+To effectively diagnose the cause of environmental change and predict responses, scientists need to incorporate conditions that are ecologically realistic, and rely on increasingly multidisciplinary and integrative techniques to characterise *not only* the vunlerability of species and ecosystems to climate change, but also their capacity to acclimatise to those changes.
+<!-- Thus, the disruptive impact of the Anthropocene and the broad scientific concensus that anthropogenic $CO_2$  -->
+<!-- Despite broad scientific concensus that anthropogenic $CO_2$ plays a key role in global change, the problems that define the Anthropocene are unlikely to solved in the immediate future. -->
+<!-- Current models suggest that we are already "locked-in" to a $1.5 ^{\circ}C$ increase in global temperatures relative to pre-industrial climate even if we successfully reduce emissions as agreed at the 2015 United Nations Climate Change Conference (COP 21) in Paris (). -->
+
+
+<!-- - because of this, it has become paramount for us to act before it is too late -->
+<!-- - etc -->
+<!-- , effectively regulating climate change in the non-marine biosphere at the expense of major changes to oceanic chemistry and physics.  -->
+<!-- Major changes to oceanic chemistry and physics have thus been documented and studies show significant impacts of these changes to oceanic primary productivity [@Behrenfeld2016], trophic interactions [@Ullah2018], species distributions [@Brown2016; @GarciaMolinos2015] and the spread of disease [@Burge2014]. -->
+
+<!-- Unravelling the mechanisms by which marine biota respond to climate change is still an ongoing challenge.  -->
+<!-- Global change in the ocean will have deleterious effects on some organisms, and beneficial effects for others. -->
+<!-- - A multistressor world -->
+<!-- - Ocean warming and acidification -->  
+
+
+<!-- Look into helmuth 2005 -->
+
+
+## Ecophysiology meets climate change
+
+<!-- Understanding the mechanisms by which climate change impacts organisms in their habitats is of increasing interest to biologists and ecologists, but remains an ongoing challenge. -->
+<!-- Many studies document shifts in species distribution patterns, etc... -->
+
+
+<!-- Until recently, en- vironmental physiologists have relied primarily on carefully controlled laboratory experiments in which they manipulate a single environmental variable in order to assess organismal performance under changing conditions (Todgham & Stillman 2013). However, investigators are increasingly realizing that single-stressor experiments may not be appropriate in assessing the effects of climate change in marine habitats (Wernberg et al. 2012). Experimental marine biologists now often incor- porate two or more environmental factors into their experimental designs, with the hope of gener- ating more realistic inferences about the effects of global change  -->
+
+- Detecting the effects of climate change from a physiological context
+- On the growing importance of understanding underlying mechanisms to explain large-scale ecological patterns
+- Current methods of measuring physiological stress
+    - Metabolic rate
+    - Feeding, assimilation and excretion
+    - HSP70
+- Bringing it all together: bioenergetics as an integrated ecophysiological approach - scope for growth model
+
+## Echinoderms as bioindicators of environmental change 
+
+- Why echinoderms?
+<!-- check Chiarelli 2014 -->
+- Effect of ocean warming
+- Effect of ocean acidification
+- Multistressor impacts
+- Transgenerational effects
+- Study gaps
+  - Future shock
+  - Natural variation
+  - Reproducibility
+
+## Reproducible research 
+
+- 
+- Measuring biological rates
+- Are respirometry studies reproducible?
+
+
+
+## Aims and outline
+
+- Australia as a hotspot for environmental change
+- Sydney Harbour
+- *Heliocidaris erythrogramma* -- study organism
+- Current knowledge
+- Aims
+
+
+## References
+<!-- An increase of temperature in an ectotherm system has two major effects at the molecular level: firstly, it will result in an increase in the proportion of molecules possessing sufficient kinetic energy to achieve the activation level for any given reaction, and secondly it will influence the equilibrium constant of reactions, especially those involving weak chemical bonds Ž Hochachka, 1991 . . Q 10 values for individual biochemical functions can fall anywhere from one through to very high vales, although the Q 10 for purely physical processes such as diffusion is typically around 1.5 or lower. Many studies however report Q 10 values in the range 2–3 for whole animal physiological processes under normal conditions Ž Clarke, 1983; Clarke and Johnston, 1999 . . The maintenance of whole organism Q 10 values within this range as a result of evolutionary adjustment allows for the integration of enzyme-mediated biochemical reactions with physical processes which are essential to physiology Ž Hochachka, 1991 . . -->

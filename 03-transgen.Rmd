@@ -12,6 +12,9 @@ Yeah!
 
 ## Methods
 
+From past research we know that an offset of $+2 ^{\circ}C$ is non-lethal to the species.
+pH was set at 6 levels ranging from 7.6 to 8.0.
+
 ### Collection
 
 ### Adults -- experimental setup and maintenance

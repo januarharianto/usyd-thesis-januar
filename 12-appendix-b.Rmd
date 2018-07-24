@@ -56,10 +56,10 @@ as.data.frame(phresp$contrasts) %>%
 ```
 
 
-```{r mrgroups}
-as.data.frame(cld(phresp)$emmeans)  %>%
-  rename(Group = .group) %>%
-  kable(booktabs = TRUE, caption = "Groups") %>%
-  kable_styling(font_size = 10)
-```
+# ```{r mrgroups}
+# as.data.frame(cld(phresp)$emmeans)  %>%
+#   rename(Group = .group) %>%
+#   kable(booktabs = TRUE, caption = "Groups") %>%
+#   kable_styling(font_size = 10)
+# ```
 

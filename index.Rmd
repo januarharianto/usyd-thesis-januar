@@ -3,7 +3,7 @@ author: "Januar Harianto"
 site: bookdown::bookdown_site
 documentclass: memoir
 classoption: oneside, 11pt, a4paper
-bibliography: [book.bib, packages.bib]
+bibliography: [book.bib, packages.bib, bibliography.bib]
 biblio-style: apalike
 link-citations: yes
 always_allow_html: yes
@@ -25,55 +25,67 @@ knitr::write_bib(c(
 
 ## Climate change in the Anthropocene
 
-In recent years, the terms "Anthropocene" and "Anthropozoikum" have been increasingly mentioned within the broader academic body to illustrate the influence of anthropogenic activity on the global environment (e.g. Crutzen 2006, Steffen et al. 2011, Huges et al. 2018). 
+In recent years, the term "Anthropocene" has been used increasingly within the broader academic body to emphasise the global influence of human activity on the living world [e.g. @Crutzen2006; @Steffen2011; @Hughes2017].
+Because human-environmental interactions are so intertwined in the Anthropocene, anthropogenic activities continue to transform the earth's natural systems where climate change is a driving force for many of the environmental impacts on ecosystems worldwide [@Hoegh-Guldberg2010; @Henson2017]. 
+It is now well-understood that increased concentrations of atmospheric carbon dioxide ($pCO_2$) contributes to rising temperatures globally [@IPCC2014]. 
+In addition, our ocean acts as a climate "buffer" that absorbs $25 \%$ to $40 \%$ of $CO_2$ emissions and $90 \%$ of heat, changing its chemistry and physics [@Fletcher2006; @IPCC2014; @Gattuso2015].
+The cascading effects of increased atmospheric $pCO_2$ on the ocean include alterations in temperature [@Mann2017; @Wijffels2016], carbonate chemistry [@Caldeira2003; @Hoegh-Guldberg2017], oxygen availability [@Schmidtko2017] and other abiotic variables, all of which may interact to influence marine environments profoundly.
 
-
-
-<!-- The evidence that the Earth is warming is unequivocal, and there is no longer any doubt that the 20th century saw global warming at a scale that  -->
-
-
-- A multistressor world
-- Ocean warming and acidification
-- Australia as a hotspot for environmental change
-- Sydney Harbour
-
-<!-- Look into helmuth 2005 -->
-
+ 
+Current studies show significant, large-scale impacts of climate change on oceanic primary productivity [@Behrenfeld2016], trophic interactions [@Ullah2018], species distributions [@Brown2016; @GarciaMolinos2015] and the onset of disease [@Burge2014].
+However, many uncertainties still surround the ecological risks associated with climate change [@Gattuso2015; @Howes2015], and we still know very little about the underlying physiological mechanisms that drive these biological processes [reviewed by @Somero2012; @Gunderson2016].
+<!-- Many studies have used carefully-controlled laboratory experiments and recorded responses under future conditions, yet  -->
+Part of the reason for these gaps in our knowledge are due to the complexities of designing appropriate laboratory experiments to quantify organismal or community-level responses under future conditions.
+To effectively diagnose the cause of environmental change, scientists need to conduct stress-response experiments that incorporate ecologically realistic conditions involving multiple drivers and their interactive effects [@Boyd2017; @Gunderson2017].
+In addition, there is an increasing need to rely on multidisciplinary and integrative techniques as we begin to characterise phenotypic and transgenerational resilience to those changes [@Byrne2013; @Munday2013; @Sunday2014].
 
 ## Ecophysiology meets climate change
 
-- Detecting the effects of climate change from a physiological context
-- Current methods of measuring physiological stress
-  - Metabolic rate
-  - Feeding, assimilation and excretion
-  - HSP70
-- Bringing it all together: bioenergetics as an integrated ecophysiological approach
+There is no doubt that biological systems are actively responding to the current global anthropogenic change in climate. 
+<!-- Understanding the mechanisms that  -->
+<!-- Understanding the mechanisms by which climate change impacts organisms in their habitats is of increasing interest to biologists and ecologists [@Dahlhoff2004; @Helmuth2005; @Chown2010; @Somero2017]. -->
+<!-- There is now a large body of evidence showing synergestic or antagonistic interactions between climate change stressors and that they do not act independently [@Boyd2017; @Byrne2013; @Przeslawski2015]. -->
+<!-- From a management perspective, being able to provide metrics of stress levels under field conditions is beneficial for decision makers -->
+
+<!-- Many studies document shifts in species distribution patterns, etc... -->
+
+
+<!-- Until recently, en- vironmental physiologists have relied primarily on carefully controlled laboratory experiments in which they manipulate a single environmental variable in order to assess organismal performance under changing conditions (Todgham & Stillman 2013). However, investigators are increasingly realizing that single-stressor experiments may not be appropriate in assessing the effects of climate change in marine habitats (Wernberg et al. 2012). Experimental marine biologists now often incor- porate two or more environmental factors into their experimental designs, with the hope of gener- ating more realistic inferences about the effects of global change  -->
+
+- Detecting the effects of climate change from a physiological context - why do it? People, especially decision makers, like to see numbers to prioritise actions. Strong correlation between abiotic factors and responses (most of the time).
+- **On the growing importance of understanding underlying mechanisms to explain large-scale ecological patterns**: We need to understand that global patterns may reflect correlation, but not causation. Understanding the mechanisms that cause changes in behaviour is important in verifying areas of importance for further research, and not chase the wrong tree?
+- There are currently ## papers studying climate change effects, and ##\% used physiological measurements of some kind. A majority of these studies are on invertebrates (##%). Year over year, the use of physiological metrics to quantify responses increases exponentially (Figure #). Metabolic rate was the most popular physiological metric (### papers), followed by the quantification of metabolic enzymes (### papers). Most papers look at multiple physiological traits at once (#\%). A few have integrated multiple physiological metrics into models for better synthesis (e.g. scope for growth, dynamic energy budget, oxygen-limitation theory).
+- Bringing it all together: bioenergetics as an integrated ecophysiological approach - scope for growth model to better model physiological results -- especially if multiple metrics contradict each other, an overall model will be easier to understand whether the effects are positive, or not.
 
 ## Echinoderms as bioindicators of environmental change 
 
-- Why echinoderms?
+- Why echinoderms? Invertebrates - easy to work with. Large body of research on echinoderm biology, so we know the baseline. 
 <!-- check Chiarelli 2014 -->
 - Effect of ocean warming
 - Effect of ocean acidification
 - Multistressor impacts
 - Transgenerational effects
 - Study gaps
-  - Future shock
-  - Natural variation
-  - Reproducibility
+  - Future shock: most studies are acute. Organisms are not provided the opportunity to physiologically acclimate to their surroundings, and are instead placed abruptly into future conditions. (However, acute studies can still be relevant when investigating climate extremes). 
+  - Natural variation: most studies use constant conditions. In reality, varition occurs on the temporal scale of days to months to years. Seasonality may affect interpretation of results as well. E.g. at constant temperature, organisms do not get the cue to prepare for spawning, so they don't have to allocate resources for reproduction. This is critical information -- for urchins, they allocate > 80\% of their feeding energetics to reproduction, so
+  - Reproducibility. Briefly mention this (to open up for section below). Many studies are not realistically reproducible. How do we deal with this?
 
 ## Reproducible research 
 
-- Measuring biological rates
-- Are respirometry studies reproducible?
-
-
+- At the very least, if experiments are not realistically reproducible, their analyses should be. This makes studies more comparable if analytical approaches are similar.
+- Are respirometry studies reproducible? Not really.Out of ## papers that performed respirolmetry of some kind, a very low percentage (## \%) actually published their data. When we assessed methodology, many show signs of subjectivity (i.e. arbitrarily selecting data) when determining rates: ## studies mentioned the metric of interest, but did not define how it was measured; ## studies defined the measurement technique, but were not specific (i.e. "we selected stable regions of the data"" instead of "we used method xx to select stable regions of the data").
+- Reliable methods of measuring biological rates. Focus on metabolic rate -- why is it important? Show how different measures of the same rate can have a high margin of error (cite papers - probably 40-50\% margin of error). 
+- Current solutions, identify the issue with these current solutions. Talk about data collection, data storage and data wrangling.
+- Reiterate the need for reproducible analyses.
 
 ## Aims and outline
 
+- Australia as a hotspot for environmental change
+- Sydney Harbour
 - *Heliocidaris erythrogramma* -- study organism
 - Current knowledge
 - Aims
 
 
+## References
 <!-- An increase of temperature in an ectotherm system has two major effects at the molecular level: firstly, it will result in an increase in the proportion of molecules possessing sufficient kinetic energy to achieve the activation level for any given reaction, and secondly it will influence the equilibrium constant of reactions, especially those involving weak chemical bonds Ž Hochachka, 1991 . . Q 10 values for individual biochemical functions can fall anywhere from one through to very high vales, although the Q 10 for purely physical processes such as diffusion is typically around 1.5 or lower. Many studies however report Q 10 values in the range 2–3 for whole animal physiological processes under normal conditions Ž Clarke, 1983; Clarke and Johnston, 1999 . . The maintenance of whole organism Q 10 values within this range as a result of evolutionary adjustment allows for the integration of enzyme-mediated biochemical reactions with physical processes which are essential to physiology Ž Hochachka, 1991 . . -->

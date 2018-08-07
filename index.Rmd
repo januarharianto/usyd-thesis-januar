@@ -160,76 +160,72 @@ All of these changes will have ecological and physiological impacts; increased m
  Understanding the fundamental mechanisms behind temperature’s effects on organism physiology will help improve predictions of physiological tolerance to environmental stress and better understand the impacts species-level changes such as these can have on the world's marine ecosystems.
 
 
-### Increased seawater carbon dioxide concentrations, $pCO_2$
+### Increased carbon dioxide concentration, *pCO~2~*
 
 A pervasive effect of rising $pCO_2$ levels in the oceans is the chemical alteration of the carbonate system of seawater from ocean acidification (OA), which causes a general decline of surface ocean pH [@IPCC2013]. 
-This in turn affects a wide range of basic physiological functions in organisms such as membrane transport [e.g. @Moulin2015], photosynthesis [e.g. @Gao2010], growth [e.g. @Pistevos2015], reproduction [e.g. @Boulais2017] and calcification [e.g. @Thomsen2015]. 
-In particular, reduced pH will challenge marine calcifiers [@Cyronak2016] where reduced rates of calcification (or increased dissolution) have been recorded in corals [@Hoegh-Guldberg2007], bivalves [@Waldbusser2015], echinoderms [@Wolfe2013] and planktonic species [e.g. coccolithophores, @Riebesell2017].
+By now, a considerable body of data exists on the effect of OA on marine organisms, but there is also substantial interest in predicting the extent to which organisms will be able to respond or adapt to changes in seawater chemistry and other abiotic factors [e.g. @Hendriks2015; @Popova2016].
+OA influences a wide range of basic physiological functions in organisms such as membrane transport [e.g. @Moulin2015], photosynthesis [e.g. @Gao2010], growth [e.g. @Pistevos2015], reproduction [e.g. @Boulais2017] and calcification [e.g. @Thomsen2015]. 
+In particular, reduced pH will challenge the resilience of marine calcifiers [@Cyronak2016] where reduced rates of calcification (or increased dissolution) affects the growth and maintenance of both larval and adult stages of the life cycle, and is already well-documented in corals [@Hoegh-Guldberg2007], bivalves [@Waldbusser2015], echinoderms [@Wolfe2013] and planktonic calcifiers [e.g. coccolithophores, @Riebesell2017].
 <!-- For those animals, experimental studies have generally showed negative effects of OA, although results become highly variable when other abiotic stressors such as increased temperature come into play [refs]. -->
 
-Importantly, OA affects metabolism because of its effect upon biochemical pathways, resulting in altered metabolic costs to maintain physiological homeostasis [@Pan2015; @Hendriks2015].
-Thus, in some species, increased pH is accompanied by elevated metabolic rate responses due to the substantially increased energetic costs of maintaining calcium carbonate skeletons [e.g. Stumpp2011; @Calosi2013] or to preserve acid-base balance [e.g. Catarion2012; @Collard2013].
-However, in other organisms or under combined effects with other stressors, OA may have the opposite effect and cause metabolic depression because of disruptions in metabolic pathways [e.g. @Anestis2007] or trade-offs in energy allocation to conserve energy [e.g. @Pan2015].
+Importantly, OA affects metabolism because of its effect upon biochemical pathways, resulting in altered metabolic costs to maintain physiological homeostasis [@Melzner2009; @Hendriks2015].
+Thus, in some species, increased pH is accompanied by elevated metabolic rate responses due to the substantially increased energetic costs of maintaining calcium carbonate skeletons [e.g. Stumpp2011; @Calosi2013] or to preserve acid-base balance [e.g. Catarino2012; @Collard2013].
+However, in other organisms or under combined effects with other stressors, OA may have the opposite effect and cause metabolic depression, because of disruptions in metabolic pathways [e.g. @Anestis2007] or trade-offs in energy allocation to conserve energy [e.g. @Pan2015].
+<!-- Determining the specific cause of OA on organismal performance therefore requires an integration of metabolic performance and the plasticity of  -->
+If the impact is severe, acidification could further reduce an organism's tolerances to other environmental stressors such as temperature [e.g. @Ko2014], salinity [e.g. @Parker2017a] and pollution [e.g. @Zeng2015].
 
-
-<!-- While there is general agreement to date on the effect of OA on ocean chemistry, -->
-
-<!-- OA may also affect extracellular acid-base balances for species that are less capable of controlling extracellular pH from active ion transport [e.g. Catarion2012; @Collard2013], whereas more mobile organisms such as fish are more tolerant [@Heuer2014; @Thomsen2015].  -->
-
-
-
-<!-- The field of OA has demonstrated a multitude of biological effects causing profound ecological shifst [@Kroeker2010; @Gaylord2015]. -->
-
-<!-- Ocean acidiﬁcation is a pervasive stressor that could affect many marine organisms and cause profound ecological shifts. -->
-
-<!-- Many marine organisms, from phytoplankton to ﬁsh, are sensitive to changes in carbonate chemistry, and their responses to the predicted changes could lead to profound ecological shifts in marine ecosystems (reviewed by Doney et al. 2009b). -->
-<!-- A variety of biological responses to ocean acidiﬁcation have been measured across a range of taxa, but this information has not been synthesized into meaningful comparisons to broad ecological impacts. -->
-<!-- Marine organisms vary broadly in their responses to ocean acidiﬁcation, in part due to the wide variety of processes affected (e.g., dissolution and calciﬁcation rates, growth rates, development and surviva, Doney et al. 2009, Hofmann et al. 2010, Kroeker et al. 2013, Portner 2008), making it challenging to predict how marine ecosystems will respond to ocean acidiﬁcation. -->
-<!-- The biological impacts of ocean acidification is still unclear, but there is growing evidence that it plays an important role in biodiversity. -->
-
-<!-- By altering the balance of carbonate saturation states in sea water, OA also increases the metabolic costs associated with acid–base regulation, calcification and skeletogenesis (Doney et al. 2009, Hofmann et al. 2010, Kroeker et al. 2013, Portner 2008).  -->
-<!-- Calciﬁcation may be especially sensitive because altered carbonate chemistry directly affects the deposition and dissolution rates of the CaCO 3 used for structures (Gattuso & Buddemeier 2000). -->
-<!-- Reduced calciﬁcation rates or increased dissolution rates have been measured in tropical corals (Kleypas et al. 1999; Marubini et al. 2003; Hoegh-Guldberg et al. 2007), planktonic organisms (Riebesell et al. 2000; Orr et al. 2005), bivalves (Michaelidis et al. 2005; Gazeau et al. 2007) and echinoderms (Kurihara & Shirayama 2004; Shirayama & Thornton 2005) amongst others in response to ocean acidiﬁcation.  -->
-<!-- The impacts on calciﬁcation could then result in altered energy allocation (Wood et al. 2008), lower growth rates, reduced reproductive output and decreased survival amongst calcifying organisms under conditions of ocean acidiﬁcation. -->
-
-
-<!-- However, projected ocean acidification may progress at a rate that is difficult to stimulate in the laboratory. -->
-
-
-
-<!-- Carlos Duarte is OA an open ocean symptom? -->
-<!-- Talk about how temperature influences OA based on seasonal changes in temp + salinity alone - thus, temperature itself drives OA (check paper) in coastal regions at least. -->
+So far, our understanding of OA-induced responses are based mostly on experimental studies which expose organisms to constant pH or $pCO_2$ conditions over time [@Gunderson2016]. 
+Constant pH may be an appropriate estimate for open ocean systems, coastal regions are a lot more complex, both biogeochemically and structurally, with vastly dynamic variability in pH due to interactions within and between benthic species that can alter their immediate regions both physically and chemically [@Hendriks2015]. 
+In many cases, the pH variability experienced in coastal habitats often exceed the magnitude of long-term projections for open-ocean regions [@Duatre2013].
 
 ## On the complexities of climate change manipulation experiments
 
-### Multistressor effects and their interactions
+<!-- ### Multistressor effects and their interactions -->
 
-Experimental marine biologists now often incorporate two or more environmental factors into their experimental designs, with the hope of generating more realistic inferences about the effects of global change (refs).
-Conceptually, organisms subjected to multiple stressors exhibit one of three types of responses: additive, antagonistic, or synergistic (Todgham & Stillman 2013)
-An additive effect occurs when the combined effect of multiple stressors equals the sum of the effects of each stressor in isolation.
-An antagonistic effect occurs when the combined effect of multiple stressors is less than the expected additive effect in isolation.
-A synergistic effect occurs when the combined effect of multiple stressors is greater than the expected additive effect of the stressors in isolation.
+The marine world is affected by multiple stressors, with durations and severity that vary across multiple spatial and temporal scales.
+These stressors often interact to produce additive, synergestic or antagonistic effects on biological processes, which can result in positive or negative impacts [reviewed by @Byrne2013; @Gunderson2016].
+<!-- To accurately estimate the response of organisms under future anthropogenic change, the effect of interactions between multiple stressors must be incorporated into experimental designs (Wernberg et al. 2012\*).  -->
+Most experimental scientists now understand the necessity of incorporating more than a single stressor to obtain responses from organisms that are more realistic to the natural environments, as seen in recent studies [e.g. @Collard2016; @Parker2017; @Hoshijima2017; @Hoegh-Guldberg2017; @Bausch2018].
+However, we still have limited understanding of the consequences behind currently observed responses of marine taxa to multiple stressors due to the lack of mechanistic understanding of the physiological traits that underpin those responses [@Portner2004; @Portner2008; @Gunderson2016].
+<!-- For many of those studies, temperature is investigated the most in combination to other abiotic factors such as salinity, acidification and hypoxia [@Gunderson2016]. -->
 
-### Integration of different physiological traits
+For most marine invertebrates, recent meta-analyses show that synergistic effects were the most common outcome [@Przeslawski2015; @Lefevre2016; @Clements2016]. 
+However, the interactions between stressors vary depending on the life stage of the organism. 
+For example, in sea urchins, elevated temperature buffers the negative effects of decreased pH in larvae and embryos [e.g. @Byrne2009; @Wolfe2013], but in later juvenile and adult stages, temperature and pH do not interact, and warming affected sea urchin responses more than acidification [e.g. @Carey2016; @Karelitz2016; @Harianto2018].
+Thus different responses to the same stressor combinations can occur in the same organism depending on its life history [see review by @Byrne2013].
+<!-- ### Integration of different physiological traits -->
 
-Explaining a species' performance from its metabolic rate is less than straightforward (reword).
+<!-- Explaining a species' performance from its metabolic rate is less than straightforward (reword). -->
 
-An understanding of the effects of environmental stress on metabolic rate can provide insights for the interpretation of  other physiological responses, since …trade-offs… etc. 
+<!-- An understanding of the effects of environmental stress on metabolic rate can provide insights for the interpretation of  other physiological responses, since …trade-offs… etc.  -->
 
-### Long-term experiments and the artificial constraints of constant conditions
+<!-- ### Long-term experiments and the artificial constraints of constant conditions -->
 
-The increased attention to multiple stressors has paralleled an increased focus on the temporal dynamics of environmental stress.
-Experimental biologists have traditionally subjected organisms to constant conditions within a given treatment, usually based on summaries of environmental measurements such as mean or maximum values of a given stressor. However, environmental parameters fluctuate on multiple timescales, from hours to months to years. 
-These fluctuations are likely to be extremely important for dictating how organisms respond to prevailing conditions and to human-induced environmental change (Vincenzi 2014). For example, mean environmental conditions ignore spikes in environmental stress that may have enormous consequences for population dynamics (Denny et al. 2011, Wethey et al. 2011).
-Similarly, exposure to constant extreme stress ignores reprieves from stress that are likely important in allowing organisms to cope with these conditions.
+In addition to the increased attention to multiple stressors, focus on the temporal dynamics of environmental stress has started to be of growing interest to climate biologists [refs].
+<!-- It is still difficult to predict future ecosystem-level responses of organisms to climate change, partly because -->
+The majority of current experiments involved in the manipulation of constant conditions often do so without considering that environmental parameters fluctuate on multiple timescales, from hours, to months and years [@Hendriks2010; @Duarte2013].
+These fluctuations are likely to be extremely important for dictating how organisms respond to already variable conditions with the added pressures from anthropogenic change [@Kreyling2013; @Thompson2013] and the press and pulse of extreme events [@Harris2018]. 
+
+
+Thus, instead of maintaining constant conditions, climate manipulation experiments need to somehow incorporate the temporal variability of environmental conditions -- a challenging endeavour considering the fact that we still lack a baseline record of current environmental data in most marine habitats, even for some of the world's most iconic harbours [e.g. Sydney Harbour, @Mayer-Pinto2015; @Tanner2017].
+In addition, mean environmental conditions ignore spikes in environmental stress that may have extensive consequences on population dynamics, especially during extreme weather events [@Leung2017].
+
+<!-- Similarly, exposure to constant extreme stress ignores reprieves from stress that are likely important in allowing organisms to cope with these conditions. -->
+
+
+
+
 
 ## Study animal
 
-The focus of this thesis is the sea urchin, *Heliocidaris erythrogramma* (Valenciennes, 1846). Endemic to Australia, *H. erythrogramma* is distributed along the rocky reefs of Southern Australia south of ~25°S [@Keesing2013]. It inhabits the subtidal fringe of intertidal reefs at 1 to 5 m in depth [Sheperd1973; Underwood1991], occupying burrows in kelp-dominated reefs but is also found in seagrass beds and barren areas [@Keesing2013]. When seen, the species is very abundant, occurring at high densities [80 — 192 individuals/m2, Wright et al. 2005] and is thus a prominent component of the marine landscape.
+The focus of this thesis is the sea urchin, *Heliocidaris erythrogramma* (Valenciennes, 1846). Endemic to Australia, *H. erythrogramma* is distributed along the rocky reefs of Southern Australia south of $\sim25 ^{\circ}S$ [@Keesing2013]. It inhabits the subtidal fringe of intertidal reefs at 1 to 5 m in depth [@Underwood1991], occupying burrows in kelp-dominated reefs but is also found in seagrass beds and barren areas [@Keesing2013]. When seen, the species is very abundant, occurring at high densities [$80 - 192\ indv \cdot m^2$, @Wright2005] and is a prominent component of the marine landscape.
 
-As with many other sea urchins, *H. erythrogramma* is a known ecosystem engineer. It is a vigorous herbivore, feeding mostly on the kelp *Ecklonia Radiata* (Vanderklift and Kendrick 2005). However, at high population densities there is evidence that it will consume algal species that they would normally avoid (Wright et al. 2005). Thus, grazing pressure by the sea urchin can lead to significant effects on community assemblages, as is common for many sea urchin species associated with sea urchin "barrens" (Pearse, 2006). Connolly (1986) found negligible diel movement when testing sea urchins in South Australia, and Sanderson et al. (1996) found that even after one year of observations in Tasmania, *H.erythrogramma* moved very little from their locations. This species appears relatively sedentary in general, thus any environmental change that affects *H. erythrogramma* will affect the structure of marine benthic communities at distinctly local scales.
+As with many other sea urchins, *H. erythrogramma* is a known ecosystem engineer. It is a vigorous herbivore, feeding mostly on the kelp *Ecklonia Radiata* [@Vanderklift2005]. However, at high population densities there is evidence that it will consume algal species that they would normally avoid [@Wright2005]. Thus, grazing pressure by the sea urchin can lead to significant effects on community assemblages, as is common for many sea urchin species associated with sea urchin "barrens" [@Filbee-Dexter2014].
+This species appears relatively sedentary in general; Connolly (1986) found negligible diel movement when testing sea urchins in South Australia, and [@Sanderson1996] found that even after one year of observations in Tasmania, *H.erythrogramma* moved very little from their locations. , thus any environmental change that affects *H. erythrogramma* will affect the structure of marine benthic communities at distinctly local scales.
 
-In many ways, *H. erythrogramma* is the perfect candidate to study the effects of climate change on an ecologically important species. Sea urchins are already used as model organisms in the study of developmental biology and 
+In many ways, *H. erythrogramma* is the perfect candidate to study the effects of climate change on an ecologically important species. 
+Sea urchins are already used as model organisms in the study of developmental biology [refs]. 
+They
 
 ### Effects of warming and acidification on H. *erythrogramma*
 

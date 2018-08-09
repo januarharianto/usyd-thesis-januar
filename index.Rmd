@@ -176,7 +176,7 @@ If the impact is severe, acidification could further reduce an organism's tolera
 
 So far, our understanding of OA-induced responses are based mostly on experimental studies which expose organisms to constant pH or $pCO_2$ conditions over time [@Gunderson2016]. 
 Constant pH may be an appropriate estimate for open ocean systems, coastal regions are a lot more complex, both biogeochemically and structurally, with vastly dynamic variability in pH due to interactions within and between benthic species that can alter their immediate regions both physically and chemically [@Hendriks2015]. 
-In many cases, the pH variability experienced in coastal habitats often exceed the magnitude of long-term projections for open-ocean regions [@Duatre2013].
+In many cases, the pH variability experienced in coastal habitats often exceed the magnitude of long-term projections for open-ocean regions [@Duarte2013].
 
 ## On the complexities of climate change manipulation experiments
 
@@ -189,12 +189,14 @@ Most experimental scientists now understand the necessity of incorporating more 
 However, we still have limited understanding of the consequences behind currently observed responses of marine taxa to multiple stressors due to the lack of mechanistic understanding of the physiological traits that underpin those responses [@Portner2004; @Portner2008; @Gunderson2016].
 <!-- For many of those studies, temperature is investigated the most in combination to other abiotic factors such as salinity, acidification and hypoxia [@Gunderson2016]. -->
 
-For most marine invertebrates, recent meta-analyses show that synergistic effects were the most common outcome [@Przeslawski2015; @Lefevre2016; @Clements2016]. 
+<!-- For most marine invertebrates, recent meta-analyses show that synergistic effects were the most common outcome [@Przeslawski2015; @Lefevre2016; @Clements2016], with warming and OA being the two most important stressors  -->
+For most marine invertebrates, recent meta-analyses show that warming and OA appear to be the most important stressors because of their pervasive nature, and their synergistic effects on physiology and biochemical pathways [@Przeslawski2015; @Lefevre2016; @Clements2016].
 However, the interactions between stressors vary depending on the life stage of the organism. 
 For example, in sea urchins, elevated temperature buffers the negative effects of decreased pH in larvae and embryos [e.g. @Byrne2009; @Wolfe2013], but in later juvenile and adult stages, temperature and pH do not interact, and warming affected sea urchin responses more than acidification [e.g. @Carey2016; @Karelitz2016; @Harianto2018].
 Thus different responses to the same stressor combinations can occur in the same organism depending on its life history [see review by @Byrne2013].
 <!-- ### Integration of different physiological traits -->
-
+Further, changes in energetics due to physiological compensation or depression may interact with biological processes such as growth and reproduction, which we still have a poor understanding of (Newell and Branch 1980; Parry 1983; Angilletta et al. 2010; Coggan et al. 2011).
+As a result, studies that integrate multiple physiological parameters are important in predicting vulnerability to environmental stress [@Magozzi2015].
 <!-- Explaining a species' performance from its metabolic rate is less than straightforward (reword). -->
 
 <!-- An understanding of the effects of environmental stress on metabolic rate can provide insights for the interpretation of  other physiological responses, since …trade-offs… etc.  -->
@@ -218,27 +220,63 @@ In addition, mean environmental conditions ignore spikes in environmental stress
 
 ## Study animal
 
-The focus of this thesis is the sea urchin, *Heliocidaris erythrogramma* (Valenciennes, 1846). Endemic to Australia, *H. erythrogramma* is distributed along the rocky reefs of Southern Australia south of $\sim25 ^{\circ}S$ [@Keesing2013]. It inhabits the subtidal fringe of intertidal reefs at 1 to 5 m in depth [@Underwood1991], occupying burrows in kelp-dominated reefs but is also found in seagrass beds and barren areas [@Keesing2013]. When seen, the species is very abundant, occurring at high densities [$80 - 192\ indv \cdot m^2$, @Wright2005] and is a prominent component of the marine landscape.
+The focus of this thesis is the sea urchin, *Heliocidaris erythrogramma* (Valenciennes, 1846). 
+Endemic to Australia, *H. erythrogramma* is distributed along the rocky reefs of Southern Australia south of $\sim25 ^{\circ}S$ [@Keesing2013]. It inhabits the subtidal fringe of intertidal reefs at 1 to 5 m in depth [@Underwood1991], occupying burrows in kelp-dominated reefs but is also found in seagrass beds and barren areas [@Keesing2013].
+When present, the species is very abundant, occurring at high densities [$80 - 192\ indv \cdot m^2$, @Wright2005] and is a prominent component of the marine landscape.
 
-As with many other sea urchins, *H. erythrogramma* is a known ecosystem engineer. It is a vigorous herbivore, feeding mostly on the kelp *Ecklonia Radiata* [@Vanderklift2005]. However, at high population densities there is evidence that it will consume algal species that they would normally avoid [@Wright2005]. Thus, grazing pressure by the sea urchin can lead to significant effects on community assemblages, as is common for many sea urchin species associated with sea urchin "barrens" [@Filbee-Dexter2014].
-This species appears relatively sedentary in general; Connolly (1986) found negligible diel movement when testing sea urchins in South Australia, and [@Sanderson1996] found that even after one year of observations in Tasmania, *H.erythrogramma* moved very little from their locations. , thus any environmental change that affects *H. erythrogramma* will affect the structure of marine benthic communities at distinctly local scales.
+As with many other sea urchins, *H. erythrogramma* is a known ecosystem engineer.
+It is a vigorous herbivore, feeding mostly on the kelp *Ecklonia radiata* [@Vanderklift2005].
+However, at high population densities there is evidence that it will consume algal species that they would normally avoid [@Wright2005]. 
+Thus, grazing pressure by the sea urchin can lead to significant effects on community assemblages [@Ling2010], as is common for many sea urchin species associated with sea urchin "barrens" [@Filbee-Dexter2014].
 
-In many ways, *H. erythrogramma* is the perfect candidate to study the effects of climate change on an ecologically important species. 
-Sea urchins are already used as model organisms in the study of developmental biology [refs]. 
-They
+<!-- , thus any environmental change that affects *H. erythrogramma* will affect the structure of marine benthic communities at distinctly local scales. -->
+
+In many ways, *H. erythrogramma* is the ideal candidate to study the effects of climate change on an ecologically important species. 
+Sea urchins are already used as model organisms in the study of developmental biology [refs] and biomineralisation [refs]. 
+Their larvae are morphologically simple tranparent, while adults are relatively sedentary in general [Connolly 1986; @Sanderson1996] and are therefore easy to manipulate in the laboratory or in the field.
+As habitat-modifying organisms that often occur in large numbers, they are also ecologically significant -- changes in their distribution can potentially affect the structure of marine benthic communities at distinctly local scales [@Ling2010; @Steneck2002].
+Sea urchins have also been identified to be vulnerable to climate change, especially in pre-metamorphic stages [@Kroeker2010; @Przeslawski2015].
+
+To date, a large proportion of studies on sea urchins are focused on development [@Byrne2013; @Przeslawski2015], with the analysis of physiological traits becoming more common in recent years [e.g. @Stumpp2011; @Dorey2013]. 
+Focus on early life stanges are common as they are particularly sensitive to environmental stress, which may represent key barriers to long-term species persistence [@Przeslawski2015].
+In contrast, studies on adult sea urchins are more focused on the measurement of physiological traits such as metabolic, feeding and growth rates [e.g. @Moulin2015; @Delorme2016], however the are also numerous studies that utilise sea urchins as bioindicators of environmental pollution and stress [e.g. @Chiarelli2014; @Savriama2015; @Pinsino2015].
+
+
+More recently, there is a rapid emergence of long-term studies focused on adult sea urchin species in an effort to better understand modes of acclimation and physiological plasticity, which could affect tolerance to environmental stressors [@Suckling2015, @Morley2016; @Carey2016; @Harianto2018].
+These studies showed that physiological traits can adjust in response to long-term exposures to stress over time, although stress responses may not necessarily lead to improved fitness.
+For example, @Harianto2018 showed that long-term exposure to elevated temperature ($+4-6^{\circ}C$) increases the metabolic rate, immune response and mortality of *H. erythrogramma*, whereas @Morley2016 showed that the Antarctic sea urchin, *Sterechinus neumayeri*, after 40 months of acclimation to combined warming ($+2 ^{\circ}C$) and ocean acidification (−0.3 and −0.5 pH units), were generally unaffected by both stressors. 
+Long-term studies such as these show how poor our understanding of the role of plasticity on performance traits is, and acclimation time is a crucial factor to consider when conducting experiments that investigate responses to climate change.
+
+<!-- @Delorme2016; @Morley2016; ADULTS -->
 
 ### Effects of warming and acidification on H. *erythrogramma*
 
-We found X publications so far documenting the effects of environmental stress on *H. erythrogramma*. Of these, many are studies on the embryo and early-stage larvae [@Byrne2009; @Byrne2011; @Foo2016]. Two papers involved juveniles [@Wolfe2013], and the rest were on adults [@Nguyen2013; @Carey2016; @Brothers2016; @Sweet2016; @Harianto2018].
+There are 17 publications so far documenting the effects of climate change stress on *H. erythrogramma*. Of these, many are studies on the embryo and early-stage larvae [8 papers, e.g. @Byrne2009; @Hardy2014; @Foo2016]. Four papers involved post-settlement juveniles [@Byrne2011; @Byrne2011a; @Wolfe2013; @Foo2016], and 5 papers were on adults [@Nguyen2013; @Carey2016; @Brothers2016; @Sweet2016; @Harianto2018]. Three additional studies focused on sperm or egg performance under ocean future OA conditions [@Havenhand2008; @Schlegel2012; @Foo2018]. 
+All studies focused on the effect of temperature, pH, or their interactions on the urchin.
+Experiments on the embryo to juvenile stages focused mostly on developmental changes (e.g. normal/abnormal growth, morphometrics) and survival, whereas studies that focused on adults were more focused on physiological responses and some morphometrics.
 
-- Fertilisation is robust to ocean warming (Byrne 2009), but not to acidification (Havenhand 2008). When combined, negative effects of acidification are buffered by increased temperature
-- Sublethal effects found with warming, but not acidification in developing embryos (Byrne 2009, 2011, Hardy and Byrne 2014)
-- Evidence of parental identity interacting with stressors in developing embryos to metamorphosis, resulting in reduced impact in some crosses (Foo et al. 2016)
-- Sublethal effects found with both warming and acidification in settling juveniles (Byrne et al 2011)
-- Positive effect of warming on spine length, but negative on calcification for juveniles, no effect on survival (Wolfe et al 2013)
-- From juveniles to adults, warming influences metabolism and has a positive effect (Carey et al. 2016)
-- Adult immune response is compromised by ocean acidification, but over time the effect was diminished partly due to interactions with temperature (Brothers et al. 2016)
-- For adults, extreme warming causes metabolic depression (Harianto et al. 2018). This has been shown in other sea urchin species with warming (Delrome and Sewell 2011). A similar pattern was also observed for temperate ophiuroids and asteroids (Christensen et al. 2011; McElroy et al. 2012).
+Decreased pH reduces sperm density and swimming speed [@Havenhand2008; @Schlegel2012] but increased sperm motility [@Foo2018]. 
+Eggs of *H. erythrogramma* retained their jelly coat even under OA conditions [pH $7.6-7.8$, @Foo2018].
+Thus, fertilisation is robust to both decreased pH and warming [@Byrne2010; @Byrne2010a], but was compromised at high temperature [$26 ^{\circ}C$, @Byrne2011].
+At early development, temperature significantly affected normal development and survival from the embryo to pre-metamorphic stages, but decreased pH did not [@Byrne2009; @Hardy2014].
+
+Upon reaching early juvenile stage, acidification becomes a key driver as *H. erythrogramma* begins to produce calcified strutures, with two studies demonstrating abnormalities in spine and test growth occurring when cultured from fertilisation to low pH [7.6--7.6, @Byrne2011a; @Wolfe2013]. 
+However, temperature, when included as an additional stressor, diminished the negative effects of OA in both studies.
+In addition, warming had a positive effect on juvenile spine length, but no effect on survival, and while decreased pH did not affect either response, electron microscopy showed blunting of spine structures due to dissolution [@Wolfe2013].
+
+There was evidence that the immune response (i.e. phagocytic activity of coelomocyte cells) of *H. erythrogramma* is affected by decreased pH, but warming interacted with pH and alleviated those negative effects [@Brothers2016].
+@Carey2016 found that *H. erythrogramma* increased its metabolic response by up to 20\% when exposed to either warming ($23^{\circ}C$ to control $17^{\circ}C$) and acidification (pH 7.6), but the two stressors did not interact.
+However, the combined effect of both stressors were additive resulting in a 44\% increase in metabolic rate on the species.
+Interestingly, @Harianto2018 found that long-term exposure (3-month) to increased temperature resulted in increased mortality risk (69 time higher) for urchins acclimated at $24-26^{\circ}C$. 
+In addition, the sea urchins exhibited signs of metabolic depression, possibly due to disruptions in oxidative phosphorylation (Guderley and St-Pierre 2002), and elevated HSP70 protein expression, which suggest that temperatures close to $26^{\circ}C$ is thermally stressful.
+
+
+
+<!-- but it appeared that the underlying physiological mechanisms are relatively separated -- the combined effects of increased temperature and low pH had additive effects on metabolic rate [@Carey2016]. -->
+
+<!-- - From juveniles to adults, warming influences metabolism and has a positive effect (Carey et al. 2016) -->
+<!-- - Adult immune response is compromised by ocean acidification, but over time the effect was diminished partly due to interactions with temperature (Brothers et al. 2016) -->
+<!-- - For adults, extreme warming causes metabolic depression (Harianto et al. 2018). This has been shown in other sea urchin species with warming (Delrome and Sewell 2011). A similar pattern was also observed for temperate ophiuroids and asteroids (Christensen et al. 2011; McElroy et al. 2012). -->
 
 
 ## Thesis structure

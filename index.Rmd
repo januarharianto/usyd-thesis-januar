@@ -12,7 +12,6 @@ mainfont: Minion Pro
 sansfont: Myriad Pro
 mathfont: Minion Pro
 ---
-<!-- \OnehalfSpacing -->
 
 ```{r include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, fig.height = 6, fig.width = 6, 
@@ -30,22 +29,24 @@ knitr::opts_chunk$set(echo = FALSE, fig.height = 6, fig.width = 6,
 Understanding the underlying mechanisms by which climate change is affecting marine organisms is an area of increasing concern to marine ecophysiologists worldwide [@Dahlhoff2004; @Helmuth2005; @Chown2010; @Somero2017].
 As anthropogenic activities transform the ocean's natural systems, their impacts will continue to cascade through the marine biosphere across temporal and spatial scales, from organisms to whole ecosystems [@Munday2013; @Gattuso2015].
 
-It is now known that the increased concentration of atmospheric carbon dioxide ($pCO_2$) from human activity contributes to rising temperatures globally [@IPCC2014], and the ocean acts as a climate buffer that absorbs 25\% to 40\% of $CO_2$ emissions and 90\% of heat, changing its chemistry and physics [@Fletcher2006; @IPCC2014; @Gattuso2015]. 
-Consequently, alterations in temperature [@Mann2017; @Wijffels2016], carbonate chemistry [@Caldeira2003; @Hoegh-Guldberg2017], oxygen concentration [@Schmidtko2017; @Chu2017] and light availability [@Gattuso2006] are causing wide-ranging impacts on oceanic primary productivity [@Behrenfeld2016], trophic interactions [@Ullah2018], and species distributions [@Molinos2015; @Brown2016; @Sommer2018].
+It is now known that the increased concentration of atmospheric carbon dioxide ($pCO_2$) from human activity contributes to rising temperatures globally [@IPCC2014]. 
+The ocean acts as a climate buffer absorbing 25\% to 40\% of anthropogenic $CO_2$ emissions and 90\% of heat, causing changes in ocean chemistry and physics [@Fletcher2006; @IPCC2014; @Gattuso2015]. 
+Consequent alterations in temperature [@Mann2017; @Wijffels2016], carbonate chemistry [@Caldeira2003; @Hoegh-Guldberg2017], oxygen concentration [@Schmidtko2017; @Chu2017] and light availability [@Gattuso2006] are causing wide-ranging impacts on oceanic primary productivity [@Behrenfeld2016], trophic interactions [@Ullah2018], species distributions [@Molinos2015; @Brown2016; @Sommer2018] and survival [@Hughes2017].
 
-Without mitigation measures, global $pCO_2$ levels will continue to increase from the current $410 ppm$ to $985 ppm$, and average global temperatures will likely exceed $+2^{\circ}C$ relative to 1986--2005 by the end of this century [RCP8.5 scenario, @Riahi2011; @IPCC2014]. 
-These changes are expected to amplify the ecological impacts currently observed on both our natural and human ecosystems globally [@Howes2015]. 
+Without mitigation measures, global $pCO_2$ levels will continue to increase from the current $410 ppm$ to $985 ppm$ and average global temperatures will likely exceed $+2^{\circ}C$ relative to 1986--2005 by the end of this century [RCP8.5 scenario, @Riahi2011; @IPCC2014].
+In particular, ocean temperatures under the current high-emissions trajectory are expected to warm by an average of $2.73 ^{\circ}C$, with many marine organisms at *very high* risk of impacts by 2050 [@Gattuso2015].
+These changes are expected to amplify the ecological impacts currently observed on both our natural and human ecosystems globally [@Howes2015].
 
-## Predicting resilience through physiology
+## Predicting resilience to environmental stress through investigation of physiology
  
-While the broad consequences of ocean change continue to be documented in the literature, the challenge now is to tease apart the underlying casual mechanisms that drive those changes to understand the linkages between ecosystem effects and the processes that occur at the level of organism and cell [@Portner2002; @Somero2005; @Somero2012]. 
+While the broad consequences of ocean change continue to be documented in the literature, the challenge remains as to tease apart the underlying casual mechanisms that drive those changes so that we can understand the linkages between ecosystem effects and the physiological processes that occur at the level of organism and cell [@Portner2002; @Somero2005; @Somero2012]. 
 Climate manipulation experiments are valuable tools for understanding these links.
 By subjecting organisms to current and future scenarios of ocean change, we can predict, based on experimental evidence, which species within ecosystems are most vulnerable [@Munday2013; @Sinclair2016; @Verberk2016]. 
-However, doing so is not a trivial undertaking, owing to the diverse and multi-stressor nature of environmental stress [@Byrne2013; @Boyd2015].
+However, this is not a trivial task die to the diverse and multi-stressor nature of environmental stress [@Byrne2013; @Boyd2015].
 In addition, it is often difficult to deduce the adaptive potential of organisms from physiological responses due to the intrinsic phenotypic plasticity of individuals as they modify their growth, development and behaviour dynamically to environmental cues [@Forsman2015; @Murren2015].
 
-Nevertheless, studies that measure or physiological responses to changes in physical conditions — within the context of ocean climate change — provide critical insights to the tolerance or organisms to environmental stress. 
-These publications are increasing tremendously, from <10 papers published per year before 1990, to approximately 250 papers published per year making up at least 42\% of marine-related climate change publications between 2013 and 2017 (Figure 1).
+Nevertheless, studies that measure or physiological responses to changes in physical conditions — within the context of ocean climate change — provide critical insights to the tolerance or organisms to environmental stress [@Somero2012; @Bozinovic2015; @Verberk2016; @Sinclair2016]. 
+Publications in marine global change physiology are increasing tremendously, from <10 papers published per year before 1990, to approximately 250 papers published per year making up at least 42\% of marine-related climate change publications between 2013 and 2017 (Figure 1).
 	
 ```{r pcount, fig.cap = "(ref:pcount)", fig.pos = "p"}
 knitr::include_graphics("figs/ch_intro/pcount.png")
@@ -53,11 +54,12 @@ knitr::include_graphics("figs/ch_intro/pcount.png")
 
 (ref:pcount) Trends in the number of published marine climate change research studies using metrics related to physiological traits, indexed by Clarivate Web of Science from 1970 to 2017. Including reviews, over 7,118 papers were published (red bars). Yellow bars show the proportion of those papers that collected or mentioned physiological metrics or biomarkers, amounting to 2,766 publications. Data is extracted from a search of topics and abstracts using the keywords: ('climate\*change' or 'environmental change' or 'climate\*driven') AND (marine or ocean or sea or coastal or \*tidal). To filter papers that use or mention physiological metrics, common keywords associated with physiological measures were added: (physiolog\* or ecophysiolog\* or 'evolutionary physiolog\*' or \*toleran\* or metabolic or biomarker or respirat\* or heat\*shock). Note that the keywords used are not exhaustive and do not include many other common physiological terms, and are thus an underestimate the size of the dataset. Search was performed on 27 May 2018.
 
-Central to the outcomes of many of these studies has been the use of physiological traits and molecular or genetic biomarkers to quantify responses to current and future scenarios of environmental stress, such as growth and feeding rates [@Clements2018], metaboic performance [@White2013], immune response [@Pinsino2015], and molecular/gene expression [e.g. heat shock proteins/genes, @Osovitz2005; @Tomanek2008]. 
-As the data can be measured at specific time points, researchers are able to obtain snapshots of responses to changes in abiotic conditions across temporal and spatial scales [e.g. @Sunday2012].
+Central to the outcomes of many of these studies has been the use of physiological traits and molecular or genetic biomarkers to quantify responses of marine species to current and future scenarios of environmental stress, such as growth and feeding rates [@Clements2018], metaboic performance [@White2013; @Carey2016], immune response [@Pinsino2015; @Brothers2016], and molecular/gene expression [e.g. heat shock proteins/genes, @Osovitz2005; @Tomanek2008]. 
+As the data generated are typically measured at specific experimental time points, these studies provide snapshots of organism responses to changes in abiotic conditions across temporal and spatial scales [e.g. @Sunday2012].
 
-In particular, protein and genetic biomarkers that are sensitive to stress are increasingly popular as they yield new insights to the influence of abiotic conditions on cellular physiology [@Helmuth2005; @Stillman2015].
-For example, in echinoderms, which are the focus of this thesis, many studies have used heat shock protein [HSP, @Lindquist1986] expression to quantify tolerance to warming, acidification and pollution [@Osovitz2005; @Pinsino2008; @ODonnell2009; @Dong2011; @Nguyen2013; @Harianto2018].
+In particular, protein and genetic biomarkers that are sensitive to stress are increasingly used in marine global change physiology as they yield new insights to the influence of abiotic conditions on cellular physiology [@Helmuth2005; @Stillman2015].
+These new insights are particularly useful for echinoderms, the taxon in the focus of this thesis, where many studies have used heat shock protein [HSP, @Lindquist1986] expression as a biomarker to quantify tolerance to warming, acidification and pollution [@Osovitz2005; @Pinsino2008; @ODonnell2009; @Dong2011; @Nguyen2013; @Harianto2018].
+
 Molecular and genomic techniques provide an unprecedented opportunity for marine scientists to collect multiple biomarkers to characterise the effects of multiple stressors in natural environments, where collecting traditional physiological responses such as feeding rates and metabolic rates may prove less efficient, or even logisitcally challenging.
 Combined with advances in remote sensing and in-situ measurements of environmental conditions [e.g. @Smit2013; @Goela2016; @King2017; @Mann2017], we now have the means to explore patterns of resilience in individuals and populations realistically within the context of their immediate environments [e.g. @Dong2011].
 

@@ -60,8 +60,9 @@ As the data generated are typically measured at specific experimental time point
 In particular, protein and genetic biomarkers that are sensitive to stress are increasingly used in marine global change physiology as they yield new insights to the influence of abiotic conditions on cellular physiology [@Helmuth2005; @Stillman2015].
 These new insights are particularly useful for echinoderms, the taxon in the focus of this thesis, where many studies have used heat shock protein [HSP, @Lindquist1986] expression as a biomarker to quantify tolerance to warming, acidification and pollution [@Osovitz2005; @Pinsino2008; @ODonnell2009; @Dong2011; @Nguyen2013; @Harianto2018].
 
-Molecular and genomic techniques provide an unprecedented opportunity for marine scientists to collect multiple biomarkers to characterise the effects of multiple stressors in natural environments, where collecting traditional physiological responses such as feeding rates and metabolic rates may prove less efficient, or even logisitcally challenging.
-Combined with advances in remote sensing and in-situ measurements of environmental conditions [e.g. @Smit2013; @Goela2016; @King2017; @Mann2017], we now have the means to explore patterns of resilience in individuals and populations realistically within the context of their immediate environments [e.g. @Dong2011].
+Thus, molecular and genomic techniques provide an unprecedented opportunity for marine scientists to collect multiple biomarkers and characterise the effects of multiple stressors in natural environments where collecting traditional physiological responses, such as feeding rates and metabolic rates, may prove less efficient, or even logisitcally challenging.
+When the physiological and biomarker responses are placed in context with field conditions obtained from advances in remote sensing and in-situ measurements of environmental conditions [e.g. @Smit2013; @Goela2016; @King2017; @Mann2017], we now have the means to explore patterns of resilience in individuals and populations realistically within the context of their immediate environments. 
+For instance
 
 <!-- Increasing in popularity are  -->
 <!-- For echinoderms, which are the focus of this thesis, many studies have used heat shock proteins (HSPs) to quantify physiological stress [] -->
@@ -73,7 +74,12 @@ Combined with advances in remote sensing and in-situ measurements of environment
 
 ## Metabolic rate -- the most fundamental bioindicator
 
-Physiologists have long recognised the importance of metabolic rate response to assess tolerance in marine organisms. This is because as a fundamental biological trait, metabolic rate is sensitive to changes in the biophysical environment, and changes in metabolism can be inferred to result in biological and ecological consequences [@Somero2017]. Quantifying metabolic rate is part of an increasing number of studies where it is the main topic of investigation [e.g. @Carey2016], and also where it is only one metric of many being investigated [e.g. @Magozzi2015]. It is the most commonly reported response variable when physiological measures are used in marine-related climate change publications, appearing in 16\% of publications and consisting of at least 19.8\% of all reported response variables from 1970 to 2017 (Figure 2). 
+Physiologists have long recognised the importance of metabolic rate are a core response to assess tolerance in marine organisms. 
+Metabolic rate is a fundamental biological trait that is sensitive to changes in the biophysical environment [@Newell1980; @Portner2004; @Dillon2010], and changes in metabolism can be used to infer biological and ecological consequences of stress to environmental change [@Somero2017]. 
+<!-- A reduction in metabolic index worldwide has been attributed to a vertical contraction of metabolically viable habitats and shift populations to the poles [@Deutsch2015]. Useful for multistresors.. -->
+For example, it is well-known that metabolic rate performance is mediated by temperature, thus understanding the limitations of an organism's metabolic rate to thermal stress is the foundation of the metabolic theory of ecology [@Brown2004] and the theory of oxygen and capacity-limited thermal tolerance [OCLTT, @Verberk2016].
+Thus, quantifying metabolic rate is part of an increasing number of studies where it is the main topic of investigation [e.g. @Daoud2007; @Marshall2011; @Watson2014; @Carey2016; @Hoshijima2017], or it is one metric of several being investigated [e.g. @Magozzi2015; @Tateda2015; @Suckling2015; @Hoefnagel2017; @Harianto2018]. 
+Metabolic rate is the most commonly reported response variable when physiological measures are used in marine-related climate change publications, appearing in 16\% of publications and consisting of at least 19.8\% of all reported response variables from 1970 to 2017 (Figure 2). 
 
 ```{r pgroups, fig.cap = "(ref:pgroups)", fig.pos = "p"}
 knitr::include_graphics("figs/ch_intro/pgroups.png")
@@ -81,27 +87,30 @@ knitr::include_graphics("figs/ch_intro/pgroups.png")
 
 (ref:pgroups) Common physiological response variables reported in research articles published from 1970 -- 2017 and indexed by Clarivate Web of Science. Papers may report more than one response variable, thus the percentage values are based on the proportion of all reported response variables ($n =$ 2,239), not the number of publications selected ($n$ = 2,766). Numbers are tallied based on specific keywords used to describe experimental results and outcomes (e.g. 'survivorship' or 'survival rate' instead of 'survival'). Less common or species-specific response variables (e.g. coelomocyte counts in sea urchins) are not included. See Appendix XX for search terms used. Search was performed on 27 July 2018.
 
-The most accepted method of examining metabolic rate is through respirometry.
+The most accepted method to investigate metabolic rate is through respirometry.
 The methodological approaches to measuring respirometry are broad, but most protocols measure a decrease in oxygen concentration from a well-mixed, hermetically sealed chamber of known volume [@Lighton2008].
-It is important to recognise that modern technologies have allowed for new methods for determining changes in oxygen over time, and has driven the collection of increasingly large datasets with multiple experimental variables and sample sizes.
-However, there is still considerable obscurity in the manner in which metabolic rate data are extracted from these datasets.
-In most cases, respirometry data is noisy, so only certain segments of the data are analysed [refs], but few studies report how appropriate data sections are selected for analysis, or provide the raw data publicly so that their analyses are reproducible [ref].
-Thus, recent research have highlighted the need to consolidate and standardise both the measurement and reporting of this popular metric for consistent and comparable data reporting [e.g. @Svendsen2016; @Chabot2016; @Olito2017].
+It is important to recognise that modern technologies have allowed for new methods for determining changes in oxygen over time, and has driven the collection of increasingly large datasets with multiple experimental variables and sample sizes [e.g. 20 hours: @Lefevre2015; 24-h: @Seth2013; 48-h: @Tirsgaard2015; 1 week: @Portner2001].
+Despite this, there is still considerable obscurity in the manner in which metabolic rate data are extracted from these datasets.
+In most cases, respirometry data is noisy, so only certain segments of the data are analysed [see @Chabot2016].
+Few studies report how sections of the data are selected for analysis, or provide the data publicly so that their analyses can be assessed independently for the benefit of reproducibility [@Olito2017].
+Recent research have highlighted the need to consolidate and standardise both the measurement and reporting of this popular metric for consistent and comparable data reporting [e.g. @Svendsen2016; @Chabot2016; @Olito2017].
 <!-- Perhaps the greatest challenge in analysing respirometry for metabolic rate measurements is in the selection of appropriate data sections for analysis. -->
 <!-- In most cases, respirometry data is noisy, as is the nature of biological data, and it is rare to find published studies that provide the specific methods used to handle noisy data or the raw data itself. -->
 <!-- This needs to be addresses as metabolic rate measurements become more popular and advances in technology allow for cost-effective methods of measuring respirometry. -->
 <!-- While metabolic rate has been measured in response to a variety of environmental stressors, it is influenced greatly by temperature and body size, and the relationships between the two continue to be an area of active research [@West1997; @Carey2014]. -->
-Regardless, patterns in metabolic rate responses can provide deep insights to the physiological condition of an organism, since metabolism moderates almost all other biological activities [@Brown2004], from individual traits such as growth and feeding rate [@Kiorboe2014], to ecological interactions [@Seibel2007], to the dynamics of communities [@Barneche2014], and even whole ecosystems [@Brown2004].
 
-When stressed, most organisms present either elevated or depressed metabolic rates as they divert resources to maintain physiological balance.
+Being able to infer patterns in metabolic rate responses from respirometry can provide deep insights to the physiological condition of an organism, since metabolism moderates almost all other biological activities [@Brown2004], from individual traits such as growth and feeding rate [@Kiorboe2014], to ecological interactions [@Seibel2007], to the dynamics of communities [@Barneche2014], and even whole ecosystems [@Brown2004].
+When stressed, most organisms present either elevated [e.g. @Ko2014; @Pan2015; @Morley2016] or depressed [e.g. @Anestis2007; @Kelly2014; @Harianto2018] metabolic rates as they divert resources to maintain physiological balance.
 <!-- These responses have their pros and cons. -->
-Increased metabolism may divert energy away from essential functions such as growth and reproduction and can therefore reduce the fitness of the organism [refs]. 
-Alternatively, it could also mean that the organism's aerobic scope has been increased for it to grow or reproduce [@Portner2006].
-On the other hand, depressed metabolism, or metabolic depression, may be a means to conserve energy commonly expressed during hibernation, topor, aestivation or diapause [@Storey2004]. However it can also be a result of insufficient capacity for energy delivery due to either insufficient food or oxygen availability, which ultimately lead to lethal responses [@Bozinovic2015; @Lefevre2016].
+Increased metabolism may divert energy away from essential functions such as growth and reproduction and can therefore reduce the fitness of the organism -- as shown in molluscs [e.g. @Marshall2011; @Hoefnagel2017], echinoderms [e.g. @Stumpp2011; @Delorme2016; @Harianto2018], crustaceans [e.g. @Whiteley1997; @Magozzi2015] and fish [e.g. @Seth2013; @Stoffels2015]. 
+Alternatively, it could also mean that the organism's aerobic scope has been increased for it to grow or reproduce [e.g. @Portner2006; @Sandblom2014; @Hansen2017].
+On the other hand, depressed metabolism, or metabolic depression, may be a means to conserve energy commonly expressed during hibernation, topor, aestivation or diapause [@Storey1990; @Guppy1999; @Storey2004]. However it can also be a result of insufficient capacity for energy delivery due to either insufficient food or oxygen availability, which ultimately lead to lethal responses [@Bozinovic2015; @Lefevre2016].
 
-Thus, it is important to understand the context behind metabolic rate responses beyond oxygen consumption rates since physiological trade-offs may exist in ways that cannot be assessed by metabolic rate data alone.
-Assessing the sensitivity of metabolism to stressors should be accompanied by other measures of physiological function (i.e. feeding/excretion rates, reproductive capacity, etc.).
-Such an integrative view of the challenges of climate change on physiological responses may be helpful to improve our understanding of the impacts presented by climate change, in ways that would be impossible to achieve if each of these traits were to be considered in isolation.
+As metabolic responses vary and the physiological basis for these responses differ among organisms, it is also important to understand the context behind metabolic rate responses *beyond* oxygen consumption rates since physiological trade-offs may exist in ways that cannot be assessed by metabolic rate data.
+Thus, assessing the sensitivity of metabolism to stressors should be accompanied by other measures of physiological function.
+<!-- (i.e. feeding/excretion rates, reproductive capacity, etc.). -->
+Integrating multiple physiological responses to assess the challenge of climate change has been shown to be helpful to assess overall impacts presented by climate change, as shown by studies that use metabolic rate together with other response variables such as feeding, excretion, reproductive or survival rates [e.g. @Calosi2013; @Magozzi2015; @Harianto2018].
+These integrative insights would not be possible to achieve if each of these traits were to be considered in isolation.
 
 
 
@@ -116,13 +125,17 @@ Such an integrative view of the challenges of climate change on physiological re
 ## Survival
 
 A common verdict from studies of climate change effects on ecosystem biodiversity is that there will be major shifts in the distribution of life on Earth driven by migration, adaptation, and extinction [@Verges2014; @Molinos2015; @Pecl2017; @Ramirez2017; @Hughes2017; @Sommer2018].
-Despite the scale of these pertubations, climate manipulation studies to date have mostly focused on behavioural and physiological responses to stressors, while little is still understood about how they directly influence the persistence of species in their habitats. 
+Despite the scale of these pertubations, climate manipulation studies to date have mostly focused on behavioural and physiological responses to stressors [reviewed by @Helmuth2009; @Hofmann2010; @Somero2012; @Byrne2013; @Lefevre2016; @Boyd2017; @Gunderson2017], with less focus on understanding how the multitude of physiological responses can directly influence the survival of species in their natural habitats.
+<!-- Many studies still do not direcly examine how environmental stressors interact with physiological responses to directly influence the persistence of species in their habitats over long periods.  -->
 
-Survival analysis is one key metric that allows us to formally examine the relationships among environmental variables, specimen attributes and survival rates [refs].
-This is unlike survival or mortality rates, which is commonly reported in some experiments investingating the effects of abiotic stressors on newly spawned invertebrates [refs]. 
+
+Survival analysis is one key metric that allows us to formally examine the relationships among environmental variables, specimen attributes and survival rates [e.g. @Yeruham2015; @Westbrook2015; @Leung2017; @Harianto2018].
+This is different from survival or mortality rates, which is commonly reported [e.g. @Sewell1999; @Stumpp2011; @Gianguzza2014].
+To obtain
+<!-- This is unlike survival or mortality rates, which is commonly reported in some experiments investingating the effects of abiotic stressors on newly spawned invertebrates [e.g. @Sewell1999; @Stumpp2011; @Gianguzza2014].  -->
 <!-- The restricted ability of fauna to survive abiotic changes in their  -->
-Most studies to date do not investigate survival metrics of any kind, with just 54 publications since 1981 that analysed survivorship metrics from experimental data in marine climate change research (See Appendix).
-This does not infer that many of those papers need to do so, as not all studies subject their specimens to experimental conditions that are lethal. In fact, some papers have specifically reported no mortality or the loss of a few specimens during the experiment [e.g. @Dupont2013; @Zhang2015; @Carey2016].
+Since 1981, Jjust 54 publications analysed survivorship from experimental data in marine climate change research (See Appendix).
+However, not all studies subject their specimens to experimental conditions that are lethal. In fact, some papers have specifically reported no mortality or the loss of a few specimens during the experiment [e.g. @Dupont2013; @Zhang2015; @Carey2016].
 
 Still, in recent years a significant effort has been put into conducting experiments that span months to years to understand more recent, persistent responses to climate change that cannot be observed in acute stress-response studies [e.g. @Suckling2015; @Morley2016; @Harianto2018].
 Importantly, we need to document survival rates such that we are able to characterise survival as a function of environmental and physiological variables [e.g. @Anthony2007].

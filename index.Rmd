@@ -42,7 +42,7 @@ These changes are expected to amplify the ecological impacts currently observed 
 While the broad consequences of ocean change continue to be documented in the literature, the challenge remains as to tease apart the underlying casual mechanisms that drive those changes so that we can understand the linkages between ecosystem effects and the physiological processes that occur at the level of organism and cell [@Portner2002; @Somero2005; @Somero2012]. 
 Climate manipulation experiments are valuable tools for understanding these links.
 By subjecting organisms to current and future scenarios of ocean change, we can predict, based on experimental evidence, which species within ecosystems are most vulnerable [@Munday2013; @Sinclair2016; @Verberk2016]. 
-However, this is not a trivial task die to the diverse and multi-stressor nature of environmental stress [@Byrne2013; @Boyd2015].
+However, this is not a trivial task due to the diverse and multi-stressor nature of environmental stress [@Byrne2013; @Boyd2015].
 In addition, it is often difficult to deduce the adaptive potential of organisms from physiological responses due to the intrinsic phenotypic plasticity of individuals as they modify their growth, development and behaviour dynamically to environmental cues [@Forsman2015; @Murren2015].
 
 Nevertheless, studies that measure or physiological responses to changes in physical conditions — within the context of ocean climate change — provide critical insights to the tolerance or organisms to environmental stress [@Somero2012; @Bozinovic2015; @Verberk2016; @Sinclair2016]. 
@@ -61,8 +61,7 @@ In particular, protein and genetic biomarkers that are sensitive to stress are i
 These new insights are particularly useful for echinoderms, the taxon in the focus of this thesis, where many studies have used heat shock protein [HSP, @Lindquist1986] expression as a biomarker to quantify tolerance to warming, acidification and pollution [@Osovitz2005; @Pinsino2008; @ODonnell2009; @Dong2011; @Nguyen2013; @Harianto2018].
 
 Thus, molecular and genomic techniques provide an unprecedented opportunity for marine scientists to collect multiple biomarkers and characterise the effects of multiple stressors in natural environments where collecting traditional physiological responses, such as feeding rates and metabolic rates, may prove less efficient, or even logisitcally challenging.
-When the physiological and biomarker responses are placed in context with field conditions obtained from advances in remote sensing and in-situ measurements of environmental conditions [e.g. @Smit2013; @Goela2016; @King2017; @Mann2017], we now have the means to explore patterns of resilience in individuals and populations realistically within the context of their immediate environments. 
-For instance
+When the physiological and biomarker responses are placed in context with field conditions obtained from advances in remote sensing and in-situ measurements of environmental conditions [e.g. @Smit2013; @Goela2016; @King2017; @Mann2017], we now have the means to explore patterns of resilience in individuals and populations realistically within the context of their immediate environments [e.g. @Chu2012; @Davis2013; @Fischer2014; @Paganini2014].
 
 <!-- Increasing in popularity are  -->
 <!-- For echinoderms, which are the focus of this thesis, many studies have used heat shock proteins (HSPs) to quantify physiological stress [] -->
@@ -85,7 +84,7 @@ Metabolic rate is the most commonly reported response variable when physiologica
 knitr::include_graphics("figs/ch_intro/pgroups.png")
 ```
 
-(ref:pgroups) Common physiological response variables reported in research articles published from 1970 -- 2017 and indexed by Clarivate Web of Science. Papers may report more than one response variable, thus the percentage values are based on the proportion of all reported response variables ($n =$ 2,239), not the number of publications selected ($n$ = 2,766). Numbers are tallied based on specific keywords used to describe experimental results and outcomes (e.g. 'survivorship' or 'survival rate' instead of 'survival'). Less common or species-specific response variables (e.g. coelomocyte counts in sea urchins) are not included. See Appendix XX for search terms used. Search was performed on 27 July 2018.
+(ref:pgroups) Common physiological response variables reported in marine global change research articles published from 1970 -- 2017 and indexed by Clarivate Web of Science. Papers may report more than one response variable, thus the percentage values are based on the proportion of all reported response variables ($n =$ 2,239), not the number of publications selected ($n$ = 2,766). Numbers are tallied based on specific keywords used to describe experimental results and outcomes (e.g. 'survivorship' or 'survival rate' instead of 'survival'). Less common or species-specific response variables (e.g. coelomocyte counts in sea urchins) are not included. See Appendix XX for search terms used. Search was performed on 27 July 2018.
 
 The most accepted method to investigate metabolic rate is through respirometry.
 The methodological approaches to measuring respirometry are broad, but most protocols measure a decrease in oxygen concentration from a well-mixed, hermetically sealed chamber of known volume [@Lighton2008].
@@ -122,24 +121,24 @@ These integrative insights would not be possible to achieve if each of these tra
 
 <!-- Talk about HSPs here. -->
 
-## Survival
+## Survivorship
 
 A common verdict from studies of climate change effects on ecosystem biodiversity is that there will be major shifts in the distribution of life on Earth driven by migration, adaptation, and extinction [@Verges2014; @Molinos2015; @Pecl2017; @Ramirez2017; @Hughes2017; @Sommer2018].
-Despite the scale of these pertubations, climate manipulation studies to date have mostly focused on behavioural and physiological responses to stressors [reviewed by @Helmuth2009; @Hofmann2010; @Somero2012; @Byrne2013; @Lefevre2016; @Boyd2017; @Gunderson2017], with less focus on understanding how the multitude of physiological responses can directly influence the survival of species in their natural habitats.
-<!-- Many studies still do not direcly examine how environmental stressors interact with physiological responses to directly influence the persistence of species in their habitats over long periods.  -->
-
+Despite the scale of these pertubations, climate manipulation studies to date have mostly focused on behavioural and physiological responses to stressors [reviewed by @Helmuth2009; @Hofmann2010; @Somero2012; @Byrne2013; @Lefevre2016; @Boyd2017; @Gunderson2017], while there is less focus on understanding how the multitude of physiological responses could directly influence the long-term persistence of species in their natural habitats.
+<!-- This is because many experiments are short-term, which subject specimens to experimental conditions that were associated with little or no mortality [e.g. @Dupont2013; @Zhang2015]. -->
 
 Survival analysis is one key metric that allows us to formally examine the relationships among environmental variables, specimen attributes and survival rates [e.g. @Yeruham2015; @Westbrook2015; @Leung2017; @Harianto2018].
-This is different from survival or mortality rates, which is commonly reported [e.g. @Sewell1999; @Stumpp2011; @Gianguzza2014].
-To obtain
-<!-- This is unlike survival or mortality rates, which is commonly reported in some experiments investingating the effects of abiotic stressors on newly spawned invertebrates [e.g. @Sewell1999; @Stumpp2011; @Gianguzza2014].  -->
-<!-- The restricted ability of fauna to survive abiotic changes in their  -->
-Since 1981, Jjust 54 publications analysed survivorship from experimental data in marine climate change research (See Appendix).
-However, not all studies subject their specimens to experimental conditions that are lethal. In fact, some papers have specifically reported no mortality or the loss of a few specimens during the experiment [e.g. @Dupont2013; @Zhang2015; @Carey2016].
+This is different from the calculation of survival or mortality rates, which are commonly analysed by comparing one rate to another [e.g. @Sewell1999; @Stumpp2011; @Gianguzza2014].
+Survival analysis methods such as the Kaplan-Meier product-limit model [@Kaplan1958; @Rich2010] and the Cox proportional hazards model [@Cox1992; @Fisher1999] provide valuable information on the cumulative probability of surviving a given time [i.e. point survival, @Rich2010] or the risks associated with exposure to a single or combination of abiotic stressors [i.e. hazard ratio, @Tenhumberg2001].
+This allows us to predict mortality risk in terms of abiotic factors such as temperature, pH and light, and include climate-change related covariates such as density, calcification, or bleaching, simultaneously [e.g. @Anthony2007; @Geange2009; @Vasquez2015; @Harianto2018].
 
-Still, in recent years a significant effort has been put into conducting experiments that span months to years to understand more recent, persistent responses to climate change that cannot be observed in acute stress-response studies [e.g. @Suckling2015; @Morley2016; @Harianto2018].
-Importantly, we need to document survival rates such that we are able to characterise survival as a function of environmental and physiological variables [e.g. @Anthony2007].
-This will greatly assist in enhancing our ability to predict the consequences due to altered physiological responses to changing environmental conditions.
+However, many marine global change experiments did not sufficiently monitor survival rates over time, or subject their specimens to lethal stressor combinations to allow for such analyses [e.g. @Dupont2013; @Zhang2015; @Carey2016]. 
+In addition, even if exposure to OA is not lethal to an individual during a period of experimental exposure, it cannot preclude populations of that species from being vulnerable to extinction. 
+Since 1981, only 54 publications have performed survival analyses from experimental data in marine global change research (See Appendix).
+In recent years a significant effort has been put into conducting marine global change experiments that span months to years as a key approach to understand more recent, persistent responses to climate change that cannot be observed in short-term, acute stress-response studies [e.g. @Suckling2015; @Morley2016; @Harianto2018].
+Importantly, these longer-term studies provide the opportunity to document detailed physiological performances over time, including survival.
+It is crucial that we document mortality in these experiments so that we can to characterise survival as a function of environmental and physiological variables for organisms [e.g. @Anthony2007].
+This approach will enhance our ability to predict the consequences due to altered physiological responses to changing environmental conditions.
 
 <!-- even though it is a key metric that can potentially influence experimental outcomes.  -->
 <!-- A search on Web of Science yielded 54 publications since 1981 which analysed survival metrics from experimental data, a very small ($\sim 2\%$) proportion of the total published literature. -->
@@ -160,10 +159,11 @@ This is partly due to a lack of information regarding the spatial and temporal d
 
 The effects of global warming on the ocean are also not homogeneous. For example, subtropical western boundary currents are warming 2 to 3 times faster than the global average [@Wu2012].
 In Australia, the strengthening of the East Australian Current which carries tropical water south along the continent has resulted in warming at almost 4 times the global average rate [@Ridgway2007] and will continue to do so, with predictions of warming of up to $+6 ^{\circ}C$ above the pre-industrial value by the end of the century [@Lenton2015].
-Compounding to the issue is the mounting evidence that suggests that major impacts will be driven by extreme weather events that could happen at the present moment [@Katz1992; @Jentsch2007; @Thompson2013; @Mann2017; @King2017; @Leung2017]. 
-These events are random and, by definition, rare, but appear to be increasing in frequency [@Katz1992; @Mann2017; @King2017].
+Compounding to the issue is the mounting evidence that suggests that major impacts will be driven by extreme weather events [@Katz1992; @Jentsch2007; @Thompson2013; @Mann2017; @King2017; @Leung2017]. 
+For example, heat waves associated with the El Niño–Southern Oscillation (ENSO) events are particularly concerning in Australia and have caused unprecedented hot summers [@Cai2014; @Harris2018] leading to widespread coral bleaching in the Great Barrier Reef [@Hughes2017; @Hughes2017a].
+Extreme events such as these are random and, by definition, rare, but appear to be increasing in frequency [@Katz1992; @Mann2017; @King2017].
 So far, we have a poor understanding of how anthropogenic change influences extreme weather events, yet many marine organisms are already living close to their thermal limits [@Angilletta2002; @Portner2010]. 
-The biological impacts of these events vary by taxa and several studies show marked changes in physiological responses, which are sometimes catastrophic [e.g. @Leung2017; @Hughes2017], highlighting the critical need to understand long-term stress responses in climate hotspots and how extreme events may further impact these responses to abiotic stress.
+The biological impacts of these events vary by taxa and several studies show marked changes in physiological responses, which are sometimes catastrophic [e.g. @Leung2017; @Hughes2017a], highlighting the critical need to understand long-term stress responses in climate hotspots and how extreme events may further impact these responses to abiotic stress.
 
 <!-- though advances in satellite sensing and in-situ data logging have recently become cost-effective methods to capture environmental . -->
 
@@ -178,20 +178,24 @@ All of these changes will have ecological and physiological impacts; increased m
 ### Increased carbon dioxide concentration, *pCO~2~*
 
 A pervasive effect of rising $pCO_2$ levels in the oceans is the chemical alteration of the carbonate system of seawater from ocean acidification (OA), which causes a general decline of surface ocean pH [@IPCC2013]. 
-By now, a considerable body of data exists on the effect of OA on marine organisms, but there is also substantial interest in predicting the extent to which organisms will be able to respond or adapt to changes in seawater chemistry and other abiotic factors [e.g. @Hendriks2015; @Popova2016].
-OA influences a wide range of basic physiological functions in organisms such as membrane transport [e.g. @Moulin2015], photosynthesis [e.g. @Gao2010], growth [e.g. @Pistevos2015], reproduction [e.g. @Boulais2017] and calcification [e.g. @Thomsen2015]. 
-In particular, reduced pH will challenge the resilience of marine calcifiers [@Cyronak2016] where reduced rates of calcification (or increased dissolution) affects the growth and maintenance of both larval and adult stages of the life cycle, and is already well-documented in corals [@Hoegh-Guldberg2007], bivalves [@Waldbusser2015], echinoderms [@Wolfe2013] and planktonic calcifiers [e.g. coccolithophores, @Riebesell2017].
+By now, a considerable body of data exists on the effect of OA on marine organisms, as detailed in many reviews [e.g. @Sunday2014; @Przeslawski2015; @Nagelkerken2015; @Howes2015; @Poloczanska2016; @Clements2018]. 
+There is also substantial interest in predicting the extent to which organisms will be able to respond or adapt to changes in seawater chemistry and other abiotic factors [e.g. @Hendriks2015; @Popova2016].
+OA influences a wide range of basic physiological functions in organisms such as membrane transport [@Moulin2015], photosynthesis [@Gao2010], growth [@Pistevos2015], reproduction [@Boulais2017] and calcification [@Thomsen2015]. 
+In particular, reduced pH will challenge the resilience of marine calcifiers [@Cyronak2016] where reduced rates of calcification (or increased dissolution) affects the growth and maintenance of both larval and adult stages of the life cycle, which is already well-documented in corals [@Hoegh-Guldberg2007; @Gao2010; @Form2012; @Hoegh-Guldberg2017], molluscs [@Mackenzie2014; @Thomsen2015; @Waldbusser2015; @Parker2017], echinoderms [@Wolfe2013; @Yuan2016; @Collard2016; @Manriquez2017] and planktonic calcifiers such as coccolithophores and foraminifera [@Schmidt2014; @Riebesell2017].
 <!-- For those animals, experimental studies have generally showed negative effects of OA, although results become highly variable when other abiotic stressors such as increased temperature come into play [refs]. -->
 
 Importantly, OA affects metabolism because of its effect upon biochemical pathways, resulting in altered metabolic costs to maintain physiological homeostasis [@Melzner2009; @Hendriks2015].
-Thus, in some species, increased pH is accompanied by elevated metabolic rate responses due to the substantially increased energetic costs of maintaining calcium carbonate skeletons [e.g. Stumpp2011; @Calosi2013] or to preserve acid-base balance [e.g. Catarino2012; @Collard2013].
-However, in other organisms or under combined effects with other stressors, OA may have the opposite effect and cause metabolic depression, because of disruptions in metabolic pathways [e.g. @Anestis2007] or trade-offs in energy allocation to conserve energy [e.g. @Pan2015].
+Thus, in some species, increased pH is accompanied by elevated metabolic rate responses due to the substantially increased energetic costs of maintaining calcium carbonate skeletons or to preserve acid-base balance, as shown for echinoderms and other invertebrates [e.g. Stumpp2011; @Catarino2012; @Calosi2013; @Collard2013; @Parker2017; @Hoefnagel2017].
+However, in other organisms or under combined effects with other stressors, OA may have the opposite effect and may prompt metabolic depression, because of disruptions in metabolic pathways [e.g. mussels, @Anestis2007] or trade-offs in energy allocation to conserve energy [e.g. oysters, @Pan2015].
 <!-- Determining the specific cause of OA on organismal performance therefore requires an integration of metabolic performance and the plasticity of  -->
-If the impact is severe, acidification could further reduce an organism's tolerances to other environmental stressors such as temperature [e.g. @Ko2014], salinity [e.g. @Parker2017a] and pollution [e.g. @Zeng2015].
+If the impact is severe, acidification could further reduce an organism's tolerances to other environmental stressors such as temperature [e.g. @ODonnell2009; @Lischka2012; @Ko2014; @Schmidt2014], salinity [e.g. @Egilsdottir2009; @Parker2017a; @Bautista-Chamizo2018] and pollution [e.g. @Zeng2015; @Ivanina2015; @Lewis2016].
 
 So far, our understanding of OA-induced responses are based mostly on experimental studies which expose organisms to constant pH or $pCO_2$ conditions over time [@Gunderson2016]. 
-Constant pH may be an appropriate estimate for open ocean systems, coastal regions are a lot more complex, both biogeochemically and structurally, with vastly dynamic variability in pH due to interactions within and between benthic species that can alter their immediate regions both physically and chemically [@Hendriks2015]. 
+Constant pH may be an appropriate estimate for open ocean systems, but coastal regions are a lot more complex, both biogeochemically and structurally, with vastly dynamic variability in pH due to interactions within and between benthic species that can alter their immediate regions physically and chemically [@Hendriks2015]. 
 In many cases, the pH variability experienced in coastal habitats often exceed the magnitude of long-term projections for open-ocean regions [@Duarte2013].
+Thus, like temperature, variability in pH is also an important consideration when predicting tolerance to OA, and the challenge is to incorporate realistic environmental flux when conducting stress-response experiments to better estimate impacts due to changes in pH and other stressors.
+
+<!-- the field of marine global change physiology is currently increasing its focus on more realistic experiments that include the incorporation of multiple stressors and their interaction [@Boyd2015; @Boyd2017] as well as natural environmental flux [@Paganini2014; @Gunderson2016]. -->
 
 ## On the complexities of climate change manipulation experiments
 
@@ -218,14 +222,19 @@ As a result, studies that integrate multiple physiological parameters are import
 
 <!-- ### Long-term experiments and the artificial constraints of constant conditions -->
 
-In addition to the increased attention to multiple stressors, focus on the temporal dynamics of environmental stress has started to be of growing interest to climate biologists [refs].
+In addition to the increased attention to multiple stressors, focus on the temporal dynamics of environmental stress has started to be of growing interest to climate biologists.
 <!-- It is still difficult to predict future ecosystem-level responses of organisms to climate change, partly because -->
 The majority of current experiments involved in the manipulation of constant conditions often do so without considering that environmental parameters fluctuate on multiple timescales, from hours, to months and years [@Hendriks2010; @Duarte2013].
-These fluctuations are likely to be extremely important for dictating how organisms respond to already variable conditions with the added pressures from anthropogenic change [@Kreyling2013; @Thompson2013] and the press and pulse of extreme events [@Harris2018]. 
+These fluctuations are likely to be extremely important for dictating how organisms respond to already variable conditions with the added pressures from anthropogenic change [@Kreyling2013; @Thompson2013] and the press (i.e. long-term pertubation effects) and pulse (i.e. acute change effects) of extreme events [@Bender1984; @Harris2018].
+In addition, mean environmental conditions often adopted in marine global change experiments ignore spikes in environmental stress that may have extensive consequences on population dynamics, especially during extreme weather events [e.g. @Leung2017].
 
+Marine global change experiments need to incorporate the temporal variability of environmental conditions -- a challenging endeavour considering the fact that we do not have baseline data on the environmental conditions that many organisms experience in nature. 
+Continuous records of environmental carbonate chemistry is rare, although the deployment of sensors in recent years have begun to improve our understanding of the natural variability in many marine coastal environments [e.g. Antarctica: @Matson2011; coastal current ecosystems: @Chan2017; coral reefs: @Rivest2015].
+Temperature data, by contrast, is more commonly available as in-situ temperature loggers are relatively inexpensive in comparison to sensors that measure ocean carbonate chemistry [@Glenn2000].
+However, currently available data is still lacking and we have, for instance, little information for iconic regions such as Sydney Harbour [but see @Mayer-Pinto2015; @Tanner2017], even though it has been identified as a major climate change and biodiversity hotspot [@Sunday2015 ; @Johnston2015; @Popova2016].
 
-Thus, instead of maintaining constant conditions, climate manipulation experiments need to somehow incorporate the temporal variability of environmental conditions -- a challenging endeavour considering the fact that we still lack a baseline record of current environmental data in most marine habitats, even for some of the world's most iconic harbours [e.g. Sydney Harbour, @Mayer-Pinto2015; @Tanner2017].
-In addition, mean environmental conditions ignore spikes in environmental stress that may have extensive consequences on population dynamics, especially during extreme weather events [@Leung2017].
+<!-- Thus, instead of maintaining constant conditions, climate manipulation experiments need to somehow incorporate the temporal variability of environmental conditions -- a challenging endeavour considering the fact that we still lack a baseline record of current environmental data in most marine habitats, even for some of the world's most iconic harbours [e.g. Sydney Harbour, @Mayer-Pinto2015; @Tanner2017]. -->
+
 
 <!-- Similarly, exposure to constant extreme stress ignores reprieves from stress that are likely important in allowing organisms to cope with these conditions. -->
 
@@ -247,17 +256,17 @@ Thus, grazing pressure by the sea urchin can lead to significant effects on comm
 <!-- , thus any environmental change that affects *H. erythrogramma* will affect the structure of marine benthic communities at distinctly local scales. -->
 
 In many ways, *H. erythrogramma* is the ideal candidate to study the effects of climate change on an ecologically important species. 
-Sea urchins are already used as model organisms in the study of developmental biology [refs] and biomineralisation [refs]. 
-Their larvae are morphologically simple tranparent, while adults are relatively sedentary in general [Connolly 1986; @Sanderson1996] and are therefore easy to manipulate in the laboratory or in the field.
-As habitat-modifying organisms that often occur in large numbers, they are also ecologically significant -- changes in their distribution can potentially affect the structure of marine benthic communities at distinctly local scales [@Ling2010; @Steneck2002].
+Sea urchins have a long history of being used as model organisms in the study of developmental biology [@Horstadius1939; @Gustafson1963] and biomineralisation [@Beniash1999; @Wilt2002]. 
+Their larvae are morphologically simple and transparent, while adults are relatively sedentary in general [Connolly 1986; @Sanderson1996], easy to manipulate in the laboratory and in the field [e.g. @Yeruham2015; @Collard2016].
+As habitat-modifying organisms that often occur in large numbers, sea urchins are also ecologically significant -- changes in their distribution can potentially affect the structure of marine benthic communities at distinctly local scales [@Ling2010; @Steneck2002].
 Sea urchins have also been identified to be vulnerable to climate change, especially in pre-metamorphic stages [@Kroeker2010; @Przeslawski2015].
 
-To date, a large proportion of studies on sea urchins are focused on development [@Byrne2013; @Przeslawski2015], with the analysis of physiological traits becoming more common in recent years [e.g. @Stumpp2011; @Dorey2013]. 
+To date, a large proportion of studies on the impacts of climate change stressors on sea urchins are focused on development due to the fragile nature of their skeletons while still in larval stages [@Byrne2013a; @Byrne2013; @Przeslawski2015], with the analysis of physiological responses of both sea urchin larvae and adults becoming more common in recent years [e.g. @Stumpp2011; @Dorey2013]. 
 Focus on early life stanges are common as they are particularly sensitive to environmental stress, which may represent key barriers to long-term species persistence [@Przeslawski2015].
 In contrast, studies on adult sea urchins are more focused on the measurement of physiological traits such as metabolic, feeding and growth rates [e.g. @Moulin2015; @Delorme2016], however the are also numerous studies that utilise sea urchins as bioindicators of environmental pollution and stress [e.g. @Chiarelli2014; @Savriama2015; @Pinsino2015].
 
-
-More recently, there is a rapid emergence of long-term studies focused on adult sea urchin species in an effort to better understand modes of acclimation and physiological plasticity, which could affect tolerance to environmental stressors [@Suckling2015, @Morley2016; @Carey2016; @Harianto2018].
+Several recent studies have involved long-term investigations of the physiological responses of adult sea urchins in ocean warming and acidification conditions.
+Theses studies provide insights into acclimation capacity and physiological plasticity, which have an affect on tolerance to environmental stressors [@Suckling2015, @Morley2016; @Carey2016; @Harianto2018].
 These studies showed that physiological traits can adjust in response to long-term exposures to stress over time, although stress responses may not necessarily lead to improved fitness.
 For example, @Harianto2018 showed that long-term exposure to elevated temperature ($+4-6^{\circ}C$) increases the metabolic rate, immune response and mortality of *H. erythrogramma*, whereas @Morley2016 showed that the Antarctic sea urchin, *Sterechinus neumayeri*, after 40 months of acclimation to combined warming ($+2 ^{\circ}C$) and ocean acidification (−0.3 and −0.5 pH units), were generally unaffected by both stressors. 
 Long-term studies such as these show how poor our understanding of the role of plasticity on performance traits is, and acclimation time is a crucial factor to consider when conducting experiments that investigate responses to climate change.
@@ -268,7 +277,9 @@ Long-term studies such as these show how poor our understanding of the role of p
 
 There are 17 publications so far documenting the effects of climate change stress on *H. erythrogramma*. Of these, many are studies on the embryo and early-stage larvae [8 papers, e.g. @Byrne2009; @Hardy2014; @Foo2016]. Four papers involved post-settlement juveniles [@Byrne2011; @Byrne2011a; @Wolfe2013; @Foo2016], and 5 papers were on adults [@Nguyen2013; @Carey2016; @Brothers2016; @Sweet2016; @Harianto2018]. Three additional studies focused on sperm or egg performance under ocean future OA conditions [@Havenhand2008; @Schlegel2012; @Foo2018]. 
 All studies focused on the effect of temperature, pH, or their interactions on the urchin.
-Experiments on the embryo to juvenile stages focused mostly on developmental changes (e.g. normal/abnormal growth, morphometrics) and survival, whereas studies that focused on adults were more focused on physiological responses and some morphometrics.
+In the embryo to juvenile, response variables included normal/abnormal growth, morphometrics and survival.
+For adults, studies were more focused on physiology, immune response and skeletal integrity (see below). 
+<!-- Experiments on the embryo to juvenile stages focused mostly on developmental changes (e.g. normal/abnormal growth, morphometrics) and survival, whereas studies that focused on adults were more focused on physiological responses and some morphometrics. -->
 
 Decreased pH reduces sperm density and swimming speed [@Havenhand2008; @Schlegel2012] but increased sperm motility [@Foo2018]. 
 Eggs of *H. erythrogramma* retained their jelly coat even under OA conditions [pH $7.6-7.8$, @Foo2018].
@@ -301,12 +312,17 @@ In addition, the sea urchins exhibited signs of metabolic depression, possibly d
 
 <!-- ### Reproducibility -->
 
-### Aims
+<!-- ### Aims -->
 
-A significant challenge in this era of the Anthropocene is to improve our predictive power with regards to the ecologically important outcomes of climate change. To accomplish this, we must integrate single species, ecophysiological approaches into a single framework so that we can more easily test hypotheses involving multiple stressors, changing abiotic conditions and phenotypic plasticity. Our methods should also ideally be reproducible so that climate change theories can progress through replication towards community and ecosystem-level research. Here, this thesis aims to:
+A significant challenge in this era of the Anthropocene is to improve our predictive power with regards to the ecologically important outcomes of climate change. To accomplish this, it is key to integrate single species, ecophysiological approaches into a single framework to test hypotheses involving multiple stressors, changing abiotic conditions and phenotypic plasticity. It is also important that methods are easily reproducible so that the research in the field can progress through time and replication.
+
+This thesis comprises of 4 data chapters described below:
 
 
-1.
-2.
-3.
-4. 
+1. **Chapter 2** aims to determine the long-term ($>12$-week), physiological impacts and trade-offs when adult *H. erythrogramma* is incubated to near-future warming. Survivorship, metabolic rate, HSP70 expression, gonad index and gonad histology were investigated. It was predicted that *H. erythrogramma* exposed to warming would exhibit: (1) an increase in metabolic rate, up to its upper critical thermal limit; (2) an increase in HSP70 expression with chronic exposure to increased temperature; (3) decreased survival; and (4) reduced gonad development following extended exposure to increased temperature.
+
+2. **Chapter 3** is a multi-stressor experiment that incorporates the study of near-future ocean warming and acidification with a seasonal flux of temperature, to mimic the transition from winter to summer in Sydney Harbour. It is a long-term study (up to 22 weeks) that aims to investigate how the interactions between temperature and pH affect survivorship, metabolic rate, feeding rate and ammonia excretion rate. It is predicted that survivorship will be impacted by both warming and acidification, and overall physiological performance will also be reduced from the combined, long-term impact from both stressors.
+
+3. **Chapter 4** investigates whether adult *H. erythrogramma* exposed to near-future warming and acidification over its gonad developmental period will have positive carry-over effects on the metabolic response of its offspring. It was predicted that adult urchins exposed to increased warming and acidification will produce positive carry-over effects on the metabolic rate responses of their offspring.
+
+4. **Chapter 5** describes new methods of analysing data from respirometry, a technique that is used often to determine metabolic rate in organisms. It provides a mature package for the statistical programming environment R, called respR, which can be used to reliably and rapidly generate results. It also contains a novel, machine-learning method of detecting linear segments of noisy data using well-defined rules that is reproducible. 

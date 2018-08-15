@@ -26,19 +26,22 @@
 
 ## Abstract {-}
 
+
 Environmental temperature affects the physiology and fitness of ectotherms, an important consideration in a warming ocean.
 We investigated the effects of acclimation to increased temperature in the Australian sea urchin, *Heliocidaris erythrogramma*. 
-After a gradual introduction to increasing temperature ($1^{\circ}C\ 6 d^{−1}$), sea urchins were held for $\sim 3$ months in four treatments at three elevated temperatures ($22$, $24$ and $26^{\circ} C$) and the median annual temperature, $20^{\circ} C$. The effect of elevated temperature on survival, metabolic rate, $Q_{10}$, heat-shock protein (HSP$70$) expression, gonad index and gonad histology were examined. 
+After a gradual introduction to increasing temperature ($1^{\circ}C \cdot6 d^{−1}$), sea urchins were held for $\sim 3$ months in four treatments at three elevated temperatures ($22$, $24$ and $26^{\circ} C$) and the median annual temperature, $20^{\circ} C$. The effect of elevated temperature on survival, metabolic rate, $Q_{10}$, heat-shock protein (HSP$70$) expression, gonad index and gonad histology were examined. 
 There was no detectable effect of temperature on metabolic rate for the $22$ and $24^{\circ} C$ treatments, although survival decreased by $23\%$ in the $24^{\circ} C$ treatment and there was an increase in mean HSP$70$ expression. 
 At $26^{\circ} C$, metabolic rate was lower than at $22^{\circ} C$ and $24^{\circ} C$, but was similar to controls, indicating that metabolic depression may have occurred, whereas survival decreased by $31\%$ and HSP$70$ expression increased threefold. 
 It is clear that there is an active physiological response in urchins held at the highest temperatures.
 The deleterious effect of living at temperatures projected for the future indicates that the persistence of future populations of *H. erythrogramma* will depend on acclimation as habitat warming continues.
 
+\cleardoublepage
+
 ## Introduction
 
-Environmental temperature is one of the most important factors affecting the biological performance of marine ectotherms and is a major determinant of species distribution patterns across latitude and depth (Huey and Kingsolver 1989; Brown et al. 2004; Sunday et al. 2012; Poloczanska et al. 2016). 
-As the oceans warm due to climate change, marine organisms respond to thermal stress through adaptation via natural selection and/or by adjusting their behaviour and their physiology via phenotypic plasticity (Hochachka and Somero 2002; Pörtner 2010; Hoffmann and Sgrò 2011; Sunday et al. 2014). 
-Whether an individual can respond favourably to a changing environment depends not only on its genotype and the associated level of phenotypic plasticity, but also the time-scale of the stress (Seebacher et al. 2014). Migration, shifts in reproductive timing and changes to planktonic larval distribution in response to increasing temperatures are reshaping populations worldwide, contributing to the poleward migration of marine species (Poloczanska et al. 2016; Pecl et al. 2017). 
+Environmental temperature is one of the most important factors affecting the biological performance of marine ectotherms and is a major determinant of species distribution patterns across latitude and depth [@Huey1989; @Brown2004; @Sunday2012; @Poloczanska2016]. 
+As the oceans warm due to climate change, marine organisms respond to thermal stress through adaptation via natural selection and/or by adjusting their behaviour and their physiology via phenotypic plasticity [@Hochachka2002; @Portner2010; @Hoffmann2011; @Sunday2014]. 
+Whether an individual can respond favourably to a changing environment depends not only on its genotype and the associated level of phenotypic plasticity, but also the time-scale of the stress [@Seebacher2014]. Migration, shifts in reproductive timing and changes to planktonic larval distribution in response to increasing temperatures are reshaping populations worldwide, contributing to the poleward migration of marine species [@Poloczanska2016; @Pecl2017]. 
 For many benthic invertebrates, however, movement is limited especially in the adult life stages, and physiological plasticity (i.e. acclimation) is essential to ensure survival and to maintain reproductive success in a warming climate (Seebacher et al. 2014; Gunderson et al. 2017).
 
 The influence of elevated temperature on marine invertebrate performance and fitness has been investigated in many taxa including crustaceans, molluscs, polychaetes and echinoderms (Calosi et al. 2013a; Lah et al. 2017; Vergara et al. 2017; Gunderson et al. 2017). 

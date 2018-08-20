@@ -1,5 +1,0 @@
-<!-- \appendix -->
-
-# (APPENDIX) Appendix {-}
-
-# Supplementary Material for Chapter 2

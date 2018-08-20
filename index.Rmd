@@ -14,13 +14,14 @@ mathfont: Minion Pro
 ---
 
 ```{r include=FALSE}
-knitr::opts_chunk$set(echo = FALSE, fig.height = 6, fig.width = 6, 
-                      out.width = '100%', comment = "#>")
+knitr::opts_chunk$set(echo = FALSE, comment = "#>")
 # automatically create a bib database for R packages
 # knitr::write_bib(c(
 #   .packages(), 'bookdown', 'knitr', 'rmarkdown'
 # ), 'packages.bib')
 ```
+
+\OnehalfSpacing
 
 # General Introduction
 
@@ -293,7 +294,7 @@ In addition, warming had a positive effect on juvenile spine length, but no effe
 There was evidence that the immune response (i.e. phagocytic activity of coelomocyte cells) of *H. erythrogramma* is affected by decreased pH, but warming interacted with pH and alleviated those negative effects [@Brothers2016].
 @Carey2016 found that *H. erythrogramma* increased its metabolic response by up to 20\% when exposed to either warming ($23^{\circ}C$ to control $17^{\circ}C$) and acidification (pH 7.6), but the two stressors did not interact.
 However, the combined effect of both stressors were additive resulting in a 44\% increase in metabolic rate on the species.
-Interestingly, @Harianto2018 found that long-term exposure (3-month) to increased temperature resulted in increased mortality risk (69 time higher) for urchins acclimated at $24-26^{\circ}C$. 
+In addition, @Harianto2018 found that long-term exposure (3-month) to increased temperature resulted in increased mortality risk (6--9 times higher) for urchins acclimated at $24-26^{\circ}C$. 
 In addition, the sea urchins exhibited signs of metabolic depression, possibly due to disruptions in oxidative phosphorylation (Guderley and St-Pierre 2002), and elevated HSP70 protein expression, which suggest that temperatures close to $26^{\circ}C$ is thermally stressful.
 
 

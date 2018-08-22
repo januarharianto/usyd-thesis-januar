@@ -112,9 +112,11 @@ Both temperature and pH manipulations were performed on a staggered schedule suc
 Adjustments were made at the level of the header tanks such that the experimental tanks reached the new conditions within 1 to 2 days.
 <!-- Further, all adjustments were made in header tanks such that treatments slowly stabilised to their new conditions within 1 to 2 days. -->
 The adjustment process took 7 weeks during which no mortality occured.
-Once the treatment conditions were established, treatment temperatures were at $15.6 \pm 0.4^{\circ}C$, $17.6 \pm 0.4^{\circ}C$ and $18.6 \pm 0.3^{\circ}C$ (s.d.) for the ambient, $+2^{\circ}C$ and $+3^{\circ}C$ treatments respectively.
+Once the treatment conditions were established, treatment temperatures were at $15.6 \pm 0.4^{\circ}C$ for the ambient, $17.6 \pm 0.4^{\circ}C$ for $+2^{\circ}C$ and $18.6 \pm 0.3^{\circ}C$ for the $+3^{\circ}C$ treatments, respectively ($\pm s.d.$).
 
 After the adjustment period, the acclimation period started with temperature levels regulated weekly based on the mean weekly temperature over the same period in Sydney Harbour (Fig. \@ref(fig:acclim) A \& B). 
+Thus, treatment temperatures were changed to mimic the natural seasonal change expected over winter to early summer, based on reference data collected from *in situ* loggers deployed in Chowder Bay from 2009–2014 (Fig. \@ref(fig:harbour)).
+Because temperature has an effect on $CO_2$ solubility and temperatures were changing every week, the system maintained constant pH (not $CO_2$ ppm) within each treatment.
 
 ```{r acclim, fig.cap = "(ref:acclim)", fig.pos = "p"}
 knitr::include_graphics("figs/ch_multistressor/acclim.png")
@@ -122,8 +124,7 @@ knitr::include_graphics("figs/ch_multistressor/acclim.png")
 
 (ref:acclim) Temperature and pH in treatment tanks, measured daily. Only one replicate tank for every treatment was selected at random for daily measurements. Shaded regions are the pre-acclimation adjustment periods for temperature (pink) and pH (blue), respectively. (A) Coloured lines represent the planned temperature profiles (+0, +2, +3), which change every week, while coloured dots represent the actual temperatures measured. The black dots are the reference temperatures collected from *in situ* loggers deployed in Chowder Bay from 2009 to 2014, averaged by day. (B) Black lines represent the reference constant pH levels, with the initial adjustments (8.0, 7.6). Shapes represent the pH treatment group (triangle: 8.0; circle: 7.6), colours represent the temperature treatment group (+0, +2, +3).
 
-Thus, treatment temperatures were changed to mimic the natural seasonal change expected over winter to early summer, based on reference data collected from *in situ* loggers deployed in Chowder Bay from 2009–2014 (Fig. \@ref(fig:harbour)).
-Because temperature has an effect on $CO_2$ solubility and temperatures were changing every week, the system maintained constant pH (not $CO_2$ ppm) within each treatment.
+
 
 ```{r harbour, fig.cap = "(ref:harbour)", fig.pos = "p"}
 knitr::include_graphics("figs/ch_multistressor/harbour.png")
@@ -131,11 +132,11 @@ knitr::include_graphics("figs/ch_multistressor/harbour.png")
 
 (ref:harbour) Mean weekly-averaged temperature ($\pm$ s.d.) for Chowder Bay, NSW, Australia, from 2009 to 2014. Data were obtained from loggers deployed *in situ* at 3 m depth at the level of the sea urchin habitat. Colours represent the adjustment (blue) and acclimation (red) periods of the experimental treatments, respectively. The shaded region is the max/min of the temperatures recorded. These data were used to design the temperature profile of the elevated temperature treatments.
 
-### Monitoring and Surival
+### Monitoring and surival
 
 Specimens and treatment conditions were checked regularly throughout the experimental period. 
 As the spawning season (Oct -- Dec) approached the sea urchins were monitored for spawning activity every morning. 
-Spawning was detected easily as *H. erythrogramma* produces large, bouyant eggs [@Keesing2013], which remained trapped on the surface of the water in the experimental tanks until they were removed(see Appendix XX).
+Spawning was detected easily as *H. erythrogramma* produces large, bouyant eggs [@Keesing2013], which remained trapped on the surface of the water in the experimental tanks until they were removed.
 Survival was recorded by documenting the survival time of individuals over 22 weeks (155 days; Aug--Dec). 
 The urchins were observed daily for mortality, and dead individuals were removed immediately. 
 
@@ -159,7 +160,6 @@ The food was mixed with agar powder to a ratio of $1:4$ by weight, and then mixe
 The agar was left to cool and solidify for $45$ minutes, before it was cut into $1$ to $2$ $cm^2$ cubes and fed to the specimens. 
 We fed the specimens twice a week by placing $3$ to $4$ cubes on top of each individual urchin. 
 This feeding technique ensured that each animal received the same amount of food in excess during the entire experimental period.
-
 All treatment tanks were siphoned every two days and wiped weekly to remove faecal matter and minimise algal growth. 
 All $CO_2$ diffusers were scrubbed and replaced every $3$ to $5$ days.
 Header tanks were cleaned of algal growth once a month.
@@ -290,9 +290,9 @@ All energy-related units are in $kJ\ g^{-1}\ day^{-1}$, while assimilation effic
 
 Analyses were performed in R (v 3.4.3). The survival time for each specimen was determined by the number of days from time zero (when the acclimation period started) to the end of the experiment, a total period of 155 days.
 Survival data were analysed using Kaplan-Meier logrank analysis, with right censoring, to determine whether temperature and pH affect survival time. 
-In addition, a Cox proportional hazards model (Cox, 1972) was fitted using survival time as a function of temperature and pH to assess the risks of each stressor to survival time.
+In addition, a Cox proportional hazards model (Cox, 1972) was fitted using survival as a function of temperature and pH to assess the effects of each stressor to mortality risk.
 The fitted Cox regression met the assumption of proportional hazards (Schoenfeld residual tests, Grambsch and Therneau 1994; $p = 0.673$). 
-As no interactions were found between temperature and pH (Cox regression, $z =$ 0.61, $d.f. =$ 3, $p =$ 0.54), the interaction term was removed and the analysis was repeated with only the main effects tested.
+As no interactions were found between temperature and pH (Cox proportional hazards regression, $z =$ 0.61, $d.f. =$ 3, $p =$ 0.54), the interaction term was removed and the analysis was repeated with only the main effects tested.
 *Post-hoc* tests for the differences between treatments were determined using pairwise tests of significance corrected using the Benjamini-Hochberg (BH) false discovery rate method [@Benjamini1995].
 
 Metabolic rate data were first analysed by constructing a generalised linear mixed model of metabolic rate as a function of relative temperature ($+0^{\circ}C$,  $+2^{\circ}C$,  $+3^{\circ}C$) and pH ($8.0$, $7.6$).
@@ -302,11 +302,10 @@ For all analyses, the nested effects of tank, temperature within tank and pH wit
 Thus, the nested tank parameter was removed from all models and data were analysed individually using simple linear models.
 To test for fixed effects, ANOVA was performed on the models, using Type III sums of squares when interactions were present, or Type II sums of squares when they were not [@Langsrud2003].
 
-For metabolic rate data, there were no interactions between temperature and pH at 4 weeks, thus the interaction term was removed from the model and the data re-analysed to only test for main effects.
+For metabolic rate data, there were no interactions between temperature and pH at 4 weeks, thus the interaction term was removed from the model and the data re-analysed to only test for main effects (see Appendix Table XX).
 For feeding and ammonia excretion rate data, there were no significant interactions between temperature and pH ($F_{2,47} = 1.07$, $p = 0.35$ and $F_{2,54} = 2.31$, $p = 0.11$, respectively), so the temperature $\times$ pH interaction terms were removed before ANOVA was performed on each model.
-Temperature was the main driver influencing metabolic rate (see results), thus an ANCOVA was performed separately 
 
-All ANOVA analyses were tested for normality using the Shapiro-Wilk test of normality @[Royston1982], and homogeneity of variances using the Fligner-Killeen Test [@Conover1981].
+All ANOVA analyses were tested for normality using the Shapiro-Wilk test of normality [@Royston1983], and homogeneity of variances using the Fligner-Killeen Test [@Conover1981].
 <!-- Check ?shapiro.test and ?fligner.test for references -->
 Where treatment conditions were indicated to be significantly different, estimated marginal means (EMM, aka Least-Squares Means) were used to develop linear estimates, and then analysed using the *post-hoc* Tukey Highest Significant Difference (HSD) test to identify the significance between temperature-pH combinations. Significance was determined at $p < 0.05$ or lower for all statistical tests. 
 
@@ -335,26 +334,27 @@ knitr::include_graphics("figs/ch_multistressor/surv_plot.png")
 
 ### Metabolic rate
 
-After 4 weeks of acclimation, the metabolic rate of *H. erythrogramma* was significantly affected by increased temperature ($F_{2,54}= 15.9$, $p < 0.001$) or decreased pH ($F_{1,54}= 23.4$, $p < 0.001$, Table \@ref(tab:c3mrtab)).
+After 4 weeks of acclimation to treatments, the metabolic rate of *H. erythrogramma* was significantly affected by increased temperature ($F_{2,54}= 15.9$, $p < 0.001$) and decreased pH ($F_{1,54}= 23.4$, $p < 0.001$, Table \@ref(tab:c3mrtab)).
 Generally, metabolic rate increased by up to 35 \% with warming and 25 \% with reduced pH.
-However, the two stressors did not interact ($F_{2,54}= 0.07$, $p = 0.93$, Appendix Table XX), and their combined effects appeared to be additive, increasing metabolic rate by up to 56 \% (Figure \@ref(fig:resp)A).
-After 12 weeks of acclimation, metabolic rate responses were still positively influenced by both warming ($F_{2,51}=$ 9.49, $p <$ 0.001, Table \@ref(tab:c3mrtab)) or reduced pH ($F_{1,51}=$ 16.37, $p <$ 0.001, Table \@ref(tab:c3mrtab)).
-However, the interaction between temperature and pH significantly affected metabolic rate responses ($F_{2,51}=$ 10.5, $p <$ 0.001; Figure \@ref(fig:resp) B; Appendix C Figure \@ref(fig:respinteract)).
-Thus, while warming increased metabolic rate by 9 \%, and decreased pH by 18 \%, their combined effects reduced metabolic rate by up to 3 \% less than the controls.
+The two stressors did not interact ($F_{2,54}= 0.07$, $p = 0.93$, Appendix Table XX), however their combined effects were additive, increasing metabolic rate by up to 56 \% (Figure \@ref(fig:resp)A).
+At 12 weeks of acclimation, metabolic rate responses were still significantly influenced by both warming ($F_{2,51}=$ 9.49, $p <$ 0.001, Table \@ref(tab:c3mrtab)) or reduced pH ($F_{1,51}=$ 16.37, $p <$ 0.001, Table \@ref(tab:c3mrtab)).
+However, significant interaction between temperature and pH resulted in an antagonistic effect on metabolic rate ($F_{2,51}=$ 10.5, $p <$ 0.001; Figure \@ref(fig:resp) B; Appendix C Figure \@ref(fig:respinteract)).
+Thus, while warming elevated metabolic rate by 9 \%, and decreased pH by 18 \%, their combined effects reduced metabolic rate by up to 3 \% less than the controls.
+*Post-hoc* analysis using Tukey's HSD showed significant differences between groups at 4 weeks of acclimation, but there were no differences when the same groups were compard at 12 weeks (Appendix C Table XX).
 
 ```{r resp, fig.cap = "(ref:resp)"}
 knitr::include_graphics("figs/ch_multistressor/resp_plot.png")
 ```
 
-(ref:resp) Metabolic rate ($mg\ O_2\ h^{-1}\ kg^{-1}$) of *H. erythrogramma* acclimated for 12 weeks in six treatments of three temperatures ($+0, +2, +3 ^\circ C$) and two pH levels (8.0, 7.6). The top and bottom of the boxes represent the interquartile range (IQR) between the 25th and 75th percentile (Q1 and Q3, respectively). The horizontal line represents the median (Q2), the horizontal dotted line represents the mean, and the vertical lines (whiskers) represent the range of the data computed as follows: Q1 − 1.5IQR (bottom whisker); greater than Q3 + 1.5 IQR (top whisker).
+(ref:resp) Metabolic rate ($mg\ O_2\ h^{-1}\ kg^{-1}$) of *H. erythrogramma* acclimated for (A) 4 weeks, and (B) 12 weeks in six treatments of three temperatures ($+0, +2, +3 ^\circ C$) and two pH levels (white: 8.0, blue: 7.6). The top and bottom of the boxes represent the interquartile range (IQR) between the 25th and 75th percentile (Q1 and Q3, respectively). The horizontal line represents the median (Q2), the horizontal dotted line represents the mean, and the vertical lines (whiskers) represent the range of the data computed as follows: Q1 − 1.5IQR (bottom whisker); greater than Q3 + 1.5 IQR (top whisker).
 
 
 ```{r c3mrtab, message=FALSE}
 c3mrtab <- readr::read_csv("input/ch_multistressor/c3mrtab.csv")
 
-kable(c3mrtab, caption = "(ref:c3mrtab)", booktabs = TRUE) %>%
-# kable(c3mrtab, "latex", caption = "(ref:c3mrtab)", booktabs = TRUE) %>%
-  kable_styling(full_width = T, position = "center") %>%
+# kable(c3mrtab, caption = "(ref:c3mrtab)", booktabs = TRUE) %>%
+kable(c3mrtab, "latex", caption = "(ref:c3mrtab)", booktabs = TRUE) %>%
+  kable_styling(position = "center") %>%
   kable_styling(latex_options = "hold_position") %>%
   row_spec(c(0,1,6), bold = T)
 ```
@@ -399,7 +399,7 @@ Decreased pH had no significant effect ($F_{1, 56} = 0.91$, $p < 0.34$), and the
 
 (ref:anovanhtab) One-way ANOVA test on the effects of temperature or pH on the ammonia excretion rate of *H. erythrogramma* after 12 weeks of incubation to elevated temperature ($+0$, $+2$, $+3^\circ C$) and decreased pH ($8.0$ , $7.6$). The ANOVA was performed with the non-significant interaction terms removed. $n = 10$.
 
-(ref:nitrogen) Feeding rate of *H. erythrogramma* acclimated for 12 weeks to three temperatures ($+0, +2, +3 ^\circ C$) and two pH levels (8.0, 7.6). The top and bottom of the boxes represent the interquartile range (IQR) between the 25th and 75th percentile (Q1 and Q3, respectively). The horizontal line represents the median (Q2), the horizontal dotted line represents the mean, and the vertical lines (whiskers) represent the range of the data computed as follows: Q1 − 1.5IQR (bottom whisker); greater than Q3 + 1.5 IQR (top whisker).
+(ref:nitrogen) Ammonia ($NH_3$) excretion rate of *H. erythrogramma* acclimated for 12 weeks to three temperatures ($+0, +2, +3 ^\circ C$) and two pH levels (8.0, 7.6). The top and bottom of the boxes represent the interquartile range (IQR) between the 25th and 75th percentile (Q1 and Q3, respectively). The horizontal line represents the median (Q2), the horizontal dotted line represents the mean, and the vertical lines (whiskers) represent the range of the data computed as follows: Q1 − 1.5IQR (bottom whisker); greater than Q3 + 1.5 IQR (top whisker).
 
 ```{r nitrogen, fig.cap="(ref:nitrogen)", fig.pos='p'}
 knitr::include_graphics("figs/ch_multistressor/nh_plot.png")
@@ -433,13 +433,24 @@ sfg %>%
   rename("AE (%)" = A, Feeding = Ce, Respiration = Re, Excretion = Ue,
     SfG = sfg) %>%
   select(7,2,3,4,5,6) %>%
-  # kable("latex", booktabs = TRUE, caption = "(ref:c3sfgtab)", digits = 3)
-  kable(booktabs = TRUE, caption = "(ref:c3sfgtab)", digits = 3)
+  kable("latex", booktabs = TRUE, caption = "(ref:c3sfgtab)", digits = 3) %>%
+  # kable(booktabs = TRUE, caption = "(ref:c3sfgtab)", digits = 3) %>%
+  # kable_styling(full_width = T) %>%
+  kable_styling(latex_options = "hold_position")
+
 
 
 ```
 
 (ref:c3sfgtab) Scope for growth (SfG) parameters, standardised to the same unit ($kJ\ g^{-1}\ day^{-1}$). Each parameter was obtained after 12 -- 13 weeks of acclimation to three temperatures ($+0, +2, +3 ^\circ C$) and two pH levels (8.0, 7.6).
+
+### Spawning activity
+
+Synchronous, mass-spawning of the urchins took place in two separate occassions, on 7 October and 24 October, 2014. 
+The first even coincided with a full moon, while the second occurred approximately two weeks after.
+Direct spawning behaviour were not observed in both occassions as they happened overnight, however eggs retained within treatment tanks and developed into juveniles over the next few days (see Appendix Figures \@ref(fig:floateggs) \& \@ref(fig:juvies)).
+In the first spawning event, eggs were observed for all treatment combinations.
+However, in the second spawning event, eggs were observed for all +3 &deg;C treatments and in the combined +2 &deg;C with 7.6 pH treatments only, with fertilisation occurring only in the +3 &deg;C treatments.
 
 ## Discussion
 
@@ -449,10 +460,9 @@ sfg %>%
 
 Long-term acclimation to warming and acidification affected the survival, feeding, metabolic and ammonia excretion rates of *H. erythrogramma*, especially at the higher temperature offsets ($+3 ^\circ C$).
 Contrary to our predictions, we found no evidence of interactive effects between temperature and pH affecting survival, feeding rate and ammonia excretion.
-For metabolic rate, temperature and pH did not interact and were additive at 4 weeks of acclimation. 
-However at 12 weeks the stressors interacted antagonistically causing decreased metabolic rate with increasing temperature.
-Acclimation to $+3 ^{\circ}C$ over 22 weeks caused significant mortality, but neither $+2 ^{\circ}C$, nor the inclusion of low pH -- with or without warming -- affected survival within the same period.
-In fact, the main effect of pH was significant only for metabolic rate.
+For metabolic rate, temperature and pH did not interact at 4 weeks of acclimation, but significant, antagonistic interactions were detected at 12 weeks where at pH 7.6, metabolic rate decreased with increasing temperature.
+Acclimation to +3 &deg;C over 22 weeks caused significant mortality, but neither a +2 &deg;C increase in temperature, nor the inclusion of low pH -- with or without warming -- affected survival within the same period.
+It appears that pH had a significant effect on metabolic rate response only, while temperature significantly influenced every measured response.
 Scope for growth values were positive in all treatments, indicating energy surplus adequate to support energy demands.
 <!-- (may shift to conclusion?) -->
 
@@ -461,22 +471,35 @@ Scope for growth values were positive in all treatments, indicating energy surpl
 
 ### Effect on survival
 
-As survival was documented daily and over a long period of 22 weeks, we were able to analyse the relationship between temperature, pH and survival rate to generate a Cox proportional hazards model to determine mortality risk.
-Warming was the main driver affecting survival and was associated with increased mortality risk (338 \%) while low pH did not interact with temperature and was associated with a much lower risk (47 \%).
-Interestingly, the majority of mortality events occured in $+3 ^{\circ}C$ treatments, whereas specimens acclimated $+2 ^{\circ}C$ treatments did not experience significant mortality.
-<!-- and the median survival threshold was at $14 - 19$ weeks -->
+As survival was documented daily and over a long period of 22 weeks, we were able to analyse the relationship between temperature, pH and survival rate to determine mortality risks associated with different treatment groups.
+Past studies have indicated that temperatures above $24-26 ^{\circ}C$ were sublethal to both adult and larval stages of *H. erythrogramma* while there was no evidence of pH affecting survival [@Byrne2009; @Byrne2011; @Harianto2018].
+In particular, @Harianto2018 showed that exposure increased temperature (24 &deg;C to $26 ^{\circ}C$) caused significant decreases in adult survival (up to 33 \%) after 14 weeks of acclimation to those conditions.
 
-Past studies have indicated that temperatures above $24-26 ^{\circ}C$ were sublethal to both adult and larval stages of *H. erythrogramma* (Harianto et al. 2018, Byrne et al. 2011).
-In particular, Harianto et al. (2018) showed that long-term acclimation to increased temperature ($24 ^\circ C$ to $26 ^{\circ}C$) caused significant decreases of up to $33 \%$ in adult survival after 14 weeks of acclimation.
-Here, mortality occured even before those temperature thresholds -- for our $+3 ^{\circ}C$-only treatments, $25\%$ mortality occurred when temperatures were still increasing from $20$ to $24 ^{\circ}C$ over 10 weeks.
-Perhaps the metabolic costs of low pH was detrimental to the health of *H. erythrogramma*, as significant, antagonistic interactions between the two stressors we observed in metabolic rate results (see below).
-However, Carey et al. (2016) also showed that only 6 of their specimens perished after 2 months of acclimation to warming ($23 ^\circ C$) and acidification (ph $7.5$) scenarios.
+In this study, warming was the main driver affecting survival and was associated with increased mortality risk ($\sim$ 3 fold) while low pH did not interact with temperature and was associated with a much lower risk ($\sim$ 0.5 fold).
+The majority of mortality events occured at the higher temperature increase of +3 &deg;C, regardless of pH.
+<!-- , and no significant mortality occurred in treatments set to +2 &deg;C. -->
+Interestingly, in the +3 &deg;C treatments, up to 25 \% mortality occurred when temperatures were still increasing from 20 &deg;C to 24 &deg;C over 10 weeks (see Figure \@ref(fig:surv)), well before the sublethal temperature thresholds of 24 &deg;C to 26 &deg;C were achieved.
+This temperature range did not cause the same levels of mortality for +2 &deg;C treatments -- there was no significant mortality for these treatments.
+Similarly, @Carey2016 reported low mortality (6 out of approx. 100) when *H. erythrogramma* was acclimated to constant warming below the  24 &deg;C to 26 &deg;C threshold (18 &deg;C, 23 &deg;C) and acidification ($pH_T$ 8.0, 7.5) scenarios for two months.
 
-These contrasting results may be attributed to several factors.
-First, we collected our specimens within Sydney Harbour, while Carey et al. (2016) collected them from an open coast site outside of the harbour.
-Second, we incorporated an acclimation profile of changing temperature which may cause urchins to physiologically adjust to changing conditions regularly to achieve a new physiological steady state (Hochachka and Somero 2002, Pörtner 2008), as opposed to when they are acclimating to one constant treatment condition.
-Whether Sydney Harbour populations of *H. erythrogramma* are less tolerant to environmental stress to their open ocean counterparts remains a knowledge gap that needs to be investigated, but diversity in tolerance to climate change stressors between different populations is expected.
-Regardless, *H. erythrogramma* has a wide distribution in southern Australia (Keesing, 2013) and the availability of populations that are more tolerant than others can provide resilience to the species via larval dispersal mechanisms across the coast (Byrne et al, 2011).
+<!-- Mortality occured even before the sublethal temperature thresholds of 24 &deg;C to $26 ^{\circ}C$ -- for the $+3 ^{\circ}C$-only treatments, $25\%$ mortality occurred when temperatures were still increasing from $20$ to $24 ^{\circ}C$ over 10 weeks. -->
+The data suggest the rise in mortality cannot be attributed to increased temperature alone, as the same temperature range did not induce the same levels of mortality between treatments in our study.
+<!-- We propose one probable reason for the contrasting differences in survival between the two treatment temperatures and other studies on *H. erythrogramma*. -->
+Likely, the seasonally-changing temperature regime that we introduced have introduced additional biological consequences, especially at the beginning of the study during Winter where the transition to summer typically triggers a period of vigorous gonadal regeneration in *H. erythrogramma* to prepare for reproductive spawning [@Williams1975].
+Goand growth is an metabolically intensive process, where protein, lipid and carbohydrate reserves stored in eggs can increase the wet mass of a sea urchin by up to 16 \% in less than 100 days [@GMarsh2007].
+When experimental temperatures are kept constant, as seen in many past marine global change experiments on sea urchins [e.g. @Uthicke2014; @Brothers2015; @Delorme2016; @Morley2016; @Harianto2018], gonad development can occur without the added pressures of constant physiological adjustments to changing environmental conditions.
+However, gonad development may also decrease at high temperatures as an energetic trade-off to maintain critical physiological functions, as seen in the sea urchin *Evechinus  chloroticus* [@Delorme2016] and *Echinometra* sp. *A* [@Uthicke2014].
+In this study, there was strong evidence of synchronous mass-spawning which
+
+
+Thus, it is possible that under a more realistic, laboratory-driven transition from winter to summer conditions for our study, *H. erythrogramma* focused on gametogenesis in Winter, but was energetically compromised closer to Summer conditions in the seasonal cycle, when warming was increased above the ambient baseline levels, with +3 &deg;C showing severe consequences to survival while +2 &deg;C did not.
+This is an important conseqence of environmental variation that is often not considered in the majority of current ocean climate change experiments but has been highlighted in recent reviews [e.g. @Gunderson2016].
+Many marine invertebrates do exhibit a seasonal cycle in activities such as growth, reproduction and feeding, and understanding seasonal biology is vital for predicting how organisms will respond to temporal changes in environmental conditions with the added pressure of ocean warming and acidification [@Kreyling2013; @Thompson2013].
+
+<!-- Second, it is possibile that the populations of sea urchins collected in this experiment have different tolerance levels to temperature compared to past studies on the same species. -->
+<!-- The specimens used for this study were from within the Sydney Harbour -->
+<!-- Whether Sydney Harbour populations of *H. erythrogramma* are less tolerant to environmental stress to their open ocean counterparts remains a knowledge gap that needs to be investigated, but diversity in tolerance to climate change stressors between different populations is expected. -->
+<!-- Regardless, *H. erythrogramma* has a wide distribution in southern Australia (Keesing, 2013) and the availability of populations that are more tolerant than others can provide resilience to the species via larval dispersal mechanisms across the coast (Byrne et al, 2011). -->
 
 
 
@@ -497,12 +520,17 @@ Regardless, *H. erythrogramma* has a wide distribution in southern Australia (Ke
 <!-- However, when metabolic rate was estimated again at 12 weeks of acclimation, specimens responded differently. By then, antagonistic interactions between temperature and pH were observed resulting in decreased metabolic rate with simultaneous exposure to both increased temperature and reduced pH conditions, but no significant main effects when single stressors were considered. -->
 <!-- Here, temperatures had increased ($20.7$, $22.7$ and $23.7 ^{\circ}C$, respectively) but were only slightly higher than those recorded in Carey et al. (2016) at $23 ^{\circ}C$. -->
 
+As single stressors, the effects of both increased temperature and reduced pH on the metabolic rate of *H. erythrogramma* were clearly positive in both sampling periods of 4 and 12 weeks of acclimation.
+This was expected: it is well-known that temperature moderates biochemical reactions and physiological activity in ectotherms [@Hochachka2002; @Brown2004; @Dillon2010; @Somero2012], thus metabolic rate normally increases with temeprature until the organism is physiologically limited by its thermal tolerance or oxygen availability [@Portner2002; @Bozinovic2015]. 
+In addition, and changes in oceanic pH alters biochemical pathways which 
+
 We found differences in metabolic rate responses measured at two different periods. 
-At 4 weeks of acclimation, metabolic rate increased additively with temperature -- which were at $16.6$, $18.6$ and $19.6 ^{\circ}C$ respectively at the time -- and decreased pH, with no interactions detected between both stressors.
-These results were similar to Carey et al. (2016) where, *H. erythrogramma* specimens, acclimated for 8 weeks to constant warming and acidified conditions ($18$ vs $23 ^{\circ}C$, $- 0.4$ pH) showed positive and additive metabolic responses to both stressors, which did not interact.
+At 4 weeks of acclimation, metabolic rate increased additively with temperature -- which were at 16.6 &deg;C, 18.6 &deg;C and 19.6 &deg;C respectively at the time -- and decreased pH, with no interactions detected between both stressors.
+These results were similar to Carey et al. (2016) where, *H. erythrogramma* specimens, acclimated for 8 weeks to constant warming and acidified conditions (18 &deg;C, 23 &deg;C; $pH_T$ 8.0, 7.6) showed positive and additive metabolic responses to both stressors, which did not interact.
 
 <!-- The increased metabolism due to increased temperature and/or reduced pH are expected due to the positive effect of temperature on biochemical reactions (Hochachka and Somero 2002) whereas pH affects acid-base relationships associated with maintaining physiological integrity (Pörtner 2008). -->
 The increased metabolism due to increased temperature and/or reduced pH are expected due to the positive effect of temperature on biochemical reactions (Hochachka and Somero 2002) whereas pH affects acid-base relationships associated with maintaining physiological integrity (Pörtner 2008).
+When the urchins were measured again for metabolic rate at 12 weeks of acclimation, the same effects were found.
 However, we found that our specimens responded differently when metabolic rate was estimated again at 12 weeks.
 As single stressors neither temperature nor pH were influencing metabolic rate, but antagonistic interactions between temperature and pH were observed resulting in decreased metabolic rate with simultaneous exposure to both increased temperature and reduced pH conditions. 
 *H.erythrogramma* appeared to have reduced its metabolic rate in response to the simultaneous exposure to both stressors.
@@ -525,6 +553,9 @@ The increased mortality at $+3 ^\circ C$ also indicated that those conditions we
 
 We used SfG to better understand the thermal responses of *H. erythrogramma* as it incorporates most of the physiological responses that were measured, and showed that there was less available energy available for *H. erythrogramma* to maintain physiological functions after 12 weeks of acclimation in treatments.
 Regardless, SfG values were still positive in all experimental situations indicating energy surplus adequate to support energy demands.
+
+However, the sea urchins were clearly stressed. 
+
 
 ### Temperature drives physiological responses
 
@@ -591,7 +622,7 @@ These studies demonstrated that given time, adult sea urchins can respond and ev
 <!-- --- -->
 
 
-<!-- increased temperature has been shown to be detrimental to *H. erythrogramma* with $24$ to $26 ^\circ C$ -->
+<!-- increased temperature has been shown to be detrimental to *H. erythrogramma* with $24$ to 26 &deg;C -->
 
 <!-- Tolerance of an organism to the effects of OA may be due to its ability to compensate for changes in extracellular pH (citation). -->
 
@@ -613,5 +644,5 @@ These studies demonstrated that given time, adult sea urchins can respond and ev
 <!--As the first long-term multi-stressor study on echinoderms that used data from loggers to recreate seasonal change over time under realistic conditions
 In this study, *H. erythrogramma* was exposed to a temperature profile which stimulated the transition of increasing temperature from winter to summer. -->
 <!-- This influenced survival greatly, especially as temperatures approached sublethal limits over the acclimation period.  -->
-<!-- By the end of the experiment at 22 weeks of acclimation, our $+3 ^\circ C$ treatments ($25.8 `^\circ C$) were close to the maximum thermal threshold of *H. erythrogramma* ($26 ^\circ C$, Harianto et al. 2018, Byrne et al. 2010), but a few individuals were able to tolerate the high temperature. -->
+<!-- By the end of the experiment at 22 weeks of acclimation, our $+3 ^\circ C$ treatments ($25.8 `^\circ C$) were close to the maximum thermal threshold of *H. erythrogramma* (26 &deg;C, Harianto et al. 2018, Byrne et al. 2010), but a few individuals were able to tolerate the high temperature. -->
 <!-- The ability to remodel for the effects of environmental stress is species-specific and depends on individual plasticity (Wilson and Franklin, 2002), with thermal compensation often measured by quantifying phyiological rates such as metabolic rate () and feeding performance () -->

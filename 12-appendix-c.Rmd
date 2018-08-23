@@ -9,12 +9,28 @@ knitr::opts_chunk$set(echo=FALSE, fig.height=6, fig.width=6, out.width='100%', c
 ```{r, include = FALSE}
 
 library(kableExtra) # enhance kable with pipes
+library(tidyverse)
+library(snipR)
 
 ```
 
 # Supplementary Material for Chapter 3
 
-```{r multisetup, fig.cap = "(ref:multisetup)", fig.pos="h"}
+```{r floateggs, fig.cap = "(ref:floateggs)", fig.pos="h"}
+knitr::include_graphics("figs/ch_multistressor/floatingeggs.jpg")
+```
+
+(ref:floateggs) Eggs of *H. erythrogramma*, floating near the surface of the tank. Mass spawning occurred in all treatments, spontaneously. As the eggs of *H. erythrogramma* are buoyant, they were not immediately flushed by the flowthrough system. It was not possible to determine which urchins spawned as the spawning events were not directly observed.  
+
+```{r juvies, fig.cap = "(ref:juvies)", fig.pos="p"}
+knitr::include_graphics("figs/ch_multistressor/juvies.jpg")
+```
+
+(ref:juvies) Juvenile *H. erythrogramma* observed settling on the lid of a treatment tank. Following spawning events, settling juveniles were observed on the tank surfaces of all treatments, providing evidence that at least one male and one female urchin spawned gametes during the mass spawning events. 
+
+
+
+```{r multisetup, fig.cap = "(ref:multisetup)", fig.pos="p"}
 knitr::include_graphics("figs/ch_multistressor/experimental_design.png")
 ```
 
@@ -48,3 +64,16 @@ as.data.frame(emmresp$contrasts) %>%
 ```
 
 
+
+
+<!-- ```{r mrgroups} -->
+<!-- load("output/ch_multistressor/respiration.RData") -->
+
+<!-- as.data.frame(emmresp$contrasts) %>% -->
+<!--   mutate(sig = p_stars(p.value)) %>% -->
+<!--   # kable(booktabs = TRUE, digits = 3, caption = cp) %>% -->
+<!--   kable(format = "latex", booktabs = TRUE, digits = 3, caption = cp) %>% -->
+<!--   kable_styling(font_size = 10) %>% -->
+<!--   group_rows(index = c("4 weeks" = 15, "12 weeks" = 15)) %>% -->
+<!--   footnote("***: p < 0.001; **: p < 0.01; *: p < 0.05; .: p < 0.1") -->
+<!-- ``` -->

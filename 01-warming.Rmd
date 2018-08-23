@@ -38,6 +38,8 @@ library(pander)
 
 ## Abstract {-}
 
+\SingleSpacing
+
 Environmental temperature affects the physiology and fitness of ectotherms, an important consideration in a warming ocean.
 We investigated the effects of acclimation to increased temperature in the Australian sea urchin, *Heliocidaris erythrogramma*. 
 After a gradual introduction to increasing temperature (1 &deg;C $\cdot6 d^{−1}$), sea urchins were held for $\sim$ 3 months in four treatments at three elevated temperatures (22, 24 and 26 &deg;C) and the median annual temperature, 20 &deg;C. The effect of elevated temperature on survival, metabolic rate, $Q_{10}$, heat-shock protein (HSP70) expression, gonad index and gonad histology were examined. 
@@ -47,6 +49,7 @@ It is clear that there is an active physiological response in urchins held at th
 The deleterious effect of living at temperatures projected for the future indicates that the persistence of future populations of *H. erythrogramma* will depend on acclimation as habitat warming continues.
 
 \cleardoublepage
+\OnehalfSpacing
 
 ## Introduction
 

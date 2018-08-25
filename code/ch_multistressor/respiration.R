@@ -39,12 +39,22 @@ resp_df <- read_excel("input/ch_multistressor/metabolic_rate.xlsx", sheet = 2) %
 
 # Perform a three-way analysis of variance using temperature (+0, +2, +3), pH
 # (8.0, 7.6) and time (4 weeks, 12 weeks) as fixed factors.
+# check https://mcfromnz.wordpress.com/2011/03/02/anova-type-iiiiii-ss-explained
+# to understand why we use type 3 ANOVA when interactions are involved.
 resp_anova <- lm(rate ~ Temperature * pH * Time, data = resp_df) %>%
-  Anova(type = 3, contrasts=list(topic=contr.sum, sys=contr.sum))
+  Anova(type = 3, contrasts=list(topic=contr.sum, sys=contr.sum)) %>%
+  print()
 
-## Run ANOVA
+## Run ANOVA minus 3-way interaction since it is not significant
 model <- lm(rate ~ Temperature*pH*Time - Temperature:pH:Time, data = resp_df)
 Anova(model, type = 3, contrasts=list(topic=contr.sum, sys=contr.sum))
+
+
+## Run ANOVA on Temperature:Time
+lm(rate ~ Temperature*Time, data = resp_df) %>%
+  Anova()
+lm(rate ~ Temperature*Time, data = resp_df) %>%
+  Anova(type = 3, contrasts=list(topic=contr.sum, sys=contr.sum))
 
 ## Post Hoc
 ## include all
@@ -54,8 +64,8 @@ emmeans(model, ~ Temperature:pH:Time) %>%
 
 ## separate time
 emmeans(model, pairwise ~ Temperature:pH:Time)
-phresp <- emmeans(model, pairwise ~ Temperature:pH | Time)
-cld(emmeans(model, pairwise ~ Temperature:pH | Time))
+emmresp <- emmeans(model, pairwise ~ Temperature:pH | Time)
+CLD(emmeans(model, pairwise ~ Temperature:pH | Time))
 
 pairs(emmeans(model, ~ Temperature*pH*Time), simple = "Time", combine = T)
 
@@ -102,30 +112,65 @@ resp_w4 <- resp_df %>%
   filter(Time == "4 weeks") %>%
   print()
 
+# Summarise week 4 data
+resp_w4 %>%
+  group_by(Temperature, pH) %>%
+  summarise(mean = mean(rate))
+
 resp_w12 <- resp_df %>% 
   filter(Time == "12 weeks") %>%
   print()
 
+# Summarise week 12 data
+resp_w12 %>%
+  group_by(Temperature, pH) %>%
+  summarise(mean = mean(rate),
+            sd = sd(rate))
+
 # Analyse week 4
 lm(rate ~ Temperature * pH, data = resp_w4) %>%
-  Anova() %>%
+  Anova(type = 3, contrasts=list(topic=contr.sum, sys=contr.sum)) %>%
   print()
 # No interaction - remove temp*pH
 anova_wk4 <-
   lm(rate ~ Temperature + pH, data = resp_w4) %>%
-  Anova() %>%
+  Anova(type = 3, contrasts=list(topic=contr.sum, sys=contr.sum)) %>%
   print()
 wk4_lm <- lm(rate ~ Temperature + pH, data = resp_w4) 
 emmeans(wk4_lm, pairwise~Temperature:pH)
 # Analyse week 12
 anova_wk12 <-
   lm(rate ~ Temperature * pH, data = resp_w12) %>%
-  Anova() %>%
+  # Anova() %>%
+  Anova(type = 3, contrasts=list(topic=contr.sum, sys=contr.sum)) %>%
   print()
 #Anova(model, type = 3, contrasts=list(topic=contr.sum, sys=contr.sum))
 wk12_lm <- lm(rate ~ Temperature + pH, data = resp_w12) 
+emmeans(wk12_lm, pairwise~Temperature:pH)
 emmeans(wk12_lm, pairwise~Temperature | pH)
 emmeans(wk12_lm, pairwise~pH | Temperature)
+
+library(agricolae)
+# HSD.test(wk12_lm, "Temperature", group = TRUE, console=TRUE)
+
+
+# Let's perform a t-test (paired) to check for acclimation to temp
+# First, we select the data to be tested
+# In this case they are the temp data in wk 4 and the temp data in wk 12
+
+wk4ctrl <- resp_df %>%
+  # filter(Temperature == "+0°C") %>%
+  filter(pH == "pH 8.0") %>%
+  filter(Time == "4 weeks") %>%
+  print()
+
+wk12ctrl <- resp_df %>%
+  # filter(Temperature == "+0°C") %>%
+  filter(pH == "pH 8.0") %>%
+  filter(Time == "12 weeks") %>%
+  print()
+
+t.test(wk4ctrl$rate, wk12ctrl$rate, var.equal = TRUE)
 
 
 # PLOTS ------------------------------------------------------------------------
@@ -141,7 +186,8 @@ rplot_data <- read_excel("input/ch_multistressor/metabolic_rate.xlsx", sheet = 2
 resp_plot <- ggplot(rplot_data, aes(factor(temp_fac), rate, fill = factor(ph_fac))) +
   # facet_wrap(~ifelse(week, c("4 weeks","12 weeks"))) +
   facet_wrap(~week,
-    labeller = labeller(week = c(`4` = "4 weeks", `12` = "12 weeks"))) +
+    labeller = labeller(week = c(`4` = "4 weeks", `12` = "12 weeks")),
+    scales = "free_x", ncol = 1) +
   cowplot::theme_cowplot() +
   # create boxplot and add a bit of space between objects:
   geom_boxplot(position = position_dodge(0.8), outlier.alpha = .5) +
@@ -173,6 +219,8 @@ resp_plot <- ggplot(rplot_data, aes(factor(temp_fac), rate, fill = factor(ph_fac
   labs(fill = "") +
   xlab(" ") +
   ylab((expression("Metabolic Rate (" ~ mg ~ O[2] ~~ h ^ -1 ~~ kg ^ -1 * ")"))) +
+  # remove all legends
+  theme(legend.position = "none") +
   geom_blank()
 resp_plot
 
@@ -206,6 +254,7 @@ p4 <- ggplot(wks4, aes(factor(temp_fac), rate, fill = factor(ph_fac))) +
   ggtitle("4 weeks") +
   xlab(" ") +
   ylab(expression("Metabolic Rate (" ~ mg ~ O[2] ~~ h ^ -1 ~~ kg ^ -1 * ")")) +
+  ylim(4.5,12.6) +
   geom_blank()
 p4
 
@@ -225,6 +274,8 @@ p12 <- ggplot(wks12, aes(factor(temp_fac), rate, fill = factor(ph_fac))) +
   ggtitle("12 weeks") +
   xlab("") +
   ylab(expression("Metabolic Rate (" ~ mg ~ O[2] ~~ h ^ -1 ~~ kg ^ -1 * ")")) +
+  # change scale
+  ylim(4.5,12.6) +
   geom_blank()
 p12
 
@@ -234,8 +285,8 @@ legend <- cowplot::get_legend(p4 + theme(legend.position="bottom",
 resp_plot <- cowplot::plot_grid(
   p4 + theme(legend.position="none"),
   p12 + theme(legend.position="none"),
-  legend,
-  rel_heights = c(1, 1, .1),
+  # legend,
+  # rel_heights = c(1, 1, .1),
   labels = c("A", "B"),
   # hjust = -6,
   ncol = 1,

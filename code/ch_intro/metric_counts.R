@@ -31,6 +31,6 @@ counts <-
 counts
 
 cowplot::save_plot(
-  "figs/ch_intro/counts.png", counts,
-  base_height = 4, base_width = 8
+  "figs/ch_intro/pgroups.png", counts,
+  base_height = 6, base_width = 8
 ) 

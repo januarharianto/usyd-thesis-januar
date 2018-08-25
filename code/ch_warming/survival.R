@@ -120,8 +120,9 @@ posthoc <- pairwise_survdiff(Surv(time, death) ~ treatment, data = dt,
 cox <- coxph(Surv(time, death) ~ treatment, data = dt) %>%
   print()
 
-summary(cox)
-
+coxsum <- summary(cox)
+coxsum$coefficients
+coxtab <- data.table::data.table(coxsum$coefficients)
 
 cox_assumption <- cox.zph(cox)
 cox_assumption$table[3,3] # this is the overall p value
@@ -135,4 +136,8 @@ cowplot::ggsave(
   plot = survplot,
   height = 6, width = 6 * 1.3
 )
+
+# Save the data
+save.image(file = "output/ch_warming/surv.RData")
+
 

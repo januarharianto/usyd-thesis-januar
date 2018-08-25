@@ -576,32 +576,47 @@ In many of these studies, mortality was not reported mainly because survival rat
 
 
 
-### Tolerance to pH change
+### Long-term multistressor impacts
 
-<!-- *H. erythrogramma* appears to be tolerant to OA effects in this study. -->
-Long-term exposure to decreased pH alone did not significantly affect feeding, excretion and survival rates for *H. erythrogramma*.
+To date, long-term multistressor experiments spanning months on echinoderms are still uncommon, possibly due to time and resource constraints (but see Suckling et al. 2015, Morley et al. 2016, Carey et al. 2016).
+Morley et al. (2016) presented the longest (40-month) study to date investigating the effects of both warming and acidification on an echinoderm species, the antarctic sea urchin *Sterechinus neumayeri*, using the same sample populations from Suckling et al. (2015).
+They found that long-term acclimation to warming and acidification eventually had no significant effect on feeding bioenergetics.
+Carey et al. (2016) looked into metabolic and feeding responses of *H. erythrogramma* after two months of acclimation to constant warming and acidification conditions, and showed evidence of metabolic acclimation.
+<!-- These studies demonstrated that given time, adult sea urchins can respond and even become resilient to the effects of warming and acidification. -->
+In our study, urchins were introduced to treatment conditions over 7 weeks and were acclimated for another 12 weeks before the relevant physiological responses were recorded.
+
+Generally, strong tolerance to OA effects is a common result in studies of adult sea urchin species, often demonstrated by their ability to maintain internal acid-base balance.
+For example, *Paracentrotus lividus* showed partial compensation of internal coelomic fluid buffering capacity when exposed to low pH (7.7 and 7.4 vs 8.0 control) for 19 days (Catarino et al. 2012), and *Echinometra* sp. *A*  was resilient to increased acidification, maintaining perivisceral coelomic fluid pH after approximately 3 months of acclimation to nea future levels of acidification ($\sim$ 860--940 $\mu Atm$ $pCO_2$).
+*Strongylocentrotus droebachiensis* fully compensated for extracellular acidosis after 5 days of exposure to elevated pCO~2~ (1275 $\mu$atm, Dupont and Thorndyke, 2012), and in longer-term experiments, @Catarino2012 showed that *Echinometra mathaei* was able to maintain its extracellular pH after 7 months in low pH conditions (7.4, 7.7 vs. control 8.0).
+The maintenance of acid-base balance is an metabolically costly process since the regulation of ions requires the use of energy, thus exposure to OA effects often impacts metabolism, as shown in this study by the significantly increased metabolic rates when *H. erythrogramma* was exposed to low pH. 
+Similarly, @Catarino2012 showed that *P. lividus* upregulated its metabolic rate when in low pH conditions.
+
+Long-term exposure to low pH did not significantly affect feeding, excretion and survival rates of *H. erythrogramma*, even when combined with warming, suggesting that the urchin was able to successfully compensate for the effects of ocean acidification for these traits.
+Energetic trade-offs would be necessary maintain acid-base balance, however metabolic rate did not increase with warming and low pH but was depressed as described above, limiting the energy available to maintain these processes.
+While metabolic depression might be a necessary response to maintain balance between energy supply and demand [@Guppy1994; @Guppy1999; @Guderley2002], in the longer term it can lead to a decrease in energy budget and reproduction as seen in gastropods and urchins [@Stumpp2011; @Zhang2015] which can affect the sea urchin's ability to persist in the face of ongoing ocean warming and acidification.
+<!-- At a +3 &deg;C increase in temperature, severe impacts were observed resulting in high mortality over time (>50 \%), which indicated inability to acclimate to those conditions. -->
+<!-- At a +3 &deg;C increase in temperature, high mortality occurred with or without OA, which indicated that *H. erythrogramma* was unable to acclimate to this temeprature increase threshold while its survival was not affected at +2 &deg;C. -->
+
+
+
+
+<!-- When combined with warming, OA may enhance the cost of living with negative population-level consequences, as shown by  -->
 <!-- Even when combined with warming, pH did not significantly interact for those responses. -->
-While this may suggest that *H. erythrogramma* may be tolerant to ocean acidification effects brought by changing pH, metabolic rate results showed that energetic trade-offs were necessary to maintain physiological balance.
 
-which suggests that when exposed to reduced pH alone, it could compensate for CO~2~-induced changes in extracellular pH (Wittmann and Pörtner, 2013) while maintaining usual biological activity.
+
+<!-- which suggests that when exposed to reduced pH alone, it could compensate for CO~2~-induced changes in extracellular pH (Wittmann and Pörtner, 2013) while maintaining usual biological activity. -->
 <!-- Thus, there is currently strong evidence that while larval and juvenile life stages of sea urchins are affected -->
-The strong tolerance to OA effects has been previously demonstrated in other adult sea urchin species -- *Paracentrotus lividus* showed partial compensation when exposed to low pH  (7.7 and 7.4 vs 8.0 control) for 19 days (Catarino et al. 2012), and *Echinometra* sp. *A*  was resilient to increased acidification, maintaining perivisceral coelomic fluid pH after approximately 3 months of acclimation to nea future levels of acidification ($\sim$ 860--940 $\mu Atm$ $pCO_2$).
-*Strongylocentrotus droebachiensis* fully compensated for extracellular acidosis after 5 days of exposure to elevated pCO~2~ (1275 $\mu$atm, Dupont and Thorndyke, 2012), and in longer-term experiments, @Catarino2012 showed that *Echinometra mathaei* was able to maintain its extracellular pH after 7 months in low pH conditions (7.7 vs control 8.0).
-
-Importantly, when *H. erythrogramma* is exposed to the combined effects of both low pH and increased temperature, +3 &deg;C appeared to be the tipping point for significant sublethal impacts to both survival and metabolism.
 
 
-<!-- ### Conclusions -->
+<!-- Importantly, when *H. erythrogramma* is exposed to the combined effects of both low pH and increased temperature, +3 &deg;C appeared to be the tipping point for significant sublethal impacts to both survival and metabolism. -->
 
-These results underscore the need for a multifactorial and integrative approach to predicting the effects of climate change stressors as they show how physiolgical responses are
 
-<!-- To date, long-term multistressor experiments spanning months on echinoderms are still uncommon, possibly due to time and resource constraints (but see Suckling et al. 2015, Morley et al. 2016, Carey et al. 2016). -->
-<!-- Morley et al. (2016) presented the longest (40-month) study to date investigating the effects of both warming and acidification on an echinoderm species, the antarctic sea urchin *Sterechinus neumayeri*, using the same sample populations from Suckling et al. (2015). -->
-<!-- They found that long-term acclimation to warming and acidification eventually had no significant effect on feeding bioenergetics. -->
-<!-- Carey et al. (2016) looked into metabolic and feeding responses of *H. erythrogramma* after two months of acclimation to constant warming and acidification conditions, and showed evidence of metabolic acclimation. -->
-<!-- These studies demonstrated that given time, adult sea urchins can respond and even ecome resilient to the effects of warming and acidification. -->
-<!-- In our study, urchins were introduced to treatment conditions over 7 weeks and were acclimated for another 12 weeks before the relevant physiological responses were recorded. -->
----
+### Conclusions
+
+
+
+The results of this study underscore the need for a multifactorial and integrative approach to predicting the effects of climate change stressors as they show how physiolgical responses can change the interpretation of sensitivities to climate change [@Gunderson2016].
+Increased energetic costs of OA may interact with warming to affect metabolism that contrasts with single stressor effects alone.
 
 <!-- As a single stressor, reduced pH did not appear to physiologically affect *H. erythrogramma*, with no significant effects on survival, metabolic rate, feeding and ammonia excretion. -->
 <!-- In contrast, warming significantly influenced all of the responses above. -->
@@ -622,28 +637,11 @@ These results underscore the need for a multifactorial and integrative approach 
 
 <!-- However, the decrease in metabolic rates was accompanied by significantly reduced feeding and ammonia excretion rates. -->
 <!-- The worsened feeding performance highlighted the possibility of sublethal thermal stress, likely caused by a reduced oxygen delivery capacity or impaired mitochondrial functions (Guderley and St-Pierre 2002, etc). -->
+While a $+3 ^{\circ}C$ increase in temperature caused significant levels of mortality in our treatments, a lower $+2 ^{\circ}C$ increase did not.
+It is possible that temperatures were approaching lethal limits in the warmest treatment.
+For *H. erythrogramma*, it has been demonstrated that temperatures above $24 ^{\circ}C$ were detrimental (Harianto et al. 2018).
+Taking seasonal changes in temperature into account, our results suggest that *H. erythrogramma* lives close to the incipient lethal temperature, and despite slow acclimation to increased temperatures, it is vunerable to future near-future ocean warming and acidification especially during summer months when temperatures approach $25 ^{\circ}C$.
 
-
-
-<!-- While a $+3 ^{\circ}C$ increase in temperature caused significant levels of mortality in our treatments, a lower $+2 ^{\circ}C$ increase did not.  -->
-<!-- It is possible that temperatures were approaching lethal limits in the warmest treatment. -->
-<!-- For *H. erythrogramma*, it has been demonstrated that temperatures above $24 ^{\circ}C$ were detrimental (Harianto et al. 2018). -->
-<!-- Taking seasonal changes in temperature into account, our results suggest that *H. erythrogramma* lives close to the incipient lethal temperature, especially during summer months when temperatures approach $23 ^{\circ}C$. -->
-<!-- With increases in temperature brought about by climate change and increased occurrence of heat waves, further studies should be made into...  -->
-
-
-<!-- increased temperature has been shown to be detrimental to *H. erythrogramma* with $24$ to 26 &deg;C -->
-
-<!-- Tolerance of an organism to the effects of OA may be due to its ability to compensate for changes in extracellular pH (citation). -->
-
-
-<!-- The combined effects of increased temperature and low pH did not have an interactive effect on any of the responses measured, except for metabolic rate. -->
-<!-- Overall, the energy budget of the sea urchin appeared to be reduced after 12 weeks of acclimation, primarily due to the decreased contribution of energy toward SfG from significantly reduced feeding (Table #). -->
-<!-- Regardless, SfG values were still positive in all experimental situations indicating energy surplus adequate to support energy demand and suggests that other underlying mechanisms were involved to compromised fitness. -->
-
-
-<!-- REWORD: -->
-<!-- Metabolic suppression has been identiﬁed as an adaptive mechanism by which some organisms cope with hypercapnia, but prolonged metabolic suppression will have consequences on growth and survival (Fabry et al., 2008; Dymowska et al., 2012). In contrast, some species appear to respond to OA by increasing their metabolic rates, although this comes at an energetic cost (Wood et al., 2008; Stumpp et al., 2011). -->
 
 
 

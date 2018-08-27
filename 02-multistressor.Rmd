@@ -355,33 +355,33 @@ c3mrtab <- readr::read_csv("input/ch_multistressor/c3mrtab.csv")
 # kable(c3mrtab, caption = "(ref:c3mrtab)", booktabs = TRUE) %>%
 kable(c3mrtab, "latex", caption = "(ref:c3mrtab)", booktabs = TRUE) %>%
   kable_styling(position = "center") %>%
-  kable_styling(latex_options = "hold_position") %>%
+  # kable_styling(latex_options = "hold_position") %>%
+  kable_styling(full_width = T) %>%
   row_spec(c(0,1,6), bold = T)
 ```
 
 (ref:c3mrtab) Analysis of Variance (ANOVA) of the effects of increased temperature and decreased pH, and their interaction on the metabolic rate of *Heliocidaris erythrogramma*. Data were analysed separately for 4-week and 12-week acclimation periods. There were no significant interactions at 4 weeks, and thus the interaction term was removed and the data reanalysed (See Appendix). Significant differences are indicated with asterisks. ***: $p <$ 0.001.
 
-
-<!-- At 12 weeks, interactions between temperature and pH resulted in decreased metabolic rate with warming and low pH ($F_{2,51}= 10.5$, $p < .001$; Figure \@ref(fig:resp) B; Appendix Figure \@ref(fig:respinteract)).  -->
-<!-- As main effects, neither temperature ($F_{2,51}= 1.1$, $p = 0.3$) nor pH ($F_{1,51}= 1.6$, $p = 0.2$) were significant. -->
-<!-- *Post-hoc* analyses showed that at 4 weeks of acclimation, metabolic rate was significantly different between groups that were subject to elevated temperature ($p = < 0.0001$) or decreased pH ($p < 0.001$), compared to control treatments, with no interactions observed (Appendix Table ##). -->
-<!-- (Appendix Table \@ref(tab:mrcontrasts)). -->
-<!-- However, at 12 weeks of acclimation, no significant differences between any treatment groups were observed ($p > 0.1$; Appendix Table ##). -->
-<!-- ($p > 0.1$; Appendix Table \@ref(tab:mrgroups)),  -->
-<!-- even when results were partitioned by temperature or pH. -->
-
-(ref:anovaresptab) ANOVA test on the effects of temperature, pH or acclimation time on the metabolic rate of *H. erythrogramma*, at 4 or 12 weeks of incubation to elevated temperature ($+0$, $+2$, $+3^\circ C$) and decreased pH ($8.0$ , $7.6$). As the three-way interaction term was not significant, it was removed from the model before analysis. $n = 10$
-
 ### Feeding rate 
 
-Feeding rate was significantly influenced by elevated temperature (ANOVA, $F_{2,49} = 13.5$, $p < 0.001$), but not pH ($F_{1,49} = 1.25$, $p = 0.27$). 
+Feeding rate was significantly influenced by elevated temperature (ANOVA, $F_{2,49} = 13.5$, $p < 0.001$, Table \@ref(tab:c3feedtab)), but not pH ($F_{1,49} = 1.25$, $p = 0.27$, Table \@ref(tab:c3feedtab)). 
 There were also no statistically significant interactions between temperature and pH ($F_{2,47} = 1.15$, $p < 0.35$).
 Pairwise comparisons using Tukey's HSD showed that the general trend was that feeding decreased with increasing temperature, and specimens acclimated to increased temperature of $+2 ^\circ C$ and $+3 ^\circ C$ had significantly decreased feeding at pH $7.6$ ($p = 0.001$ and $p = 0.008$, respectively), but not at pH 8.0.
 No other significant differences between treatment groups were detected.
 
-(ref:anovafeedtab) ANOVA test on the effects of temperature or pH on the feeding rate of *H. erythrogramma* after 12 weeks of incubation to elevated temperature ($+0$, $+2$, $+3^\circ C$) and decreased pH ($8.0$ , $7.6$). The ANOVA was performed with the non-significant interaction terms removed. $n = 10$.
+```{r c3feedtab, message=FALSE}
+c3feedtab <- readr::read_csv("input/ch_multistressor/c3feedanova.csv")
 
+# kable(c3feedtab, caption = "(ref:c3feedtab)", booktabs = TRUE) %>%
+kable(c3feedtab, "latex", caption = "(ref:c3feedtab)", booktabs = TRUE) %>%
+  kable_styling(position = "center") %>%
+  # kable_styling(latex_options = "hold_position") %>%
+  kable_styling(full_width = T) %>%
+  row_spec(c(0), bold = T)
 
+```
+
+(ref:c3feedtab) Analysis of Variance (ANOVA) test on the effects of temperature or pH on the feeding rate of *H. erythrogramma* after 12 weeks of incubation to elevated temperature ($+0$, $+2$, $+3^\circ C$) and decreased pH ($8.0$ , $7.6$). The ANOVA was performed with the non-significant interaction terms removed. $n = 10$.
 
 ```{r, fig.cap = "(ref:feeding)", fig.pos = "p"}
 knitr::include_graphics("figs/ch_multistressor/feed_plot.png")
@@ -392,23 +392,33 @@ knitr::include_graphics("figs/ch_multistressor/feed_plot.png")
 ### Ammonia excretion rate
 <!-- TODO fix this -->
 
-Urchins acclimated to elevated temperature treatments had significantly higher ammonia excretion rates (ANOVA, $F_{2, 56} = 8.94$, $p < 0.001$; Figure \@ref(fig:nitrogen)). 
+Urchins acclimated to elevated temperature treatments had significantly higher ammonia excretion rates (ANOVA, $F_{2, 56} = 8.94$, $p < 0.001$; Figure \@ref(fig:nitrogen), Table \@ref(tab:c3nhanova)). 
 Decreased pH had no significant effect ($F_{1, 56} = 0.91$, $p < 0.34$), and there was no evidence of interaction between temperature and pH ($F_{1, 56} = 0.67$, $p = 0.42$). 
 *Post-hoc* using Tukey's HSD ($p = 0.05$) showed that at ambient pH (8.0), acclimation to $+2 ^\circ C$ increased ammonia excretion by 1.3-fold ($d.f. =$ 54, $p =$ 0.016), but not at $+3 ^\circ C$ ($p =$ 0.099). At low pH (7.6), acclimation to $+2 ^\circ C$ did not significantly affect ammonia excretion ($p =$ 0.29), but at $+3 ^\circ C$, excretion increased by 1.5-fold ($p =$ 0.016).  
 
+```{r c3nhanova, message=FALSE}
+c3nhtab <- readr::read_csv("input/ch_multistressor/c3nhanova.csv")
 
-(ref:anovanhtab) One-way ANOVA test on the effects of temperature or pH on the ammonia excretion rate of *H. erythrogramma* after 12 weeks of incubation to elevated temperature ($+0$, $+2$, $+3^\circ C$) and decreased pH ($8.0$ , $7.6$). The ANOVA was performed with the non-significant interaction terms removed. $n = 10$.
+kable(c3nhtab, "latex", caption = "(ref:c3nhanova)", booktabs = TRUE) %>%
+  kable_styling(position = "center") %>%
+  # kable_styling(latex_options = "hold_position") %>%
+  kable_styling(full_width = T) %>%
+  row_spec(c(0), bold = T)
 
-(ref:nitrogen) Ammonia ($NH_3$) excretion rate of *H. erythrogramma* acclimated for 12 weeks to three temperatures ($+0, +2, +3 ^\circ C$) and two pH levels (8.0, 7.6). The top and bottom of the boxes represent the interquartile range (IQR) between the 25th and 75th percentile (Q1 and Q3, respectively). The horizontal line represents the median (Q2), the horizontal dotted line represents the mean, and the vertical lines (whiskers) represent the range of the data computed as follows: Q1 − 1.5IQR (bottom whisker); greater than Q3 + 1.5 IQR (top whisker).
+```
+
+(ref:c3nhanova) Analysis of Variance (ANOVA) test on the effects of temperature or pH on the ammonia excretion rate of *H. erythrogramma* after 12 weeks of incubation to elevated temperature ($+0$, $+2$, $+3^\circ C$) and decreased pH ($8.0$ , $7.6$). The ANOVA was performed with the non-significant interaction terms removed (See Appendix X). $n = 10$.
 
 ```{r nitrogen, fig.cap="(ref:nitrogen)", fig.pos='p'}
 knitr::include_graphics("figs/ch_multistressor/nh_plot.png")
 ```
 
+(ref:nitrogen) Ammonia ($NH_3$) excretion rate of *H. erythrogramma* acclimated for 12 weeks to three temperatures ($+0, +2, +3 ^\circ C$) and two pH levels (8.0, 7.6). The top and bottom of the boxes represent the interquartile range (IQR) between the 25th and 75th percentile (Q1 and Q3, respectively). The horizontal line represents the median (Q2), the horizontal dotted line represents the mean, and the vertical lines (whiskers) represent the range of the data computed as follows: Q1 − 1.5IQR (bottom whisker); greater than Q3 + 1.5 IQR (top whisker).
+
 ### Scope for growth
 
 The scope for growth model for *H. erythrogramma*, which incorporated data from metabolic rate, feeeding rate, ammonia excretion rate and assimilation efficiency, showed that there is a net positive energy budget under all experimental scenarios of increased temperature and low pH after $12$ weeks of acclimation (SfG $> 0$; Figure \@ref(fig:c3sfg)). 
-Further, the energy acquired by feeding contributed to the majority (>90 \%) of the energy budget of *H. erythrogramma* (\@ref(tab:c3sfgtab)).
+Further, the energy acquired by feeding contributed to the majority (>90 \%) of the energy budget of *H. erythrogramma* (Table \@ref(tab:c3sfgtab).
 <!-- (Table \@ref(tab:sfgtab)). -->
 While specimens acclimated to low pH only recorded a $16\%$ increase in SfG ($1.17$), exposure to conditions of increased temperature only reduced overall SfG by $31$ to $41\%$.
 When simultaneously acclimated to both stressors of increased temperature and low pH, mean SfG was reduced the most by $42$ to $45\%$.

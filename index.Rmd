@@ -204,19 +204,19 @@ Thus, like temperature, variability in pH is also an important consideration whe
 <!-- ### Multistressor effects and their interactions -->
 
 The marine world is affected by multiple stressors, with durations and severity that vary across multiple spatial and temporal scales.
-These stressors often interact to produce additive, synergestic or antagonistic effects on biological processes, which can result in positive or negative impacts [reviewed by @Byrne2013; @Gunderson2016].
+These stressors often interact to produce additive, synergestic or antagonistic effects on biological processes, which can result in positive or negative impacts [reviews: @Byrne2013; @Gunderson2016].
 <!-- To accurately estimate the response of organisms under future anthropogenic change, the effect of interactions between multiple stressors must be incorporated into experimental designs (Wernberg et al. 2012\*).  -->
-Most experimental scientists now understand the necessity of incorporating more than a single stressor to obtain responses from organisms that are more realistic to the natural environments, as seen in recent studies [e.g. @Collard2016; @Parker2017; @Hoshijima2017; @Hoegh-Guldberg2017; @Bausch2018].
+Most experimental scientists now understand the necessity of incorporating more than a single stressor to obtain responses from organisms that are more realistic to the natural environments, as seen in recent studies [ @Collard2016; @Parker2017; @Hoshijima2017; @Hoegh-Guldberg2017; @Bausch2018].
 However, we still have limited understanding of the consequences behind currently observed responses of marine taxa to multiple stressors due to the lack of mechanistic understanding of the physiological traits that underpin those responses [@Portner2004; @Portner2008; @Gunderson2016].
 <!-- For many of those studies, temperature is investigated the most in combination to other abiotic factors such as salinity, acidification and hypoxia [@Gunderson2016]. -->
 
 <!-- For most marine invertebrates, recent meta-analyses show that synergistic effects were the most common outcome [@Przeslawski2015; @Lefevre2016; @Clements2016], with warming and OA being the two most important stressors  -->
-For most marine invertebrates, recent meta-analyses show that warming and OA appear to be the most important stressors because of their pervasive nature, and their synergistic effects on physiology and biochemical pathways [@Przeslawski2015; @Lefevre2016; @Clements2016].
+Recent meta-analyses show that warming and OA appear to be the most important stressors affecting marine invertebrates because of their pervasive nature, and their synergistic effects on physiology and biochemical pathways [@Przeslawski2015; @Lefevre2016; @Clements2016].
 However, the interactions between stressors vary depending on the life stage of the organism. 
-For example, in sea urchins, elevated temperature buffers the negative effects of decreased pH in larvae and embryos [e.g. @Byrne2009; @Wolfe2013], but in later juvenile and adult stages, temperature and pH do not interact, and warming affected sea urchin responses more than acidification [e.g. @Carey2016; @Karelitz2016; @Harianto2018].
-Thus different responses to the same stressor combinations can occur in the same organism depending on its life history [see review by @Byrne2013].
+For example, in sea urchins, elevated temperature can buffer the negative effects of decreased pH on larval calcification [e.g. @Byrne2009; @Wolfe2013], but in later juvenile and adult stages, temperature and pH did not interact in some studies, and warming affected sea urchin responses more than acidification [e.g. @Carey2016; @Harianto2018].
+Thus different responses to the same stressor combinations can occur in the same organism depending on its life history [@Byrne2013].
 <!-- ### Integration of different physiological traits -->
-Further, changes in energetics due to physiological compensation or depression may interact with biological processes such as growth and reproduction, which we still have a poor understanding of (Newell and Branch 1980; Parry 1983; Angilletta et al. 2010; Coggan et al. 2011).
+Further, changes in energetics due to physiological compensation or depression may interact with biological processes such as growth and reproduction, which we still have a poor understanding of [@Newell1980; @Parry1983; @Angilletta2010; @Coggan2011].
 As a result, studies that integrate multiple physiological parameters are important in predicting vulnerability to environmental stress [@Magozzi2015].
 <!-- Explaining a species' performance from its metabolic rate is less than straightforward (reword). -->
 
@@ -226,23 +226,23 @@ As a result, studies that integrate multiple physiological parameters are import
 
 In addition to the increased attention to multiple stressors, focus on the temporal dynamics of environmental stress has started to be of growing interest to climate biologists.
 <!-- It is still difficult to predict future ecosystem-level responses of organisms to climate change, partly because -->
-The majority of current experiments involved in the manipulation of constant conditions often do so without considering that environmental parameters fluctuate on multiple timescales, from hours, to months and years [@Hendriks2010; @Duarte2013].
-These fluctuations are likely to be extremely important for dictating how organisms respond to already variable conditions with the added pressures from anthropogenic change [@Kreyling2013; @Thompson2013] and the press (i.e. long-term pertubation effects) and pulse (i.e. acute change effects) of extreme events [@Bender1984; @Harris2018].
-In addition, mean environmental conditions often adopted in marine global change experiments ignore spikes in environmental stress that may have extensive consequences on population dynamics, especially during extreme weather events [e.g. @Leung2017].
+Most multi-stressor experiments have used constant parameter conditions, although environmental conditions can fluctuate on multiple timscales, from hours, to months and years [@Hendriks2010; @Duarte2013].
+<!-- The majority of current experiments involved in the manipulation of constant conditions often do so without considering that environmental parameters fluctuate on multiple timescales, from hours, to months and years [@Hendriks2010; @Duarte2013]. -->
+These variations are likely to be extremely important for dictating how organisms respond to current and future conditions [@Kreyling2013; @Thompson2013] as well as the press (i.e. long-term pertubation effects) and pulse (i.e. acute change effects) of extreme events [@Bender1984; @Harris2018].
+<!-- In addition, mean environmental conditions often adopted in marine global change experiments ignore spikes in environmental stress that may have extensive consequences on population dynamics, especially during extreme weather events [e.g. @Leung2017]. -->
 
-Marine global change experiments need to incorporate the temporal variability of environmental conditions -- a challenging endeavour considering the fact that we do not have baseline data on the environmental conditions that many organisms experience in nature. 
-Continuous records of environmental carbonate chemistry is rare, although the deployment of sensors in recent years have begun to improve our understanding of the natural variability in many marine coastal environments [e.g. Antarctica: @Matson2011; coastal current ecosystems: @Chan2017; coral reefs: @Rivest2015].
-Temperature data, by contrast, is more commonly available as in-situ temperature loggers are relatively inexpensive in comparison to sensors that measure ocean carbonate chemistry [@Glenn2000].
+In particular, long-term marine global change experiments should at least consider the variablility of environmental conditions depending on the thermal environments of study organisms.
+For example, intertidal environments are characterised by daily fluctuations in temperature and pH due to the tidal cycle, which may override any effect that would be expected when determining responses based on latitudinal effects [@Sunday2011; @Lathlean2014].
+Subtidal habitats, in contrast, are characterised by less variable thermal environments as they are permanently submerged.
+Continuous records of environmental carbonate chemistry are rare, although the deployment of sensors in recent years have begun to improve our understanding of the natural variability in many marine coastal environments [e.g. Antarctica: @Matson2011; coastal current ecosystems: @Chan2017; coral reefs: @Rivest2015].
+Temperature data, by contrast, is more commonly available as *in situ* temperature loggers are relatively inexpensive in comparison to sensors that measure ocean carbonate chemistry [@Glenn2000].
 However, currently available data is still lacking and we have, for instance, little information for iconic regions such as Sydney Harbour [but see @Mayer-Pinto2015; @Tanner2017], even though it has been identified as a major climate change and biodiversity hotspot [@Sunday2015 ; @Johnston2015; @Popova2016].
+Marine global change experiments need to incorporate the temporal variability of environmental conditions -- a challenging endeavour considering the fact that we do not have baseline data on the environmental conditions that many organisms experience in nature. 
 
 <!-- Thus, instead of maintaining constant conditions, climate manipulation experiments need to somehow incorporate the temporal variability of environmental conditions -- a challenging endeavour considering the fact that we still lack a baseline record of current environmental data in most marine habitats, even for some of the world's most iconic harbours [e.g. Sydney Harbour, @Mayer-Pinto2015; @Tanner2017]. -->
 
 
 <!-- Similarly, exposure to constant extreme stress ignores reprieves from stress that are likely important in allowing organisms to cope with these conditions. -->
-
-
-
-
 
 ## Study animal
 
@@ -259,26 +259,27 @@ Thus, grazing pressure by the sea urchin can lead to significant effects on comm
 
 In many ways, *H. erythrogramma* is the ideal candidate to study the effects of climate change on an ecologically important species. 
 Sea urchins have a long history of being used as model organisms in the study of developmental biology [@Horstadius1939; @Gustafson1963] and biomineralisation [@Beniash1999; @Wilt2002]. 
-Their larvae are morphologically simple and transparent, while adults are relatively sedentary in general [Connolly 1986; @Sanderson1996], easy to manipulate in the laboratory and in the field [e.g. @Yeruham2015; @Collard2016].
+Their larvae are morphologically simple and transparent, while adults are relatively sedentary in general [@Sanderson1996], easy to manipulate in the laboratory and in the field [e.g. @Yeruham2015; @Collard2016].
 As habitat-modifying organisms that often occur in large numbers, sea urchins are also ecologically significant -- changes in their distribution can potentially affect the structure of marine benthic communities at distinctly local scales [@Ling2010; @Steneck2002].
-Sea urchins have also been identified to be vulnerable to climate change, especially in pre-metamorphic stages [@Kroeker2010; @Przeslawski2015].
+Sea urchins have also been identified to be vulnerable to climate change, especially in pre-metamorphic stages [@Kroeker2010; @Byrne2013; @Przeslawski2015].
 
-To date, a large proportion of studies on the impacts of climate change stressors on sea urchins are focused on development due to the fragile nature of their skeletons while still in larval stages [@Byrne2013a; @Byrne2013; @Przeslawski2015], with the analysis of physiological responses of both sea urchin larvae and adults becoming more common in recent years [e.g. @Stumpp2011; @Dorey2013]. 
+To date, a large proportion of studies on the impacts of climate change stressors on sea urchins are focused on development due to the fragile nature of their skeletons while still in larval stages [@Byrne2013a; @Byrne2013; @Przeslawski2015], with the analysis of physiological responses of both sea urchin larvae and adults in several recent studies [e.g. @Stumpp2011; @Dorey2013]. 
 Focus on early life stanges are common as they are particularly sensitive to environmental stress, which may represent key barriers to long-term species persistence [@Przeslawski2015].
-In contrast, studies on adult sea urchins are more focused on the measurement of physiological traits such as metabolic, feeding and growth rates [e.g. @Moulin2015; @Delorme2016], however the are also numerous studies that utilise sea urchins as bioindicators of environmental pollution and stress [e.g. @Chiarelli2014; @Savriama2015; @Pinsino2015].
+In contrast, studies on adult sea urchins are more focused on the measurement of physiological traits such as metabolic, feeding and growth rates [@Moulin2015; @Delorme2016]. 
+There are also numerous studies that utilise sea urchins as bioindicators of environmental pollution and stress [@Chiarelli2014; @Savriama2015; @Pinsino2015].
 
 Several recent studies have involved long-term investigations of the physiological responses of adult sea urchins in ocean warming and acidification conditions.
-Theses studies provide insights into acclimation capacity and physiological plasticity, which have an affect on tolerance to environmental stressors [@Suckling2015, @Morley2016; @Carey2016; @Harianto2018].
+These studies provide insights into acclimation capacity and physiological plasticity, which have an affect on tolerance to environmental stressors [@Suckling2015, @Morley2016; @Carey2016; @Harianto2018].
 These studies showed that physiological traits can adjust in response to long-term exposures to stress over time, although stress responses may not necessarily lead to improved fitness.
 For example, @Harianto2018 showed that long-term exposure to elevated temperature ($+4-6^{\circ}C$) increases the metabolic rate, immune response and mortality of *H. erythrogramma*, whereas @Morley2016 showed that the Antarctic sea urchin, *Sterechinus neumayeri*, after 40 months of acclimation to combined warming ($+2 ^{\circ}C$) and ocean acidification (−0.3 and −0.5 pH units), were generally unaffected by both stressors. 
-Long-term studies such as these show how poor our understanding of the role of plasticity on performance traits is, and acclimation time is a crucial factor to consider when conducting experiments that investigate responses to climate change.
+Long-term studies such as these show how poor our understanding of the role of plasticity on performance traits is, and that acclimation time is a crucial factor to consider when conducting experiments that investigate responses to climate change.
 
 <!-- @Delorme2016; @Morley2016; ADULTS -->
 
 ### Effects of warming and acidification on H. *erythrogramma*
 
 There are 17 publications so far documenting the effects of climate change stress on *H. erythrogramma*. Of these, many are studies on the embryo and early-stage larvae [8 papers, e.g. @Byrne2009; @Hardy2014; @Foo2016]. Four papers involved post-settlement juveniles [@Byrne2011; @Byrne2011a; @Wolfe2013; @Foo2016], and 5 papers were on adults [@Nguyen2013; @Carey2016; @Brothers2016; @Sweet2016; @Harianto2018]. Three additional studies focused on sperm or egg performance under ocean future OA conditions [@Havenhand2008; @Schlegel2012; @Foo2018]. 
-All studies focused on the effect of temperature, pH, or their interactions on the urchin.
+These studies investigated the effect of temperature, pH, or their interactions on the urchin.
 In the embryo to juvenile, response variables included normal/abnormal growth, morphometrics and survival.
 For adults, studies were more focused on physiology, immune response and skeletal integrity (see below). 
 <!-- Experiments on the embryo to juvenile stages focused mostly on developmental changes (e.g. normal/abnormal growth, morphometrics) and survival, whereas studies that focused on adults were more focused on physiological responses and some morphometrics. -->
@@ -288,7 +289,7 @@ Eggs of *H. erythrogramma* retained their jelly coat even under OA conditions [p
 Thus, fertilisation is robust to both decreased pH and warming [@Byrne2010; @Byrne2010a], but was compromised at high temperature [$26 ^{\circ}C$, @Byrne2011].
 At early development, temperature significantly affected normal development and survival from the embryo to pre-metamorphic stages, but decreased pH did not [@Byrne2009; @Hardy2014].
 
-Upon reaching early juvenile stage, acidification becomes a key driver as *H. erythrogramma* begins to produce calcified strutures, with two studies demonstrating abnormalities in spine and test growth occurring when cultured from fertilisation to low pH [7.6--7.6, @Byrne2011a; @Wolfe2013]. 
+Upon reaching early juvenile stage, acidification becomes a key driver as *H. erythrogramma* begins to produce more calcified strutures, and two studies demonstrated the presence of structural abnormalities in spines and tests when cultured from fertilisation to low pH [7.6--7.6, @Byrne2011a; @Wolfe2013]. 
 However, temperature, when included as an additional stressor, diminished the negative effects of OA in both studies.
 In addition, warming had a positive effect on juvenile spine length, but no effect on survival, and while decreased pH did not affect either response, electron microscopy showed blunting of spine structures due to dissolution [@Wolfe2013].
 
@@ -296,7 +297,7 @@ There was evidence that the immune response (i.e. phagocytic activity of coelomo
 @Carey2016 found that *H. erythrogramma* increased its metabolic response by up to 20\% when exposed to either warming ($23^{\circ}C$ to control $17^{\circ}C$) and acidification (pH 7.6), but the two stressors did not interact.
 However, the combined effect of both stressors were additive resulting in a 44\% increase in metabolic rate on the species.
 In addition, @Harianto2018 found that long-term exposure (3-month) to increased temperature resulted in increased mortality risk (6--9 times higher) for urchins acclimated at $24-26^{\circ}C$. 
-In addition, the sea urchins exhibited signs of metabolic depression, possibly due to disruptions in oxidative phosphorylation (Guderley and St-Pierre 2002), and elevated HSP70 protein expression, which suggest that temperatures close to $26^{\circ}C$ is thermally stressful.
+In addition, *H. erythrogramma* exhibited signs of metabolic depression, possibly due to disruptions in oxidative phosphorylation (Guderley and St-Pierre 2002), and elevated HSP70 protein expression [@Harianto2018], which suggest that temperatures close to $26^{\circ}C$ is thermally stressful.
 
 
 
@@ -316,15 +317,20 @@ In addition, the sea urchins exhibited signs of metabolic depression, possibly d
 
 <!-- ### Aims -->
 
-A significant challenge in this era of the Anthropocene is to improve our predictive power with regards to the ecologically important outcomes of climate change. To accomplish this, it is key to integrate single species, ecophysiological approaches into a single framework to test hypotheses involving multiple stressors, changing abiotic conditions and phenotypic plasticity. It is also important that methods are easily reproducible so that the research in the field can progress through time and replication.
-
 This thesis comprises of 4 data chapters described below:
 
+1. **Chapter 2** investigated the long-term (>12-week), physiological impacts and trade-offs that may occur when adult *H. erythrogramma* was incubated to near-future warming of up to +6 &deg;C. Survivorship, metabolic rate, HSP70 expression, gonad index and gonad histology data were collected. The aim of the study was to determine the physiological limits of the sea urchin when exposed, over a long-term, to near future ocean warming conditions.
 
-1. **Chapter 2** aims to determine the long-term ($>12$-week), physiological impacts and trade-offs when adult *H. erythrogramma* is incubated to near-future warming. Survivorship, metabolic rate, HSP70 expression, gonad index and gonad histology were investigated. It was predicted that *H. erythrogramma* exposed to warming would exhibit: (1) an increase in metabolic rate, up to its upper critical thermal limit; (2) an increase in HSP70 expression with chronic exposure to increased temperature; (3) decreased survival; and (4) reduced gonad development following extended exposure to increased temperature.
+    The predictions were that *H. erythrogramma* exposed to warming would exhibit: (1) an increase in metabolic rate, up to its upper critical thermal limit; (2) an increase in HSP70 expression with chronic exposure to increased temperature; (3) decreased survival; and (4) reduced gonad development following extended exposure to increased temperature.
 
-2. **Chapter 3** is a multi-stressor experiment that incorporates the study of near-future ocean warming and acidification with a seasonal flux of temperature, to mimic the transition from winter to summer in Sydney Harbour. It is a long-term study (up to 22 weeks) that aims to investigate how the interactions between temperature and pH affect survivorship, metabolic rate, feeding rate and ammonia excretion rate. It is predicted that survivorship will be impacted by both warming and acidification, and overall physiological performance will also be reduced from the combined, long-term impact from both stressors.
+2. **Chapter 3** is a multi-stressor experiment that incorporates the study of near-future ocean warming and acidification with a seasonal flux of temperature, to mimic the transition from winter to summer in Sydney Harbour. It is a long-term study (up to 22 weeks) with the aim to determine how the interactions between temperature and pH affect survivorship, metabolic rate, feeding rate and ammonia excretion rate. 
 
-3. **Chapter 4** investigates whether adult *H. erythrogramma* exposed to near-future warming and acidification over its gonad developmental period will have positive carry-over effects on the metabolic response of its offspring. It was predicted that adult urchins exposed to increased warming and acidification will produce positive carry-over effects on the metabolic rate responses of their offspring.
+    It was predicted that survivorship will be impacted by both warming and acidification, and overall physiological performance will also be reduced from the combined, long-term impact from both stressors.
 
-4. **Chapter 5** describes new methods of analysing data from respirometry, a technique that is used often to determine metabolic rate in organisms. It provides a mature package for the statistical programming environment R, called respR, which can be used to reliably and rapidly generate results. It also contains a novel, machine-learning method of detecting linear segments of noisy data using well-defined rules that is reproducible. 
+3. **Chapter 4** investigated whether adult *H. erythrogramma* exposed to near-future warming and acidification over its gonad developmental period will have positive carry-over effects on the development, metabolic response and morphology of its offspring. 
+   
+    The predictions were that positive carry-on effects will be detected from parental urchins exposed to increased ocean warming and acidification condition, reflected in larval development and metabolic rate responses.
+
+4. **Chapter 5** describes the development of new methods of analysing respirometry data. The methods are provided as a mature package for the statistical programming environment, R. The package is called respR, and as a complete workflow, it can be used to reliably and rapidly analyse data and generate results. It also contains a novel, machine-learning method of detecting linear segments of noisy data using well-defined and reproducible rules. The aim of this chapter was to streamline the analysis of respirometry data in a manner that is both transparent and reproducible, using free and open-source computing methodology.
+
+A significant challenge in this era of the Anthropocene is to improve our predictive power with regards to the ecologically important outcomes of climate change. To accomplish this, it is key to integrate single species, ecophysiological approaches into a single framework to test hypotheses involving multiple stressors, changing abiotic conditions and phenotypic plasticity. It is also important that methods are easily reproducible so that the research in the field can progress through time and replication.

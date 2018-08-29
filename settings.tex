@@ -76,8 +76,8 @@
 \usepackage{flafter}
 
 \captionstyle{\small}
-% \captionnamefont{\slshape\color{caption}}
-% \captiondelim{\null\newline}
+\captionnamefont{\slshape\color{caption}}
+\captiondelim{\null\newline}
 \captionnamefont{\small\bfseries\color{smartred}}
 \captiontitlefont{\small\linespread{.84}\selectfont}
 % \captionstyle[\raggedright]{}
@@ -88,7 +88,7 @@
 \newsubfloat{figure}% Create subfloat in figure environment
 \newsubfloat{table}% Create subfloat in table environment
 
-\renewcommand{\floatpagefraction}{0.1} % figures appear on different page
+\renewcommand{\floatpagefraction}{0.5} % figures appear on different page
 
 % COLOPHON ---------------------------------------------------------------------
 \makeatletter
@@ -293,6 +293,7 @@
 % \usepackage{array}
 \usepackage{float}
 \floatstyle{plaintop}
+% \floatplacement{table}{t!} % not working
 % \floatplacement{figure}{H}
 \restylefloat{table}
 \usepackage[tableposition=top, font=small, margin=10pt]{caption}
@@ -345,3 +346,7 @@
 
 % set numbering of subsections
 \setsecnumdepth{subsubsection}
+
+% prevent placing floats before a section (this should prevent figures from
+% bunching at the end of the chapter.
+\usepackage[section]{placeins}

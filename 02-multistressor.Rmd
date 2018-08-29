@@ -355,7 +355,7 @@ c3mrtab <- readr::read_csv("input/ch_multistressor/c3mrtab.csv")
 # kable(c3mrtab, caption = "(ref:c3mrtab)", booktabs = TRUE) %>%
 kable(c3mrtab, "latex", caption = "(ref:c3mrtab)", booktabs = TRUE) %>%
   kable_styling(position = "center") %>%
-  # kable_styling(latex_options = "hold_position") %>%
+  kable_styling(latex_options = "HOLD_position") %>%
   kable_styling(full_width = T) %>%
   row_spec(c(0,1,6), bold = T)
 ```
@@ -375,7 +375,7 @@ c3feedtab <- readr::read_csv("input/ch_multistressor/c3feedanova.csv")
 # kable(c3feedtab, caption = "(ref:c3feedtab)", booktabs = TRUE) %>%
 kable(c3feedtab, "latex", caption = "(ref:c3feedtab)", booktabs = TRUE) %>%
   kable_styling(position = "center") %>%
-  # kable_styling(latex_options = "hold_position") %>%
+  kable_styling(latex_options = "HOLD_position") %>%
   kable_styling(full_width = T) %>%
   row_spec(c(0), bold = T)
 
@@ -445,8 +445,8 @@ sfg %>%
   select(7,2,3,4,5,6) %>%
   kable("latex", booktabs = TRUE, caption = "(ref:c3sfgtab)", digits = 3) %>%
   # kable(booktabs = TRUE, caption = "(ref:c3sfgtab)", digits = 3) %>%
-  # kable_styling(full_width = T) %>%
-  kable_styling(latex_options = "hold_position")
+  # kable_styling(latex_options = "hold_position") %>%
+  kable_styling(full_width = F)
 
 
 

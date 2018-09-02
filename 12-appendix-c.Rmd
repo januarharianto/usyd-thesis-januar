@@ -46,25 +46,37 @@ knitr::include_graphics("figs/ch_multistressor/resp_interaction.png")
 (ref:respinteract) Interaction plots showing the effects of pH (8.0, 7.6) in three temperature treatments (+0 &deg;C, +2 &deg;C, +3 &deg;C) on metabolic rate at 4 weeks and 12 weeks of acclimation to conditions. 
 
 
+```{r c3mranovaix, message=FALSE}
+c3mranovaix <- readr::read_csv("input/ch_multistressor/c3mranovaix.csv")
+
+kable(c3mranovaix, "latex", caption = "(ref:c3mranovaix)", booktabs = TRUE) %>%
+  kable_styling(position = "center") %>%
+  # kable_styling(latex_options = "hold_position") %>%
+  kable_styling(full_width = T) %>%
+  row_spec(c(0), bold = T)
+
+```
+
+(ref:c3mranovaix) Analysis of Variance (ANOVA) test on the effects of temperature or pH on the metabolic rate of *H. erythrogramma* after 4 weeks of incubation to elevated temperature ($+0$, $+2$, $+3^\circ C$) and decreased pH ($8.0$ , $7.6$). There was no significant interaction between temperature and pH, thus the analysis was repeated with the terms removed (see Chapter 3 Table /@ref(tab:c3mrcontrasts). Significant differences are indicated with asterisks. **: $p= <0.01$ 
 
 
 
-```{r mrcontrasts}
+```{r c3mrcontrasts}
 load("output/ch_multistressor/respiration.RData")
 
 #caption
-cp <- "P-values from \\emph{post hoc} Tukey's Honest Significant Difference test performed on the estimated marginal means of treatment group results, for comparisons of performance of metabolic rate between treatments at 4 weeks and 12 weeks of acclimation to increased temperature (+0 \\degree C, +2 \\degree C, +3 \\degree C) and decreased pH (8.0, 7.6). Significant differences were found between treatments at 4 weeks of acclimation, but not at 12 weeks."
+# cp <- "P-values from \\emph{post hoc} Tukey's Honest Significant Difference test performed on the estimated marginal means of treatment group results, for comparisons of performance of metabolic rate between treatments at 4 weeks and 12 weeks of acclimation to increased temperature (+0 \\degree C, +2 \\degree C, +3 \\degree C) and decreased pH (8.0, 7.6). Significant differences were found between treatments at 4 weeks of acclimation, but not at 12 weeks."
 
 as.data.frame(emmresp$contrasts) %>%
   mutate(sig = p_stars(p.value)) %>%
-  kable(format = "latex", booktabs = TRUE, digits = 3, caption = cp) %>%
+  kable(format = "latex", booktabs = TRUE, 
+    digits = 3, caption = "(ref:c3mrcontrasts)") %>%
   kable_styling(font_size = 10) %>%
   group_rows(index = c("4 weeks" = 15, "12 weeks" = 15)) %>%
   footnote("***: p < 0.001; **: p < 0.01; *: p < 0.05; .: p < 0.1")
 ```
 
-
-
+(ref:c3mrcontrasts) P-values from *post hoc* Tukey's Honest Significant Difference test performed on the estimated marginal means of treatment group results, for comparisons of performance of metabolic rate between treatments at 4 weeks and 12 weeks of acclimation to increased temperature (+0 &deg;C, +2 &deg;C, +3 &deg;C) and decreased pH (8.0, 7.6). Significant differences were found between treatments at 4 weeks of acclimation, but not at 12 weeks.
 
 <!-- ```{r mrgroups} -->
 <!-- load("output/ch_multistressor/respiration.RData") -->

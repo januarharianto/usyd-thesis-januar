@@ -145,7 +145,7 @@ Temperature was recorded daily in all treatments.
 Sea water pH was measured spectrophotometrically on the total scale with a custom-built pH sampling system connected to an Ocean Optics USB4000+ fibre optic spectrometer, using m-Cresol dye indicator (Acros Argonics, catalog number 110585000, Lot A0321770) and calculated according to @Liu2011. 
 The measurements were calibrated to certified reference material (CRM) for $CO_2$ in seawater (Batch 139) following SOP 6b in @Dickson2007.
 The pH of the tanks were measured every 2 to 3 days.
-In addition, the pH sampling system automatically measured pH in one ambient and one low pH treatment every two hours to characterise pH during the acclimation period (Appendix ##).
+In addition, the pH sampling system automatically measured pH in one ambient and one low pH treatment every two hours to characterise pH during the acclimation period.
 
 For total alkalinity ($A_T$) measurements, sea water samples (330 mL) were taken randomly from experimental tanks every 2 to 3 weeks (total $n = 64$ samples). 
 $A_T$ was determined by potentiometric titration (907 Titrando, Metrohm), calibrated using sea water CRMs [Batch 139, @Dickson2007]. 
@@ -298,11 +298,12 @@ As no interactions were found between temperature and pH (Cox proportional hazar
 Metabolic rate data were first analysed by constructing a generalised linear mixed model of metabolic rate as a function of relative temperature ($+0^{\circ}C$,  $+2^{\circ}C$,  $+3^{\circ}C$) and pH ($8.0$, $7.6$).
 Acclimation time was not included as a factor and the two periods (4 and 12 weeks) were analysed separately to avert the effect of any survivor bias in the results.
 Feeding rate and ammonia excretion rate data were also analysed as above with the response variable as a function of temperature and pH.
-For all analyses, the nested effects of tank, temperature within tank and pH within tank were added as a random parameter in the models, and then tested using a likelihood ratio test on random effects, which were all not significant ($p \geq 0.9$ for all tests, Appendix XX).
+For all analyses, the nested effects of tank, temperature within tank and pH within tank were added as a random parameter in the models, and then tested using a likelihood ratio test on random effects, which were all not significant ($p \geq 0.9$ for all tests).
+<!--see Appendix XX). -->
 Thus, the nested tank parameter was removed from all models and data were analysed individually using simple linear models.
 To test for fixed effects, ANOVA was performed on the models, using Type III sums of squares when interactions were present, or Type II sums of squares when they were not [@Langsrud2003].
 
-For metabolic rate data, there were no interactions between temperature and pH at 4 weeks, thus the interaction term was removed from the model and the data re-analysed to only test for main effects (see Appendix Table XX).
+For metabolic rate data, there were no interactions between temperature and pH at 4 weeks, thus the interaction term was removed from the model and the data re-analysed to only test for main effects (see Appendix Table \@ref(tab:mranovaix)).
 For feeding and ammonia excretion rate data, there were no significant interactions between temperature and pH ($F_{2,47} = 1.07$, $p = 0.35$ and $F_{2,54} = 2.31$, $p = 0.11$, respectively), so the temperature $\times$ pH interaction terms were removed before ANOVA was performed on each model.
 
 All ANOVA analyses were tested for normality using the Shapiro-Wilk test of normality [@Royston1983], and homogeneity of variances using the Fligner-Killeen Test [@Conover1981].
@@ -336,11 +337,11 @@ knitr::include_graphics("figs/ch_multistressor/surv_plot.png")
 
 After 4 weeks of acclimation to treatments, the metabolic rate of *H. erythrogramma* was significantly affected by increased temperature ($F_{2,54}= 15.9$, $p < 0.001$) and decreased pH ($F_{1,54}= 23.4$, $p < 0.001$, Table \@ref(tab:c3mrtab)).
 Generally, metabolic rate increased by up to 35 \% with warming and 25 \% with reduced pH.
-The two stressors did not interact ($F_{2,54}= 0.07$, $p = 0.93$, Appendix Table XX), however their combined effects were additive, increasing metabolic rate by up to 56 \% (Figure \@ref(fig:resp)A).
+The two stressors did not interact ($F_{2,54}= 0.07$, $p = 0.93$, however their combined effects were additive, increasing metabolic rate by up to 56 \% (Figure \@ref(fig:resp)A).
 At 12 weeks of acclimation, metabolic rate responses were still significantly influenced by both warming ($F_{2,51}=$ 9.49, $p <$ 0.001, Table \@ref(tab:c3mrtab)) or reduced pH ($F_{1,51}=$ 16.37, $p <$ 0.001, Table \@ref(tab:c3mrtab)).
 However, significant interaction between temperature and pH resulted in an antagonistic effect on metabolic rate ($F_{2,51}=$ 10.5, $p <$ 0.001; Figure \@ref(fig:resp) B; Appendix C Figure \@ref(fig:respinteract)).
 Thus, while warming elevated metabolic rate by 9 \%, and decreased pH by 18 \%, their combined effects reduced metabolic rate by up to 3 \% less than the controls.
-*Post-hoc* analysis using Tukey's HSD showed significant differences between groups at 4 weeks of acclimation, but there were no differences when the same groups were compard at 12 weeks (Appendix C Table XX).
+*Post-hoc* analysis using Tukey's HSD showed significant differences between groups at 4 weeks of acclimation, but there were no differences when the same groups were compard at 12 weeks (Appendix C Table \@ref(tab:c3mrcontrasts)).
 
 ```{r resp, fig.cap = "(ref:resp)"}
 knitr::include_graphics("figs/ch_multistressor/resp_plot.png")
@@ -360,7 +361,7 @@ kable(c3mrtab, "latex", caption = "(ref:c3mrtab)", booktabs = TRUE) %>%
   row_spec(c(0,1,6), bold = T)
 ```
 
-(ref:c3mrtab) Analysis of Variance (ANOVA) of the effects of increased temperature and decreased pH, and their interaction on the metabolic rate of *Heliocidaris erythrogramma*. Data were analysed separately for 4-week and 12-week acclimation periods. There were no significant interactions at 4 weeks, and thus the interaction term was removed and the data reanalysed (See Appendix). Significant differences are indicated with asterisks. ***: $p <$ 0.001.
+(ref:c3mrtab) Analysis of Variance (ANOVA) of the effects of increased temperature and decreased pH, and their interaction on the metabolic rate of *Heliocidaris erythrogramma*. Data were analysed separately for 4-week and 12-week acclimation periods. There were no significant interactions at 4 weeks, and thus the interaction term was removed and the data reanalysed (See Appendix C Table \@ref(tab:c3mranovaix)). Significant differences are indicated with asterisks. ***: $p <$ 0.001.
 
 ### Feeding rate 
 
@@ -407,7 +408,7 @@ kable(c3nhtab, "latex", caption = "(ref:c3nhanova)", booktabs = TRUE) %>%
 
 ```
 
-(ref:c3nhanova) Analysis of Variance (ANOVA) test on the effects of temperature or pH on the ammonia excretion rate of *H. erythrogramma* after 12 weeks of incubation to elevated temperature ($+0$, $+2$, $+3^\circ C$) and decreased pH ($8.0$ , $7.6$). The ANOVA was performed with the non-significant interaction terms removed (See Appendix X). $n = 10$.
+(ref:c3nhanova) Analysis of Variance (ANOVA) test on the effects of temperature or pH on the ammonia excretion rate of *H. erythrogramma* after 12 weeks of incubation to elevated temperature ($+0$, $+2$, $+3^\circ C$) and decreased pH ($8.0$ , $7.6$). The ANOVA was performed with the non-significant interaction terms removed. $n = 10$.
 
 ```{r nitrogen, fig.cap="(ref:nitrogen)", fig.pos='p'}
 knitr::include_graphics("figs/ch_multistressor/nh_plot.png")

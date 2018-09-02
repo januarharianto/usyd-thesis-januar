@@ -1,0 +1,93 @@
+<!-- # Parental acclimation influences the metabolic response of *Heliocidaris erythrogramma* larvae to near-future ocean warming and acidification -->
+
+# Offspring metabolic responses to ocean warming and acidification are shaped by parental environment in the sea urchin, *Heliocidaris erythrogramma*
+
+\chaptermark{Offspring metabolic responses to OW and OA in \textit{Heliocidaris erythrogramma}}
+
+
+
+
+## Abstract {-}
+
+
+
+## Introduction
+
+<!-- Temperature is the most important stressor in determining urchin survival (chapter 2), regardless of pH (chapter 3). However, long term experiments aside, there is a need to understand transgen effects. -->
+
+## Methods
+
+<!-- From past research we know that an offset of $+2 ^{\circ}C$ is non-lethal to the species. -->
+<!-- pH was set at 6 levels ranging from 7.6 to 8.0. -->
+
+### Collection of adults
+
+*Heliocidaris erythrogramma* specimens (35--44 $mm$ test diameter) were collected from three locations within Sydney Harbour: Milk Beach ([-33.856478, 151.266958](https://www.google.com/maps/?q=-33.856478,151.266958)), Bottle and Glass Point ([-33.847960, 151.270122](https://www.google.com/maps/?q=-33.847960,151.270122)) and Chowder Bay ([-33.841657, 151.253677](https://www.google.com/maps/?q=-33.847960,151.270122)).
+The sea urchins were collected in the subtidal zone (2--3 $m$) in June 2015 at the beginning of gametogenesis [@Laegdsgaard1991] and transported to the Sydney Institute of Marine Science (SIMS) in Chowder Bay, Australia.
+They were maintained at ambient conditions in flowthrough filtered sea water (FSW, 70 $\mu m$, 1.5 $L\ min^{-1}$) for 2 weeks before experiments began.
+
+### Experimental design
+
+All experimental treatments were maintained in a controlled environment room which was capable of adjusting room temperature, lighting, sea water temperature and sea water pH. 
+Room lighting timers were calibrated weekly to reflect the natural photoperiod over time.
+Sea water temeprature was maintained using a software-controlled, thermocouple-solenoid feedback system that automatically mixed warm (26 &deg;C) and cold (14.5 &deg;C) filtered FSW (20 $\mu m$) to provide water at a stable temperature. 
+The water was stored in individual header tanks, and each header tank was further maintained by a submersible heater (200 W, Blue Sea, Guangdong, China) attached to a temperature controller (model 7028/3, TUNZE Aqraientechnik GmbH, Germany).
+
+To control pH, in the adult treatments pre-mixed $CO_2$ gas was bubbled vigorously into header tanks using a venturi injector which allows the flowthrough system to maintain stable pH rapidly.
+The gas was prepared realtime using a proportional–integral–derivative controller which injects food-grade $CO_2$ (BOC, Australia) into scrubbed ambient air through a thermally-compensated, low-flow controller valve (Parker Hannifin, OH, USA).
+For larval experiments,
+
+
+#### Adult experiments
+
+#### Larval cultures
+
+### Parental acclimation
+
+### Larval spawning
+
+### Metabolic rate
+
+### Data analyses
+
+
+
+
+<!-- *H. erythrogramm* specimens (35--44 $mm$ test diameter) were collected from the subtidal zone (2--3 $m$) from Milk Beach ([-33.856478, 151.266958](https://www.google.com/maps/?q=-33.856478,151.266958)), Bottle and Glass Point ([-33.847960, 151.270122](https://www.google.com/maps/?q=-33.847960,151.270122)) and Chowder Bay ([-33.841657, 151.253677](https://www.google.com/maps/?q=-33.847960,151.270122)) in June 2015. -->
+<!-- They were transported to the Sydney Institute of Marine Science (SIMS) in Chowder Bay, Australia and  -->
+<!-- <!-- maintained at ambient conditions in flowthrough filtered sea water (FSW, 70 $\mu m$, 1.5 $L\ min^{-1}$) for 2 weeks. --> 
+<!-- then allocated to four treatments of 2 temperature profiles (ambient + 0 &deg;C, elevated +2 &deg;C) crossed with 2 pH~T~ levels (ambient 8.0, acidic 7.6) in a climate-controlled room where lighting was calibrated weekly to automatically follow the diurnal sunrise/sunset cycle. -->
+<!-- Each treatment combination consists of five replicate tanks (4 $L$) with 3 sea urchins per tank, for a total of 15 sea urchins per treatment. -->
+
+<!-- For each treatment, flowthrough FSW (20 $\mu m$) was supplied at a flow rate of approximately 0.2 $L\ min^{-1}$. -->
+
+
+<!-- ### Adjustment to conditions and acclimation -->
+
+<!-- Treatments were set to ambient conditions at the time of transfer (17.8 &deg;C, pH~T~ 8.0).  -->
+<!-- To minimise physiological stress to changing conditions, adjustments to elevated temperature (or low pH) were carried out slowly at +1 &deg;C week^-1^ and -0.1 pH week^-1^. -->
+<!-- <!-- This process took 4 weeks, and by the end of the adjustment period treatment temperatures were at X &deg;C (ambient) and X &deg;C (elevated).  --> 
+<!-- Temperature was altered using a thermocouple-solenoid feedback system that mixed flowthrough FSW (20 $\mu m$) at two fixed temperatures (26 &deg;C and 14.5 &deg;C) -->
+<!-- Once treatment levels were established, pH was kept constant while temperature was varied weekly based on the natural temperature profile of Chowder Bay. -->
+<!-- The temperature profile was determined from *in situ* loggers deployed within sea urchin habitats in the area from 2009--2014 (See Chapter 3, Figure \@ref(fig:harbour)). -->
+
+
+<!-- We spawned the sea urchins from Oct--Nov 2015.  -->
+<!-- Urchins were spawned within their own treatment conditions. -->
+<!-- Embryos were fertilised under a range of temperatures (18--24 &deg;C) and at 2 pH levels (8.0 and 7.6). -->
+<!-- Embryos were maintained in custom-build kriesels. -->
+
+
+
+
+<!-- Routine feeding was done  -->
+ <!-- fed a diet mixture of fresh *Ecklonia radiata* and *Sargassum* spp. suspended in kelp-based agar (see Chapter 3). -->
+
+<!-- Experiments were performed in a constant-temeprature room where room lighting was set using a 24-h timer, adjusted weekly to simulate the diurnal patterns of sunrise and sunset. -->
+<!-- We prepared 5 tanks per treatment, with 3 individuals per tank (total 15 inds treatment^-1^). -->
+
+<!-- After approximately a month (August 2015), the sea urchins were allocated to treatments of two temperature profiles (ambient, elevated +2 &deg;C) and two pH levels (ambient 8.0, low 7.6). -->
+<!-- This was done by transferring individual specimens randomly into a controlled-temperature room -->
+<!-- The temeprature increase level was chosen to ensure that no significant mortality would occur during acclimation (Chapter 3). -->
+
+

@@ -59,6 +59,8 @@ ggplot(dt, aes(temp, mean, colour = parents)) +
   geom_line() +
   geom_errorbar(aes(ymin = mean - se, ymax = mean + se), width = .1) +
   cowplot::theme_cowplot() +
+  xlab("Temperature °C") +
+  ylab((expression("Metabolic rate (" ~ pmol ~ O[2] ~~ h ^ -1 ~~ mu*m ^ -1 * ")"))) +
   geom_blank()
 
 # Difference between ANOVA and ANCOVA? 

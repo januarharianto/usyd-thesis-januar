@@ -60,10 +60,12 @@ fd <- feeding_rate %>%
   select(-grp) %>%
   print()
 
+library(lme4)
 ## Generate linear mixed model
 mxmodel <- lmer(rate ~ temp*ph + (1|tank) + (temp|tank) + (ph|tank), 
   data = fd) %>% 
   print()
+library(car)
 Anova(mxmodel)
 
 ## Update to remove interaction since it is not significant

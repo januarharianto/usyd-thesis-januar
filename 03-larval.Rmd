@@ -1,8 +1,22 @@
 <!-- # Parental acclimation influences the metabolic response of *Heliocidaris erythrogramma* larvae to near-future ocean warming and acidification -->
 
+```{r, echo = FALSE, include = FALSE}
+# Settings
+
+options(knitr.kable.NA = '')
+knitr::opts_chunk$set(echo = FALSE,
+                      out.width = '100%', 
+                      comment = "#>")
+
+library(tidyverse)
+library(kableExtra)
+library(snipR)
+
+```
+
 # Offspring metabolic responses to ocean warming and acidification are shaped by parental environment in the sea urchin, *Heliocidaris erythrogramma*
 
-\chaptermark{Offspring metabolic responses to OW and OA in \textit{Heliocidaris erythrogramma}}
+\chaptermark{Offspring metabolic responses to warming and acidification}
 
 
 
@@ -40,13 +54,15 @@ In the adult treatments, pre-mixed $CO_2$ gas was bubbled vigorously into header
 <!-- which allows the flowthrough system to maintain stable pH rapidly. -->
 The gas was prepared realtime using a proportional–integral–derivative controller which injects food-grade $CO_2$ (BOC, Australia) into scrubbed ambient air through a controller valve (Parker Hannifin, OH, USA).
 For larval experiments, the total flow rate was higher to maintain more treatments (>2 $L\ min^{-1}$), thus pH was controlled by mixing pure $CO_2$ gas directly into header tanks. This was done using an APEX AquaController system (Neptune Systems, Inc., CA, USA), where lab grade pH probe modules (model no. PRBPH) were used to provide feedback to control modules (model no. PM1) for adjustments to seawater pH. 
+The pH was adjusted to the total scale ($pH_T$) by an offset to spectrophotometric measurements of pH, which was measured daily (see below).
 The control modules automatically injected $CO_2$ micro-bubbles via solenoid valves into $CO_2$ reactors (Max Mix 2000 $L\ hr^{-1}$, Ista Professional Aquarium System, Taiwan) attached to submersible pumps (model AP550LV, Aquatec Equipment, Perth, Australia) inside each header tank.
 <!-- that run continuously to mix the $CO_2$-infused water into header tank. -->
 
-Treatment temperature was logged daily in all treatments using PT1000 resistance temperature detectors (RTDs) attached to a Graphtec Multifunction logger (model: GL840, Graphtec). Treatment pH on the total scale was measured spectrophotometrically using a custom-built automated sampling system connected to an optic-fibre spectrophotometer (model: USB4000+, Ocean Optics, Inc., FL, USA).
-The dye indicator used for spectrophotometric measurements is m-cresol (Acros Argonics, catalog number 110585000, Lot A0321770) and all measurements were calibrated to certified reference material (CRM) for $CO_2$ in seawater obtained from the Scripps Institution of Oceanography (University of California, San Diego, USA) following SOP 6b in @Dickson2007. Calculations of pH were based on @Liu2011.
+Treatment temperature was logged daily in all treatments using PT1000 resistance temperature detectors (RTDs) attached to a Graphtec Multifunction logger (model: GL840, Graphtec). 
+Treatment pH on the total scale was measured spectrophotometrically using a custom-built automated sampling system connected to an optic-fibre spectrophotometer (model: USB4000+, Ocean Optics, Inc., FL, USA).
+The dye indicator used for spectrophotometric measurements was m-cresol (Acros Argonics, catalog number 110585000, Lot A0321770) and all measurements were calibrated to certified reference material (CRM) for $CO_2$ in seawater obtained from the Scripps Institution of Oceanography (University of California, San Diego, USA) following SOP 6b in @Dickson2007. Calculations of pH were based on @Liu2011.
 
-#### Adult treatments and acclimation
+#### Adult treatments and adjustments
 
 Sea urchins were randomly assigned to 4 treatments of two temperatures (ambient +0 &deg;C, elevated +2 &deg;C) and two pH levels (ambient 8.0 $pH_T$, acidic $pH_T$ 7.6). 
 Each treatment combination consists of five replicate tanks (4 $L$) with three sea urchins per tank for a total of 15 sea urchins per treatment.
@@ -57,22 +73,64 @@ The sea urchins were held in their treatment conditions for at least 3 months be
 
 #### Larval cultures
 
-We incubated embryos in custom-built plankton mini-kreisels which were similar to, but smaller in size as those built by @Hammill2017.
+Embryos were incubated in custom-built, mini-kreisels of similar design to those built by @Hammill2017.
 <!-- as these tanks allow us to culture larvae in flowthrough conditions. -->
-Each kriesel was constructed by mounting a cylindrical tube (x $cm$ diameter, y $cm$ wide) between two acrylic panels (g $\times$ h $\time$ i $cm$).
-An opening x $cm$ wide on the circular edge allowed water to flow into the kreisel to form circular currents
+Each kriesel was constructed by mounting a cylindrical acrylic tube (10 $cm$ diameter, 4 $cm$ wide) between two acrylic panels (12 $\times$ 11 $\times$ 0.3 $cm$) using acetone adhesive (Figure \@ref(fig:kreisel)).
+An inflow tubing leading into the kreisel provided continuous laminar flow in a circular motion within the kreisel.
+As the seawater input was flowthrough, it was delivered through a series of three filters (70 $\mu m \Rightarrow$ 20 $\mu m \Rightarrow$ 1 $\mu m$) to prevent other pelagic organisms from interacting with the larva.
+The outflow was covered with a 0.5 $\mu m$ mesh to prevent escape.
 
-### Parental acclimation
+There were 10 treatments of 4 temperatures (18 &deg;C, 20 &deg;C, 22 &deg;C, 24 &deg;C) and two pH levels (8.0, 7.6). Each treatment contained three experimental kreisels, supplied with flowthrough seawater at a rate of 50 $mL\ min^{-1}$. 
+<!-- The flow rate was adjusted slightly ($\pm 5\ mL\ min^{-1}$) for each kreisel to ensure that the larva were not pressed against the outflow mesh . -->
 
-### Larval spawning
+```{r kreisel, fig.cap = "(ref:kreisel)", fig.pos="p"}
+knitr::include_graphics("figs/ch_larval/kreisel.png")
+```
+
+(ref:kreisel) This is the caption for the kreisel setup.
+
+
+
+### Larval spawning and incubation
+
+To accomodate all experiments in the larval culture system, larval spawning was performed sequentially for each adult treatment.
+The selection of treatment group was made at random and incubations lasted 14 days each, starting in October 2015 and ending in December 2015.
+Spawning was induced manually by injection of 1--2 $mL$ of 0.5 M potassium chloride (KCl).
+For each adult treatment, the gametes of at least 3 females and 2 males were pooled.
+Approximately 1000--1500 unfertilised eggs were added to each kreisel after spawning.
+Sperm was introduced after 15 minutes at a pre-diluted sperm concentration of approximately $2 \times 10^5\ sperm\ mL^{−1}$.
+<!-- to avoid polyspermy (cite?). -->
+The flowthrough system was not turned off during fertilisation, but fertilisation success was checked for each treatment after 20 minutes by collecting at least 30 embryos from each treatment and inspection for the formation of the fertilisation envelope (98--100 \% for all treatments). 
+The embryos and larvae were left to develop in the kreisels under constant temperature (18 &deg;C--24 &deg;C) and pH levels (8.0, 7.6) as described above for 14 days before metabolic rate measurements were made.
 
 ### Metabolic rate
+
+Metabolic rate, $MO_2$, was estimated using constant-volume respirometry. 
+Respirometry chambers used were 2 $mL$ glass vials with silicon septum lids (Mfr. No. CERT97E-12, Thomas Scientific, NJ, USA).
+Oxygen concentration within the glass vials were measured using needle-type microsensors (NTH-PSt1, PreSens GmbH, Regensburg, Germany) connected to 4-channel and 10-channel meters (OXY-10 micro and OXY-4 micro, PreSens GmbH).
+<!-- We used 9 vials for larvae while the other 5 contained only treatment water to account for the presence of background respiration. -->
+For each kreisel, 50 juveniles were collected at random and placed into a vial for a total of 150 juveniles and 3 vials per treatment.
+
+The vials were submerged in water baths at the appropriate temperature.
+To account for background respiration, 4-6 vials containing only treatment water were measured separately for each larval group.
+Respirometry experiments ran for 12 to 15 hours, overnight, and oxygen concentrations did not drop below 85 \% air saturation when the oxygen measurements were stopped.
+
+
 
 ### Data analyses
 
 
+## Results
 
+An interaction of parental environment and offspring temperature significantly affected the metabolic rate of the juveniles (GLMM, $F_{3,23} =$ 11.38, $p<$ 0.001) demonstrating that parental acclimation environment had an effect on the slope of the metabolic rate reaction norms.
 
+```{r larvalrates, fig.cap = "(ref:larvalrates)", fig.pos="p"}
+
+knitr::include_graphics("figs/ch_larval/larvalrates.png")
+
+```
+
+(ref:larvalrates) This is the caption for the ancova analysis.
 
 <!-- We spawned the sea urchins from Oct--Nov 2015.  -->
 <!-- Urchins were spawned within their own treatment conditions. -->

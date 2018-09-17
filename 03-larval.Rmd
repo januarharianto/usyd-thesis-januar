@@ -14,7 +14,7 @@ library(snipR)
 
 ```
 
-# Offspring metabolic responses to ocean warming and acidification are shaped by parental environment in the sea urchin, *Heliocidaris erythrogramma*
+# Offspring metabolic reaction norms to ocean warming and acidification are shaped by parental environment in the sea urchin, *Heliocidaris erythrogramma*
 
 \chaptermark{Offspring metabolic responses to warming and acidification}
 
@@ -26,66 +26,32 @@ library(snipR)
 
 ## Introduction
 
-The unprecedented rate in which carbon dioxide ($\mathrm{CO_2}$) is being absorbed by the ocean has significantly altered its physical and chemical properties, contributing to the phenomena of ocean warming (OW) and ocean acidification (OA) [@Howes2015]. 
-These two environmental stressors are well-studied in the literature, with their diverse and interactive effects documented across many taxa [reviewed by @Byrne2013; @Harvey2013; @Przeslawski2015; @Poloczanska2016].
-Increased temperature from OW affects all levels of animal physiology and thus, their fitness [@Somero2010; @Somero2012; @Verberk2016], and OA alters the carbonate chemistry of seawater and influences biochemical pathways related to physiological functioning [@Cyronak2016; @Clements2018].
+The unprecedented rate in which anthropogenic carbon dioxide ($\mathrm{CO_2}$) is being absorbed by the ocean has significantly altered its physical and chemical properties, contributing to the phenomena of ocean warming and ocean acidification [@Caldeira2003; @Howes2015]. 
+These two environmental stressors are well-studied in the literature with diverse and interactive effects documented across many taxa [reviewed by @Byrne2013; @Harvey2013; @Przeslawski2015; @Poloczanska2016].
+Generally, increased temperature alters all levels of animal physiology which affects fitness [@Somero2010; @Somero2012; @Verberk2016], while ocean acidification alters the carbonate chemistry of seawater, influencing biochemical pathways related to physiological functioning [@Cyronak2016; @Clements2018].
 
-How organisms react to OW and OA are dependent on their phenotypic plasticity since it determines their capacity to acclimate to increased environmental stress [@Munday2013; @Seebacher2014; @Murren2015].
-<!-- Given time, marine animals have limited capacity to acclimate to increased environmental stress due to their phenotypic plasticity. -->
-However, recognising the extent to which the observed responses are beneficial to their overall fitness is currently a challenge, since we still lack a mechanistic understanding of the physiological traits responsible for many biological responses [@Portner2004; @Portner2008; @Gunderson2016].
-<!-- Discussion: For example, increased metabolism may be a result of an increase in aerobic scope for growth and reproduction [@Sandblom2014; @Hansen2017] -->
-In addition, recent marine studies have demonstrated that the plastic responses of organisms to environmental stress within one generation may influence the responses to environmental conditions in the next [e.g. @Wong2018; @Borges2018; @Scanes2018; @Ross2016].
-These carry-over effects are still an area of ongoing research ranging from investigations of developmental plasticity, maternal effects and transgenerational plasticity [@Torda2017; @Donelson2018].
+Whether marine organisms are able to remain resilient in the face of future ocean warming and acidification depends greatly on their phenotypic plasticity as it determines their capacity to acclimate to increased environmental stress [@Munday2013; @Seebacher2014; @Murren2015].
+Recognising the extent to which the observed plasticity is beneficial to their overall fitness remains an ongoing challenge due to the difficulties in identifying the physiological mechanisms which cause changes in performance [@Portner2004; @Portner2008].
+For example, increased metabolism due to warming may be a result of an increase in aerobic scope for growth and reproduction, which is beneficial [@Sandblom2014; @Hansen2017], however it may also signal trade-offs diverting energy from growth and reproduction to metabolism in order to maintain fitness [@Marshall2011; @Hoefnagel2017].
+<!-- Thus it is important to demonstrate whether an observed plastic response increases the fitness of individuals with rigorous experimental design. -->
 
-In this study, I investigated the effect of parental acclimation to warming and low pH conditions on the metabolic rate response of offspring to a range of temperatures, using the sea urchin *Heliocidaris erythrogramma* as a model specimen.
-Sea urchins, as calcifying benthic marine ectotherms, are vunerable to the effects of OW and OA in the ocean, especially in their developmental larval and juvenile life stages [@Byrne2013; @Przeslawski2015].
+In addition to phenotypic plasticity in organisms, recent marine climate change studies have also demonstrated that plastic responses to environmental stress within one generation may influence the responses to environmental conditions in the next [e.g. @Borges2018; @Heckwolf2018; @Scanes2018; @Wong2018; @Zhao2018].
+These carry-over effects are still an area of ongoing research ranging from investigations of developmental plasticity, maternal effects and transgenerational plasticity [reviewed by @Ross2016; @Torda2017; @Donelson2018].
+<!-- Generally, parents experiencing stressful conditions can influence their offspring by adjusting resources to the egg (i.e. maternal investment), or by influencing the offspring phenotype directly [@Donelson2018]. -->
+<!-- Carry-over effects have been demonstrated in fish [@Donelson2012; @Heckwolf2018; @Allan2014], bivalve molluscs [@Parker2015; @Scanes2018], crustaceans [@Pedersen2014; @Borges2018] and sea urchins [@Wong2018; @Zhao2018]. -->
+Because marine calcifiers are particularly vunerable to the effects of ocean warming and acidification especially during their early developmental stages [@Byrne2011; @Byrne2013; @Nagelkerken2015; @Poloczanska2016], many studies have used sea urchin larvae as models for the response of calcifying marine organisms to changing environmental conditions from gamete to juvenile stages [@ODonnell2009; @Sewell1999; @Byrne2011; @Stumpp2011; @Dorey2013; @Hardy2014; @Gianguzza2014].
+The influence of carry-over effects between sea urchin generations in the context of climate change have only been considered recently, thus few studies to date have examined the effects of environmental cues from parents on offspring responses to ocean warming and acidification.
+For example, @Wong2018 demonstrated that incubating the sea urchin *Strongylocentrotus purpuratus* to upwelling conditions of colder temperature and high *p*$\mathrm{CO_2}$ for 4.5 months intensified the transcriptomic response and growth (i.e. size) of the progeny.
+Similarly, @Zhao2018 found evidence of transgenerational effects in the sea urchin *Strongylocentrotus intermedius* incubated for 15 months to elevated temperature conditions, whereby the hatchability and size of larvae were negatively affected by parental exposure to warming.
+These results suggest the importance of parental environmental history on the plastic responses of offspring as their effects may either buffer or negate the performance of developing sea urchin larvae to future climate change scenarios.
 
-<!-- Discussion: Currently it is difficult to determine whether the altered responses of the offspring generation in many of these studies is a result of transgenerational plasticity (TGP), maternal effects or developmental plasticity [@Torda2017; @Donelson2018]. -->
-
-<!-- These responses vary depending on the scale and rate of the change experienced, as all organisms can adjust their physiology to buffer against acute or chronic levels of environmental stress [@Munday2013; @Seebacher2014; @Murren2015]. -->
-
-
-<!-- In the face of fluctuating climates, phenotypic plasticity is a crucial mechanism for determining whether an animal is able to maintain fitness in response to acute or chronic levels of environmental stress [@Munday2013; @Seebacher2014; @Murren2015]. -->
-
-<!-- Echinoderms such as sea urchins are vunerable to climate change -->
-<!-- , especially in their developmental and juvenlie life stages,  -->
-<!-- as both OW and OA can produce a range of complex and negative biological responses in growth [@Byrne2011; @Moulin2015], metabolism [@Stumpp2011; @Delorme2016], calcification [@Wolfe2013; @Collard2016] and immune response [@Branco2013; @Brothers2016]. -->
-
-
-
-
-
-<!-- In general, marine ectotherms are able to respond to environmental stress by adjusting their physiology [@Seebacher2014] and by genetic adaptation [@Hoffmann2011; @Sunday2014]. -->
-
-
-<!-- The most important climate change stressors, ocean warming (OW) and ocean acidification (OA), are occurring at unprecedented rates due the continuous increase of anthropogenic carbon dioxide ($\mathrm{CO_2}$) in the atmosphere and the ocean [refs]. -->
-
-
-<!-- However, the multistressor and rapid nature of environmental change means that changes may be experienced across a few generations, or even within one generation, which require more immediate responses. -->
-
-
-
-
-
-<!-- Recent studies have also provided some evidence that the response of marine organisms to environmental stress may be influenced by the conditions experienced by the previous generation(s) [@Torda2017; @Donelson2018]. -->
-<!-- As scientists explore the mechanisms behind these effects, they have been denoted by various labels such as trans-generational plasticity (TGP), parental effects, intergenerational effects and non-genetic inheritance and carry-over effects [@Donelson2018]. -->
-<!-- Understanding these processes across generations is still an area of ongoing research [refs], but evidence is mounting that these effects can occur environmental influence on paternal -->
-
-<!-- Recent marine climate change research has focused on their combined effects on organisms [reviewed by @Byrne2013; @Harvey2013; @Kroeker2013; @Przeslawski2015; @Hoegh-Guldberg2017], and ample evidence from meta-analyses suggests that the combined and interactive effects of both OW and OA will result in a range of complex biological responses due to differences in physiological characteristics of organisms [@Przeslawski2015; @Lefevre2016].  -->
-<!-- Calcifying organisms in particular have been shown to be more susceptible to OA effects as changes in the carbonate chemistry of the ocean will directly impair their ability to calcify, as shown in echinoderms [@Wolfe2013; @Yuan2016; @Manriquez2017], corals [@Hoegh-Guldberg2007; @Gao2010; @Hoegh-Guldberg2017] and molluscs [@Mackenzie2014; @Waldbusser2015; @Parker2017a]. -->
-
-
-
-
-<!-- For sea urchins, both ocean warming and acidification have been shown to alter biochemical reactions and pathways, affecting metabolism [citation], acid-base regulation [citation], heat-shock [citation] and immune [citation] responses. -->
-<!-- These studies showed that sea urchins are vulnerable to climate change -->
-
-<!-- Although the majority of studies to date have focused on potential impacts based on short-term and single-generation experiments, recent experiments on sea urchins indicate that there is a need to consider the potential for evolutionary adaptation or carry-over effects over multiple generations in response to environmental stress [@Wong2018; @Zhao2018]. -->
-
-
-<!-- In addition, phenotypic plasticity may increase resilience of organisms to climate change stressors,  -->
-<!-- This means that experiments need to be conducted relatively long-term -->
-
+<!-- to better visualise -->
+In this study, the interactive effects of increased temperature and reduced pH ereinvestigated in the sea urchin, *Heliocidaris erythrogramma*, across two generations.
+Adult urchins were incubated in conditions for 3 months, spawned, and their offspring raised at a range of temperatures (18 \degree C to 24 \degree C) for 14 days.
+Interactions between parental treatments and offspring plastic responses are compared using thermal reaction norms with metabolic rate and growth as performance traits. 
+Metabolic rate was used as it is a fundamental biological rate that modulates all other biological activities [@Brown2004]. 
+Measuring metabolic rate performance in sea urchin larvae can provide important insights to their plasticity as it can be associated with bioenergetic and fitness consequences [e.g. @Stumpp2011; @Dorey2013].
+It was expected that there will be an interaction between parental acclimation environments (temperature/pH) and offspring metabolic rate and growth reaction norms to temperature, signalling carry-over effects to the offspring from parental environments. 
 
 
 ## Methods
@@ -95,6 +61,7 @@ Sea urchins, as calcifying benthic marine ectotherms, are vunerable to the effec
 
 ### Collection of adults
 
+<!-- *Heliocidaris erythrogramma* (35--44 $mm$ test diameter) were collected from Milk Beach ([-33.856478, 151.266958](https://www.google.com/maps/?q=-33.856478,151.266958)) in Sydney Harbour during low tide. -->
 *Heliocidaris erythrogramma* (35--44 $mm$ test diameter) were collected from three locations within Sydney Harbour: Milk Beach ([-33.856478, 151.266958](https://www.google.com/maps/?q=-33.856478,151.266958)), Bottle and Glass Point ([-33.847960, 151.270122](https://www.google.com/maps/?q=-33.847960,151.270122)) and Chowder Bay ([-33.841657, 151.253677](https://www.google.com/maps/?q=-33.847960,151.270122)).
 The sea urchins were collected in the subtidal zone (2--3 $m$) in June 2015 in mid-winter when the gonads are less developed [@Laegdsgaard1991] and transported to the Sydney Institute of Marine Science (SIMS) in Chowder Bay, Australia.
 There, they were maintained at the ambient flowthrough facility with filtered seawater (FSW, 70 $\mu m$, 1.5 $L\ min^{-1}$) for 2 weeks before they were transferred into acclimation treatments.
@@ -264,3 +231,5 @@ knitr::include_graphics("figs/ch_larval/larvalgrowth.png")
 
 
 ## Discussion
+
+

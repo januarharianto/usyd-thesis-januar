@@ -14,7 +14,7 @@ library(snipR)
 
 ```
 
-# Offspring metabolic reaction norms to ocean warming and acidification are shaped by parental environment in the sea urchin, *Heliocidaris erythrogramma*
+# Offspring metabolic reaction norms to ocean warming and acidification are shaped by parental environment in the sea urchin, *Heliocidaris erythrogramma* {#chapter4}
 
 \chaptermark{Offspring metabolic responses to warming and acidification}
 
@@ -78,7 +78,7 @@ It was hypothesised that there are interactions between parental acclimation env
 <!-- *Heliocidaris erythrogramma* (35--44 $mm$ test diameter) were collected from Milk Beach ([-33.856478, 151.266958](https://www.google.com/maps/?q=-33.856478,151.266958)) in Sydney Harbour during low tide. -->
 *Heliocidaris erythrogramma* (35--44 mm test diameter) were collected from three locations within Sydney Harbour: Milk Beach ([-33.856478, 151.266958](https://www.google.com/maps/?q=-33.856478,151.266958)), Bottle and Glass Point ([-33.847960, 151.270122](https://www.google.com/maps/?q=-33.847960,151.270122)) and Chowder Bay ([-33.841657, 151.253677](https://www.google.com/maps/?q=-33.847960,151.270122)).
 The sea urchins were collected in the subtidal zone (2--3 m) in June 2015 in mid-winter when the gonads are less developed [@Laegdsgaard1991] and transported to the Sydney Institute of Marine Science (SIMS) in Chowder Bay, Australia.
-There, they were maintained at the ambient flowthrough facility with filtered seawater (FSW, 70 $\mu m$, 1.5 $\mathrm{L\ min^{-1}}$) for 2 weeks before they were transferred into acclimation treatments.
+There, they were maintained at the ambient flowthrough facility with filtered seawater (FSW, 70 $\mu$m, 1.5 $\mathrm{L\ min^{-1}}$) for 2 weeks before they were transferred into acclimation treatments.
 
 ### Experimental design
 
@@ -106,17 +106,17 @@ Sea urchins were randomly assigned to 4 treatments of two temperatures (ambient,
 Each treatment combination consists of five replicate tanks (4 $L$) with three sea urchins per tank for a total of 15 sea urchins per treatment.
 <!-- The temperatures and pH levels were selected based on projections of OA conditions predicted for the region by the year 2100 [@Lenton2015]. -->
 To minimise physiological stress, all treatments were at ambient temperature and pH at the beginning of the acclimation period, and adjustments to elevated temperature (or low pH) were carried out slowly at +1 *&deg;C* $week^{-1}$ and -0.1 pH $week^{-1}$.
-Once treatment levels were established, pH was kept constant while temperature was adjusted weekly based on the natural temperature profile of Chowder Bay, determined using *in situ* loggers previously deployed in sea urchin habitats from 2009--2014 (See Chapter 3, Figure \@ref(fig:harbour)). 
+Once treatment levels were established, pH was kept constant while temperature was adjusted weekly based on the natural temperature profile of Chowder Bay, determined using *in situ* loggers previously deployed in sea urchin habitats from 2009--2014 (See Chapter \ref{chapter3}, Figure \@ref(fig:harbour)). 
 
 
 ### Larval kreisel setup
 
 Embryos were incubated in custom-built, mini-kreisels of similar design to those built by @Hammill2017.
 <!-- as these tanks allow us to culture larvae in flowthrough conditions. -->
-Each kriesel was constructed by mounting a cylindrical acrylic tube (10 $cm$ diameter, 4 $cm$ wide) between two acrylic panels (12 $\times$ 11 $\times$ 0.3 $cm$) using acetone adhesive (Figure \@ref(fig:kreisel)).
+Each kriesel was constructed by mounting a cylindrical acrylic tube (10 cm diameter, 4 cm wide) between two acrylic panels (12 $\times$ 11 $\times$ 0.3 cm) using acetone adhesive (Figure \@ref(fig:kreisel)).
 An inflow tubing leading into the kreisel provided continuous laminar flow in a circular motion within the kreisel.
-As the seawater input was flowthrough, it was delivered through a series of three filters (70 $\mu m \Rightarrow$ 20 $\mu m \Rightarrow$ 1 $\mu m$) to prevent pelagic organisms in the flowthrough system from interacting with the specimens.
-The outflow was covered with a 50 $\mu m$ mesh to prevent escape.
+As the seawater input was flowthrough, it was delivered through a series of three filters (70 $\mu m \Rightarrow$ 20 $\mu m \Rightarrow$ 1 $\mu$m) to prevent pelagic organisms in the flowthrough system from interacting with the specimens.
+The outflow was covered with a 50 $\mu$m mesh to prevent escape.
 
 There were 10 treatments of 4 temperatures (18 &deg;C, 20 &deg;C, 22 &deg;C, 24 &deg;C) and two pH levels (8.0, 7.6). Each treatment contained three experimental kreisels, supplied with flowthrough seawater at a rate of 50 $mL\ min^{-1}$. 
 <!-- The flow rate was adjusted slightly ($\pm 5\ mL\ min^{-1}$) for each kreisel to ensure that the larva were not pressed against the outflow mesh . -->
@@ -151,13 +151,13 @@ The respirometry chambers used were 2 $mL$ borosilicate glass vials with silicon
 Oxygen concentration within the glass vials were measured using needle-type microsensors (NTH-PSt1, PreSens GmbH, Regensburg, Germany) attached to 4-channel and 10-channel meters (OXY-10 micro and OXY-4 micro, PreSens GmbH).
 <!-- We used 9 vials for larvae while the other 5 contained only treatment water to account for the presence of background respiration. -->
 From each kreisel, 50 juveniles were collected at random and placed into a respirometry vial for measurement of oxygen uptake.
-Each respirometry vial was rinsed at least two times and filled with 0.22 $\mu m$ FSW at the same treatment conditions as the source juveniles before the specimens were transferred for measurement.
+Each respirometry vial was rinsed at least two times and filled with 0.22 $\mu$m FSW at the same treatment conditions as the source juveniles before the specimens were transferred for measurement.
 To account for background respiration, 4-6 vials containing only treatment water were measured separately for each larval group.
 Respirometry experiments ran for 12 to 15 hours in the dark and oxygen concentrations did not drop below 85 \% air saturation when the experiments were completed.
 Temperature was kept constant throughout the experiment using a water bath.
 
 After respirometry, juveniles were collected and photographed under a compound microscope. 
-To test for the effects of parental and offspring treatments on growth, 30 photographed juveniles were randomly sampled for measurements of test diameter ($\mu m$) as a proxy for growth (Figure \@ref(fig:juvdiam).
+To test for the effects of parental and offspring treatments on growth, 30 photographed juveniles were randomly sampled for measurements of test diameter ($\mu$m) as a proxy for growth (Figure \@ref(fig:juvdiam).
 Metabolic rate results were scaled to the average test diameter per larvae based on the juveniles measured [$pmol\ O_2\ h^{-1}\ larvae^{-1}\ \mu m^{-1}$, @Dorey2013].
 
 ```{r juvdiam, fig.cap="(ref:juvdiam)", fig.pos="p"}

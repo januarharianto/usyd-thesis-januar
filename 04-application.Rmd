@@ -5,7 +5,8 @@
 options(knitr.kable.NA = '')
 knitr::opts_chunk$set(echo = FALSE,
                       out.width = '100%', 
-                      comment = "#>")
+                      comment = "#>", 
+                      cache = FALSE)
 # additional packges
 library(respR)
 library(readxl)
@@ -26,11 +27,11 @@ listfunctions <- readxl::read_excel('tables/list-of-functions.xlsx')
 conversions <- readxl::read_excel("tables/conversion-units.xlsx")
 ```
 
-# respR -- an R package for the analysis of respirometry data[^published5]
+# respR -- an R package for the analysis of respirometry data[^published5] {#chapter5}
 \chaptermark{respR -- an R package for respirometry}
 
 
-[^published5]: A portion of this chapter has been submitted and is under a second review as "Harianto J, Carey N and Byrne M (2018). `respR` -- an R package for the analysis of respirometry data. *Methods in Ecology and Evolution*. In review."
+[^published5]: A portion of this chapter has been submitted and is under a third review as "Harianto J, Carey N and Byrne M (2018). `respR` -- an R package for the analysis of respirometry data. *Methods in Ecology and Evolution*. In review." In addition, the R package, `respR`, is already publishedo on GitHub as an open-source project.
 
 
 ## Abstract {-}
@@ -87,7 +88,7 @@ The package `LoLinR` [@Olito2017], while not specifically coded for respirometry
 <!-- Importantly, all of these packages assume that data are monotonic with evenly-spaced sampling periods with respect to time, an ideal structure but one where respirometry data often fails to meet.  -->
 <!-- They also do not have the tools to analyse complicated datasets to automatically determine useful metric such as $\dot{M}O_{2,max}$ and $\dot{M}O_{2,min}$. -->
 
-Here we describe `respR`, an open-source R package designed to provide an efficient and reproducible workflow for the analysis of respirometry data (Table 1).
+Here we describe `respR`, an open-source R package designed to provide an efficient and reproducible workflow for the analysis of respirometry data (Table \ref{funlist}).
 The package contains utilities to: (1) analyse closed, intermittent, flow-through and open-tank respirometry data [see @Lighton2008; @Svendsen2016], (2) determine volume and mass specific oxygen uptake rates, (3) automatically detect maximal and minimal rates, $P_{crit}$, and (4) detect the most linear sections of data using novel rolling regression and kernel density estimation techniques.
 In addition, the package contains "housekeeping" functions for data import and export as supplementary material at all stages of respirometry analysis, including saving raw data, subsetting criteria, background corrections, units of measure, and resulting metabolic rates. 
 This streamlines the reporting of analytical methods and allows reviewers or other investigators to fully reproduce or scrutinise the results. 
@@ -95,37 +96,57 @@ Additional functions useful in processing respirometry data are available, and a
 We show how `respR` might be used to determine $\dot{M}O_{2,max}$, $\dot{M}O_{2,min}$, and $P_{crit}$.
 
 
-```{r Table-1, echo=F}
-pander(listfunctions, caption = "Main functions available in `respR`.",
-  split.cells = 50, split.table = 80, floating = TRUE)
-
-```
-
-
-<!-- ```{r funlist, message=FALSE} -->
-
-<!-- funlist <- readr::read_csv("tables/list-of-functions.csv") -->
-<!-- kable(funlist, "latex", booktabs = TRUE) %>% -->
-<!--   column_spec(2, width = "23 em") -->
-<!-- # kable(gdt, "latex", caption = "(ref:tablename)", booktabs = TRUE) %>% -->
-<!--   # kable_styling(position = "center") %>% -->
-<!--   # kable_styling(latex_options = "hold_position") %>% -->
-<!--   # kable_styling(full_width = T) %>% -->
-<!--   # row_spec(c(0), bold = T) -->
+<!-- ```{r Table-1, echo=F} -->
+<!-- pander(listfunctions, caption = "Main functions available in `respR`.", -->
+<!--   split.cells = 50, split.table = 80, floating = TRUE) -->
 
 <!-- ``` -->
 
-<!-- (ref:funlist) Insert caption here. -->
+
+<!-- Table is in raw LaTeX format as kable sucks at formatting text-only tables that contain sentences and formatting. -->
+
+\begin{table}
+\centering
+\caption{Main functions available in respR.}
+\label{funlist}
+\begin{tabular}{p{0.35\linewidth}p{0.55\linewidth}}
+\toprule
+\textbf{Function} & \textbf{Description} \\ 
+\midrule
+\texttt{import\_data()} & Automatically import and format raw data files from commonly-used respirometry devices. \\
+\texttt{inspect()} & Checks data for errors, extracts a two-column dataframe for analysis, and plots the data for quick visualisation. \\
+\texttt{calc\_rate.bg()} & Calculates background oxygen uptake rate. \\
+\texttt{calc\_rate()} & Calculates oxygen uptake rate from precise segment(s) of the data. \\
+\texttt{calc\_rate.ft()} & Calculates oxygen uptake rate in flowthrough experiments. \\
+\texttt{auto\_rate()} & Calculates ``max'', ``min'', ``interval'' or ``best-fit'' rates. \\
+\texttt{adjust\_rate()} & Corrects data for background changes in oxygen concentration. \\
+\texttt{convert\_DO()} & Converts between units of oxygen concentration. \\
+\texttt{convert\_rate()} & Converts experimental rates to specific units. \\
+\texttt{pcrit()} & Calculates critical oxygen tension, $P_{crit}$. \\
+subsample() & Reduces the size of a large data frame, by extracting every n-th row. \\
+\texttt{intermittent.rd.rda} & Respirometry data for a single sea urchin~specimen (\textit{Heliocidaris erythrogramma}) collected using intermittent respirometry. Data were collected over 80 minutes. \\
+\texttt{sardine.rd.rda} & Respirometry data for a single sardine specimen, \textit{Sardinops sagax}. Data were collected over 2 hours. \\
+\texttt{squid.rd.rda} & Respirometry data for a single squid specimen, \textit{Doryteuthis opalescens}, to determine $P_{crit}$. Data were collected over a 9-hour period. \\
+\texttt{urchins.rd.rda} & Multi-column dataset containing respirometry and background respirometry data for 16 sea urchin specimens (\textit{Heliocidaris erythrogramma}). Data for each urchin were collected over 45 minutes. \\
+\bottomrule
+\end{tabular}
+\end{table}
 
 
 ## Package overview
 
-The `respR` package streamlines the analysis of respirometry data by partitioning the data processing workflow into several independent actions: (1) initially, data are imported, checked for common errors, plotted for visual inspection and exported as an object; (2) the object is then analysed to estimate the desired rate parameter; (3) diagnostic plots are automatically generated and the data can be further explored using the generic S3 `print()`, `plot()`, and `summary()` commands to verify the results; (4) adjustments to the data from background respiration are applied; (5) volume or mass-specific rate conversions, specific to the respiratory chamber and specimen(s), are calculated where necessary (Fig. 1). 
+The `respR` package streamlines the analysis of respirometry data by partitioning the data processing workflow into several independent actions: (1) initially, data are imported, checked for common errors, plotted for visual inspection and exported as an object; (2) the object is then analysed to estimate the desired rate parameter; (3) diagnostic plots are automatically generated and the data can be further explored using the generic S3 `print()`, `plot()`, and `summary()` commands to verify the results; (4) adjustments to the data from background respiration are applied; (5) volume or mass-specific rate conversions, specific to the respiratory chamber and specimen(s), are calculated where necessary (Fig. \@ref(fig:c4intro)). 
 By design, each step of the workflow requires minimal manual manipulation of the data, and the user can pass the output of each function to the next. 
 This object-oriented approach makes `respR` easy to use, even for novice users of R, and allows R programmers to extend the functionality of the package easily. 
 <!-- either by adding additional intermediate actions or substituting current actions with other code without breaking the rest of the package.  -->
 Note, we use $\dot O_2$ in the text to represent the unit-less rate of $O_2$ use with regard to the time unit, and to distinguish it from other commonly reported metrics (e.g. $\dot{M}O_2$, $\dot{V}O_2$).
 
+
+```{r c4intro, fig.cap="(ref:c4intro)"}
+knitr::include_graphics("figs/ch_methods/fig1.png")
+```
+
+(ref:c4intro) Diagram showing steps in a typical workflow in the analysis of respirometry data using `respR`. **(A)** Data are first checked for errors before **(B)** main functions are used to extract and analyse segments of the data. **(C)** Summarised results and diagnostic plots provide immediate visual feedback on the outcome of the analyses. **(D)** Once the rate estimates are obtained, they can be converted into volume and/or mass-specific rates.
 
 Installation of `respR` can be performed directly via the R console using `devtools`:
 
@@ -182,9 +203,17 @@ Rates are determined using linear regression.
 For more complex respirometry parameters, the function `auto_rate()` uses a novel method of combining rolling regression and kernel density estimate algorithms to detect patterns in respirometry data. 
 First, `auto_rate()` always performs a rolling linear regression on the data before additional methods are applied. 
 The rolling regression runs all possible ordinary least-squares (OLS) linear regressions $(y = \beta_0 + \beta_1 X + \epsilon)$ of a fixed sample width across the entire data series, and is expressed as: $$y_t(n) = X_t(n) \beta (n) + \epsilon_t(n), \ t = n,\ ...,\ T$$ where $n$ is the window of width $n < T$, $T$ is the total length of the dataset, $y_t(n)$ is the vector of observations (e.g. oxygen concentration), $X_t(n)$ is the matrix of explanatory variables, $\beta (n)$ is a vector of regression paramters and $\epsilon_t(n)$ is a vector of error terms.
-<!-- Thus, a total of $(T - n) + 1$ number of overlapping regressions are fitted, which are then ranked to obtain maximum and minimum values. -->
 Thus, a total of $(T - n) + 1$ number of overlapping regressions are fitted.
-Here, we can obtain maximum and minimum rate values of width $n$ by ranking the regressions, and if a periodic, interval-based regression is required, the function automatically selects regression metrics for non-overlapping sections of the data (Fig. 2a).
+Here, we can obtain maximum and minimum rate values of width $n$ by ranking the regressions, and if a periodic, interval-based regression is required, the function automatically selects regression metrics for non-overlapping sections of the data (Fig. \@ref(fig:c4rolling)a).
+
+
+```{r c4rolling, fig.cap="(ref:c4rolling)", fig.scap="(ref:sc4rolling)"}
+knitr::include_graphics("figs/ch_methods/fig2.png")
+```
+
+(ref:c4rolling) Illustration showing the sampling method used by `auto_rate()` during **(A)** interval regression analysis, where sample windows do not overlap and **(B)** rolling regression analysis, where sample windows overlap and move forward by one sample unit at a time.
+
+(ref:sc4rolling) Illustration showing the sampling methods used by `auto_rate()`.
 
 `auto_rate()` can also automatically select the most stable (i.e. most linear) sections of noisy data by applying additional analytical techniques. 
 First, we take advantage of the key assumption that linear sections of a data series are reflected by stable parameters across the rolling estimates, a property that is often applied in financial statistics to evaluate model stability and make forward predictions on time-series data [@Zivot2006].
@@ -197,20 +226,21 @@ The smoothing bandwidth is computed using the solve-the-equation *plug-in* metho
 We then use $h$ to select all values in the rolling regression output that match the range of values around each mode ($\theta_n$) of the KDE (i.e. $\theta_n \pm h$).
 These rolling estimates are grouped and ranked by size, and the upper and lower bounds of the data windows they represent are used to re-select linear segments from the original data series.
 The rolling estimates are then discarded while the ranked data segments are analysed using linear regression. 
-Summary diagnostics and visual plots provide supporting information on the technique and the validity of the results (Fig. 3).
+Summary diagnostics and visual plots provide supporting information on the technique and the validity of the results (Fig. \@ref(fig:c4autorate)).
 The performance of this particular method is further discussed in the Supplementary Material.
+
+```{r c4autorate, fig.cap="(ref:c4autorate)", fig.scap="(ref:sc4autorate)", out.width = '70%'}
+knitr::include_graphics("figs/ch_methods/fig3.png")
+```
+
+(ref:c4autorate) Typical graphical outputs of the function `auto_rate()`. **(A)** Depending on the `method` input, the function is able to show: (clockwise from top left) the maximum rate detected, the minimum rate detected, calculation of rate by fixed-width intervals, and the most linear region as determined by kernel density estimates. **(B)** In addition, the outputs will also print diagnostic plots of: (clockwise from top left) the rolling regression of rate as a function of time with dotted lines indicating the region used to estimate the parameter, a kernel density plot that shows only when the `linear` method is called, a residual plot of the regression, and a normal Q-Q plot of the residuals of the regression. The analysis is performed using the example dataset `sardine.rd`, which is included in the package. Code to reproduce the plots is available in Appendix \ref{appendixd}.
+
+(ref:sc4autorate) Typical graphical outputs of the function `auto_rate()`.
 
 #### Estimating rate from flow-through respirometry
 
 The function `calc_rate.ft()` is used to specifically analyse flow-through respirometry data, and is similar to `calc_rate()` in functionality. 
 However it accepts additional inputs of incurrent and excurrent oxygen concentration, and flow rate, based on the equation: $$\dot O_2 = (C_iO_2 - C_eO_2)FR$$ where $\dot O_2$ is the rate of $O_2$ uptake over time, $C_iO_2$ and $C_eO_2$ are the incurrent and excurrent $O_2$ concentrations, and $FR$ is the flow rate of water through the system [@Lighton2008].
-
-
-<!-- ```{r fig3, echo = F, fig.cap="Typical graphical outputs of the function `auto_rate()`. **(A)** Depending on the `method` input, the function is able to show: (clockwise from top left) the maximum rate detected, the minimum rate detected, calculation of rate by fixed-width intervals, and the most linear region as determined by kernel density estimates. **(B)** In addition, the outputs will also print diagnostic plots of: (clockwise from top left) the rolling regression of rate as a function of time with dotted lines indicating the region used to estimate the parameter, a kernel density plot that shows only when the `linear` method is called, a residual plot of the regression, and a normal Q-Q plot of the residuals of the regression. The analysis is performed using the example dataset `sardine.rd`, which is included in the package. Code to reproduce the plots is available in the Supplementary Material."} -->
-
-<!-- knitr::include_graphics("figs/fig3.png") -->
-<!-- # knitr::include_graphics("figs/fig3.pdf") -->
-<!-- ``` -->
 
 #### Estimating critical oxygen tension, P$_{crit}$
 
@@ -223,21 +253,22 @@ As $P_{crit}$ is the break-point in the relationship between ambient dissolved o
 This computationally intensive, but fast, method is unique to `respR` as most other methods use non-overlapping intervals to characterise their data, but rolling metrics are more sensitive to $P_{crit}$ analysis due to their high resolution.
 Alternatively, the user can input already calculated $\bar O_2 \sim \dot O_2$ data and the function will determine $P_{crit}$ using the data directly. 
 
+```{r c4pcrit, fig.cap="(ref:c4pcrit)", fig.scap="(ref:sc4pcrit)"}
+knitr::include_graphics("figs/ch_methods/fig4.png")
+```
 
-<!-- ```{r fig4, echo = F, fig.cap = "Output plots of the function `pcrit()`, used in the calculation of critical oxygen tension, P$_{crit}$. **(A)** To determine P$_{crit}$ in a regular $O_2$ timeseries, the function performs a rolling regression against the rolling mean of the data. This step is skipped if similar data is already provided, and the argument `has.rate` is `TRUE`. This produces **(B, C)** data that represents the rate of $O_2$ consumption as a function of $O_2$ concentration. Regression lines are then fitted iteratively, based on the broken-stick methods of Yeager and Ultsch (1989) and the segmented approach of Muggeo (2003), until convergence is achieved. The output then highlights the critical points as indicated by the coloured lines. **(D)** A close-up plot of the results in B and C is provided for the user to visualise the positions of the dotted lines relative to the x-axis."} -->
+(ref:c4pcrit) Output plots of the function `pcrit()`, used in the calculation of critical oxygen tension, P$_{crit}$. **(A)** To determine P$_{crit}$ in a regular $O_2$ timeseries, the function performs a rolling regression against the rolling mean of the data. This step is skipped if similar data is already provided, and the argument `has.rate` is `TRUE`. This produces **(B, C)** data that represents the rate of $O_2$ consumption as a function of $O_2$ concentration. Regression lines are then fitted iteratively, based on the broken-stick methods of Yeager and Ultsch (1989) and the segmented approach of Muggeo (2003), until convergence is achieved. The output then highlights the critical points as indicated by the coloured lines. **(D)** A close-up plot of the results in B and C is provided for the user to visualise the positions of the dotted lines relative to the x-axis.
 
-<!-- knitr::include_graphics("figs/fig4.png") -->
-<!-- # knitr::include_graphics("figs/fig4.pdf") -->
-<!-- ``` -->
+(ref:sc4pcrit) Output plots of the function `pcrit()`, used in the calculation of critical oxygen tension, P$_{crit}$.
 
-### Correcting, converting and scaling data
+## Correcting, converting and scaling data
 
-#### Corrections for background respiration
+### Corrections for background respiration
 
 The function `adjust.rate()` can be used to correct $\dot O_2$ estimates for background respiration. 
 As the oxygen consumption units are not mass-specific at the point of correction, the function adjusts $\dot O_2$ directly without bias using the equation: $$\dot O_{2(correction)} = \dot O_2 - (\phi_d + \dot O_{2(bg)})$$ where $\phi_d$ is the air-water oxygen flux as determined by Fick's Law [@Leclercq1999] and $\dot O_{2(bg)}$ is background respiration.
 
-#### Rate conversions
+### Rate conversions
 
 Because `respR` does not make any underlying assumptions on the units used to calculate metabolic rate, we provide two functions, `convert_DO()` and `convert_rate()`, to transform $\dot O_2$ into volume-adjusted or mass-specific units. These functions are comprehensive and can currently convert between 168 combinations of units and has support for changes in temperature, salinity and pressure.
 <!-- Units of measurement are not used when determining $\dot O_2$ in `respR`. Instead, two functions, `convert_DO()` and `convert_rate()`, are used to transform $\dot O_2$ to specific units and perform volumetric or mass-specific conversions.  -->
@@ -247,48 +278,42 @@ Thus any respirometry data may still be analysed without any restriction until c
 <!-- all of which are currently not supported in `respR`. -->
 <!-- Users may also be interested in using respR's analytical functions to investigate other linear relationships or perform breakpoint analyses on non-respirometry-related data. -->
 
-The function `convert_DO()` is used to convert units of oxygen concentration only (e.g. $mg/L$ or \%; Table 2). 
-For ease of use, we implemented a simple fuzzy string-matching algorithm to match relevant units (e.g. "$mg/L$", "$mg/l$", "$mg\ L^{-1}$" and "$mg\ l^{-1}$" are identified as the same units). 
+The function `convert_DO()` is used to convert units of oxygen concentration only (e.g. mg L or \%; Table \ref{convertlist}). 
+For ease of use, we implemented a simple fuzzy string-matching algorithm to match relevant units (e.g. "mg/L", "mgl-1", "mg L^-1^" and "mg\ l^-1^" are identified as the same units). 
 <!-- even when they have been provided in different formats -->
-The function `convert_rate()` is conceptually similar to `convert_DO()`, but it focuses on volumetric and mass-specific conversions (e.g. $mg\ h^{-1}\ kg^{-1}$).
+The function `convert_rate()` is conceptually similar to `convert_DO()`, but it focuses on volumetric and mass-specific conversions (e.g. mg h^-1^ kg^-1^).
+
+
+\begin{table}[tbp]
+\centering
+\caption{Units available for conversions in \texttt{convert\_DO()} and \texttt{convert\_rate()}.}
+\label{convertlist}
+\begin{tabular}{p{0.2\linewidth}p{0.2\linewidth}p{0.5\linewidth}}
+\toprule
+\textbf{Parameter} & \textbf{Used in} & \textbf{Units} \\ 
+\midrule
+$O_2$ & \texttt{convert\_DO()}, \texttt{convert\_rate()} & mg L\textsuperscript{-1}, $\mu$g L\textsuperscript{-1},  $\mu$mol L\textsuperscript{-1}, mL L\textsuperscript{-1}, $\mu$g kg\textsuperscript{-1}, mg kg\textsuperscript{-1}, $\mu$mol kg\textsuperscript{-1}, mmol kg\textsuperscript{-1}, mL kg\textsuperscript{-1}, hPa, kPa, mmHg, inHg\\
+Mass & \texttt{convert\_rate()} & $\mu$g, mg, g, kg \\
+Time & \texttt{convert\_rate()} & second, minute, hour \\
+\bottomrule
+\end{tabular}
+\end{table}
 
 ## Concluding remarks and future improvements
+
 The package `respR` implements a number of methods not available in any other R package or software. 
 These include the use of rolling regression techniques to estimate $\dot{M}O_{2,max}$, $\dot{M}O_{2,min}$, and $P_{crit}$, the use of kernel density estimation techniques to detect and rank linear segments of the data, support for unevenly-spaced time data, and the ability to extract and analyse data precisely by time, row, or $O_2$ concentration.
 <!-- In particular, there are clear advantages to using `respR` when estimating parameters for $\dot{M}O_{2,max}$ or $\dot{M}O_{2,min}$. -->
-It is important to note, however, that while `respR` contains automated methods to assist in processing difficult data, no amount of data manupilation can fix poor data. Users should still ensure that their data has been collected using acceptable methods (e.g. closed respirometry setups should always be equipped with mixing devices, see Clark et al. 2013) before performing analyses of any kind.
+It is important to note, however, that while `respR` contains automated methods to assist in processing difficult data, no amount of data manupilation can fix poor data. Users should still ensure that their data has been collected using acceptable methods (e.g. closed respirometry setups should always be equipped with mixing devices, see @Clark2013 before performing analyses of any kind.
 <!-- Unlike manual methods where data ranges may be arbitrarily selected,  -->
 Nevertheless, `respR` adheres to well-defined rules to obtain rates of interest, and its methods and results are transparent and fully reproducible. 
 The `respR` package allows for more effective and less time-consuming handling and processing of the extensive datasets that are increasingly common in respirometry research.
 
 
-```{r Table2, echo = F, results='asis'}
+<!-- ```{r Table2, echo = F, results='asis'} -->
 
-pander(conversions, caption = "Units available for conversions in `convert_DO()` and `convert_rate()`.")
+<!-- pander(conversions, caption = "Units available for conversions in `convert_DO()` and `convert_rate()`.") -->
 
-```
+<!-- ``` -->
 
 
-```{r c4intro, fig.cap="(ref:c4intro)", fig.pos="p"}
-knitr::include_graphics("figs/ch_methods/fig1.png")
-```
-
-(ref:c4intro) Diagram showing steps in a typical workflow in the analysis of respirometry data using `respR`. **(A)** Data are first checked for errors before **(B)** main functions are used to extract and analyse segments of the data. **(C)** Summarised results and diagnostic plots provide immediate visual feedback on the outcome of the analyses. **(D)** Once the rate estimates are obtained, they can be converted into volume and/or mass-specific rates.
-
-```{r c4rolling, fig.cap="(ref:c4rolling)", fig.pos="p"}
-knitr::include_graphics("figs/ch_methods/fig2.png")
-```
-
-(ref:c4rolling) Illustration showing the sampling method used by `auto_rate()` during **(A)** interval regression analysis, where sample windows do not overlap and **(B)** rolling regression analysis, where sample windows overlap and move forward by one sample unit at a time.
-
-```{r c4autorate, fig.cap="(ref:c4autorate)", fig.pos="p"}
-knitr::include_graphics("figs/ch_methods/fig3.png")
-```
-
-(ref:c4autorate) Typical graphical outputs of the function `auto_rate()`. **(A)** Depending on the `method` input, the function is able to show: (clockwise from top left) the maximum rate detected, the minimum rate detected, calculation of rate by fixed-width intervals, and the most linear region as determined by kernel density estimates. **(B)** In addition, the outputs will also print diagnostic plots of: (clockwise from top left) the rolling regression of rate as a function of time with dotted lines indicating the region used to estimate the parameter, a kernel density plot that shows only when the `linear` method is called, a residual plot of the regression, and a normal Q-Q plot of the residuals of the regression. The analysis is performed using the example dataset `sardine.rd`, which is included in the package. Code to reproduce the plots is available in the Supplementary Material.
-
-```{r c4pcrit, fig.cap="(ref:c4pcrit)", fig.pos="p"}
-knitr::include_graphics("figs/ch_methods/fig4.png")
-```
-
-(ref:c4pcrit) Output plots of the function `pcrit()`, used in the calculation of critical oxygen tension, P$_{crit}$. **(A)** To determine P$_{crit}$ in a regular $O_2$ timeseries, the function performs a rolling regression against the rolling mean of the data. This step is skipped if similar data is already provided, and the argument `has.rate` is `TRUE`. This produces **(B, C)** data that represents the rate of $O_2$ consumption as a function of $O_2$ concentration. Regression lines are then fitted iteratively, based on the broken-stick methods of Yeager and Ultsch (1989) and the segmented approach of Muggeo (2003), until convergence is achieved. The output then highlights the critical points as indicated by the coloured lines. **(D)** A close-up plot of the results in B and C is provided for the user to visualise the positions of the dotted lines relative to the x-axis.

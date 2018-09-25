@@ -35,12 +35,12 @@ c3mranovaix <- readr::read_csv("input/ch_multistressor/c3mranovaix.csv")
 kable(c3mranovaix, "latex", caption = "(ref:c3mranovaix)", booktabs = TRUE) %>%
   kable_styling(position = "center") %>%
   # kable_styling(latex_options = "hold_position") %>%
-  kable_styling(full_width = T) %>%
+  # kable_styling(full_width = T) %>%
   row_spec(c(0), bold = T)
 
 ```
 
-(ref:c3mranovaix) Analysis of Variance (ANOVA) test on the effects of temperature or pH on the metabolic rate of *H. erythrogramma* after 4 weeks of incubation to elevated temperature ($+0$, $+2$, $+3^\circ C$) and decreased pH ($8.0$ , $7.6$). There was no significant interaction between temperature and pH, thus the analysis was repeated with the terms removed (see Chapter 3 Table /@ref(tab:c3mrcontrasts). Significant differences are indicated with asterisks. **: $p= <0.01$ 
+(ref:c3mranovaix) Analysis of Variance (ANOVA) test on the effects of temperature or pH on the metabolic rate of *H. erythrogramma* after 4 weeks of incubation to elevated temperature ($+0$, $+2$, $+3^\circ C$) and decreased pH ($8.0$ , $7.6$). There was no significant interaction between temperature and pH, thus the analysis was repeated with the terms removed. Significant differences are indicated with asterisks. **: $p= <0.01$ 
 
 
 <!-- ```{r mrgroups} -->

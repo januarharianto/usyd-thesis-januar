@@ -15,9 +15,13 @@ library(snipR)
 
 ```
 
+\SingleSpacing
 
 # Long-term study of the multistressor impacts of ocean warming and acidification on the physiology of the sea urchin, *Heliocidaris erythrogramma* {#chapter3}
+
 \chaptermark{Warming and acidification on \textit{Heliocidaris erythrogramma}}
+
+\OnehalfSpacing
 
 ## Abstract{-}
 

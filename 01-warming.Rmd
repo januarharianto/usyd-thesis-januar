@@ -12,13 +12,14 @@ library(kableExtra)
 library(pander)
 ```
 
+\SingleSpacing
+
 # The effect of warming on mortality, metabolic rate, heat-shock protein response and gonad growth in thermally acclimated sea urchins (*Heliocidaris erythrogramma*)[^published2] {#chapter2}
 \chaptermark{Effect of warming on \textit{Heliocidaris erythrogramma}}
 
+\OnehalfSpacing
+
 [^published2]: This chapter is *published*: Harianto J, Nguyen HD, Holmes SP and Byrne M (2018). The effect of warming on mortality, metabolic rate, heat-shock protein response and gonad growth in thermally acclimated sea urchins (*Heliocidaris erythrogramma*). *Marine Biology* 165(6):96. doi: 10/gdqdv4.
-
-<!-- You can label chapter and section titles using `{#label}` after them, e.g., we can reference Chapter \@ref(intro). If you do not manually label them, there will be automatic labels anyway, e.g., Chapter \@ref(methods). -->
-
 
 ## Abstract {-}
 
@@ -266,7 +267,7 @@ knitr::include_graphics("figs/ch_warming/c2hsp.png")
 All urchins had gonads and there were no significant differences in gonad index between treatments (ANOVA, $F_{1,55} =$ 0.899, $p =$ 0.35; Figure 5). Partially spawned gonads were observed in 67 \%, 71 \%, 73 \% and 81 \% of gonad samples for the control, +2 \degree C, +4 \degree C and +6 \degree C treatments, respectively. The remaining gonad samples had few or no gametes evident and were scored as "spent" (Figure \@ref(fig:c2histo)).
 
 ```{r c2histo, fig.cap="(ref:c2histo)", fig.scap="(ref:sc2histo)", fig.pos="p"}
-knitr::include_graphics("figs/ch_warming/c2histo.png")
+knitr::include_graphics("figs/ch_warming/c2histol.png")
 ```
 
 (ref:c2histo) Histology of the gonads of female (A, B, D, E, G, J, L) and male (C, F, H, K) *Heliocidaris erythrogramma* after 14 weeks of acclimation in experimental treatments. The gonads were in a range of conditions with a few remaining unspawned gametes (top row; A–J), a mixture of intact and degenerating (arrows) gametes (second row; B–K) or spent with few or no gametes (bottom row; C–L) some with lipofuschin-like degradation pigment (arrows). Scale bars = 50 $\mu$m.

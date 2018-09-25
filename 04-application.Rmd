@@ -27,9 +27,12 @@ listfunctions <- readxl::read_excel('tables/list-of-functions.xlsx')
 conversions <- readxl::read_excel("tables/conversion-units.xlsx")
 ```
 
+\SingleSpacing
+
 # respR -- an R package for the analysis of respirometry data[^published5] {#chapter5}
 \chaptermark{respR -- an R package for respirometry}
 
+\OnehalfSpacing
 
 [^published5]: A portion of this chapter has been submitted and is under a third review as "Harianto J, Carey N and Byrne M (2018). `respR` -- an R package for the analysis of respirometry data. *Methods in Ecology and Evolution*. In review." In addition, the R package, `respR`, is already publishedo on GitHub as an open-source project.
 

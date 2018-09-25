@@ -1,0 +1,15 @@
+
+`r if (knitr::is_html_output()) '# References {-}'`
+
+\clearpage
+\markboth{References}{References}
+
+# References {-}
+<!-- \chapter*{References} -->
+
+\raggedright
+\noindent
+
+\setlength{\parindent}{-0.5in}
+\setlength{\leftskip}{0.5in}
+\setlength{\parskip}{8pt}

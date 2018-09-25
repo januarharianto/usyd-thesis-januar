@@ -14,10 +14,13 @@ library(snipR)
 
 ```
 
+\SingleSpacing
+
 # Offspring metabolic reaction norms to ocean warming and acidification are shaped by parental environment in the sea urchin, *Heliocidaris erythrogramma* {#chapter4}
 
 \chaptermark{Offspring metabolic responses to warming and acidification}
 
+\OnehalfSpacing
 
 ## Abstract {-}
 

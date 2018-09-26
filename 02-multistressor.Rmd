@@ -27,7 +27,7 @@ library(snipR)
 
 The warming and acidification of the world’s oceans affect nearly all aspects of physiology in marine organisms, and it is important to consider both stressors when predicting biological responses to a changing climate.
 We investigated the effects of long-term exposure to these stressors on the physiological responses of the sea urchin, *Heliocidaris erythrogramma*, a species that resides in the south-east Australian ocean warming hotspot. 
-Urchins collected in winter were slowly-adjusted over 7 weeks to conditions of elevated temperature (ambient +0, +2, +3 \degree C) and decreased pH (ambient -0, -0.4 pH units) conditions, before they were maintained at seasonally changing temperature and fixed pH for 22 weeks. Temperature was adjusted weekly to mimic the temperature change that occurs over time from winter to summer. 
+Urchins collected in winter were slowly-adjusted over 7 weeks to conditions of elevated temperature (ambient, +2, +3 \degree C) and decreased pH (ambient -0, -0.4 pH units) conditions, before they were maintained at seasonally changing temperature and fixed pH for 22 weeks. Temperature was adjusted weekly to mimic the temperature change that occurs over time from winter to summer. 
 Metabolic rate was measured at 4 and 12 weeks of acclimation, feeding rate and ammonia excretion rate at 12 weeks, and survival was monitored for 22 weeks. 
 Assimilation efficiency was also determined between weeks 12 and 13.
 Results showed that at +3 \degree C and regardless of pH, urchins were stressed, as demonstrated by the low survival (37 – 45 \% at 22 weeks), decreased feeding rate and increased rates of excretion, whereas + 2 \degree C had no observable effect on survival.
@@ -194,7 +194,7 @@ Header tanks were cleaned of algal growth once a month.
 
 Routine weight-specific metabolic rate, $MO_2$ was estimated by intermittent-flow respirometry at two time-points (at 4 and 12 weeks of acclimation), from a random sample of 10 specimens from each treatment.
 <!-- By 4 weeks survival was high with some mortality ensuing (see below), therefore the caveat with respect to the 12-week measurement is that we did this on the survivors. -->
-At 4 weeks, the temeperature levels were at 16.6, 18.6 and 19.6 \degree C and at 12 weeks, the temperature levels were at 20.7, 22.7 and 23.7 \degree C for the control +0, +2 and +3 \degree C treatments, respectively.
+At 4 weeks, the temeperature levels were at 16.6, 18.6 and 19.6 \degree C and at 12 weeks, the temperature levels were at 20.7, 22.7 and 23.7 \degree C for the ambient, +2 and +3 \degree C treatments, respectively.
 The specimens were not fed for 5 days prior to measurements and they were transferred individually into 1 L respirometry chambers maintained by individual water baths. 
 Each chamber contained an oxygen sensor spot (SP-PSt3-NAU, PreSens GmbH, Germany) for the detection of dissolved oxygen concentration using an external multi-channel sensor (OXY-10-mini, PreSens Gmbh, Germany). 
 A magnetic stirrer ensured even mixing of water.
@@ -378,7 +378,7 @@ Post-hoc analysis using Tukey's HSD showed significant differences between group
 knitr::include_graphics("figs/ch_multistressor/resp_plot.png")
 ```
 
-(ref:resp) Metabolic rate ($mg\ O_2\ h^{-1}\ kg^{-1}$) of *H. erythrogramma* acclimated for (A) 4 weeks, and (B) 12 weeks in six treatments of three temperatures ($+0, +2, +3 ^\circ C$) and two pH levels (white: 8.0, blue: 7.6). The top and bottom of the boxes represent the interquartile range (IQR) between the 25th and 75th percentile (Q1 and Q3, respectively). The horizontal line represents the median (Q2), the horizontal dotted line represents the mean, and the vertical lines (whiskers) represent the range of the data computed as follows: less than Q1 − 1.5IQR (bottom whisker); greater than Q3 + 1.5 IQR (top whisker).
+(ref:resp) Metabolic rate ($mg\ O_2\ h^{-1}\ kg^{-1}$) of *H. erythrogramma* acclimated for (A) 4 weeks, and (B) 12 weeks in six treatments of three temperatures (ambient, +2 \degree C, +3 \degree C) and two pH levels (white: 8.0, blue: 7.6). The top and bottom of the boxes represent the interquartile range (IQR) between the 25th and 75th percentile (Q1 and Q3, respectively). The horizontal line represents the median (Q2), the horizontal dotted line represents the mean, and the vertical lines (whiskers) represent the range of the data computed as follows: less than Q1 − 1.5IQR (bottom whisker); greater than Q3 + 1.5 IQR (top whisker).
 
 (ref:sresp) Metabolic rate ($mg\ O_2\ h^{-1}\ kg^{-1}$) of *H. erythrogramma* acclimated for (A) 4 weeks, and (B) 12 weeks in six treatments of three temperatures ($+0, +2, +3 ^\circ C$) and two pH levels (white: 8.0, blue: 7.6).
 
@@ -586,7 +586,7 @@ When experimental temperatures are kept constant, especially in many long-term, 
 <!-- Thus, one probable reason for the differences in survival between to the two treatments could be due to . -->
 Thus, the differences in temperature offset to the ambient levels had severe consequences at +3 \degree C, but not at +2 \degree C.
 The effect of this 1 \degree C difference would not be detected if environmental variation was not considered in long-term acclimation experiments, as is the case for the majority of current ocean climate change experiments. 
-However the importance of natural seasonal variation has been highlighted in recent reviews [e.g. @Gunderson2016] as most marine invertebrates exhibit a seasonal cycle in activities such as growth, reproduction and feeding 
+However the importance of natural seasonal variation has been highlighted in recent reviews [e.g. @Gunderson2016] as most marine invertebrates exhibit a seasonal cycle in activities such as growth, reproduction and feeding. 
 Thus, understanding the effects of seasonal change on biology is vital for predicting how organisms will respond to temporal changes with the added pressure of ocean warming [@Kreyling2013; @Thompson2013].
 <!-- If pH was also varied in this study...? -->
 <!-- Second, it is possibile that the populations of sea urchins collected in this experiment have different tolerance levels to temperature compared to past studies on the same species. -->
@@ -693,9 +693,9 @@ By far, only two other echinoderm studies [@Yeruham2015; @Zhao2018] have perform
 <!-- While those studies investigated sea urchin responses to warming only, -->
 @Yeruham2015 found that long-term (90+ days) exposure to increased (+2 \degree C) temperature was very lethal, causing significant mortality (up to 100 \%) in the Mediterranean purple sea urchin, *Paracentrotus lividus*.
 @Zhao2018 performed a transgenerational study which showed that parental acclimation to warming (+3 \degree C for 15 months) negatively affected fertilisation and larval size. 
-In our study, urchins were introduced to treatment conditions over 7 weeks and were acclimated for another 12 weeks before the relevant physiological responses were recorded, and introducing seasonal variation revealed stress responses that would not have been detected if the natural, long-term variation was not considered.
+In our study, urchins were introduced to treatment conditions over 7 weeks and were acclimated for another 12 weeks before the relevant physiological responses were recorded, and introducing seasonal variation revealed stress responses that would not have been detected if it was not considered.
 
-A general tolerance to OA effects is seen in several studies of adult sea urchin species, often demonstrated by their ability to maintain internal acid-base balance.
+A general tolerance to OA effects is seen in several studies of adult sea urchin species, demonstrated by their ability to maintain internal acid-base balance.
 For example, *Paracentrotus lividus* showed partial compensation of internal coelomic fluid buffering capacity when exposed to low pH (7.7 and 7.4 vs 8.0 control) for 19 days (Catarino et al. 2012), and *Echinometra* sp. *A*  was resilient to increased acidification, maintaining perivisceral coelomic fluid pH after approximately 3 months of acclimation to nea future levels of acidification ($\sim$ 860--940 $\mu Atm$ *p*$\mathrm{CO_2}$).
 *Strongylocentrotus droebachiensis* fully compensated for extracellular acidosis after 5 days of exposure to elevated pCO~2~ (1275 $\mu$atm, Dupont and Thorndyke, 2012), and in longer-term experiments, @Catarino2012 showed that *Echinometra mathaei* was able to maintain its extracellular pH after 7 months in low pH conditions (7.4, 7.7 vs. control 8.0).
 The maintenance of acid-base balance is an metabolically costly process since the regulation of ions requires the use of energy, thus exposure to OA effects often impacts metabolism, as shown in this study by the significantly increased metabolic rates when *H. erythrogramma* was exposed to low pH. 

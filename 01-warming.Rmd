@@ -14,7 +14,7 @@ library(pander)
 
 \SingleSpacing
 
-# The effect of warming on mortality, metabolic rate, heat-shock protein response and gonad growth in thermally acclimated sea urchins (*Heliocidaris erythrogramma*)[^published2] {#chapter2}
+# The effect of warming on mortality, metabolic rate, heat-shock protein response and gonad growth in thermally acclimated sea urchins (*Heliocidaris erythrogramma*) [^published2] {#chapter2}
 \chaptermark{Effect of warming on \textit{Heliocidaris erythrogramma}}
 
 \OnehalfSpacing

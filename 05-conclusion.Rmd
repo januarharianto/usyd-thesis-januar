@@ -22,46 +22,110 @@ library(snipR)
 <!-- The future of our oceans depend on the amount of anthropogenic carbon emitted in the next few decades. -->
 
 <!-- The era of the Anthropocene continues to stress our climate system worldwide, and these changes are causing deterioration of our marine ecosystems at an unprecedented scales, from mass mortality events to the redistribution of marine biodiversity, all compounded by the threat of increased extreme events [@Hughes2017a; @Harris2018; @Sommer2018]. -->
-A significant challenge in this era of the Anthropocene is to improve our predictive power with regards to the ecologically important outcomes of climate change. 
-These impacts on the ocean are multi-faceted, with strong synergies between abiotic stressors (e.g. temperature and pH) shaped by regional patterns of variability in time and space. 
-Addressing the influence of these interaction are vital to predicting the resilience of marine communities to environmental change [@Boyd2015; @Lange2017].
-However, it is also important to understand the basic physiological mechanisms influencing the responses of marine organisms to these stressors, of which temperature is a fundamental driver [@Somero2017; @Pettersen2018].
+A significant challenge in this era of the Anthropocene is to improve our predictive power with regards to the ecologically important outcomes of climate change on our ocean. 
+These impacts are multi-faceted, with strong synergies between abiotic stressors (e.g. temperature and pH) shaped by regional patterns of variability in time and space. 
+Addressing the influence of these interactions are vital to predicting the resilience of marine communities to environmental change [@Boyd2015; @Lange2017].
+However, it is also important to understand the basic physiological mechanisms influencing the responses of marine organisms to these stressors, of which temperature is a fundamental driver [Chapters \@ref(chapter2), \@ref(chapter3), \@ref(chapter4); @Somero2017; @Pettersen2018].
 To accomplish this, it is key to integrate single species, ecophysiological approaches to test hypotheses involving multiple stressors, changing abiotic conditions and phenotypic plasticity. 
 It is also important that methods are easily reproducible so that the research in the field can progress through time and replication. 
 
-This thesis addresses the knowledge gaps above, and although the long-term and multi-stressor experimental methods were applied to a single species of sea urchin, the outcomes are relevant to current and future predictions of resilience of other taxa to our increasingly altered ocean.
-Importantly, this thesis shows evidence that the future will pose considerable challenges to the resilience of this sea urchin (and similar taxa), the outcomes of this thesis highlight the fact that that in addition to phenotypic plasticity, trans-generational effects (e.g. transgenerational plasticity and developmental plasticity) and genetic adaptation will also play major roles in the alteration of species occurrences and performances under climate change.
+This thesis addresses the knowledge gaps above with its long-term and multistressor experimental designs focusing on physiological responses, especially metabolic rate, and with the development of novel methods to rapidly and reproducibly analyse physiological rates. 
+Although the experiments were applied to a single species of sea urchin, the outcomes are relevant to current and future predictions of resilience in our increasingly altered ocean.
+
+## Metabolic rate is a key physiological response variable
+
+The ability to alter metabolic rates in response to abiotic change can have important consequences because organisms with the greatest capacity for physiological plasticity are hypothesised to be most resilient to climate change stressors [@Tomanek2008; @Somero2010; @Dingemanse2010].
+For adult *H. erythrogramma*, long-term exposure to warming or acidification resulted in the expected response of increased metabolic rates with warming or low pH, and in some cases revealed energetic trade-offs involving metabolic depression (Chapter \@ref(chapter2)), or reduced metabolic sensitivity to the stressors (Chapter \@ref(chapter3)).
+Changes in metabolic rate can provide vital insights to the understanding of other physiological responses such as HSP70 protein expression (Chapter \@ref(chapter2)),  feeding rates (Chapter \@ref(chapter2), \@ref(chapter3)) and scope for growth (SfG, Chapter \@ref(chapter3)).
+This is because all of these processes are affected by the availability of energy which is metabolised via respiration.
+Thus, reduced feeding and decreased metabolic rate for *H. erythrogramma* in the presense of combined temperature and pH stress (+3 \degree C, pH 7.6, Chapter \@ref(chapter3)) were indicative of underlying physiological stress since less energy is available to respond to increased stress levels.
+Similarly, observed metabolic depression due to exposure to high levels of warming (+6 \degree C at 26 \degree C, Chapter \@ref(chapter2)) would indicate an active suppression of metabolic processes which would affect all other physiological processes, thus providing a physiological baseline for the interpretation of other physiological responses at that treatment level.
+<!-- , thus indicating underlying obstacles affecting fitness and survival.  -->
+
+Metabolic rate is a vital component of the scope for growth model (SfG), which provides valuable information about the changing energy budgets of organisms when under environmental stress as they are expected to devote extra energy to maintain physiological homeostasis at the expense of growth and reproduction [@Hoefnagel2017]. 
+*Heliocidaris erythrogramma* has a net positive scope for growth under all warming and acidification scenarios (Chapter \@ref(chapter3)).
+Thus there was sufficient available energy for allocation to growth, reproduction and other physiological processes [@Filgueira2011].
+Despite available excess energy the species suffered significant mortality at a +3 \degree C level of warming, which was unaffected by the inclusion of low pH.
+This indicated that while the species was not limited by energy availability, other undelying issues were  impacting its fintess, which may include limitations to aerobic scope [@Verberk2016] or insufficient physiological plasticity to compensate for the negative effects of thermal stress [@Seebacher2014]. 
+
+As SfG integrates multiple growth components into a single performance metric of energy acquisition (feeding, assimilation) and expenditure (respiration, excretion), calculating SfG is worthwhile to quantify the effects of environmental stress on the net energy available for growth.
+Further studies could look into detailed statistical differences in SfG to determine metabolic stress, which has been shown to be a useful indicator [e.g. @Tateda2015].
+
+<!-- If SfG is positive, an organism has sufficient excess energy that can be allocated to growth and reproduction. In contrast, negative SfG indicates over-utilisation of energy reserves, thus growth and reproduction will be impacted or decrease [@Filgueira2011]. -->
+
+<!-- model SfG on individual sea urchins, which was a limitation of this study. -->
+
+<!-- In contrast, negative SfG indicates over-utilisation of energy reserves, thus growth and reproduction will be impacted or decrease [@Filgueira2011]. -->
+<!-- When adult *H. erythrogramma* altered its metabolic rate, it was in response to exposure to increased temperature, low pH, or the combination ot both stressors (Chapters \@ref(chapter2), \@ref(chapter3)).  -->
+
+
+
+
+<!-- Importantly, this thesis shows evidence that the future will pose considerable challenges to the resilience of this sea urchin (and similar taxa), the outcomes of this thesis highlight the fact that that in addition to phenotypic plasticity, trans-generational effects (e.g. transgenerational plasticity and developmental plasticity) and genetic adaptation will also play major roles in the alteration of species occurrences and performances under climate change. -->
 <!-- The results of  experiments highlighted the importance of temperature, and the interactive influence (from a multistressor context) of low pH, on the physiologicsl responses of *H. erythrogramma*. -->
 
 
-## Timing affects stress responses
+## Timing and magnitude of stress events can influence the outcome of stressor experiments
 
 <!-- To be ecologically relevant, experiments that aim to determine the stress responses of an organism to environmental stressors must first consider the spatial and temporal nature of the natural environment that the organism occupies. -->
 All adult acclimation experiments in this thesis (Chapters \@ref(chapter2) to \@ref(chapter4)) were performed with careful consideration of the natural environment inhabited by *H. erythrogramma*.
 <!-- Temperature levels were determined based on in situ loggers deployed at collection sites, and  -->
-The first study (Chapter \@ref(chapter2)) used the annual mean temperature of the sea urchin habitat in Sydney Harbour to establish constant temeprature treatments and determine thermal limits.
+The first study (Chapter \@ref(chapter2)) used the annual mean temperature of the sea urchin habitat in Sydney Harbour to establish constant temperature treatments and to determine long-term thermal limits.
 Subsequent studies (Chapters \@ref(chapter3), \@ref(chapter4)) incorporated a baseline representation of temperature conditions with weekly adjustments, based on logger data to reflect the realistic pattern of seasonal change experienced by the sea urchins.
 These considerations were critical in disentangling the chronic effects of envrionmental stress on the physiological responses of *H. erythrogramma*. 
-The results of Chapter \@ref(chapter2) showed that the upper thermal tolerance limit of *H. erythrogramma* was 26 \degree C, however Chapter \@ref(chapter3) also showed that significant mortality can occur at lower temperature levels (20 \degree C to 25 \degree C) when temperature levels followed the long-term seasonal trend between winter and summer.
-The results underline the vital importance of seasonal dynamics on organismal responses, and the consequences of exposure to climate change stressors depend critically on the timing of introduction of stressors.
 
-The inclusion of seasonality of temperature is rarely taken into account as most studies use constant temperature to establish their conditions []
+The results of Chapter \@ref(chapter2) showed that the upper thermal tolerance limit of *H. erythrogramma* was 26 \degree C, but significant mortality can occur at lower temperature levels (20 \degree C to 24 \degree C) if treatment temperature levels followed the long-term seasonal trend between winter and summer (Chapter \@ref(chapter3)).
+In contrast, at those same temperature levels (20 \degree C to 24 \degree C) under constant temperature conditions (Chapter \@ref(chapter2)), survivorship was not significantly affected.
+<!-- The results underline the importance of seasonal dynamics on organismal responses, and the consequences of exposure to climate change stressors depend critically on the timing of introduction of stressors. -->
+<!-- Because all studies in this thesis involved long-term experiments, it was important that  -->
+It appears that the experimental simulation of an early arrival of summer temperatures from weekly adjustments of temperature was more stressful to *H. erythrogramma* than if it were acclimated constantly to the same summer-level (i.e 22 \degree C) temperature.
+Further, the sea urchins were collected in the beginning of winter in June, which was at during beginning of *H. erythrogramma's* peak gonadal developmental season before spawning [@Williams1975; @Laegdsgaard1991].
+Gametogenesis is an energetically demanding biological process [@Marsh2007] that can can potentially be an important factor affecting metabolic and physiological responses to stressors at its seasonal peak.
+The inclusion of seasonality of temperature (or other environmental variables) is rarely taken into account as most studies use constant temperature to establish their conditions [@Gunderson2015], but for long-term studies it is a vital consideration since seasonal variations are expected in the environment, and many marine invertebrates follow a seasonal cycle for growth, reproduction and feeding, all of which may affect metabolic responses.
+
+In addition to the timing of experiments, their durations are also important considerations affecting the interpretation of stressor studies.
+For example, many of the above responses may be different, or may not have been observed if the experimental durations were short, as is often discussed for climate change experiments from various studies and reviews [@Gunderson2015; @Przeslawski2015; @Morley2016; @Verges2016; @Hoefnagel2017]. This highlights the importance of discerning long-term trends from acute responses as they represent different scenarios with distinct ecological relevances.
+Past studies on marine ectotherms have demonstrated that high thermal tolerance cannot determine resilience to chronic warming [@Madeira2018; @Nguyen2011].
+Thus, while acute responses are essential to understanding rapid responses to environmental variability, understanding the effects of long-term exposure to the same levels of stress are also needed to understand resilience at longer time scales.
+
+
+
+
+
+<!-- Thus, even for studies that expose organisms to constant conditions, the  -->
 
 <!-- Incorporating more realistic environmental conditions into long-term expriments are important as they -->
 
 <!-- As a result, these studies are ecologically relevant since abiotic factors fluctuate over time and the consequences of different stressors on the resilence of orgasnisms are dependent on their ability to physiologically acclimate to changes in their environments [@Seebacher2014; @Murren2015]. -->
 <!-- Experiments that aim to determine the stress responses of an organism to environmental stressors must first consider the spatial and temporal nature of the natural environment of the study organism. -->
 
-## Linking physiology to resilience
 
-For adult *H. erythrogramma*, warming appears to be the dominant stressor affecting all physiological responses significantly.
+## Current populations of *H. erythrogramma* show limited resilience to the interactive effects of warming and acidification
 
-## The fate of calcifying sea urchins in the face of climate change
+<!-- Regardless of acclimation regime, the current populations of *H. erythrogramma* tested in this thesis appeared to be living close to their upper thermal limit of 26 \degree C as seen from this thesis. -->
+
+<!-- The current populations of *H. erythrogramma* tested in this thesis appear to be living close to their upper thermal limit, which was 26 \degree C. -->
+
+*H. erythrogramma* is 
 
 
-## Future directions
+## Offspring responses are influenced by parental environments
 
-There is no doubt that climate change will alter marine biodiversity in the future [@Hillebrand2018]. The work presented in this thesis provides an experimental framework with which to undertake climate change research utilising multiple stressors 
+## Modern analytical techniques can improve analyses of increasingly complex respirometry data
+
+## Concluding remarks and future directions
+
+There is no doubt that climate change will alter marine biodiversity in the future [@Hillebrand2018; @Hughes2017; @Ramirez2017]. 
+For sea urchins such as *H. erythrogramma*, the evidence shows that there is potential for resilience through the alteration of physiology and phenotypic plasticity.
+The work presented here provides an experimental framework with which to undertake long-term climate change research using multiple stressors under a unifying theme of metabolic response, and delivers novel methods in the analysis of physiological rates in an R package that has the potential of being used across multiple disciplines.
+The investigation of the interaction between environmental variables, parental experience and offspring responses remains largely unexplored for many marine taxa, and will be highly relevant for better predictions of impacts to future changes in our marine environments. In addition, while briefly explored in this thesis, understanding the dynamics of temporal variations in environmental conditions is also an important consideration as different responses can occur if experiments incorporate realistic experimental conditions that better reflect the variations in stress patterns experienced by organisms in their natural environments.
+Anticipating these future directions will provide better ecological interpretations of species resilience to climate change stress.
+
+<!-- must consider the dynamics of en- vironmental stress at the spatial and temporal scales appropriate for the organism under study. -->
+
+
+<!-- very different responses to the same stressor combinations can occur in the same organism depending on how realistic the experi- mental conditions are, which carries subsequent implications for the ecological interpretation as well. -->
+
 
 <!-- END -->
 \OnehalfSpacing

@@ -27,6 +27,7 @@ listfunctions <- readxl::read_excel('tables/list-of-functions.xlsx')
 conversions <- readxl::read_excel("tables/conversion-units.xlsx")
 ```
 
+\cleardoublepage
 \SingleSpacing
 
 # respR -- an R package for the analysis of respirometry data[^published5] {#chapter5}
@@ -59,20 +60,20 @@ It is also is by far the most common metric used to assess physiological perform
 While there are other methods such as monitoring heart or ventilatory rates, metabolic rate is typically quantified using respirometry, which measures the rate of oxygen uptake over time [@Lighton2008]. 
 
 There are four broad methodological approaches in respirometry: closed, intermittent flow, flow-through and open. 
-In closed respirometry, $O_2$ decrease is measured within a hermetically sealed chamber of known volume, sometimes set within a closed loop to allow mixing of the environment within the chamber. 
+In closed respirometry, O~2~ decrease is measured within a hermetically sealed chamber of known volume, sometimes set within a closed loop to allow mixing of the environment within the chamber. 
 Oxygen recordings may be continuous through use of an oxygen probe, periodic through withdrawing water or gas samples at set intervals, or a two-point measurement consisting of the initial and final concentrations. 
-Metabolic rates are estimated from the $O_2$ timeseries by assuming a linear relationship between variables, and estimates of metabolic rate are straightforward in constant volume respirometry using the equation: $$VO_2 = \dot O_2V$$ where $\dot O_2$ is the slope of the regression that describes the rate of change in $O_2$ concentration over time, or in the case of a two-point measurement, the difference in $O_2$ concentration divided by time elapsed, and $V$ is the volume of the container [@Lighton2008].
+Metabolic rates are estimated from the O~2~ timeseries by assuming a linear relationship between variables, and estimates of metabolic rate are straightforward in constant volume respirometry using the equation: $$VO_2 = \dot O_2V$$ where $\mathrm{\dot O_2}$ is the slope of the regression that describes the rate of change in O~2~ concentration over time, or in the case of a two-point measurement, the difference in O~2~ concentration divided by time elapsed, and $V$ is the volume of the container [@Lighton2008].
 
-In intermittent flow respirometry, $O_2$ concentration is measured as described above, but periodically the chamber is flushed with new water or air, returning it to initial conditions, resealed, and the experiment repeated [@Svendsen2016]. 
+In intermittent flow respirometry, O~2~ concentration is measured as described above, but periodically the chamber is flushed with new water or air, returning it to initial conditions, resealed, and the experiment repeated [@Svendsen2016]. 
 This technique is essentially closed respirometry, but with the incorporation of repeated measures. 
 Depending on the metabolic rate metric being investigated, final respiration rate can be calculated as the mean of the measures [e.g. @Carey2016], or the lowest or highest rates recorded in any trial [e.g. @Stoffels2015].
 
 Flow-through respirometry involves a closed chamber, but with a regulated flow of air or water through it at a precisely determined rate. 
-After equilibrium has been achieved, the oxygen concentration differential between the incurrent and excurrent channels, along with the flow rate, allows calculation of the oxygen extracted from the flow volume per unit time: $$VO_2 = (C_iO_2 - C_eO_2)FR$$ where $\dot{V}O_2$ is the rate of $O_2$ consumption over time, $C_iO_2$ and $C_eO_2$ are the incurrent and excurrent $O_2$ concentrations, and $FR$ is the flow rate of water through the system [@Lighton2008].
+After equilibrium has been achieved, the oxygen concentration differential between the incurrent and excurrent channels, along with the flow rate, allows calculation of the oxygen extracted from the flow volume per unit time: $$VO_2 = (C_iO_2 - C_eO_2)FR$$ where $\dot{V}O_2$ is the rate of O~2~ consumption over time, $C_iO_2$ and $C_eO_2$ are the incurrent and excurrent O~2~ concentrations, and $FR$ is the flow rate of water through the system [@Lighton2008].
 
 A final method is open respirometry, in which an open tank or semi-enclosed area is used, but the input or mixing rate of oxygen from the surroundings is known or found to be negligible relative to oxygen consumption of the specimens [@Leclercq1999]. 
 It is seldom used, but for some applications it is a sufficient and practical methodology [@Gamble2014]. 
-The common equation used for open respirometry is: $$VO_2 = \dot O_2V + \phi_d$$ where $\dot O_2V$ is the slope of the regression that relates $O_2$ concentration to time, $V$ is the volume of the container and $\phi_d$ is the oxygen flux as determined by Fick's Law [@Leclercq1999].
+The common equation used for open respirometry is: $$VO_2 = \dot O_2V + \phi_d$$ where $\dot O_2V$ is the slope of the regression that relates O~2~ concentration to time, $V$ is the volume of the container and $\phi_d$ is the oxygen flux as determined by Fick's Law [@Leclercq1999].
 
 Depending on the experiment, different metabolic rate parameters may be of interest to researchers. 
 These include maximum metabolic rate (MMR, or $\dot{M}O_{2,max}$), rates under high activity or exhaustive exercise, and minimal metabolic rate ($\dot{M}O_{2,min}$), which may be termed standard (SMR), basal (BMR), or resting metabolic rate, and typically represents the minimum metabolic cost of maintaining biological functioning [@White2013; @Chabot2016]. 
@@ -80,7 +81,7 @@ Routine metabolic rate (RMR) is similar to $\dot{M}O_{2,min}$, but takes into ac
 Another metric of interest is the critical oxygen tension, which represents the lowest level of oxygen at which aerobic metabolism is independent of the ambient partial pressure of oxygen [$P_{crit}$; @Yeager1989; @Hochachka2002]. 
 
 Respirometry studies are increasingly outputting large, high-resolution datasets conducted over long periods [e.g. 20 h; @Norin2012]. 
-In many cases, processing the data involves an *ad hoc* selection of data points with poorly reported criteria, and subsequent manual processing of the data subset(s) using a spreadsheet program (e.g. Microsoft Excel) or an integrated development environment (IDE, e.g. R or Matlab). 
+In many cases, processing the data involves an ad hoc selection of data points with poorly reported criteria, and subsequent manual processing of the data subset(s) using a spreadsheet program (e.g. Microsoft Excel) or an integrated development environment (IDE, e.g. R or Matlab). 
 These approaches can be tedious and time-consuming especially when spreadsheet programs struggle with the vast datasets that are generated, while IDEs require a degree of expertise to use and have substantial learning curves. 
 Dedicated software are also available to perform metabolic rate analyses, but many have costly licensing requirements (e.g. AutoResp by Loligo Systems), complicating or preventing their use on multiple machines, and are proprietary and closed-source, hindering scientific reproducibility and transparency.  
 
@@ -142,14 +143,16 @@ The `respR` package streamlines the analysis of respirometry data by partitionin
 By design, each step of the workflow requires minimal manual manipulation of the data, and the user can pass the output of each function to the next. 
 This object-oriented approach makes `respR` easy to use, even for novice users of R, and allows R programmers to extend the functionality of the package easily. 
 <!-- either by adding additional intermediate actions or substituting current actions with other code without breaking the rest of the package.  -->
-Note, we use $\dot O_2$ in the text to represent the unit-less rate of $O_2$ use with regard to the time unit, and to distinguish it from other commonly reported metrics (e.g. $\dot{M}O_2$, $\dot{V}O_2$).
+Note, we use $\mathrm{\dot O_2}$ in the text to represent the unit-less rate of O~2~ use with regard to the time unit, and to distinguish it from other commonly reported metrics (e.g. $\dot{M}O_2$, $\dot{V}O_2$).
 
 
-```{r c4intro, fig.cap="(ref:c4intro)"}
+```{r c4intro, fig.cap="(ref:c4intro)", fig.scap="(ref:sc4intro)"}
 knitr::include_graphics("figs/ch_methods/fig1.png")
 ```
 
 (ref:c4intro) Diagram showing steps in a typical workflow in the analysis of respirometry data using `respR`. **(A)** Data are first checked for errors before **(B)** main functions are used to extract and analyse segments of the data. **(C)** Summarised results and diagnostic plots provide immediate visual feedback on the outcome of the analyses. **(D)** Once the rate estimates are obtained, they can be converted into volume and/or mass-specific rates.
+
+(ref:sc4intro) Diagram showing steps in a typical workflow in the analysis of respirometry data using `respR`.
 
 Installation of `respR` can be performed directly via the R console using `devtools`:
 
@@ -194,12 +197,12 @@ Data segments can be truncated before analysis by time period or row numbers. Th
 
 #### Processing respirometry data
 
-Typically, the analysis of respirometry data requires the selection one or more linear sections of the data for more accurate calculations of $\dot O_2$ [e.g. @Gordon1989; @Chu2017; @Carey2016]. 
+Typically, the analysis of respirometry data requires the selection one or more linear sections of the data for more accurate calculations of $\mathrm{\dot O_2}$ [e.g. @Gordon1989; @Chu2017; @Carey2016]. 
 The function `calc_rate()` can manually extract and process data subset from respirometry data. 
-Data subsets can be selected by (1) time period, (2) row numbers, (3) $O_2$ decrease or (4) proportion, which should accommodate most, if not all, manual data selection requirements and allow for consistent reporting of methods and results. 
+Data subsets can be selected by (1) time period, (2) row numbers, (3) O~2~ decrease or (4) proportion, which should accommodate most, if not all, manual data selection requirements and allow for consistent reporting of methods and results. 
 Rates are determined using linear regression.
 <!-- However a two-point analysis is also included alongside all regression results.  -->
-<!-- Generally, $\dot O_2$ is calculated using the equation: $$\dot O_2 = \dot O_2 \cdot V$$ where $\dot O_2$ is the slope of the regression that describes the rate of change in $O_2$ concentration over time, or in the case of a two-point measurement, the difference in $O_2$ concentration divided by time elapsed, and $V$ is the volume of the container [@Lighton2008]. -->
+<!-- Generally, $\mathrm{\dot O_2}$ is calculated using the equation: $$\dot O_2 = \dot O_2 \cdot V$$ where $\mathrm{\dot O_2}$ is the slope of the regression that describes the rate of change in O~2~ concentration over time, or in the case of a two-point measurement, the difference in O~2~ concentration divided by time elapsed, and $V$ is the volume of the container [@Lighton2008]. -->
 
 <!-- ### Estimating maximum, minimum, most linear and interval rate -->
 
@@ -243,7 +246,7 @@ knitr::include_graphics("figs/ch_methods/fig3.png")
 #### Estimating rate from flow-through respirometry
 
 The function `calc_rate.ft()` is used to specifically analyse flow-through respirometry data, and is similar to `calc_rate()` in functionality. 
-However it accepts additional inputs of incurrent and excurrent oxygen concentration, and flow rate, based on the equation: $$\dot O_2 = (C_iO_2 - C_eO_2)FR$$ where $\dot O_2$ is the rate of $O_2$ uptake over time, $C_iO_2$ and $C_eO_2$ are the incurrent and excurrent $O_2$ concentrations, and $FR$ is the flow rate of water through the system [@Lighton2008].
+However it accepts additional inputs of incurrent and excurrent oxygen concentration, and flow rate, based on the equation: $$\dot O_2 = (C_iO_2 - C_eO_2)FR$$ where $\mathrm{\dot O_2}$ is the rate of O~2~ uptake over time, $C_iO_2$ and $C_eO_2$ are the incurrent and excurrent O~2~ concentrations, and $FR$ is the flow rate of water through the system [@Lighton2008].
 
 #### Estimating critical oxygen tension, P$_{crit}$
 
@@ -252,7 +255,7 @@ The first is a "broken-stick" regression (BSR) approach, adopted from @Yeager198
 The second method is a wrapper for the segmented, or "broken-line" regression approach, presented by @Muggeo2003 and available as part of the `segmented` R package [@Muggeo2008], which estimates the critical point by iteratively fitting two intersecting models on the data and selecting the point that minimises the "gap" between the two fitted lines.
 Both methods are well-used in the literature [@Labra2016; @Hansen2017; @Chu2017; @Regan2017].
 
-As $P_{crit}$ is the break-point in the relationship between ambient dissolved oxygen ($O_2$) and rate of O2 uptake ($\dot O_2$), the user has two options to input data. With an $O_2 \sim$ timeseries dataset, the function will automatically perform both a rolling mean and a rolling regression of $O_2$ data over time to produce the required $\bar O_2 \sim \dot O_2$ dataset (Fig. 4). 
+As $P_{crit}$ is the break-point in the relationship between ambient dissolved oxygen (O~2~) and rate of O2 uptake ($\mathrm{\dot O_2}$), the user has two options to input data. With an $O_2 \sim$ timeseries dataset, the function will automatically perform both a rolling mean and a rolling regression of O~2~ data over time to produce the required $\bar O_2 \sim \dot O_2$ dataset (Fig. 4). 
 This computationally intensive, but fast, method is unique to `respR` as most other methods use non-overlapping intervals to characterise their data, but rolling metrics are more sensitive to $P_{crit}$ analysis due to their high resolution.
 Alternatively, the user can input already calculated $\bar O_2 \sim \dot O_2$ data and the function will determine $P_{crit}$ using the data directly. 
 
@@ -260,7 +263,7 @@ Alternatively, the user can input already calculated $\bar O_2 \sim \dot O_2$ da
 knitr::include_graphics("figs/ch_methods/fig4.png")
 ```
 
-(ref:c4pcrit) Output plots of the function `pcrit()`, used in the calculation of critical oxygen tension, P$_{crit}$. **(A)** To determine P$_{crit}$ in a regular $O_2$ timeseries, the function performs a rolling regression against the rolling mean of the data. This step is skipped if similar data is already provided, and the argument `has.rate` is `TRUE`. This produces **(B, C)** data that represents the rate of $O_2$ consumption as a function of $O_2$ concentration. Regression lines are then fitted iteratively, based on the broken-stick methods of Yeager and Ultsch (1989) and the segmented approach of Muggeo (2003), until convergence is achieved. The output then highlights the critical points as indicated by the coloured lines. **(D)** A close-up plot of the results in B and C is provided for the user to visualise the positions of the dotted lines relative to the x-axis.
+(ref:c4pcrit) Output plots of the function `pcrit()`, used in the calculation of critical oxygen tension, P$_{crit}$. **(A)** To determine P$_{crit}$ in a regular O~2~ timeseries, the function performs a rolling regression against the rolling mean of the data. This step is skipped if similar data is already provided, and the argument `has.rate` is `TRUE`. This produces **(B, C)** data that represents the rate of O~2~ consumption as a function of O~2~ concentration. Regression lines are then fitted iteratively, based on the broken-stick methods of Yeager and Ultsch (1989) and the segmented approach of Muggeo (2003), until convergence is achieved. The output then highlights the critical points as indicated by the coloured lines. **(D)** A close-up plot of the results in B and C is provided for the user to visualise the positions of the dotted lines relative to the x-axis.
 
 (ref:sc4pcrit) Output plots of the function `pcrit()`, used in the calculation of critical oxygen tension, P$_{crit}$.
 
@@ -268,13 +271,13 @@ knitr::include_graphics("figs/ch_methods/fig4.png")
 
 ### Corrections for background respiration
 
-The function `adjust.rate()` can be used to correct $\dot O_2$ estimates for background respiration. 
-As the oxygen consumption units are not mass-specific at the point of correction, the function adjusts $\dot O_2$ directly without bias using the equation: $$\dot O_{2(correction)} = \dot O_2 - (\phi_d + \dot O_{2(bg)})$$ where $\phi_d$ is the air-water oxygen flux as determined by Fick's Law [@Leclercq1999] and $\dot O_{2(bg)}$ is background respiration.
+The function `adjust.rate()` can be used to correct $\mathrm{\dot O_2}$ estimates for background respiration. 
+As the oxygen consumption units are not mass-specific at the point of correction, the function adjusts $\mathrm{\dot O_2}$ directly without bias using the equation: $$\dot O_{2(correction)} = \dot O_2 - (\phi_d + \dot O_{2(bg)})$$ where $\phi_d$ is the air-water oxygen flux as determined by Fick's Law [@Leclercq1999] and $\dot O_{2(bg)}$ is background respiration.
 
 ### Rate conversions
 
-Because `respR` does not make any underlying assumptions on the units used to calculate metabolic rate, we provide two functions, `convert_DO()` and `convert_rate()`, to transform $\dot O_2$ into volume-adjusted or mass-specific units. These functions are comprehensive and can currently convert between 168 combinations of units and has support for changes in temperature, salinity and pressure.
-<!-- Units of measurement are not used when determining $\dot O_2$ in `respR`. Instead, two functions, `convert_DO()` and `convert_rate()`, are used to transform $\dot O_2$ to specific units and perform volumetric or mass-specific conversions.  -->
+Because `respR` does not make any underlying assumptions on the units used to calculate metabolic rate, we provide two functions, `convert_DO()` and `convert_rate()`, to transform $\mathrm{\dot O_2}$ into volume-adjusted or mass-specific units. These functions are comprehensive and can currently convert between 168 combinations of units and has support for changes in temperature, salinity and pressure.
+<!-- Units of measurement are not used when determining $\mathrm{\dot O_2}$ in `respR`. Instead, two functions, `convert_DO()` and `convert_rate()`, are used to transform $\mathrm{\dot O_2}$ to specific units and perform volumetric or mass-specific conversions.  -->
 This unique approach has the advantage of allowing rate calculations for data that may not be entirely supported by the `respR` workflow. 
 For example, measurements of respiration can be scaled to surface area [e.g. diatoms & coral, @Iversen2013; @Naumann2014], volume [e.g. copepod eggs, @Hammervold2015], or density [e.g. sea urchin larvae, @Stumpp2011], all of which are not yet supported in `respR`'s conversion functions.
 Thus any respirometry data may still be analysed without any restriction until conversion is required, in which users at this point perform those conversions manually.
@@ -282,7 +285,7 @@ Thus any respirometry data may still be analysed without any restriction until c
 <!-- Users may also be interested in using respR's analytical functions to investigate other linear relationships or perform breakpoint analyses on non-respirometry-related data. -->
 
 The function `convert_DO()` is used to convert units of oxygen concentration only (e.g. mg L or \%; Table \ref{convertlist}). 
-For ease of use, we implemented a simple fuzzy string-matching algorithm to match relevant units (e.g. "mg/L", "mgl-1", "mg L^-1^" and "mg\ l^-1^" are identified as the same units). 
+For ease of use, we implemented a simple fuzzy string-matching algorithm to match relevant units (e.g. mg/L, mgl-1, mg L^-1^ and mg\ l^-1^ are identified as the same units). 
 <!-- even when they have been provided in different formats -->
 The function `convert_rate()` is conceptually similar to `convert_DO()`, but it focuses on volumetric and mass-specific conversions (e.g. mg h^-1^ kg^-1^).
 
@@ -295,7 +298,7 @@ The function `convert_rate()` is conceptually similar to `convert_DO()`, but it 
 \toprule
 \textbf{Parameter} & \textbf{Used in} & \textbf{Units} \\ 
 \midrule
-$O_2$ & \texttt{convert\_DO()}, \texttt{convert\_rate()} & mg L\textsuperscript{-1}, $\mu$g L\textsuperscript{-1},  $\mu$mol L\textsuperscript{-1}, mL L\textsuperscript{-1}, $\mu$g kg\textsuperscript{-1}, mg kg\textsuperscript{-1}, $\mu$mol kg\textsuperscript{-1}, mmol kg\textsuperscript{-1}, mL kg\textsuperscript{-1}, hPa, kPa, mmHg, inHg\\
+O~2~ & \texttt{convert\_DO()}, \texttt{convert\_rate()} & mg L\textsuperscript{-1}, $\mu$g L\textsuperscript{-1},  $\mu$mol L\textsuperscript{-1}, mL L\textsuperscript{-1}, $\mu$g kg\textsuperscript{-1}, mg kg\textsuperscript{-1}, $\mu$mol kg\textsuperscript{-1}, mmol kg\textsuperscript{-1}, mL kg\textsuperscript{-1}, hPa, kPa, mmHg, inHg\\
 Mass & \texttt{convert\_rate()} & $\mu$g, mg, g, kg \\
 Time & \texttt{convert\_rate()} & second, minute, hour \\
 \bottomrule
@@ -305,7 +308,7 @@ Time & \texttt{convert\_rate()} & second, minute, hour \\
 ## Concluding remarks and future improvements
 
 The package `respR` implements a number of methods not available in any other R package or software. 
-These include the use of rolling regression techniques to estimate $\dot{M}O_{2,max}$, $\dot{M}O_{2,min}$, and $P_{crit}$, the use of kernel density estimation techniques to detect and rank linear segments of the data, support for unevenly-spaced time data, and the ability to extract and analyse data precisely by time, row, or $O_2$ concentration.
+These include the use of rolling regression techniques to estimate $\dot{M}O_{2,max}$, $\dot{M}O_{2,min}$, and $P_{crit}$, the use of kernel density estimation techniques to detect and rank linear segments of the data, support for unevenly-spaced time data, and the ability to extract and analyse data precisely by time, row, or O~2~ concentration.
 <!-- In particular, there are clear advantages to using `respR` when estimating parameters for $\dot{M}O_{2,max}$ or $\dot{M}O_{2,min}$. -->
 It is important to note, however, that while `respR` contains automated methods to assist in processing difficult data, no amount of data manupilation can fix poor data. Users should still ensure that their data has been collected using acceptable methods (e.g. closed respirometry setups should always be equipped with mixing devices, see @Clark2013 before performing analyses of any kind.
 <!-- Unlike manual methods where data ranges may be arbitrarily selected,  -->

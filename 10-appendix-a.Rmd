@@ -2,12 +2,6 @@
 
 # (APPENDIX) Appendix {-}
 
-# Supplementary Material for Chapter 1 {#appendixa}
+<!-- # Supplementary Material for Chapter 1 {#appendixa} -->
 
-## Search criteria for literature review
-
-Website access - date.
-The terms used were..., filtered further using...
-Returned XXX results.
-Data was exported into .csv format and then analysed in R (version 3.4.5).
-
+<!-- ## Search criteria for literature review -->

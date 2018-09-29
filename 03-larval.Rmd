@@ -26,22 +26,31 @@ library(snipR)
 
 ## Abstract {-}
 
-The environment experienced by parents can modify offspring responses to their environments.
-Marine organisms appear to have some capacity to acclimate to changing climate through phenotypic plasticity and maximise fitness by modulating their sensitivity to warming and acidification.
+<!-- Marine organisms can maintain their performance under ocean warming and acidification conditions by  -->
+<!-- The damaging impacts of ocean warming and ocean acidification on calcifying marine organisms are well-established  -->
+<!-- The damaging effects of ocean warming and ocean acidification on marine calcifiers are well-understood and they have limited capacity to acclimate to these stressors through phenotypic plasticity. -->
+<!-- However, whether these manifestations of plasticity can persist across generations remains largely unanswered. -->
+Transgenerational carry-over effects are mechanisms which allow for rapid responses of offspring to environmental stress based on the experiences of their parents to the same stressors.
+<!-- and can also include carry-over effects during early development. -->
+<!-- The environmental stressors experienced by parents can modify the responses of their offspring -->
+<!-- The environment experienced by parents can modify offspring performances -->
+<!-- Marine organisms appear to have some capacity to acclimate to changing climate through phenotypic plasticity and maximise fitness by modulating their sensitivity to warming and acidification. -->
 <!-- Past studies of the effects of ocean warming and ocean acidification have provided important insights into the responses of marine organisms to climate change, and have showed that they have some capacity to acclimate to changing environments due to their phenotypic plasticity. -->
 <!-- It would be advantageous for established populations to maximise fitness by modulating the effects of these stressors on to their offspring.  -->
-This study investigated the potential transgenerational or carry-over effects of adult exposure to warming or low pH on the metabolic responses and growth of offspring.
-Adult *Heliocidaris erythrogramma* parents were exposed to two temperature treatments (ambient, elevated +2 \degree C), adjusted to an offset with respect to the seasonal cycle to promote gonad development. 
-At the same time they were exposed to two constant pH~T~ treatments, for a fully factorial design over the gonad development period of winter to summer (3 months).
-
-
+This study investigated the potential transgenerational carry-over effects of adult exposure to warming or low pH on the metabolic responses and growth of their offspring using the model sea urchin species *Heliocidaris erythrogramma*.
+Adults were exposed to two temperature treatments (ambient, elevated +2 \degree C) and two pH~T~ levels (8.0, 7.6) in a fully factorial design. 
+Treatment temperatures were adjusted to an offset with respect to the seasonal cycle to promote gonad development. 
+<!-- At the same time they were exposed to two constant pH~T~ treatments, for a fully factorial design over the gonad development period of winter to summer (3 months). -->
 <!-- and two pH~T~ (ambient 8.0, low 7.6) treatments in a fully factorial design for 3 months over the gonad developmental period of winter to summer. -->
-Gametes were used to generate offspring treatments reared over 14 days to the settled juvenile at 4 temperatures (18 \degree C, 20 \degree C, 22 \degree C, 24 \degree C) and at two pH~T~ (ambient 8.0, low 7.6) levels.
+The sea urchins were spawned to generate offspring which were placed in four temperature treatments (18 \degree C, 20 \degree C, 22 \degree C, 24 \degree C) and at two pH~T~ (ambient 8.0, low 7.6) levels over 14 days to the juvenile stage.
+Metabolic rate and growth performances were tested.
+<!-- treatments reared over 14 days to the settled juvenile at 4 temperatures (18 \degree C, 20 \degree C, 22 \degree C, 24 \degree C) and at two pH~T~ (ambient 8.0, low 7.6) levels. -->
 <!-- Gametes were collected, fertilised and incubated over 14 days to the settled juvenile stage at 4 temperatures (18 \degree C, 20 \degree C, 22 \degree C, 24 \degree C) and at two pH~T~ (ambient 8.0, low 7.6) levels. -->
-The juveniles were then tested for metabolic rate and growth using test diameter. 
-When exposed to a range of temperatures, offspring from the warm treatment parents altered their metabolic thermal performances by increasing their respiration by up to 30\%, but growth was not influenced by parental treatments.
-Whether the parents were exposed to ambient or low pH had no effect on offspring metabolic rate or growth responses. 
-These findings imply that parental exposure to environmental change, particularly warming, may shape the performance of offspring to the same range of conditions. This plasticity may act as an important mechanism for rapid acclimatisation of populations to a changing climate in order to maximise fitness.
+<!-- The juveniles were then tested for metabolic rate and growth using test diameter.  -->
+Offspring from the warm treatment parents altered their metabolism by increasing their respiration by up to 30\% at 24 \degree C.
+In contrast, parental pH treatment had no effect on offspring metabolic rates.
+Growth was not influenced by parental acclimation to temperature and pH. 
+These findings imply that parental exposure to environmental change, particularly warming, may shape the performance of offspring to the same range of conditions. This plasticity may act as an important mechanism for rapid acclimatisation of populations to maximise fitness in a changing ocean.
 
 ## Introduction
 
@@ -59,8 +68,9 @@ For example, increased metabolism due to warming may be a result of an increase 
 <!-- Carry-over effects have been demonstrated in fish [@Donelson2012; @Heckwolf2018; @Allan2014], bivalve molluscs [@Parker2015; @Scanes2018], crustaceans [@Pedersen2014; @Borges2018] and sea urchins [@Wong2018; @Zhao2018]. -->
 
 Because marine calcifiers are particularly vunerable to the effects of ocean warming and acidification especially during early development [@Byrne2011; @Byrne2013; @Nagelkerken2015; @Poloczanska2016], many studies have used sea urchin larvae as model species to assess the response of calcifying marine organisms to changing climate [@ODonnell2009; @Sewell1999; @Byrne2011; @Stumpp2011; @Dorey2013; @Hardy2014; @Gianguzza2014].
-Plastic responses to environmental stress within one generation may influence the responses to environmental conditions in the next [e.g. @Borges2018; @Scanes2018; @Wong2018; @Zhao2018] and this is currently an active area of climate adaptation research ranging from investigations of developmental plasticity, maternal effects and transgenerational plasticity [reviewed by @Ross2016; @Torda2017; @Donelson2018].
-Here the term "carry-over" effects is used as our experiments involved exposure of parents to environmental stress to assess the performance of their offspring.
+However it is not known how the stress experienced by the previous generation may influence the responses of these larvae.
+Plastic responses to environmental stress within one generation may influence the responses to environmental conditions in the next as a mechanism for climate adaptation [e.g. @Borges2018; @Scanes2018; @Wong2018; @Zhao2018]. This is an area of active research with investigations of developmental plasticity, maternal effects and transgenerational plasticity [reviewed by @Ross2016; @Torda2017; @Donelson2018].
+Here the term "carry-over" effects is used as our experiments involved exposure of parents to environmental stress to assess the performance of their offspring in response to these stressors.
 
 The influence of carry-over effects between generations of sea urchins in the context of climate change has only been considered recently.
 Few studies have examined the effects of parental environmental history on offspring responses to ocean warming and acidification although it has long been known that the temperature at which gametes develop directly influences the thermal tolerance of offspring [@Byrne2011].
@@ -70,9 +80,9 @@ For *Heliocidaris erythrogramma*, the species investigated here, the progeny of 
 These results suggest the importance of parental environmental history on the responses of offspring as their effects may either buffer or negate the performance of developing sea urchin larvae to future climate change scenarios.
 
 <!-- to better visualise -->
-In this study, the interactive and carry-over effects of increased temperature and reduced pH were investigated in the sea urchin, *H. erythrogramma* and its progeny.
-Parents were incubated for 3 months to temperature (ambient, +3 \degree C) which was modulated to follow an offset to the seasonal cycle to promote gonad development, and to two pH~T~ levels (8.0, 7.6).
-Gametes were then used to generate offspring which were incubated to 4 temperature (18 \degree C, 20 \degree C, 22 \degree C, 24 \degree C) and two pH~T~ (8.0, 7.6) treatments in a fully factorial design for 14 days.
+In this study, the carry-over effects of increased temperature and reduced pH were investigated in the sea urchin, *H. erythrogramma*.
+The adults were incubated for 3 months to temperature (ambient, +3 \degree C) which was modulated to follow an offset to the seasonal cycle to promote gonad development, and to two pH~T~ levels (8.0, 7.6).
+These urchins were then spawned to generate offspring which were incubated to 4 temperature (18 \degree C, 20 \degree C, 22 \degree C, 24 \degree C) and two pH~T~ (8.0, 7.6) treatments in a fully factorial design for 14 days.
 Interactions between parental treatments and offspring plastic responses were compared using general linear models of their thermal performances with metabolic rate and growth as performance traits. 
 Metabolic rate was used as it is a fundamental biological rate that modulates all other biological activities [@Brown2004]. 
 Measuring metabolic rate performance in sea urchin larvae can provide important insights to their plasticity as it can be associated with bioenergetics and fitness consequences [e.g. @Stumpp2011; @Dorey2013].
@@ -90,7 +100,7 @@ It was hypothesised that interactions between parental acclimation environments 
 <!-- *Heliocidaris erythrogramma* (35--44 $mm$ test diameter) were collected from Milk Beach ([-33.856478, 151.266958](https://www.google.com/maps/?q=-33.856478,151.266958)) in Sydney Harbour during low tide. -->
 *Heliocidaris erythrogramma* (35--44 mm test diameter) were collected from three locations within Sydney Harbour: Milk Beach ([-33.856478, 151.266958](https://www.google.com/maps/?q=-33.856478,151.266958)), Bottle and Glass Point ([-33.847960, 151.270122](https://www.google.com/maps/?q=-33.847960,151.270122)) and Chowder Bay ([-33.841657, 151.253677](https://www.google.com/maps/?q=-33.847960,151.270122)).
 The sea urchins were collected in the subtidal zone (2--3 m) in June 2015 in mid-winter when the gonads were in the resting stage [@Laegdsgaard1991] and transported to the Sydney Institute of Marine Science (SIMS) in Chowder Bay, Australia.
-There, they were maintained at the ambient flowthrough facility with filtered seawater (FSW, 70 $\mu$m, 1.5 $\mathrm{L\ min^{-1}}$) for 2 weeks before they were transferred into acclimation treatments.
+There, they were maintained at the ambient flowthrough facility with filtered seawater (FSW, 70 $\mu$m, 1.5 L min^-`^) for 2 weeks before they were transferred into acclimation treatments.
 
 ### Experimental design
 
@@ -192,8 +202,9 @@ All data were analysed in R (version 3.5.0) using the `car` package for ANCOVA a
 
 We found a significant interaction between parental temperature treatment and offspring metabolic response to temperature (GLMM ANCOVA, $F_{3,22} =$ 24.04, $p<$ 0.001). 
 Juvenile metabolic rate increased significantly with temperature ($F_{1,22} =$ 20.41, $p<$ 0.001), but parental acclimation to warmer warmer treatments (+2 \degree C) resulted in increased metabolism at higher temperatures. 
-At 24 \degree C, the difference in metabolic rates between larval groups was up to $\sim$ 30 \% depending on whether their parents were acclimated to increased temperature, or not.
-Parental acclimation to low pH (7.6) did not have an effect on metabolic rate responses ($F_{1,22} =$ 1.63, $p=$ 0.22), and offspring exposure to low pH also did not significantly affect metabolic rate responses ($F_{1,22} =$ 0.65, $p=$ 0.43).
+At 24 \degree C, the difference in metabolic rates between larval groups was up to $\sim$ 30 \% depending on whether their parents had been acclimated to increased temperature.
+Parental acclimation to low pH (7.6) did not have an effect on metabolic rate responses of the offspring ($F_{1,22} =$ 1.63, $p=$ 0.22). 
+Offspring exposure to low pH, regardless of parental environment, also did not significantly affect metabolic rate responses ($F_{1,22} =$ 0.65, $p=$ 0.43).
 
 ```{r c4ancovamr, message=FALSE}
 
@@ -249,7 +260,7 @@ kable(gdt, "latex", caption = "(ref:juvgrowthancova)",
 
 (ref:juvgrowthancova) Generalised linear mixed model (GLMM) analyses of covariance (ANCOVA, Type II) on the effect of parental environments (ambient, +2 \degree C, pH~T~ 8.0, pH~T~ 7.6) and offspring treatments (18 \degree C, 20 \degree C, 22 \degree C, 24 \degree C, pH~T~ 8.0, pH~T~ 7.6) on juvenile (14-day) test diameter of *Heliocidaris erythrogramma*. Only main effects were analsed as interactions were all not significant. Significant differences are indicated with asterisks. ***: $p <$ 0.001.
 
-(ref:sjuvgrowthancova) Generalised linear mixed model (GLMM) analyses of covariance (ANCOVA, Type II) on the effect of parental environments (ambient, +2 \degree C, pH~T~ 8.0, pH~T~ 7.6) and offspring treatments (18 \degree C, 20 \degree C, 22 \degree C, 24 \degree C, pH~T~ 8.0, pH~T~ 7.6) on juvenile (14-day) test diameter of *Heliocidaris erythrogramma*.
+(ref:sjuvgrowthancova) Generalised linear mixed model (GLMM) analyses of covariance (ANCOVA, Type II) on the effect of parental environments and offspring treatments on juvenile test diameter of *Heliocidaris erythrogramma*.
 
 
 
@@ -259,22 +270,27 @@ knitr::include_graphics("figs/ch_larval/juvgrowth.png")
 
 ```
 
-(ref:juvgrowth) Mean test diameter ($\mu m \pm$ SD) of juvenile *Heliocidaris erythrogramma* following rearing to a range of temperatures (18 \degree C, 20 \degree C, 22 \degree C, 24 \degree C) under constant *(A)* ambient pH~T~ (8.0); and *(B)* low pH~T~ (7.6) conditions. The juveniles were generated from parents that had been acclimated for 3 months to two temperature (blue: ambient +0 \degree C, red: elevated +2 \degree C) and two pH~T~ levels (dashed: ambient 8.0, line: 7.6).
+(ref:juvgrowth) Mean test diameter ($\mu m \pm$ SD) of juvenile *Heliocidaris erythrogramma* following rearing to a range of temperatures (18 \degree C, 20 \degree C, 22 \degree C, 24 \degree C) under constant *(A)* ambient pH~T~ (8.0); and *(B)* low pH~T~ (7.6) conditions. The juveniles were generated from parents that had been acclimated for 3 months to two temperature (blue: ambient +0 \degree C, red: elevated +2 \degree C) and two pH~T~ levels (8.0, 7.6).
 
 (ref:sjuvgrowth) Mean test diameter ($\mu m \pm$ SD) of juvenile *Heliocidaris erythrogramma* following rearing to a range of temperatures under constant *(A)* ambient pH~T~; and *(B)* low pH~T~ conditions.
 
 ## Discussion
 
-This study provides experimental evidence that the environment experienced by adult *H. erythrogramma* over a short period of incubation the gonad development period from resting to maturity [see @Laegdsgaard1991] can rapidly alter the response of offspring with respect to changes in temperature.
-Parental acclimation to warming, but not pH, significantly altered offspring thermal performance, and both parental and offspring environments interacted to influence the shape of metabolic rate performance in the offspring.
-In contrast, differences in test size between offspring treatments were not influenced by parental temperature, parental pH environment, or offspring temperature.
-However, offspring incubation to low pH (7.6 pH~T~) significantly reduced the test size of the juveniles, which was expected as low pH has been shown to affect calcification in post-metamorphic juveniles as they begin to produce specialised calcified structures such as spines [@Wolfe2013; @Byrne2011].
+<!-- This study provides experimental evidence that the environment experienced by adult *H. erythrogramma* over a short period of incubation the gonad development period from resting to maturity [see @Laegdsgaard1991] can rapidly alter the response of offspring with respect to changes in temperature. -->
+This study provides experimental evidence that the environmental history of the adult *H. erythrogramma* over the gonad development period [see @Laegdsgaard1991] can rapidly alter the response of offspring.
+Parental acclimation to warming, but not pH, significantly altered offspring thermal performance, and both parental and offspring environments interacted to influence the shape of metabolic rate performance curve of the offspring.
+<!-- In contrast, differences in test size between offspring treatments were not influenced by parental temperature, parental pH environment, or offspring temperature. -->
+In contrast, offspring growth was not influenced by parental temperature, parental pH environment, or offspring temperature.
+However, offspring incubation to low pH (7.6 pH~T~) significantly reduced the test size of the juveniles, which was expected as low pH has been shown to affect calcification in post-metamorphic juveniles as they begin to calcify to produce their skeleton [@Wolfe2013; @Byrne2011].
 
 The physiological responses of adult *H. erythrogramma* and their resilience to increased temperature and low pH are well-understood from previous studies [Chapter \@ref(chapter3); @Byrne2009; @Byrne2011; @Carey2016; @Harianto2018].
 This sea urchin is able to withstand long-term exposure to increased temperature of up to 24 \degree C without significant mortality [@Byrne2011; @Harianto2018] and it is more sensitive to warming than low pH [\@ref(chapter3); @Byrne2009].
-It was expected that the progeny of *H. erythrogramma* would respond to warmer temperature by increasing their metabolic rates to sustain energy balance, as required to support increased growth and development from warming [@Stumpp2011]. 
+It was expected that the progeny of *H. erythrogramma* would respond to warmer temperature by increasing their metabolic rates as a potential means to sustain energy balance to support increased growth and development in response to warming, as this was found for *Strongylocentrotus purpuratus* larvae [@Stumpp2011]. 
 This was evident from their thermal performances which showed significant increases in metabolic rate with warming.
-However, the linear slope of the thermal performance curves were different between juveniles depending on parental temperature treatment which indicated strong influence of parental environment on offspring physiological performance.
+Thus the increase in metabolic rate as a carry-over effect is interpreted as a beneficial response.
+The linear slope of the thermal performance curves differed between juveniles depending on parental temperature treatment.
+This indicated strong influence of parental environment on offspring physiological performance.
+
 Our results reinforce the idea that physiological acclimation capacity can be influenced by the interactions between the environmental conditions of the previous generation as well as the conditions experienced during early development.
 This is interesting as it implies that transgenerational effects and acclimation are mechanistically linked, which is ecologically important. 
 This adds to our understanding of the thermotolerance of *H. erythrogramma* and the influence of parental environment on development [@Byrne2011].
@@ -283,8 +299,9 @@ This adds to our understanding of the thermotolerance of *H. erythrogramma* and 
 <!-- However, this study showed that if parent urchins were acclimated to  warmer (+2 \degree C) temperature prior to spawning, the slope of thermal reaction norms for metabolic rate in offspring were altered, resulting in increased metabolism at higher incubation temperatures compared to offspring spawned from parents acclimated to ambient temperature. -->
 
 <!-- Whether the increased metabolic performance is beneficial to the fitness of the juveniles is not known from the available data that we have collected. -->
-Understanding the physiological basis behind bioenergetic processes influenced by metabolism is still lacking for sea urchin larvae [but see @Stumpp2011]. 
-It is difficult to determine if the increased metabolic performance in offspring of parents incubated in warmer environments is beneficial and represents increased fitness, or are detrimental to survival in the long term.
+<!-- The physiological basis behind bioenergetic processes influenced by metabolism is poorly understood for sea urchin larvae [but see @Stumpp2011] and here, we tested the responses in newly settled juveniles for the first time. -->
+In this study, the physiological responses of newly settled sea urchin juveniles were investigated for the first time by measurement of metabolic rate performance.
+It is difficult to determine if the increased metabolic performance in the offspring of parents incubated in warmer environments is beneficial and represents increased fitness, or if this would be detrimental to survival in the long term.
 While increased metabolism to support growth and development would theoratically be advantageous in early developmental stages, the juvenile test diameter data from this study did not indicate any influence of parental environments on the size of juveniles.
 There was no evidence that temperature affected juvenile test size, as found in a previous study on the same species by @Wolfe2013 which also found no significant effects of temperature (21 \degree C to 25 \degree C) but a significant effect of low pH (8.0, 7.8, 7.6, 7.4) on the test size of 14-day juveniles.
 <!-- It is possible that the sea urchin -->
@@ -292,17 +309,18 @@ There was no evidence that temperature affected juvenile test size, as found in 
 
 <!-- Interestingly, @Wolfe2013 found that both increased temperature and low pH significantly affected spine lengh, measured from micrographs obtained by scanning electron microscopy.  -->
 
-Offspring responses were indicative of the role of parental exposure in influencing their metabolic traits, but the mechanisms responsible for the differences observed between offspring phenotypes may be a result of a combination of different selection pressures. 
-Trans-generational plasticity (TGP) is sometimes attributed to observations of effects on one generation associated with the exposures of a previous generation [@Scanes2018; @Parker2012; @Putnam2015]. 
-However, there are other interactions between parental and offspring environments that can also influence the responses of the offspring without attribution to TGP exclusively [@Ross2016; @Torda2017; @Donelson2018].
-These carry-over effects may include a combination of maternal or paternal influence and developmental plasticity [@Torda2017; @Beaman2016]. 
+<!-- Offspring responses were indicative of the role of parental exposure in influencing their metabolic traits, but  -->
+The mechanisms underlying the differences observed between offspring phenotypes observed here are likely due to a combination of different selection pressures. 
+Although trans-generational plasticity (TGP) is sometimes attributed to observations of effects on one generation associated with the exposures of a previous generation [@Scanes2018; @Parker2012; @Putnam2015], these cases involved conditioning of adults with established gonads which could already be the source of eventual phenotypes, and thus may not be TGP effects [@Torda2017; @Donelson2018].
+In this case the term carry-over effects may be more accurate as it can include a combination of TGP, maternal or paternal influence and developmental plasticity [@Torda2017; @Beaman2016]. 
 <!-- *Heliocidaris erythrogramma* larvae are lecithotrophic, thus maternal legacy. -->
 In this study, adults had the opportunity to respond to altered environmental conditions during gametogenesis by modifying maternal investment or cellular defensive mechanisms in the egg [e.g. @Hamdoun2007]. 
 As *H. erythrogramma* larvae are lecithotrophic, maternal influence can shape the resilience of developmental stages prior to metamorphosis into juveniles [@Hamdoun2007; @Foo2016].
 
-Developmental plasticity may also have influenced our results especially if environmental conditions present a "bottle-neck" for successful acclimation, and selective mortality results in only resilient larvae that successfully metamorphose into juveniles.
-This has been previously demonstrated by @Foo2016 where strong interactions between maternal source and stress factors (warming and acidification) resulted in carry-on effects between developmental stages to affect fertilisation, larval development and juvenile calcification.
-To address the effect of developmental plasticity the experiment would need to observe the performance of individual offspring from early development, however this was not possible in our flow-through as dead organisms are washed away.
+Developmental plasticity [@Beaman2016] may also have influenced our results especially if environmental conditions present a bottle-neck for successful acclimation, and selective mortality results in only resilient larvae that successfully metamorphose into juveniles.
+This has been previously demonstrated by @Foo2016 who showed that strong interactions between maternal source and stress factors (warming and acidification) can result in in carry-on effects on fertilisation, larval development and juvenile calcification.
+<!-- in in carry-on effects between developmental stages to affect fertilisation, larval development and juvenile calcification. -->
+To discern this effect the experiment would need to observe the performance of individual offspring from early development, however this was not possible in our flow-through experiment as dead organisms are washed away.
 <!-- which is especially important for *H. erythrogramma* as its larvae is lecithotrophic. -->
 <!-- This in turn can have selective consequences on the development of the offspring, which . -->
 
@@ -320,12 +338,12 @@ We also incorporated a seasonal temperature profile for the adult urchins so tha
 Sea urchin reproduction involves substantial gonad growth that is influenced by seasonal temperature change [@Giese1959; @Laegdsgaard1991].
 <!-- This is in contrast to past studies of transgenerational carry-over effects on marine invertebrates which often maintain constant temperature during parental incubation [e.g. @Wong2018; but see @Zhao2018]. -->
 <!-- At a +2 \degree C increase in temperature, *H. erythrogramma* produced offspring which increased their respiration rates substantially compared to the offspring of parents acclimated to ambient temperature. -->
-The experimental design allowed us to realistically quantify performance through a comparison of thermal responses, and to obtain critical insights on offspring responses based on the interactions between parental and offspring environments.
+The experimental design allowed us to realistically quantify performance through a comparison of thermal responses, and to obtain critical insights on offspring responses based on the interactions between parental and offspring environments following acclimation of parents in a seasonally-relevant temperature regime.
 
-Our results indicated that there was an effect of parental acclimation to increased temperature on offspring physiology in *H. erythrogramma*.
+Our results indicated that there was an effect of parental acclimation on the physiological responses of their offspring to increased temperature.
 Trans-generational effects through phenotypic plasticity is well known to occur through a generation and can play a major role in determining the range of acclimatory responses to temperature, and other environmental variables including ocean acidification [@Zhao2018a], pollution [@Duan2018; @Scanes2018] and ultraviolet radiation [@Kazerouni2017].
 A multitude of other environmental variables remain unexplored and it is still unclear how interactions between parents and offspring environments influence adaptation, especially in the context of TGP [@Donelson2018; @Luquet2016].
-For ecologically-important sea urchins such as *H. erythrogramma*, further research is required to better understand the potential for multi-generational TGP effects and how these mechanisms will facilitate persistance in a rapidly changing ocean.
+For ecologically-important sea urchins such as *H. erythrogramma*, further research is required to better understand the potential for multi-generational TGP effects in which germ-line effects can be discerned, and how these mechanisms will facilitate persistence in a rapidly changing ocean.
 
 
 <!-- which shapes the transgenerational strategies in response to environmental change. -->

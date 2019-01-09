@@ -72,5 +72,5 @@ heatmap
 # Export ----
 
 cowplot::save_plot("figs/ch_warming/heatmap.png", heatmap,
-  base_height = 6, base_width = 6)
+  base_height = 8, base_width = 6)
 

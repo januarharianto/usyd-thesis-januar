@@ -8,7 +8,8 @@
 \PassOptionsToPackage{expansion=false,final}{microtype}
 
 % Activate colours to use in the book.
-\usepackage[usenames,dvipsnames,svgnames, table]{xcolor}
+%\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\PassOptionsToPackage{usenames,dvipsnames,svgnames,table}{xcolor}
 
 % COLOR DEFINITIONS ------------------------------------------------------------
 \definecolor{smartgray}{gray}{0.55}
@@ -31,7 +32,7 @@
 \colorlet{heading}{smartgray}
 \colorlet{ref}{smartblue}
 \colorlet{cite}{smartblue}
-\colorlet{url}{smartred}
+\colorlet{url}{smartgreen}
 \colorlet{caption}{black}
 \colorlet{margincaption}{caption}
 
@@ -46,12 +47,13 @@
 
 % FONT OPTIONS -----------------------------------------------------------------
 \usepackage{fontspec}
+% \usepackage{MinionPro}
 % \usepackage{mathpazo}
 % \setsansfont{Myriad Pro}
 % \setsansfont{CMU Sans Serif}
 % \setmonofont{Consolas}
 \setmonofont{PT Mono}
-% \setmathfont{Minion Math}
+\setmathfont{Minion Pro}
 
 
 % Define a new 'widespaced' font that is used in section headings
@@ -64,12 +66,19 @@
 ]{Minion Pro}%
 
 
+\DeclareRobustCommand{\spacedallcaps}[1]{%
+	{\widespaced\oldstylenums{\MakeTextUppercase{#1}}}%
+}%
+\DeclareRobustCommand{\spacedlowsmallcaps}[1]{%
+	{\widespaced\oldstylenums{\textsc{\MakeTextLowercase{#1}}}}%
+}%
+
 % CHAPTER STYLES ---------------------------------------------------------------
 
 % \chapterstyle{ell}
 % \renewcommand*{\chapnumfont}{\normalfont\huge\bfseries}
 % \renewcommand*{\chaptitlefont}{\normalfont\Huge}
-
+% \chapterstyle{brotherton}
 
 % FIGURES ----------------------------------------------------------------------
 % make sure floats do not appear before references
@@ -88,7 +97,16 @@
 \newsubfloat{figure}% Create subfloat in figure environment
 \newsubfloat{table}% Create subfloat in table environment
 
-\renewcommand{\floatpagefraction}{0.5} % figures appear on different page
+% https://robjhyndman.com/hyndsight/latex-floats/
+% better looking floats?
+
+\setcounter{topnumber}{2} % max no of floats at top of page
+\setcounter{bottomnumber}{2} % max no of floats at bottom of page
+\setcounter{totalnumber}{2} % maximum number of floats on a page
+\renewcommand{\topfraction}{0.85}
+\renewcommand{\bottomfraction}{0.85}
+\renewcommand{\textfraction}{0.15}
+\renewcommand{\floatpagefraction}{0.5}
 
 % COLOPHON ---------------------------------------------------------------------
 \makeatletter
@@ -253,6 +271,7 @@
 
 % Hack to make floatrow work with memoir.
 \let\newfloat\undefined 
+
 % Handles alignment of floats (figures), with centering as default.
 \usepackage{floatrow} 
 
@@ -263,15 +282,21 @@
 \usepackage{varioref} 
 
 % Clickable references.
-\hypersetup{pdfencoding=auto,pdfborderstyle={/S/U/W 1},linkbordercolor=ref,
-  colorlinks,linkcolor=ref,citecolor=cite,urlcolor=url}
+\hypersetup{
+  pdfencoding=auto,
+  pdfborderstyle={/S/U/W 1},
+  linkbordercolor=ref,
+  colorlinks,
+  linkcolor=ref,
+  citecolor=cite,
+  urlcolor=url}
 
 % Anchors links to the beginning of their respective floats. 
 % Load after hyperref.
 \usepackage[all]{hypcap}
 
 % Name references automatically. Load after hyperref.
-% \usepackage[noabbrev,capitalize,nameinlink]{cleveref} 
+% \usepackage[noabbrev,capitalize]{cleveref}
 
 \usepackage[toc,acronym]{glossaries} % Glossary.
 
@@ -311,6 +336,7 @@
 \usepackage[normalem]{ulem}
 \usepackage{makecell}
 
+\usepackage{bookmark} % 
 
 % APPENDIX ---------------------------------------------------------------------
 
@@ -319,16 +345,17 @@
 
 % PAGE LAYOUT ------------------------------------------------------------------
 % \settypeblocksize{23.45cm}{11.85cm}{*} % original settings
-\settypeblocksize{23.45cm}{12.85cm}{*} % expanded, since we are not using margin
-%\setlength{\textheight}{23.45cm}
-%\setlength{\textwidth}{11.85cm}
-\setlength{\parskip}{1.3em} % add space between paragraphs
+\settypeblocksize{23.45cm}{13.05cm}{*} % expanded, since we are not using margin
+% \setlength{\textheight}{23.45cm}
+% \setlength{\textwidth}{11.85cm}
+\setlength{\parskip}{1.1em} % add space between paragraphs
 % \renewcommand{\baselinestretch}{1.2} % redefine line spacing
 \setlrmargins{3.141592653589793cm}{*}{*}
 \setulmargins{*}{*}{*}
 \setmarginnotes{0.8cm}{3.5cm}{1cm}
 \checkandfixthelayout
-% let's not use hypenation in the text:
+
+% let's not use hypenation in the text if justified:
 \pretolerance=5000
 \tolerance=9000
 \emergencystretch=0pt
@@ -338,15 +365,67 @@
 % Ok, now for chapter style
 % \chapterstyle{ntglike} % this is ok
 % \chapterstyle{ger}
-\renewcommand*{\chaptitlefont}{\huge \bfseries}
+\renewcommand*{\chaptitlefont}{\LARGE \bfseries}
 % \renewcommand*{\afterchaptertitle}%
     % {\newpage}
+
+% \renewcommand{\chapterautorefname}{Chapter}
+% \AtBeginDocument{\def\chapterautorefname{Chapter}}%
 
 \setlength{\parindent}{0em} % don't indent paragraphs
 
 % set numbering of subsections
 \setsecnumdepth{subsubsection}
 
+% set depth of table of contents
+\setcounter{tocdepth}{2}
+
 % prevent placing floats before a section (this should prevent figures from
 % bunching at the end of the chapter.
-\usepackage[section]{placeins}
+% \usepackage[section]{placeins}
+
+% \usepackage{tcolorbox} % for boxed text -- used in statement page.
+
+% capitalise chapter cross reference
+\renewcommand*{\chapterautorefname}{Chapter}
+
+% inline code grey background hack
+% using \codex activates highlighting of the code
+% https://tex.stackexchange.com/a/140175
+\newcommand\codex[2][]{
+    \tikz[baseline=(s.base)]{
+        \node(s)[
+            rounded corners,
+            fill=blue!5,        % background color
+            % draw=gray,          % border of box
+            % text=gray!50!black, % text color
+            inner xsep =0pt,    % horizontal space between text and border
+            inner ysep =0pt,    % vertical space between text and border
+            text height=2ex,    % height of box
+            text depth =1ex,    % depth of box
+            #1                  % other options
+        ]{\texttt{#2}};
+    }
+}
+
+
+\usepackage{pdflscape}
+\usepackage{afterpage}
+
+\usepackage{siunitx}
+
+
+\let\svthefootnote\thefootnote
+\newcommand\blankfootnote[1]{%
+  \let\thefootnote\relax\footnotetext{#1}%
+  \let\thefootnote\svthefootnote%
+}
+\let\svfootnote\footnote
+\renewcommand\footnote[2][?]{%
+  \if\relax#1\relax%
+    \blankfootnote{#2}%
+  \else%
+    \if?#1\svfootnote{#2}\else\svfootnote[#1]{#2}\fi%
+  \fi
+}
+

@@ -131,7 +131,8 @@ harbour_plot <- ggplot(dt, aes(date, mean)) +
   theme(
     legend.text = element_text(size = 10),
     legend.title = element_text(size = 10),
-    legend.position = "bottom"
+    legend.position = "bottom",
+    legend.justification = "center"
   ) +
   theme(legend.key.size = unit(2, "lines")) +
   geom_blank()

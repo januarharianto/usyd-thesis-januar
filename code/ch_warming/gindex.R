@@ -35,14 +35,20 @@ summ <- dt %>%
 
 gi_plot <-
   ggplot(dt, aes(as.character(treatment), gi)) +
-  geom_boxplot(fatten = 1) +
+  geom_boxplot(    
+    fill = "lightyellow",
+    fatten = 1,
+    alpha = .6,
+    outlier.size = 2,
+    outlier.alpha = .8) +
   stat_summary(fun.y = median, geom = "errorbar",
-    aes(ymax = ..y.., ymin = ..y.., linetype = "median"),
+    aes(ymax = ..y.., ymin = ..y.., linetype = "Median"),
     width = .75) +
   stat_summary(fun.y = mean, geom = "errorbar",
-    aes(ymax = ..y.., ymin = ..y.., linetype = "mean"),
+    aes(ymax = ..y.., ymin = ..y.., linetype = "Mean"),
     width = .75) +
   scale_linetype_manual(name = "", values = c(3,1)) +
+  theme(legend.position = "bottom", legend.justification = "center") +
   xlab("Treatment temperature (°C)") +
   ylab("Gonad Index")
 gi_plot
@@ -61,5 +67,5 @@ analysis <-
 
 # Export data ----
 
-cowplot::save_plot("figs/ch_warming/gindex.png", gi_plot,
-  base_height = 6, base_width = 6*1.3)
+cowplot::save_plot("figs/ch_warming/c2gindex.png", gi_plot,
+  base_height = 8, base_width = 8)

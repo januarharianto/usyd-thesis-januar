@@ -30,13 +30,14 @@ conversions <- readxl::read_excel("tables/conversion-units.xlsx")
 \cleardoublepage
 \SingleSpacing
 
-# respR -- an R package for the analysis of respirometry data[^published5] {#chapter5}
+# respR -- an R package for the analysis of respirometry data {#chapter5}
 \chaptermark{respR -- an R package for respirometry}
 
 \OnehalfSpacing
 
-[^published5]: This chapter is formatted for Methods in Ecology and Evolution. It is under review as "Harianto J, Carey N and Byrne M (2018). respR -- an R package for the analysis of respirometry data." The R package, `respR`, has been published on GitHub as an open-source project.
+<!-- [^published5]: This chapter is formatted for Methods in Ecology and Evolution. It is under review as "Harianto J, Carey N and Byrne M (2018). respR -- an R package for the analysis of respirometry data." The R package, `respR`, has been published on GitHub as an open-source project. -->
 
+\footnote[]{This chapter is formatted for Methods in Ecology and Evolution. It is under review as "Harianto J, Carey N and Byrne M (2018). respR -- an R package for the analysis of respirometry data." The R package, \texttt{respR}, has been published on GitHub as an open-source project.}
 
 ## Abstract {-}
 
@@ -61,8 +62,8 @@ While there are other methods such as monitoring heart or ventilatory rates, met
 
 There are four broad methodological approaches in respirometry: closed, intermittent flow, flow-through and open. 
 In closed respirometry, $\mathrm{O_2}$ decrease is measured within a hermetically sealed chamber of known volume, sometimes set within a closed loop to allow mixing of the environment within the chamber. 
-Oxygen recordings may be continuous through use of an oxygen probe, periodic through withdrawing water or gas samples at set intervals, or a two-point measurement consisting of the initial and final concentrations. 
-Metabolic rates are estimated from the $\mathrm{O_2}$ timeseries by assuming a linear relationship between variables, and estimates of metabolic rate are straightforward in constant volume respirometry using the equation: $$VO_2 = \dot O_2V$$ where $\mathrm{\dot O_2}$ is the slope of the regression that describes the rate of change in $\mathrm{O_2}$ concentration over time, or in the case of a two-point measurement, the difference in $\mathrm{O_2}$ concentration divided by time elapsed, and $V$ is the volume of the container [@Lighton2008].
+Oxygen recordings may be continuous through the use of an oxygen probe, periodic through withdrawing water or gas samples at set intervals, or a two-point measurement consisting of the initial and final concentrations. 
+Metabolic rates are estimated from the $\mathrm{O_2}$ time series by assuming a linear relationship between variables, and estimates of metabolic rate are straightforward in constant volume respirometry using the equation: $$VO_2 = \dot O_2V$$ where $\mathrm{\dot O_2}$ is the slope of the regression that describes the rate of change in $\mathrm{O_2}$ concentration over time, or in the case of a two-point measurement, the difference in $\mathrm{O_2}$ concentration divided by time elapsed, and $V$ is the volume of the container [@Lighton2008].
 
 In intermittent flow respirometry, $\mathrm{O_2}$ concentration is measured as described above, but periodically the chamber is flushed with new water or air, returning it to initial conditions, resealed, and the experiment repeated [@Svendsen2016]. 
 This technique is essentially closed respirometry, but with the incorporation of repeated measures. 
@@ -71,33 +72,33 @@ Depending on the metabolic rate metric being investigated, final respiration rat
 Flow-through respirometry involves a closed chamber, but with a regulated flow of air or water through it at a precisely determined rate. 
 After equilibrium has been achieved, the oxygen concentration differential between the incurrent and excurrent channels, along with the flow rate, allows calculation of the oxygen extracted from the flow volume per unit time: $$VO_2 = (C_iO_2 - C_eO_2)FR$$ where $\dot{V}O_2$ is the rate of $\mathrm{O_2}$ consumption over time, $C_iO_2$ and $C_eO_2$ are the incurrent and excurrent $\mathrm{O_2}$ concentrations, and $FR$ is the flow rate of water through the system [@Lighton2008].
 
-A final method is open respirometry, in which an open tank or semi-enclosed area is used, but the input or mixing rate of oxygen from the surroundings is known or found to be negligible relative to oxygen consumption of the specimens [@Leclercq1999]. 
-It is seldom used, but for some applications it is a sufficient and practical methodology [@Gamble2014]. 
+A final method is open respirometry, in which an open tank or semi-enclosed area is used, but the input or mixing rate of oxygen from the surroundings is known or found to be negligible relative to the oxygen consumption of the specimens [@Leclercq1999]. 
+It is seldom used, but for some applications, it is a sufficient and practical methodology [@Gamble2014]. 
 The common equation used for open respirometry is: $$VO_2 = \dot O_2V + \phi_d$$ where $\dot O_2V$ is the slope of the regression that relates $\mathrm{O_2}$ concentration to time, $V$ is the volume of the container and $\phi_d$ is the oxygen flux as determined by Fick's Law [@Leclercq1999].
 
 Depending on the experiment, different metabolic rate parameters may be of interest to researchers. 
-These include maximum metabolic rate (MMR, or $\dot{M}O_{2,max}$), rates under high activity or exhaustive exercise, and minimal metabolic rate ($\dot{M}O_{2,min}$), which may be termed standard (SMR), basal (BMR), or resting metabolic rate, and typically represents the minimum metabolic cost of maintaining biological functioning [@White2013; @Chabot2016]. 
-Routine metabolic rate (RMR) is similar to $\dot{M}O_{2,min}$, but takes into account that in some organisms energy is expended on small, spontaneous movements to maintain posture or position [@Rogers2016]. 
+These include maximum metabolic rate (MMR, or $\mathrm{\dot{M}}$O~2,max~), rates under high activity or exhaustive exercise, and minimal metabolic rate ($\mathrm{\dot{M}}$O~2,min~), which may be termed standard (SMR), basal (BMR), or resting metabolic rate, and typically represents the minimum metabolic cost of maintaining biological functioning [@White2013; @Chabot2016]. 
+Routine metabolic rate (RMR) is similar to $\mathrm{\dot{M}}$O~2,min~, but takes into account that in some organisms energy is expended on small, spontaneous movements to maintain posture or position [@Rogers2016]. 
 Another metric of interest is the critical oxygen tension, which represents the lowest level of oxygen at which aerobic metabolism is independent of the ambient partial pressure of oxygen [P~crit~; @Yeager1989; @Hochachka2002]. 
 
 Respirometry studies are increasingly outputting large, high-resolution datasets conducted over long periods [e.g. 20 h; @Norin2012]. 
 In many cases, processing the data involves an ad hoc selection of data points with poorly reported criteria, and subsequent manual processing of the data subset(s) using a spreadsheet program (e.g. Microsoft Excel) or an integrated development environment (IDE, e.g. R or Matlab). 
 These approaches can be tedious and time-consuming especially when spreadsheet programs struggle with the vast datasets that are generated, while IDEs require a degree of expertise to use and have substantial learning curves. 
-Dedicated software are also available to perform metabolic rate analyses, but many have costly licensing requirements (e.g. AutoResp by Loligo Systems), complicating or preventing their use on multiple machines, and are proprietary and closed-source, hindering scientific reproducibility and transparency.  
+Dedicated software is also available to perform metabolic rate analyses, but many have costly licensing requirements (e.g. AutoResp by Loligo Systems), complicating or preventing their use on multiple machines, and are proprietary and closed-source, hindering scientific reproducibility and transparency.  
 
 A number of open-source R software packages have recently become available which are designed for, or are suitable to analyse data from respirometry. 
 The `respirometry` package (https://CRAN.R-project.org/package=respirometry) contains a comprehensive collection of tools to explore and evaluate experimental parameters in aquatic respirometry and is useful for the design and diagnosis of experimental setups.
 The `rMR` package (https://CRAN.R-project.org/package=rMR) performs interval-based metabolic rate calculations and has a method to analyse P~crit~ using the "broken-stick" regression method [@Yeager1989]. 
 The `LoLinR` package [@Olito2017], while not specifically coded for respirometry, provides a statistically robust method of detecting a "best-fit" regression, and performs well at identifying truly linear subsets of a data series. 
 <!-- Importantly, all of these packages assume that data are monotonic with evenly-spaced sampling periods with respect to time, an ideal structure but one where respirometry data often fails to meet.  -->
-<!-- They also do not have the tools to analyse complicated datasets to automatically determine useful metric such as $\dot{M}O_{2,max}$ and $\dot{M}O_{2,min}$. -->
+<!-- They also do not have the tools to analyse complicated datasets to automatically determine useful metric such as $\mathrm{\dot{M}}$O~2,max~ and $\mathrm{\dot{M}}$O~2,min~. -->
 
 Here we describe `respR`, an open-source R package designed to provide an efficient and reproducible workflow for the analysis of respirometry data (Table \ref{funlist}).
-The package contains utilities to: (1) analyse closed, intermittent, flow-through and open-tank respirometry data [see @Lighton2008; @Svendsen2016], (2) determine volume and mass specific oxygen uptake rates, (3) automatically detect maximal and minimal rates, P~crit~, and (4) detect the most linear sections of data using novel rolling regression and kernel density estimation techniques.
+The package contains utilities to: (1) analyse closed, intermittent, flow-through and open-tank respirometry data [see @Lighton2008; @Svendsen2016], (2) determine volume and mass-specific oxygen uptake rates, (3) automatically detect maximal and minimal rates, P~crit~, and (4) detect the most linear sections of data using novel rolling regression and kernel density estimation techniques.
 In addition, the package contains "housekeeping" functions for data import and export as supplementary material at all stages of respirometry analysis, including saving raw data, subsetting criteria, background corrections, units of measure, and resulting metabolic rates. 
 This streamlines the reporting of analytical methods and allows reviewers or other investigators to fully reproduce or scrutinise the results. 
-Additional functions useful in processing respirometry data are available, and are described in more detail in our online html vignette (https://januarharianto.github.io/respR/).
-We show how `respR` might be used to determine $\dot{M}O_{2,max}$, $\dot{M}O_{2,min}$, and P~crit~.
+Additional functions useful in processing respirometry data are available and are described in more detail in our online HTML vignette (https://januarharianto.github.io/respR/).
+We show how `respR` might be used to determine $\mathrm{\dot{M}}$O~2,max~, $\mathrm{\dot{M}}$O~2,min~, and P~crit~.
 
 
 <!-- ```{r Table-1, echo=F} -->
@@ -117,7 +118,7 @@ We show how `respR` might be used to determine $\dot{M}O_{2,max}$, $\dot{M}O_{2,
 \toprule
 \textbf{Function} & \textbf{Description} \\ 
 \midrule
-\texttt{import\_data()} & Automatically import and format raw data files from commonly-used respirometry devices. \\
+\texttt{import\_file()} & Automatically import and format raw data files from commonly-used respirometry devices. \\
 \texttt{inspect()} & Checks data for errors, extracts a two-column dataframe for analysis, and plots the data for quick visualisation. \\
 \texttt{calc\_rate.bg()} & Calculates background oxygen uptake rate. \\
 \texttt{calc\_rate()} & Calculates oxygen uptake rate from precise segment(s) of the data. \\
@@ -126,11 +127,12 @@ We show how `respR` might be used to determine $\dot{M}O_{2,max}$, $\dot{M}O_{2,
 \texttt{adjust\_rate()} & Corrects data for background changes in oxygen concentration. \\
 \texttt{convert\_DO()} & Converts between units of oxygen concentration. \\
 \texttt{convert\_rate()} & Converts experimental rates to specific units. \\
-\texttt{pcrit()} & Calculates critical oxygen tension, P~crit~. \\
-subsample() & Reduces the size of a large data frame, by extracting every n-th row. \\
+\texttt{pcrit()} & Calculates critical oxygen tension, $P_{crit}$. \\
+\texttt{subsample()} & Reduces the size of a large data frame, by extracting every n-th row. \\
+\texttt{subset\_data()} & Extract a subset of a data frame. \\
 \texttt{intermittent.rd.rda} & Respirometry data for a single sea urchin~specimen (\textit{Heliocidaris erythrogramma}) collected using intermittent respirometry. Data were collected over 80 minutes. \\
 \texttt{sardine.rd.rda} & Respirometry data for a single sardine specimen, \textit{Sardinops sagax}. Data were collected over 2 hours. \\
-\texttt{squid.rd.rda} & Respirometry data for a single squid specimen, \textit{Doryteuthis opalescens}, to determine P~crit~. Data were collected over a 9-hour period. \\
+\texttt{squid.rd.rda} & Respirometry data for a single squid specimen, \textit{Doryteuthis opalescens}, to determine $P_{crit}$. Data were collected over a 9-hour period. \\
 \texttt{urchins.rd.rda} & Multi-column dataset containing respirometry and background respirometry data for 16 sea urchin specimens (\textit{Heliocidaris erythrogramma}). Data for each urchin were collected over 45 minutes. \\
 \bottomrule
 \end{tabular}
@@ -174,10 +176,10 @@ The function \codex{inspect()} extracts a two-column data frame from a multi-col
 All data should be numeric; `respR` at this time has limited support for date/time data (e.g. `POSIXct` and `POSIXt` classes).
 Parsing different time formats is complex and beyond the scope of this package, particularly because such packages already exist (e.g. `lubridate`).
 Time data, being a continuous variable, should be sequential, without duplicates.
-Ideally, sampling frequency will be monotonic, but in many instances this may not be the case, such as experiments with irregular sampling intervals, or because machine drift and/or data dropouts frequently occur during regular sampling.
-The information obtained from the checks allow us to make informed decisions on how to best analyse the data, and fix any cryptic errors (e.g. non-numeric data) easily.
-In particular, knowing whether a timeseries is irregular, or not, will allow us to decide whether to use time-based data extraction methods to obtain data segments of predetermined time intervals. 
-<!-- `respR` uses time-based data extraction methods by default in most of its analytical functions (except `pcrit()`), and correctly handles irregular timeseries data. -->
+Ideally, sampling frequency will be monotonic, but in many instances, this may not be the case, such as experiments with irregular sampling intervals, or because machine drift and/or data dropouts frequently occur during regular sampling.
+The information obtained from the checks allow us to make informed decisions on how to best analyse the data and fix any cryptic errors (e.g. non-numeric data) easily.
+In particular, knowing whether a time series is irregular, or not, will allow us to decide whether to use time-based data extraction methods to obtain data segments of predetermined time intervals. 
+<!-- `respR` uses time-based data extraction methods by default in most of its analytical functions (except `pcrit()`), and correctly handles irregular time series data. -->
 
 Using \codex{inspect()} is optional -- the main functions in our package will readily work with data frames that were not processed by the function. 
 Running \codex{inspect()} is an exploratory step that flags potential issues before analysis. 
@@ -189,7 +191,7 @@ Error check results are summarised in the R console and all tests are saved in t
 
 #### Calculating background rate
 
-Background oxygen consumption rate is often measured to account for the contribution of microbial respiration, and applied as a correction to experimental rates [@Rogers2016]. 
+Background oxygen consumption rate is often measured to account for the contribution of microbial respiration and applied as a correction to experimental rates [@Rogers2016]. 
 Background rates typically account for a small percentage of experimental rates, and multiple “blank” experiments are usually conducted and the rates averaged to obtain a more accurate estimate of the correction [e.g. @Daoud2007; @Carey2014a]. The function \codex{calc\_rate.bg()} uses simple linear regression to process multiple background rate measurements simultaneously. 
 Data segments can be truncated before analysis by time period or row numbers. The results are stored as an object for later use.
 
@@ -197,7 +199,7 @@ Data segments can be truncated before analysis by time period or row numbers. Th
 
 #### Processing respirometry data
 
-Typically, the analysis of respirometry data requires the selection one or more linear sections of the data for more accurate calculations of $\mathrm{\dot O_2}$ [e.g. @Gordon1989; @Chu2017; @Carey2016]. 
+Typically, the analysis of respirometry data requires the selection of one or more linear sections of the data for more accurate calculations of $\mathrm{\dot O_2}$ [e.g. @Gordon1989; @Chu2017; @Carey2016]. 
 The function \codex{calc\_rate()} can manually extract and process data subset from respirometry data. 
 Data subsets can be selected by (1) time period, (2) row numbers, (3) $\mathrm{O_2}$ decrease or (4) proportion, which should accommodate most, if not all, manual data selection requirements and allow for consistent reporting of methods and results. 
 Rates are determined using linear regression.
@@ -219,7 +221,7 @@ knitr::include_graphics("figs/ch_methods/fig2.png")
 
 (ref:c4rolling) Illustration showing the sampling method used by \codex{auto\_rate()} during **(A)** interval regression analysis, where sample windows do not overlap and **(B)** rolling regression analysis, where sample windows overlap and move forward by one sample unit at a time.
 
-(ref:sc4rolling) Illustration showing the sampling methods used by \codex{auto\_rate()}.
+(ref:sc4rolling) Illustration showing the sampling methods used by `auto_rate()`.
 
 \codex{auto\_rate()} can also automatically select the most stable (i.e. most linear) sections of noisy data by applying additional analytical techniques. 
 First, we take advantage of the key assumption that linear sections of a data series are reflected by stable parameters across the rolling estimates, a property that is often applied in financial statistics to evaluate model stability and make forward predictions on time-series data [@Zivot2006].
@@ -242,7 +244,7 @@ knitr::include_graphics("figs/ch_methods/fig3.png")
 (ref:c4autorate) Typical graphical outputs of the function \codex{auto\_rate()}. **(A)** Depending on the `method` input, the function is able to show: (clockwise from top left) the maximum rate detected, the minimum rate detected, calculation of rate by fixed-width intervals, and the most linear region as determined by kernel density estimates. **(B)** In addition, the outputs will also print diagnostic plots of: (clockwise from top left) the rolling regression of rate as a function of time with dotted lines indicating the region used to estimate the parameter, a kernel density plot that shows only when the `linear` method is called, a residual plot of the regression, and a normal Q-Q plot of the residuals of the regression. The analysis is performed using the example dataset \codex{sardine.rd}, which is included in the package. 
 <!-- Code to reproduce the plots is available in Appendix \ref{appendixd}. -->
 
-(ref:sc4autorate) Typical graphical outputs of the function \codex{auto\_rate()}.
+(ref:sc4autorate) Typical graphical outputs of the function `auto_rate()`.
 
 #### Estimating rate from flow-through respirometry
 
@@ -256,7 +258,7 @@ The first is a "broken-stick" regression (BSR) approach, adopted from @Yeager198
 The second method is a wrapper for the segmented, or "broken-line" regression approach, presented by @Muggeo2003 and available as part of the `segmented` R package [@Muggeo2008], which estimates the critical point by iteratively fitting two intersecting models on the data and selecting the point that minimises the "gap" between the two fitted lines.
 Both methods are well-used in the literature [@Labra2016; @Hansen2017; @Chu2017; @Regan2017].
 
-As P~crit~ is the break-point in the relationship between ambient dissolved oxygen ($\mathrm{O_2}$) and rate of O2 uptake ($\mathrm{\dot O_2}$), the user has two options to input data. With an $O_2 \sim$ timeseries dataset, the function will automatically perform both a rolling mean and a rolling regression of $\mathrm{O_2}$ data over time to produce the required $\bar O_2 \sim \dot O_2$ dataset (Fig. 4). 
+As P~crit~ is the break-point in the relationship between ambient dissolved oxygen ($\mathrm{O_2}$) and rate of O2 uptake ($\mathrm{\dot O_2}$), the user has two options to input data. With an $O_2 \sim$ time series dataset, the function will automatically perform both a rolling mean and a rolling regression of $\mathrm{O_2}$ data over time to produce the required $\bar O_2 \sim \dot O_2$ dataset (Fig. 4). 
 This computationally intensive, but fast, method is unique to `respR` as most other methods use non-overlapping intervals to characterise their data, but rolling metrics are more sensitive to P~crit~ analysis due to their high resolution.
 Alternatively, the user can input already calculated $\bar O_2 \sim \dot O_2$ data and the function will determine P~crit~ using the data directly. 
 
@@ -264,9 +266,9 @@ Alternatively, the user can input already calculated $\bar O_2 \sim \dot O_2$ da
 knitr::include_graphics("figs/ch_methods/fig4.png")
 ```
 
-(ref:c4pcrit) Output plots of the function \codex{pcrit()}, used in the calculation of critical oxygen tension, P$_{crit}$. **(A)** To determine P$_{crit}$ in a regular $\mathrm{O_2}$ timeseries, the function performs a rolling regression against the rolling mean of the data. This step is skipped if similar data is already provided, and the argument \codex{has.rate = TRUE} is used in the function. This produces **(B, C)** data that represents the rate of $\mathrm{O_2}$ consumption as a function of $\mathrm{O_2}$ concentration. Regression lines are then fitted iteratively, based on the broken-stick methods of Yeager and Ultsch (1989) and the segmented approach of Muggeo (2003), until convergence is achieved. The output then highlights the critical points as indicated by the coloured lines. **(D)** A close-up plot of the results in B and C is provided for the user to visualise the positions of the dotted lines relative to the x-axis.
+(ref:c4pcrit) Output plots of the function \codex{pcrit()}, used in the calculation of critical oxygen tension, P$_{crit}$. **(A)** To determine P$_{crit}$ in a regular $\mathrm{O_2}$ time series, the function performs a rolling regression against the rolling mean of the data. This step is skipped if similar data is already provided, and the argument \codex{has.rate = TRUE} is used in the function. This produces **(B, C)** data that represents the rate of $\mathrm{O_2}$ consumption as a function of $\mathrm{O_2}$ concentration. Regression lines are then fitted iteratively, based on the broken-stick methods of Yeager and Ultsch (1989) and the segmented approach of Muggeo (2003), until convergence is achieved. The output then highlights the critical points as indicated by the coloured lines. **(D)** A close-up plot of the results in B and C is provided for the user to visualise the positions of the dotted lines relative to the x-axis.
 
-(ref:sc4pcrit) Output plots of the function \codex{pcrit()}, used in the calculation of critical oxygen tension, P~crit~.
+(ref:sc4pcrit) Output plots of the function `pcrit()`, used in the calculation of critical oxygen tension, P~crit~.
 
 ## Correcting, converting and scaling data
 
@@ -277,7 +279,7 @@ As the oxygen consumption units are not mass-specific at the point of correction
 
 ### Rate conversions
 
-Because `respR` does not make any underlying assumptions on the units used to calculate metabolic rate, we provide two functions, \codex{convert\_DO()} and \codex{convert\_rate()}, to transform $\mathrm{\dot O_2}$ into volume-adjusted or mass-specific units. These functions are comprehensive and can currently convert between 168 combinations of units and has support for changes in temperature, salinity and pressure.
+Because `respR` does not make any underlying assumptions on the units used to calculate metabolic rate, we provide two functions, \codex{convert\_DO()} and \codex{convert\_rate()}, to transform $\mathrm{\dot O_2}$ into volume-adjusted or mass-specific units. These functions are comprehensive and can currently convert between 168 combinations of units and have support for changes in temperature, salinity and pressure.
 <!-- Units of measurement are not used when determining $\mathrm{\dot O_2}$ in `respR`. Instead, two functions, `convert_DO()` and `convert_rate()`, are used to transform $\mathrm{\dot O_2}$ to specific units and perform volumetric or mass-specific conversions.  -->
 This unique approach has the advantage of allowing rate calculations for data that may not be entirely supported by the `respR` workflow. 
 For example, measurements of respiration can be scaled to surface area [e.g. diatoms & coral, @Iversen2013; @Naumann2014], volume [e.g. copepod eggs, @Hammervold2015], or density [e.g. sea urchin larvae, @Stumpp2011], all of which are not yet supported in `respR`'s conversion functions.
@@ -318,21 +320,21 @@ To our knowledge, the methods we use here are novel, and not reported in past pu
 To assess \codex{auto\_rate()}'s performance, we created two internal functions designed to quantify the accuracy of our techniques to detect linear data. 
 The first function, \codex{sim\_data()}, generates random data containing a combination of linear and non-linear segments.
 The second function, \codex{test\_lin()}, specifically performs \codex{auto\_rate()} repeatedly on the randomly generated data, and aggregates performance metrics which are based on the proportion of linear segments correctly identified by the function.
-Both performance functions are published with the `respR` package, thus anyone can use them. These function are by no means comprehensive, but provide a starting point in generating the data and statistics necessary for users to make informed decisions on using \codex{auto\_rate()} to analyse their data.
+Both performance functions are published with the `respR` package, thus anyone can use them. These functions are by no means comprehensive, but provide a starting point in generating the data and statistics necessary for users to make informed decisions on using \codex{auto\_rate()} to analyse their data.
 
 ### Generating simulated data for tests
 
 The function \codex{sim\_data()} is used to randomly generate three kinds of data based on the \codex{method} argument. 
 It accepts inputs to customise the length of the data (no. of samples), the type of data (described below), the degree of noise as specified by the standard deviation of the data (default: 0.05), and a preview toggle to plot and visualise the simulated dataset.
-A preview of the types of data generated are provided in Figure \@ref(fig:simfigs).
+A preview of the types of data generated is provided in Figure \@ref(fig:simfigs).
 
 ```{r simfigs, fig.cap="(ref:simfigs)", fig.scap="(ref:ssimfigs)", fig.pos="p", out.width = '75%'}
 knitr::include_graphics("figs/appendices/c5simdata.png")
 ```
 
-(ref:simfigs) Example data produced by the function \codex{sim\_data()}, containing continuous variables on both the x and y axis and classified as (A) "default" data, which is made of a non-linear data segment appended to a linear segment of known length; (B) "corrupted" data, which is similar to "default" data, but includes a random dip in the trace which recovers to mimic equipment interference; and (C) "segmented" data, which is similar to "default" data, but contains two linear data segments instead of one. All data were randomly generated. No units of measure are necessary since the data is only used to test linear data detection performance of the \codex{auto\_rate()} function in `respR`.
+(ref:simfigs) Example data produced by the function \codex{sim\_data()}, containing continuous variables on both the x and y-axis and classified as (A) "default" data, which is made of a non-linear data segment appended to a linear segment of known length; (B) "corrupted" data, which is similar to "default" data, but includes a random dip in the trace which recovers to mimic equipment interference; and (C) "segmented" data, which is similar to "default" data, but contains two linear data segments instead of one. All data were randomly generated. No units of measure are necessary since the data is only used to test linear data detection performance of the \codex{auto\_rate()} function in `respR`.
 
-(ref:ssimfigs) Example data produced by the function \codex{sim\_data()} for (A) "default"; (B) "corrupted"; and (C) "segmented" data.
+(ref:ssimfigs) Example data produced by the function `sim_data()` for (A) "default"; (B) "corrupted"; and (C) "segmented" data.
 
 
 #### "Default" data
@@ -344,7 +346,7 @@ The shape of the dataset is designed to mimic common respirometry data whereby t
 #### "Corrupted" data
 
 This data uses the "default" data as a template, but a dip in the trace is inserted randomly at any point within the linear segment, which recovers.
-This event mimics equipment interference that does not necessarily invalidate the dataset if the corrupted section is omitted from analysis (Figure \@ref(fig:simfigs)B). 
+This event mimics equipment interference that does not necessarily invalidate the dataset if the corrupted section is omitted from the analysis (Figure \@ref(fig:simfigs)B). 
 The dip is generated by a cosine function of fixed amplitude of 1, and the length is randomly generated using \codex{floor(rnorm(1,.25*len\_x,.02*len\_x))}, where `len_x` is the length of the linear segment.
 
 Thus, to detect the valid linear segment, \codex{auto\_rate()} will need to omit the initial non-linear segment, ignore the dip, and then pick the longer of the two remaining linear segments that are separated by the dip.
@@ -358,110 +360,106 @@ Thus, to detect the correct linear segment, \codex{auto\_rate()} would need to c
 
 ### Test conditions
 
-To quantify the performance and accuracy of \codex{auto\_rate()}'s linear detection technique, the function `test_lin()` runs the linear detection technique (\codex{method = "linear"}) iteratively and extracts specific output parameter for analysis.
-The parameters include: (1) The length of the true segment ($len_t$); (2) the length of the detected segment that is correctly sampled ($len_c$); (3) the length of the detected segment that is *incorrectly* sampled ($len_i$); (4) the slope of the true segment ($\beta_{true}$; or true rate); and (5) the slope of the detected segment ($\beta_{detected}$, or detected rate).
+To quantify the performance and accuracy of \codex{auto\_rate()}'s linear detection technique, the function \codex{test\_lin()} runs the linear detection technique (\codex{method = "linear"}) iteratively and extracts specific output parameter for analysis.
+The parameters include: (1) The length of the true segment (len~t~); (2) the length of the detected segment that is correctly sampled (len~c~); (3) the length of the detected segment that is *incorrectly* sampled (len~i~); (4) the slope of the true segment ($\beta$~detected~; or true rate); and (5) the slope of the detected segment ($\beta$~detected~, or detected rate).
 
-<!-- The parameters include: (1) The length of the true segment ($len_t$); (2) the length of the detected segment that is correctly sampled ($len_c$). Here, we also call such data "true"; (3) the length of the detected segment that is *incorrectly* sampled ($len_i$). Here, we also call such data "other"; (4) the slope of the true segment ($\beta_{true}$; or true rate); and (6) the slope of the detected segment ($\beta_{detected}$, or detected rate). -->
+<!-- The parameters include: (1) The length of the true segment (len~t~); (2) the length of the detected segment that is correctly sampled (len~c~). Here, we also call such data "true"; (3) the length of the detected segment that is *incorrectly* sampled (len~i~). Here, we also call such data "other"; (4) the slope of the true segment ($\beta$~detected~; or true rate); and (6) the slope of the detected segment ($\beta$~detected~, or detected rate). -->
 
-From the above data, we can generate four kinds of performance metrics for visualisation: (1) A density plot of the proportion of the linear segment correctly identified. Each data point is a measure of $\mathrm{{len_c}\div{len_t}}$; (2) a density plot of the proportion of incorrectly-sampled data. Each data point is a measure of $\mathrm{{len_i}\div{len_c}}$; (3) a linear regression plot, where each data point is a measure of of $\mathrm{\beta_{detected}}$ (y) as a function of $\mathrm{\beta_{true}}$ (x); and (4) an x-y plot of the deviation between $\mathrm{\beta_{detected}}$ and $\mathrm{\beta_{true}}$. Each data point is a measure of $\mathrm{\beta_{true} - \beta_{detected}}$.
+From the above data, we can generate four kinds of performance metrics for visualisation: (1) A density plot of the proportion of the linear segment correctly identified. Each data point is a measure of len~c~ $\div$ len~t~; (2) a density plot of the proportion of incorrectly-sampled data. Each data point is a measure of len~i~ $\div$ len~c~; (3) a linear regression plot, where each data point is a measure of of $\beta$~detected~ (y) as a function of $\beta$~true~ (x); and (4) an x-y plot of the deviation between $\beta$~detected~ and $\beta$~true~. Each data point is a measure of $\beta$~true~ $-\beta$~detected~, plotted against $\beta$~true~.
 
 
-We performed `test_lin()` with 1,000 iterations, for all of the three kinds of data produced by \codex{sim\_data()} ("default", "corrupted", and "segmented"). 
-To check performance on different data lengths, we repeated the tests using 100, 200 and 500 data points. The output of our performance test is avaliable from within the package as a data object called \codex{test_lin_data}.
+We performed \codex{test\_lin()} with 1,000 iterations, for all of the three kinds of data produced by \codex{sim\_data()} ("default", "corrupted", and "segmented"). 
+To check performance on different data lengths, we ran the tests using 100 and 500 data points. The output of our performance test is available from within the package as a data object called \codex{test\_lin\_data}.
 
 
 ## Results
 
 ### "Default" data
 
-Results were generally positive; when run on data with 100 samples, **(A)** \codex{auto\_rate()} correctly detected a large proportion of the true segment in general, and **(B)** incorrectly sampled only a small amount of other data. 
-**(C)** Comparison of $\beta_{detected}$ against $\beta_{true}$ showed very stable detection across all slopes, even when slope values approached zero. 
-This was evident in **(D)** where roughly, the maximum $\beta_{detected}$ values had $\pm 0.004$ deviation from the $\beta_{detected}$ values across all values of $\pm 0.06$, even for values close to zero (Figure \@ref(fig:plotdefault100)).
+Results were generally positive; when run on data with 100 samples \codex{auto\_rate()} correctly detected a large proportion of the true segment (Figure \@ref(fig:plotdefault100)A), and incorrectly sampled only a small amount of other data (Figure \@ref(fig:plotdefault100)B). 
+Comparison of $\beta$~detected~ against $\beta$~detected~ showed very stable detection across all slopes, even when slope values approached zero (Figure \@ref(fig:plotdefault100)C). 
+The maximum $\beta$~detected~ values had $\pm 0.004$ deviation from the $\beta$~true~ values across all values of $\pm 0.06$, even for values close to zero (Figure \@ref(fig:plotdefault100)D).
 
 ```{r plotdefault100, fig.cap="(ref:plotdefault100)", fig.scap="(ref:splotdefault100)", fig.height=5, fig.width=8, fig.pos='h'}
 plot(test_lin_data$default100)
 ```
 
-(ref:plotdefault100) Performance of \codex{auto\_rate()}'s linear detection methods (`method = "linear`) using randomly simulated "default" data with a sample size of 100 observations per dataset, showing (A) A density plot of the proportion of the linear segment correctly identified. Each data point is a measure of ${len_c}\div{len_t}$. (B) A density plot of the proportion of incorrectly-sampled data. Each data point is a measure of ${len_i}\div{len_c}$. A linear regression plot, where each data point is a measure of of $\beta_{detected}$ (y) as a function of $\beta_{true}$ (x). (D) An x-y plot of the deviation between $\beta_{detected}$ and $\beta_{true}$. Each data point is a measure of $\beta_{true} - \beta_{detected}$. See main text for a definition of the terms used.
+(ref:plotdefault100) Performance of \codex{auto\_rate()}'s linear detection methods (`method = "linear`) using randomly simulated "default" data with a sample size of 100 observations per dataset, showing (A) A density plot of the proportion of the linear segment correctly identified. Each data point is a measure of len~c~ $\div$ len~t~. (B) A density plot of the proportion of incorrectly-sampled data. Each data point is a measure of len~i~ $\div$ len~c~. A linear regression plot, where each data point is a measure of of $\beta$~detected~ (y) as a function of $\beta$~true~ (x). (D) an x-y plot of the deviation between $\beta$~detected~ and $\beta$~true~. Each data point is a measure of $\beta$~true~ $-\beta$~detected~, plotted against $\beta$~true~. Data contains 1,000 iterations.
 
-(ref:splotdefault100) Performance of \codex{auto\_rate()}'s linear detection methods (`method = "linear`) using randomly simulated "default" data with a sample size of 100 observations per dataset.
+(ref:splotdefault100) Performance of `auto_rate`s linear detection methods (`method = "linear`) using randomly simulated "default" data with a sample size of 100 observations per dataset.
 
+Running the test on larger data revealed that \codex{auto\_rate()} performed even better when provided with bigger data. 
+With a 500-sample dataset, \codex{auto\_rate()} generally detected a larger proportion of the true data (Figure \@ref(fig:plotdefault500)A) and was less prone to sampling incorrect portions of the data (Figure \@ref(fig:plotdefault500)B).
+Linear regression had an R^2^ of 0.999 (Figure \@ref(fig:plotdefault500)C), and deviation was 10$\times$ smaller than when sample size was at 100 (Figure \@ref(fig:plotdefault500)D).
 
-
-Tests on larger sample data sizes of 200 and 500 revealed that \codex{auto\_rate()} performed better when provided with bigger data. 
-When used on data with 500 samples, \codex{auto\_rate()} generally **(A)** detected a larger proportion of the true data and **(B)** was less prone to sampling incorrect portions of the data. 
-**(C)** Linear regression had a $R^2$ of 0.999, and **(D)** deviation was 10$\times$ smaller than when sample size was at 100 (Figure \@ref(fig:plotdefault500)).
-
-```{r plotdefault500, fig.cap="(ref:plotdefault500)", fig.scap="(ref:plotdefault500)", fig.height=5, fig.width=8, fig.pos='h'}
+```{r plotdefault500, fig.cap="(ref:plotdefault500)", fig.scap="(ref:splotdefault500)", fig.height=5, fig.width=8, fig.pos='h'}
 plot(test_lin_data$default500)
 ```
 
-(ref:plotdefault500) Performance of \codex{auto\_rate()}'s linear detection methods (`method = "linear`) using randomly simulated "default" data with a sample size of 500 observations per dataset, showing (A) A density plot of the proportion of the linear segment correctly identified. Each data point is a measure of ${len_c}\div{len_t}$. (B) A density plot of the proportion of incorrectly-sampled data. Each data point is a measure of ${len_i}\div{len_c}$. A linear regression plot, where each data point is a measure of of $\beta_{detected}$ (y) as a function of $\beta_{true}$ (x). (D) An x-y plot of the deviation between $\beta_{detected}$ and $\beta_{true}$. Each data point is a measure of $\beta_{true} - \beta_{detected}$. See main text for a definition of the terms used.
+(ref:plotdefault500) Performance of \codex{auto\_rate()}'s linear detection methods (`method = "linear`) using randomly simulated "default" data with a sample size of 500 observations per dataset, showing (A) A density plot of the proportion of the linear segment correctly identified. Each data point is a measure of len~c~ $\div$ len~t~. (B) A density plot of the proportion of incorrectly-sampled data. Each data point is a measure of len~i~ $\div$ len~c~. A linear regression plot, where each data point is a measure of of $\beta$~detected~ (y) as a function of $\beta$~true~ (x). (D) an x-y plot of the deviation between $\beta$~detected~ and $\beta$~true~. Each data point is a measure of $\beta$~true~ $-\beta$~detected~, plotted against $\beta$~true~. Data contains 1,000 iterations.
 
-(ref:splotdefault500) Performance of \codex{auto\_rate()}'s linear detection methods (`method = "linear`) using randomly simulated "default" data with a sample size of 500 observations per dataset.
+(ref:splotdefault500) Performance of `auto_rate()`'s linear detection methods (`method = "linear`) using randomly simulated "default" data with a sample size of 500 observations per dataset.
 
 ### "Corrupted" data
 
 In this challenging data scenario \codex{auto\_rate()} had a tendency to under-sample the linear segment. 
-As this particular type of data consisted of two linear segments separated by a "dip", the function also sometimes **(A)** detected the shorter segment as the top-ranked result, resulting in the correct estimate of $\beta_{true}$, but the wrong linear segment detected. 
-Thus, the function may incorrectly sample none of the linear segment **(B)**, but only rarely; in most cases, it still identified the right segment, and incorrectly sampled only a small amount of data.
-**(C)** Comparison of $\beta_{detected}$ against $\beta_{true}$ showed stable, but relatively noisy detection of the true rate across all slopes when compared to its performance with "default"-type data. 
-**(D)** The deviation plot showed that performance was genrally poorer at values close to zero (Figure \@ref(fig:plotcorrupted100)).
+As this particular type of data consisted of two linear segments separated by a "dip", the function also sometimes detected the shorter segment as the top-ranked result, resulting in the correct estimate of $\beta$~detected~, but the wrong linear segment detected (Figure \@ref(fig:plotcorrupted100)A). 
+Thus, the function may incorrectly sample none of the linear segment, but only rarely; in most cases, it still identified the right segment, and incorrectly sampled only a small amount of data (Figure \@ref(fig:plotcorrupted100)B). Comparison of $\beta$~true~ against $\beta$~detected~ showed stable, but relatively noisy detection of the true rate across all slopes when compared to its performance with "default"-type data (Figure \@ref(fig:plotcorrupted100)C). The deviation plot showed that performance was generally poorer at values close to zero (Figure \@ref(fig:plotcorrupted100)D).
 
 ```{r plotcorrupted100, fig.cap="(ref:plotcorrupted100)", fig.scap="(ref:splotcorrupted100)", fig.height=5, fig.width=8, fig.pos='h'}
 plot(test_lin_data$corrupted100)
 ```
 
-(ref:plotcorrupted100) Performance of \codex{auto\_rate()}'s linear detection methods (`method = "linear`) using randomly simulated "corrupted" data with a sample size of 100 observations per dataset, showing (A) A density plot of the proportion of the linear segment correctly identified. Each data point is a measure of ${len_c}\div{len_t}$. (B) A density plot of the proportion of incorrectly-sampled data. Each data point is a measure of ${len_i}\div{len_c}$. A linear regression plot, where each data point is a measure of of $\beta_{detected}$ (y) as a function of $\beta_{true}$ (x). (D) An x-y plot of the deviation between $\beta_{detected}$ and $\beta_{true}$. Each data point is a measure of $\beta_{true} - \beta_{detected}$. See main text for a definition of the terms used.
+(ref:plotcorrupted100) Performance of \codex{auto\_rate()}'s linear detection methods (`method = "linear`) using randomly simulated "corrupted" data with a sample size of 100 observations per dataset, showing (A) A density plot of the proportion of the linear segment correctly identified. Each data point is a measure of len~c~ $\div$ len~t~. (B) A density plot of the proportion of incorrectly-sampled data. Each data point is a measure of len~i~ $\div$ len~c~. A linear regression plot, where each data point is a measure of of $\beta$~detected~ (y) as a function of $\beta$~true~ (x). (D) an x-y plot of the deviation between $\beta$~detected~ and $\beta$~true~. Each data point is a measure of $\beta$~true~ $-\beta$~detected~, plotted against $\beta$~true~. Data contains 1,000 iterations.
 
-(ref:splotcorrupted100) Performance of \codex{auto\_rate()}'s linear detection methods (`method = "linear`) using randomly simulated "corrupted" data with a sample size of 100 observations per dataset.
+(ref:splotcorrupted100) Performance of `auto_rate`'s linear detection methods (`method = "linear`) using randomly simulated "corrupted" data with a sample size of 100 observations per dataset.
 
-Again, \codex{auto\_rate()} performed better when provided with bigger data. At 500 samples the same issue where the the shorter linear segment was incorrectly selected still persisted **(A)**, but **(B)** the function sampled incorrect segments less often, **(C)** linear regression of $\beta_{detected}$ against $\beta_{true}$ had a better goodness of fit and **(D)** deviation values from $\beta_{true}$ were substantially smaller with seemingly fewer poor estimates when slope values approach zero (Figure \@ref(fig:plotcorrupted500)).
+Again, \codex{auto\_rate()} performed better when provided with bigger data. At 500 samples the same issue where the the shorter linear segment was incorrectly selected still persisted (Figure \@ref(fig:plotcorrupted500)A), but the function sampled incorrect segments less often (Figure \@ref(fig:plotcorrupted500)B). 
+Linear regression of $\beta$~true~ against $\beta$~detected~ had a better goodness of fit (Figure \@ref(fig:plotcorrupted500)C) and deviation values from $\beta$~detected~ were substantially smaller with seemingly fewer poor estimates when slope values approach zero (Figure \@ref(fig:plotcorrupted500)D).
 
 ```{r plotcorrupted500, fig.cap="(ref:plotcorrupted500)", fig.scap="(ref:splotcorrupted500)", fig.height=5, fig.width=8, fig.pos='h'}
 plot(test_lin_data$corrupted500)
 ```
 
-(ref:plotcorrupted500) Performance of \codex{auto\_rate()}'s linear detection methods (`method = "linear`) using randomly simulated "corrupted" data with a sample size of 500 observations per dataset, showing (A) A density plot of the proportion of the linear segment correctly identified. Each data point is a measure of ${len_c}\div{len_t}$. (B) A density plot of the proportion of incorrectly-sampled data. Each data point is a measure of ${len_i}\div{len_c}$. A linear regression plot, where each data point is a measure of of $\beta_{detected}$ (y) as a function of $\beta_{true}$ (x). (D) An x-y plot of the deviation between $\beta_{detected}$ and $\beta_{true}$. Each data point is a measure of $\beta_{true} - \beta_{detected}$. See main text for a definition of the terms used.
+(ref:plotcorrupted500) Performance of \codex{auto\_rate()}'s linear detection methods (`method = "linear`) using randomly simulated "corrupted" data with a sample size of 500 observations per dataset, showing (A) A density plot of the proportion of the linear segment correctly identified. Each data point is a measure of len~c~ $\div$ len~t~. (B) A density plot of the proportion of incorrectly-sampled data. Each data point is a measure of len~i~ $\div$ len~c~. A linear regression plot, where each data point is a measure of of $\beta$~detected~ (y) as a function of $\beta$~true~ (x). (D) an x-y plot of the deviation between $\beta$~detected~ and $\beta$~true~. Each data point is a measure of $\beta$~true~ $-\beta$~detected~, plotted against $\beta$~true~. Data contains 1,000 iterations.
 
-(ref:splotcorrupted500) Performance of \codex{auto\_rate()}'s linear detection methods (`method = "linear`) using randomly simulated "corrupted" data with a sample size of 500 observations per dataset.
+(ref:splotcorrupted500) Performance of `auto_rate()`'s linear detection methods (`method = "linear`) using randomly simulated "corrupted" data with a sample size of 500 observations per dataset.
 
 ### "Segmented" data
 
 This type of data is the most difficult to handle as \codex{auto\_rate()} needed to disregard the curved, but increasingly-linear top portion of the data, and also discard the slight degree of change in slope towards the end of the data. 
 Thus, \codex{auto\_rate()} performed well in many cases, but poorly in others. 
-In the majority of cases, **(A)** when it managed to sample the linear segment, it did so for a very large fraction of the data. 
-**(B)** It performed less well at avoiding incorrect sampling, since it sometimes selected the other linear segment. 
-However, **(C)** the plot of $\beta_{detected}$ against $\beta_{true}$ showed that it still performed surprisingly well most of the time, despite the errors, and **(D)** the deviance from the true rate appeared to be poorer when slope values are closer to zero (Figure \@ref(fig:plotsegmented100)).
+In the majority of cases, when it managed to sample the linear segment, it did so for a very large fraction of the data (Figure \@ref(fig:plotsegmented100)A). It performed less well at avoiding incorrect sampling since it sometimes selected the other linear segment (Figure \@ref(fig:plotsegmented100)B). 
+However, the plot of $\beta$~true~ against $\beta$~detected~ showed that it still performed surprisingly well most of the time, despite the errors (Figure \@ref(fig:plotsegmented100)C), and the deviance from the true rate appeared to be poorer when slope values are closer to zero (Figure \@ref(fig:plotsegmented100)D).
 
 ```{r plotsegmented100, fig.cap="(ref:plotsegmented100)", fig.scap="(ref:splotsegmented100)", fig.height=5, fig.width=8, fig.pos='h'}
 plot(test_lin_data$segmented100)
 ```
 
-(ref:plotsegmented100) Performance of \codex{auto\_rate()}'s linear detection methods (`method = "linear`) using randomly simulated "segmented" data with a sample size of 100 observations per dataset, showing (A) A density plot of the proportion of the linear segment correctly identified. Each data point is a measure of ${len_c}\div{len_t}$. (B) A density plot of the proportion of incorrectly-sampled data. Each data point is a measure of ${len_i}\div{len_c}$. A linear regression plot, where each data point is a measure of of $\beta_{detected}$ (y) as a function of $\beta_{true}$ (x). (D) An x-y plot of the deviation between $\beta_{detected}$ and $\beta_{true}$. Each data point is a measure of $\beta_{true} - \beta_{detected}$. See main text for a definition of the terms used.
+(ref:plotsegmented100) Performance of \codex{auto\_rate()}'s linear detection methods (`method = "linear`) using randomly simulated "segmented" data with a sample size of 100 observations per dataset, showing (A) A density plot of the proportion of the linear segment correctly identified. Each data point is a measure of len~c~ $\div$ len~t~. (B) A density plot of the proportion of incorrectly-sampled data. Each data point is a measure of len~i~ $\div$ len~c~. A linear regression plot, where each data point is a measure of of $\beta$~detected~ (y) as a function of $\beta$~true~ (x). (D) an x-y plot of the deviation between $\beta$~detected~ and $\beta$~true~. Each data point is a measure of $\beta$~true~ $-\beta$~detected~, plotted against $\beta$~true~. Data contains 1,000 iterations.
 
-(ref:splotsegmented100) Performance of \codex{auto\_rate()}'s linear detection methods (`method = "linear`) using randomly simulated "segmented" data with a sample size of 100 observations per dataset.
+(ref:splotsegmented100) Performance of `auto_rate()`'s linear detection methods (`method = "linear`) using randomly simulated "segmented" data with a sample size of 100 observations per dataset.
 
-Again, with a larger dataset, \codex{auto\_rate()}'s performance was substantially better. With a 500-sample dataset, many of the issues that occured in the previous test were better resolved. 
-The function **(A)** correctly sampled the right segment most of the time, and rarely sampled other data or the other linear segment **(B)**. 
-**(C)** Linear regression of $\beta_{detected}$ against $\beta_{true}$ had a $R^2$ of 0.999, and **(D)** deviations from $\beta_{true}$ were much smaller in magnitude (Figure \@ref(fig:plotsegmented500)).
+Again, with a larger dataset, \codex{auto\_rate()}'s performance was substantially better. With a 500-sample dataset, many of the issues that occurred in the previous test were better resolved. 
+The function correctly sampled the right segment most of the time (Figure \@ref(fig:plotsegmented500)A), and rarely sampled other data or the other linear segment (Figure \@ref(fig:plotsegmented500)B). 
+Linear regression of $\beta$~detected~ against $\beta$~true~ had a $R^2$ of 0.999 (Figure \@ref(fig:plotsegmented500)C), and deviations from $\beta$~detected~ were much smaller in magnitude (Figure \@ref(fig:plotsegmented500)D).
 
 ```{r plotsegmented500, fig.cap="(ref:plotsegmented500)", fig.scap="(ref:splotsegmented500)", fig.height=5, fig.width=8, fig.pos='h'}
 plot(test_lin_data$segmented500)
 ```
 
-(ref:plotsegmented500) Performance of \codex{auto\_rate()}'s linear detection methods (`method = "linear`) using randomly simulated "segmented" data with a sample size of 500 observations per dataset, showing (A) A density plot of the proportion of the linear segment correctly identified. Each data point is a measure of ${len_c}\div{len_t}$. (B) A density plot of the proportion of incorrectly-sampled data. Each data point is a measure of ${len_i}\div{len_c}$. A linear regression plot, where each data point is a measure of of $\beta_{detected}$ (y) as a function of $\beta_{true}$ (x). (D) An x-y plot of the deviation between $\beta_{detected}$ and $\beta_{true}$. Each data point is a measure of $\beta_{true} - \beta_{detected}$. See main text for a definition of the terms used.
+(ref:plotsegmented500) Performance of \codex{auto\_rate()}'s linear detection methods (`method = "linear`) using randomly simulated "segmented" data with a sample size of 500 observations per dataset, showing (A) A density plot of the proportion of the linear segment correctly identified (len~c~ $\div$ len~t~); (B) a density plot of the proportion of incorrectly-sampled data (len~i~ $\div$ len~c~). A linear regression plot, where each data point is a measure of of $\beta$~detected~ (y) as a function of $\beta$~detected~ (x). (D) an x-y plot of the deviation between $\beta$~detected~ and $\beta$~true~. Each data point is a measure of $\beta$~true~ $-\beta$~detected~, plotted against $\beta$~true~. Data contains 1,000 iterations. Data contains 1,000 iterations.
 
-(ref:splotsegmented500) Performance of \codex{auto\_rate()}'s linear detection methods (`method = "linear`) using randomly simulated "segmented" data with a sample size of 500 observations per dataset.
+(ref:splotsegmented500) Performance of `auto_rate()`'s linear detection methods (`method = "linear`) using randomly simulated "segmented" data with a sample size of 500 observations per dataset.
 
-We did not report any of the results for 200-sample size datasets, but users can call the data object `test_lin_data` and plot the results.
+<!-- We did not report any of the results for 200-sample size datasets, but users can call the data object `test_lin_data` and plot the results. -->
 
 ## Concluding remarks and future improvements
 
 The package `respR` implements a number of methods not available in any other R package or software. 
-These include the use of rolling regression techniques to estimate $\dot{M}O_{2,max}$, $\dot{M}O_{2,min}$, and P~crit~, the use of kernel density estimation techniques to detect and rank linear segments of the data, support for unevenly-spaced time data, and the ability to extract and analyse data precisely by time, row, or $\mathrm{O_2}$ concentration.
+These include the use of rolling regression techniques to estimate $\mathrm{\dot{M}}$O~2,max~, $\mathrm{\dot{M}}$O~2,min~, and P~crit~, the use of kernel density estimation techniques to detect and rank linear segments of the data, support for unevenly-spaced time data, and the ability to extract and analyse data precisely by time, row, or $\mathrm{O_2}$ concentration.
 
-It is important to note, however, that while `respR` contains automated methods to assist in processing difficult data, no amount of data manupilation can fix poor data. Users should still ensure that their data has been collected using acceptable methods (e.g. closed respirometry setups should always be equipped with mixing devices, see @Clark2013 before performing analyses of any kind.
+It is important to note, however, that while `respR` contains automated methods to assist in processing difficult data, no amount of data manipulation can fix poor data. Users should still ensure that their data has been collected using acceptable methods (e.g. closed respirometry setups should always be equipped with mixing devices, see @Clark2013 before performing analyses of any kind.
 <!-- Unlike manual methods where data ranges may be arbitrarily selected,  -->
 Nevertheless, `respR` adheres to well-defined rules to obtain rates of interest, and its methods and results are transparent and fully reproducible. 
 The `respR` package allows for more effective and less time-consuming handling and processing of the extensive datasets that are increasingly common in respirometry research.

@@ -39,7 +39,7 @@ surv_summary(s)
 
 
 # Plot the graph (kaplan-meier)
-init_plot <- ggsurvplot(s, size = .75,
+init_plot <- ggsurvplot(s, size = 2,
   surv.scale = "percent",
   # pval = TRUE,
   # pval.coord = c(1,.4),
@@ -154,3 +154,4 @@ cowplot::save_plot(
   base_height = 8, base_width = 8
 )
 save.image(file = "output/ch_multistressor/survival.RData")
+

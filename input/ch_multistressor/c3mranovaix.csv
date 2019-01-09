@@ -1,0 +1,5 @@
+﻿Source,Sum sq.,d.f.,F-value,p
+Temperature,18.34,2,6.89,0.0022**
+pH,12,1,9.11,0.0039**
+Temperature:pH,0.2,2,0.92,0.93
+Residuals,71.86,54,,

@@ -1,5 +1,6 @@
 bookdown::gitbook:
   css: style.css
+  pandoc_args: [ "--csl", "marine-biology.csl"]
   config:
     toc:
       collapse: subsection
@@ -30,13 +31,16 @@ bookdown::pdf_book:
   includes:
     in_header:
       - settings.tex
-      - preamble.tex
+      - 000_preamble.tex
     before_body:
       - 001_frontpage.tex
-      - 002_abstract.tex
-      - 003_acknowledgements.tex
+      - 002_statement.tex
+      - 003_abstract.tex
+      - 004_acknowledgements.tex
+      - 005_preface.tex
   latex_engine: xelatex
-  citation_package: natbib
+  citation_package: none
+  pandoc_args: [ "--csl", "marine-biology.csl"]
   keep_tex: yes
 
 
@@ -44,8 +48,9 @@ bookdown::pdf_book:
 #bookdown::epub_book: default
 
 
-bookdown::word_document2:
-  fig_caption: true
-  reference_docx: template.docx
+#bookdown::word_document2:
+#  fig_caption: true
+#  reference_docx: template.docx
+#  pandoc_args: [ "--csl", "marine-biology.csl"]
 
 

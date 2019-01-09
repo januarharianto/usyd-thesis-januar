@@ -69,14 +69,15 @@ resp_plot <- ggplot(dt, aes(factor(treatment), metabolicRate)) +
   ## code below adds a mean to the boxplot (dotted line)
   ## from: https://stackoverflow.com/a/40136391
   stat_summary(fun.y = median, geom = "errorbar",
-    aes(ymax = ..y.., ymin = ..y.., linetype = "median"),
+    aes(ymax = ..y.., ymin = ..y.., linetype = "Median"),
     width = .75) +
   stat_summary(fun.y = mean, geom = "errorbar",
-    aes(ymax = ..y.., ymin = ..y.., linetype = "mean"),
+    aes(ymax = ..y.., ymin = ..y.., linetype = "Mean"),
     width = .75) +
   scale_linetype_manual(name = "", values = c(3,1)) +
   xlab("Treatment temperature (°C)") + # change y-axis title
   ylab(expression("Rate "~(mg~O[2]~g^{-1}~h^{-1}))) + # Change x-axis title
+  theme(legend.position = "bottom", legend.justification = "center") +
   geom_blank()
 resp_plot
 
@@ -164,6 +165,7 @@ letterPos2$group <- c("ab", "a", "a", "b")
 
 resp_plot2 <- ggplot(pdt, aes(factor(treatment), mean)) +
   geom_boxplot(
+    fill = "lightyellow",
     fatten = 1,
     alpha = .6,
     outlier.size = 2,
@@ -176,21 +178,23 @@ resp_plot2 <- ggplot(pdt, aes(factor(treatment), mean)) +
   ## code below adds a mean to the boxplot (dotted line)
   ## from: https://stackoverflow.com/a/40136391
   stat_summary(fun.y = median, geom = "errorbar",
-               aes(ymax = ..y.., ymin = ..y.., linetype = "median"),
+               aes(ymax = ..y.., ymin = ..y.., linetype = "Median"),
                width = .75) +
   stat_summary(fun.y = mean, geom = "errorbar",
-               aes(ymax = ..y.., ymin = ..y.., linetype = "mean"),
+               aes(ymax = ..y.., ymin = ..y.., linetype = "Mean"),
                width = .75) +
   scale_linetype_manual(name = "", values = c(3,1)) +
+  scale_fill_manual(values = c("slategray1")) +
+  theme(legend.position = "bottom", legend.justification = "center") +
   xlab("Treatment temperature (°C)") + # change y-axis title
   ylab(expression("Rate "~(mg~O[2]~g^{-1}~h^{-1}))) + # Change x-axis title
   geom_blank()
-
+resp_plot2
 
 
 # Export ----
 
-cowplot::save_plot("figs/ch_warming/mr.png", resp_plot,
-  base_height = 6, base_width = 6*1.3)
-cowplot::save_plot("figs/ch_warming/mr2.png", resp_plot2,
-                   base_height = 6, base_width = 6*1.3)
+# cowplot::save_plot("figs/ch_warming/mr.png", resp_plot,
+  # base_height = 6, base_width = 6*1.3)
+cowplot::save_plot("figs/ch_warming/c2metabolic.png", resp_plot2,
+                   base_height = 8, base_width = 8)

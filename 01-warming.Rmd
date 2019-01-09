@@ -14,12 +14,14 @@ library(pander)
 
 \SingleSpacing
 
-# The effect of warming on mortality, metabolic rate, heat-shock protein response and gonad growth in thermally acclimated sea urchins (*Heliocidaris erythrogramma*) [^published2] {#chapter2}
+# The effect of warming on mortality, metabolic rate, heat-shock protein response and gonad growth in thermally acclimated sea urchins (*Heliocidaris erythrogramma*) {#chapter2}
 \chaptermark{Effect of warming on \textit{Heliocidaris erythrogramma}}
 
 \OnehalfSpacing
 
-[^published2]: This chapter is *published*: Harianto J, Nguyen HD, Holmes SP and Byrne M (2018). The effect of warming on mortality, metabolic rate, heat-shock protein response and gonad growth in thermally acclimated sea urchins (*Heliocidaris erythrogramma*). *Marine Biology* 165(6):96. doi: 10/gdqdv4.
+<!-- [^published2]: This chapter is *published*: Harianto J, Nguyen HD, Holmes SP and Byrne M (2018). The effect of warming on mortality, metabolic rate, heat-shock protein response and gonad growth in thermally acclimated sea urchins (*Heliocidaris erythrogramma*). *Marine Biology* 165(6):96. doi: 10/gdqdv4. -->
+
+\footnote[]{This chapter is published: Harianto J, Nguyen HD, Holmes SP and Byrne M (2018). The effect of warming on mortality, metabolic rate, heat-shock protein response and gonad growth in thermally acclimated sea urchins (\textit{Heliocidaris erythrogramma}). \textit{Marine Biology} 165(6):96. doi: 10/gdqdv4.}
 
 ## Abstract {-}
 
@@ -46,7 +48,7 @@ In thermal-ramping experiments where urchins are exposed to acute (instantaneous
 In contrast, long-term chronic exposure to increased temperature – where organisms have an opportunity to acclimate – provide insights into the long-term effects of warming [e.g. @Suckling2015; @Brothers2016; @Carey2016; @Delorme2016]. 
 The distinction between acute versus acclimated experiments is important, because long-term acclimation increases resilience and reduces sensitivity to elevated temperatures [@Stillman2003; @Seebacher2014]. 
 
-Acclimation studies of sea urchins have provided important insights in the effects of long-term exposure to elevated temperature on metabolism and reproduction. 
+Acclimation studies of sea urchins have provided important insights into the effects of long-term exposure to elevated temperature on metabolism and reproduction. 
 For example, a 3-month acclimation to elevated temperature (+3 \degree C) resulted in an increased metabolic rate, reduced growth and reproductive failure in the temperate sea urchin, *Evechinus chloroticus* [@Delorme2016]. 
 In a 2-year acclimation to increased temperature (+2 \degree C), individuals of the Antarctic sea urchin *Sterechinus neumayeri* were able to adjust their metabolic performance such that their metabolic rates were similar to that of control urchins [@Suckling2015]. 
 The acclimated *S. neumayeri* also produced larger eggs compared with control urchins, a response suggested to reflect increased investment in developmental success due to acclimation [@Suckling2015]. 
@@ -78,8 +80,8 @@ It was predicted that *H. erythrogramma* exposed to elevated temperature would e
 
 ### Collection
 
-Adult *Heliocidaris erythrogramma* (54.4 $\pm$ 6.1 $mm$ diameter) were collected at a depth of 2--3 $m$ from three locations in Sydney Harbour, Australia: Chowder Bay (33&deg;50'29''S, 151&deg;15'1''E), Milk Beach (33&deg;51'23''S, 151&deg;16'11''E) and Bottle and Glass Point (33&deg;50'5''S, 151&deg;16'12''E) during winter in July 2013. 
-The urchins were transported to the Sydney Institute of Marine Science (SIMS) and held in aquaria (80 $L$) supplied with ambient ($\sim$ 18 \degree C) flow-through filtered sea water (FSW; 70 $\mu$m; 1.5 $L\ min^{−1}$) for up to 4 weeks before being acclimated to the four temperature treatments (see below).
+Adult *Heliocidaris erythrogramma* (54.4 $\pm$ 6.1 $mm$ diameter) were collected at a depth of 2--3 $m$ from three locations in Sydney Harbour, Australia: Chowder Bay ([\ang{33;50;27.6}S \ang{151;15;9.8}E](https://www.google.com/maps/?q=-33.840986,151.252714)), Milk Beach ([\ang{33;51;23.3}S \ang{151;16;0.7}E](https://www.google.com/maps/?q=-33.856467,151.266856))  and Bottle and Glass Point ([\ang{33;50;55.2}S \ang{151;16;11.5}E](https://www.google.com/maps/?q=-33.848678,151.269870)) during winter in July 2013. 
+The urchins were transported to the Sydney Institute of Marine Science (SIMS) and held in aquaria (80 $L$) supplied with ambient ($\sim$ 18 \degree C) flow-through filtered sea water (FSW; 70 $\mu$m; 1.5 L min^-`^) for up to 4 weeks before being acclimated to the four temperature treatments (see below).
 
 ### Habitat temperature profile
 
@@ -91,8 +93,8 @@ The loggers were recovered, calibrated and redeployed every 3--4 months for data
 
 The acclimation experiment was performed in a temperature-controlled room with a weekly-adjusted light:dark regime that reflected the diurnal sunrise/sunset cycle. 
 A thermocouple-solenoid feedback system maintained temperatures automatically, by mixing warm (25.5 \degree C) and cold (16.0 \degree C) FSW (20 $\mu$m filtered) into 16 header tanks (60 $L$). 
-As a second level of control, heaters (75 $W$, EHEIM GmbH & Co KG, Deizisau, Germany) attached to temperature controllers (model 7028/3, TUNZE Aquarientechnik GmbH, Penzberg, Germany) maintained temperature stability within header tanks.
-The tanks were aerated to ensure that the dissolved oxygen in the system was $\geq$ 90 \%. Each header tank provided a continuous supply of FSW to 3 treatment tanks at a flow rate of 0.3 L min^-1^ $L\ min^{−1}$.
+As a second level of control, heaters (75 W, EHEIM GmbH & Co KG, Deizisau, Germany) attached to temperature controllers (model 7028/3, TUNZE Aquarientechnik GmbH, Penzberg, Germany) maintained temperature stability within header tanks.
+The tanks were aerated to ensure that the dissolved oxygen in the system was $\geq$ 90 \%. Each header tank provided a continuous supply of FSW to 3 treatment tanks at a flow rate of 0.3 L min^-1^ L min^-1^.
 
 All tanks were initially adjusted to ambient conditions (18 \degree C) at the time of transfer. 
 There were 6 tanks (25 $L$) per treatment, and 8 urchins were randomly transferred to each tank ($n =$ 192 urchins). 
@@ -123,17 +125,17 @@ A few urchins ($n =$ 4) that displayed signs of stress (e.g. dropped spines, red
 
 ### Metabolic rate
 
-After 12 weeks of acclimation, the weight-specific metabolic rate ($MO_2$; mgO~2~ h^-1^ g^-1^) of the urchins was determined using constant volume respirometry. 
-For every tank, four random urchins were measured for metabolic rate and the mean $MO_2$ used for statistical analysis ($n =$ 6 treatment^-1^).
+After 12 weeks of acclimation, the weight-specific metabolic rate (MO~2~; mgO~2~ h^-1^ g^-1^) of the urchins was determined using constant volume respirometry. 
+For every tank, four random urchins were measured for metabolic rate and the mean MO~2~ used for statistical analysis ($n =$ 6 treatment^-1^).
 Urchins were starved for 3 days and then transferred to stirred 2 $L$ respirometry chambers, supplied with treatment water, so that each urchin was maintained at its respective experimental temperature level during respirometry measurements.
 Dissolved oxygen (DO) was recorded using an optical fluorescence quenching probe (Vernier ODO-BTA) until a decrease of $\sim$ 15\% in oxygen concentration was achieved. 
 FSW-only blanks were measured routinely ($n =$ 16) to correct the recordings for background respiration and instrument drift. 
 After each measurement, the chamber was removed from the system, wiped dry and weighed. 
 The urchin was then taken out of the chamber, blotted dry with tissue, and weighed for wet-weight.
 The weight of the sea water was calculated by deducting pre-weighed chamber, stir-bar and urchin wet-weight from the total weight of the chamber, and then converted to volume by multiplying it with its density adjusted based on current treatment temperature, salinity and barometric air pressure [@Fofonoff1983]. 
-$MO_2$ was calculated using the equation based on @Lighton2008: $$MO_2 = \frac{\Delta O_2 V}{W}$$ where $\Delta O_2$ is the local linear regression (i.e. slope) of oxygen concentration over time (mg L^-1^ h^-1^), $V$ is the volume of seawater (L), and $W$ is the wet weight of the urchin (g).
+MO~2~ was calculated using the equation based on @Lighton2008: $$MO_2 = \frac{\Delta O_2 V}{W}$$ where $\Delta O_2$ is the local linear regression (i.e. slope) of oxygen concentration over time (mg L^-1^ h^-1^), $V$ is the volume of seawater (L), and $W$ is the wet weight of the urchin (g).
 
-Thermal sensitivity, $Q_{10}$, was determined as a function of mean temperature across a 10 \degree C range using the equation provided by @Prosser1991: $$Q_{10} =\left( \frac{R_1}{R_2} \right)^{10/T_1-T_2}$$ where $R_1$ and $R_2$ are the $MO_2$ at their corresponding lower and higher temperatures, $T_1$ (20 \degree C) and $T_2$ (22 \degree C, 24 \degree C or 26 \degree C), respectively.
+Thermal sensitivity, $Q_{10}$, was determined as a function of mean temperature across a 10 \degree C range using the equation provided by @Prosser1991: $$Q_{10} =\left( \frac{R_1}{R_2} \right)^{10/T_1-T_2}$$ where $R_1$ and $R_2$ are the MO~2~ at their corresponding lower and higher temperatures, $T_1$ (20 \degree C) and $T_2$ (22 \degree C, 24 \degree C or 26 \degree C), respectively.
 
 ### Gonad index and HSP70 expression
 
@@ -148,7 +150,7 @@ The supernatant protein sample was extracted from below the lipid layer, and pro
 Based on protein content estimates, we prepared protein samples to a concentration of 2 mg mL^-1^, by dilution in buffer (50 mM Tris-HCl pH 6.8, 2 \% SDS w/v, 10 \% glycerol and 5 \% beta-mercaptoethanol).
 Samples containing 40 µg of total protein were loaded in 4 to 20 \% Tris-Glycine pre-cast gels and separated via gel electrophoresis at 250 $V$ for 35 min using a Mini Protean III system (Bio-Rad Laboratories, Gladesville, New South Wales, Australia).
 A recombinant rat 70 kDa heat shock protein (Stressgen, Catalog. ID ADI-SSP-758, Sapphire Bioscience Pty. Ltd., Redfern, New South Wales, Australia), diluted to 1:100, was loaded as a positive control.
-A pre-stained protein molecular weight marker (Invitrogen Catalog. No.10748-010, Invitrogen, Carlsbad, California, USA) was also loaded to each gel (7 $\mu$L) to monitor protein separation during gel electrophoresis and to enable evaluation of western transfer efficiency.
+A prestained protein molecular weight marker (Invitrogen Catalog. No.10748-010, Invitrogen, Carlsbad, California, USA) was also loaded to each gel (7 $\mu$L) to monitor protein separation during gel electrophoresis and to enable evaluation of western transfer efficiency.
 
 Following electrophoresis, separated proteins were transferred to Polyvinylidene Difluoride (PVDF) membranes (0.45 $\mu$m pore size) using a Mini Trans-Blot Cell (Bio-Rad Laboratories). 
 Each membrane was cut into two horizontal strips, for the detection of HSP70 and $\beta$-actin (loading control), respectively.
@@ -170,7 +172,7 @@ As spawning had occurred prior to harvesting of the gonads at the end of the exp
 
 ### Data analyses
 
-There was no significant effect of nesting replicate tanks within treatments (Likelihood Ratio Test, $\chi^2$ = 0.03, $p =$ 0.9). $MO_2$ data were averaged by tank ($n =$ 6) and analysed using a one-way Analysis of Variance (ANOVA).
+There was no significant effect of nesting replicate tanks within treatments (Likelihood Ratio Test, $\chi^2$ = 0.03, $p =$ 0.9). MO~2~ data were averaged by tank ($n =$ 6) and analysed using a one-way Analysis of Variance (ANOVA).
 All data were tested for homogeneity of variance and normality assumptions [@Quinn2002]. Post-hoc analyses were performed using Tukey's HSD test ($p =$ 0.05) to detect significant differences between treatments. 
 Survival data were generated using the Kaplan-Meier method with right-censoring [see @Rich2010] and analysed using a log-rank test. 
 The stressed urchins that were removed ($n =$ 4) were also censored from the experiment. 
@@ -225,13 +227,13 @@ knitr::kable(c2cox_tab, "latex", booktabs = T, escape = F,
 
 ```
 
-(ref:c2coxtab) Results of Cox’s proportional hazards analysis on the risk of death in the sea urchin, *Heliocidaris erythrogramma* when acclimated to elevated temperatures of 22 \degree C, 24 \degree C, and 26\degree C from the control temperature of 20 \degree C. Test results were significant ($p <$ 0.001, $df =$ 3).
+(ref:c2coxtab) Results of Cox proportional hazards analysis on the risk of death in the sea urchin, *Heliocidaris erythrogramma* when acclimated to elevated temperatures of 22 \degree C, 24 \degree C, and 26\degree C from the control temperature of 20 \degree C. Test results were significant ($p <$ 0.001, $df =$ 3). \*\* $p <$0.005, \* $p <$ 0.05.
 
 (ref:sc2coxtab) Results of Cox’s proportional hazards analysis on the risk of death in the sea urchin, *Heliocidaris erythrogramma*.
 
 ### Metabolic Rate
 
-Elevated temperature had a significant effect on the $MO_2$ of *H. erythrogramma* (ANOVA, $F_{3,20} =$ 5.60, $p =$ 0.005). Pairwise comparisons were complex (20 \degree C $=$ 22 \degree C $=$ 24 \degree C; 20 \degree C $=$ 26 \degree C; 22 \degree C $=$ 24 \degree C $<$ 26 \degree C; Figure \@ref(fig:c2mr)). At +2 \degree C and +4 \degree C, there was a slight but not statistically significant increase in mean $MO_2$. At +6 \degree C, $MO_2$ was significantly lower compared to the +2 \degree C and +4 \degree C treatments but not to the control (Tukey’s HSD, +2 \degree C, $p =$ 0.013; +4 \degree C, $p =$ 0.011). $Q_{10}$, with respect to the control treatment, were 1.67 for +2 \degree C, 1.34 for +4 \degree C, and 0.88 for +6 \degree C. 
+Elevated temperature had a significant effect on the MO~2~ of *H. erythrogramma* (ANOVA, $F_{3,20} =$ 5.60, $p =$ 0.005). Pairwise comparisons were complex (20 \degree C $=$ 22 \degree C $=$ 24 \degree C; 20 \degree C $=$ 26 \degree C; 22 \degree C $=$ 24 \degree C $<$ 26 \degree C; Figure \@ref(fig:c2mr)). At +2 \degree C and +4 \degree C, there was a slight but not statistically significant increase in mean MO~2~. At +6 \degree C, MO~2~ was significantly lower compared to the +2 \degree C and +4 \degree C treatments but not to the control (Tukey’s HSD, +2 \degree C, $p =$ 0.013; +4 \degree C, $p =$ 0.011). $Q_{10}$, with respect to the control treatment, were 1.67 for +2 \degree C, 1.34 for +4 \degree C, and 0.88 for +6 \degree C. 
 
 ```{r c2mr, fig.cap="(ref:c2mr)", fig.scap="(ref:sc2mr)", fig.pos="p"}
 knitr::include_graphics("figs/ch_warming/c2metabolic.png")
@@ -270,7 +272,7 @@ All urchins had gonads and there were no significant differences in gonad index 
 knitr::include_graphics("figs/ch_warming/c2gindex.png")
 ```
 
-(ref:c2gi) Gonad index of *H. erythrogramma* after 14 weeks of acclimation in constant temperature treatments at 20, 22, 24 and 26 \degree C. The top and bottom of the boxes represent the interquartile range (IQR) between the 25th and 75th percentile (Q1 and Q3, respec- tively). The horizontal line represents the median (Q2) and the vertical lines (whiskers) represent the range of the data computed as follows: Q1−1.5 IQR (bottom whisker); greater than Q3+1.5 IQR (top whisker). Outliers that fall outside of the whiskers are included (dots). There were no significant differences between treatments. $n =$ 15 treatment^−1^
+(ref:c2gi) Gonad index of *H. erythrogramma* after 14 weeks of acclimation in constant temperature treatments at 20, 22, 24 and 26 \degree C. The top and bottom of the boxes represent the interquartile range (IQR) between the 25th and 75th percentile (Q1 and Q3, respectively). The horizontal line represents the median (Q2) and the vertical lines (whiskers) represent the range of the data computed as follows: Q1−1.5 IQR (bottom whisker); greater than Q3+1.5 IQR (top whisker). Outliers that fall outside of the whiskers are included (dots). There were no significant differences between treatments. $n =$ 15 treatment^−1^
 
 (ref:sc2gi) Gonad index of *H. erythrogramma* after 14 weeks of acclimation in constant temperature treatments.
 
@@ -324,7 +326,7 @@ Further, due to the poleward advance of the EAC, a warming of up to 7 \degree C 
 It is therefore conceivable that in the near future, the urchin populations investigated here will experience temperatures that we found deleterious in our study. 
 
 An EAC-driven migration of thermotolerant *H. erythrogramma* propagules could facilitate the persistence of local populations, with likely range retraction of more equatorward populations [@Byrne2011]. 
-However, temperature is but one of a multitude of stressors that these urchins experience. Increased levels of ocean *p*$\mathrm{CO_2}$ are exposing *H. erythrogramma* to ocean acidification, and it is likely to interact with temperature [@Przeslawski2015]. 
+However, temperature is but one of a multitude of stressors that these urchins experience. Increased levels of ocean *p*CO~2~ are exposing *H. erythrogramma* to ocean acidification, and it is likely to interact with temperature [@Przeslawski2015]. 
 
 Our study investigated responses of metabolic rate, HSP70 expression, gonad condition and survival to evaluate the influence of elevated temperature on *H. erythrogramma*. 
 Significantly increased HSP70 expression and mortality, especially at 24 \degree C and 26 \degree C, suggested that these temperature levels were thermally stressful. 

@@ -54,7 +54,7 @@ Anova(model, type = 3, contrasts=list(topic=contr.sum, sys=contr.sum))
 lm(rate ~ Temperature*Time, data = resp_df) %>%
   Anova()
 lm(rate ~ Temperature*Time, data = resp_df) %>%
-  Anova(type = 3, contrasts=list(topic=contr.sum, sys=contr.sum))
+  Anova(type = 3, contrasts = list(topic = contr.sum, sys = contr.sum))
 
 ## Post Hoc
 ## include all
@@ -70,20 +70,24 @@ CLD(emmeans(model, pairwise ~ Temperature:pH | Time))
 pairs(emmeans(model, ~ Temperature*pH*Time), simple = "Time", combine = T)
 
 # Check interactions with a plot
-interaction <- emmip(model, Temperature~pH | Time)
+interaction <- emmip(model, Temperature~pH | Time, CIs = F)
 interaction
+interaction$data
+
 # VERY interesting. Let's refine the plot
 interaction_plot <- 
   interaction + 
   cowplot::theme_cowplot() +
-  scale_x_discrete(limits=c("pH 8.0", "pH 7.6")) +
+  scale_x_discrete(limits = c("pH 8.0", "pH 7.6")) +
   theme(
     panel.border = element_rect(color = "black", fill = NA, size = .5),
     strip.background = element_rect(colour = "black", fill = NA)
   ) +
+  theme(legend.position = "bottom", legend.justification = "center") +
   # make facet labels bold:
-  theme(strip.text = element_text(face = "bold"), legend.position = "bottom") +
-  scale_colour_manual(labels = c("+0°C", "+2°C", "+3°C"), values = (c("blue","orange","firebrick"))) +
+  theme(strip.text = element_text(face = "bold")) +
+  # scale_colour_manual(labels = c("+0°C", "+2°C", "+3°C"), values = (c("blue","orange","firebrick"))) +
+  scale_colour_brewer(labels = c("+0°C", "+2°C", "+3°C"), palette = "Dark2") +
   geom_blank()
 interaction_plot
 
@@ -297,7 +301,7 @@ resp_plot
 # rm(resp_data)
 cowplot::save_plot(
   "figs/ch_multistressor/resp_plot.png", resp_plot,
-  base_height = 12, base_width = 8
+  base_height = 14, base_width = 8
 )
 
 save.image(file = "output/ch_multistressor/respiration.RData")

@@ -48,16 +48,22 @@ means <- dt %>%
 # Plotting ----
 
 hsp_plot <- ggplot(hsp, aes(treatment, intensity)) +
-  geom_boxplot(fatten = 1, alpha = 1) +
+  geom_boxplot(    
+    fill = "lightyellow",
+    fatten = 1,
+    alpha = .6,
+    outlier.size = 2,
+    outlier.alpha = .8) +
   geom_text(data = phoc, aes(fac, pos+.1),
     label = phoc$grp, fontface = "bold") +
   stat_summary(fun.y = median, geom = "errorbar",
-    aes(ymax = ..y.., ymin = ..y.., linetype = "median"),
+    aes(ymax = ..y.., ymin = ..y.., linetype = "Median"),
     width = .75) +
   stat_summary(fun.y = mean, geom = "errorbar",
-    aes(ymax = ..y.., ymin = ..y.., linetype = "mean"),
+    aes(ymax = ..y.., ymin = ..y.., linetype = "Mean"),
     width = .75) +
   scale_linetype_manual(name = "", values = c(3,1)) +
+  theme(legend.position = "bottom", legend.justification = "center") +
   xlab("Treatment temperature (°C)") +  # Change y-axis title
   ylab("Mean band intensity (au)")  # Change x-axis title
 hsp_plot
@@ -102,5 +108,5 @@ pairwise.wilcox.test(hsp$intensity, hsp$treatment, p.adjust.method = "BH")
 
 # Export ----
 
-cowplot::save_plot("figs/ch_warming/hsp.png", hsp_plot,
-  base_height = 6, base_width = 6*1.3)
+cowplot::save_plot("figs/ch_warming/c2hsp.png", hsp_plot,
+  base_height = 8, base_width = 8)

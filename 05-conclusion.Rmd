@@ -154,8 +154,7 @@ This is arguably `respR`'s most important feature, although this was only briefl
 
 There is no doubt that climate change is altering marine biodiversity [@Hillebrand2018; @Hughes2017; @Ramirez2017] and will continue to do so in the future. 
 For sea urchins such as *H. erythrogramma*, there is potential for resilience through the alteration of physiology and phenotypic plasticity.
-The work presented here provides an experimental framework with which to undertake long-term climate change research using multiple stressors under a unifying theme of metabolic rate response, and delivers novel methods in the analysis of physiological rates in a new, open-source R package.
-that has the potential of being used across multiple disciplines.
+The work presented here provides an experimental framework with which to undertake long-term climate change research using multiple stressors under a unifying theme of metabolic rate response, and delivers novel methods in the analysis of physiological rates in a new, open-source R package that has the potential of being used across multiple disciplines.
 The investigation of phenotypic plasticity and trans-generational carry-over effects remains largely unexplored but are crucial to understand in order to better predict the impacts of climate change.
 Incorporating temporal variations in environmental conditions is also an important consideration as shown here.
 The results of this thesis provide guidance for future research to obtain a better, ecologically relevant understanding of species resilience to climate change.

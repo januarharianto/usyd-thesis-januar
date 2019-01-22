@@ -25,6 +25,9 @@ library(tidyverse)
 library(knitr)
 library(kableExtra)
 library(snipR)
+library(plotly)
+library(ggthemes)
+library(RColorBrewer)
 
 ```
 
@@ -76,8 +79,25 @@ Publications in marine global change physiology are increasing tremendously, fro
 Central to the outcomes of many of these studies has been the use of physiological traits and molecular or genetic biomarkers to quantify responses of marine species to current and future scenarios of environmental stress, such as growth and feeding rates [@Clements2018], metabolic performance [@White2013; @Carey2016], immune response [@Pinsino2015; @Brothers2016], and molecular/gene expression [e.g. heat shock proteins/genes, @Osovitz2005; @Tomanek2008]. 
 As the data generated are typically measured at specific experimental time points, these studies provide snapshots of organism responses to changes in abiotic conditions across temporal and spatial scales [e.g. @Sunday2012].
     
-```{r pcount, fig.cap = "(ref:pcount)", fig.scap="(ref:spcount)", fig.pos = "p"}
-knitr::include_graphics("figs/ch_intro/pcount.png")
+```{r pcount, fig.height =8, fig.cap = "(ref:pcount)", fig.scap="(ref:spcount)", fig.pos = "p"}
+# knitr::include_graphics("figs/ch_intro/pcount.png")
+library(readxl)
+dt <- read_excel("input/ch_intro/physiol_count.xlsx", skip = 2) %>%
+  select(-4)
+
+pcounts_plot <- ggplot(dt) +
+  geom_bar(aes(year, total), stat = "identity", fill = "firebrick2") +
+  geom_bar(aes(year, phys), stat = "identity", fill = "goldenrod2") +
+  # geom_bar(aes(year, total), stat = "identity", fill = "black") +
+  # geom_bar(aes(year, phys), stat = "identity", fill = "grey") +
+  scale_x_continuous(breaks = scales::pretty_breaks(n = 10)) +
+  xlab("Year") +
+  ylab("No. of published studies") +
+  cowplot::theme_cowplot() +
+  geom_blank()
+
+ggplotly(pcounts_plot)
+
 ```
 
 (ref:pcount) Trends in the number of marine climate change research publications using metrics related to physiological traits, indexed by Clarivate Web of Science from 1970 to 2017. Including reviews, over 7,118 papers were published (red bars). Yellow bars show the proportion of those papers that collected or mentioned physiological metrics or biomarkers, amounting to 2,766 publications. Data is extracted from a search of topics and abstracts using the keywords: ('climate\*change' or 'environmental change' or 'climate\*driven') AND (marine or ocean or sea or coastal or \*tidal). To filter papers that use or mention physiological metrics, common keywords associated with physiological measures were added: (physiolog\* or ecophysiolog\* or 'evolutionary physiolog\*' or \*toleran\* or metabolic or biomarker or respirat\* or heat\*shock). Note that the keywords used are not exhaustive and do not include many other common physiological terms, and are thus an underestimate the size of the dataset. Search was performed on 27 May 2018.
@@ -109,8 +129,34 @@ It is well-established that metabolic rate performance is mediated by temperatur
 Quantifying metabolic rate is a key focus of an increasing number of studies where it is the main topic of investigation [e.g. @Daoud2007; @Marshall2011; @Watson2014; @Carey2016; @Hoshijima2017], or it is one metric of several being investigated [e.g. @Magozzi2015; @Tateda2015; @Suckling2015; @Hoefnagel2017; @Harianto2018]. 
 Metabolic rate is the most commonly reported response variable when physiological measures are used in marine-related climate change publications, appearing in 16 \% of publications and consisting of at least 19.8 \% of all reported response variables from 1970 to 2017 (Figure \@ref(fig:pgroups)). 
 
-```{r pgroups, fig.cap = "(ref:pgroups)",fig.scap="(ref:spgroups)", fig.pos="p"}
-knitr::include_graphics("figs/ch_intro/pgroups.png")
+```{r pgroups, fig.height=6, fig.cap = "(ref:pgroups)",fig.scap="(ref:spgroups)", fig.pos="p"}
+# knitr::include_graphics("figs/ch_intro/pgroups.png")
+
+dt <- read_excel("input/ch_intro/physiol_count.xlsx", sheet = 2) %>%
+  # select(-c(2,4)) %>%
+  gather(group, no) %>%
+  transform(group = reorder(group, -no)) %>%
+  mutate(pct = round(prop.table(no) * 100, 1))
+
+colourCount <- length(unique(dt$group))
+
+g <- ggplot(dt, aes(group, no, fill = group))
+counts <- 
+  g + 
+  geom_bar(stat = "identity") +
+  geom_text(aes(y = no + 30, label = paste0(pct, '%')), size = 3.5) +
+  cowplot::theme_cowplot() +
+  # scale_fill_brewer(palette = "RdGy") +
+  # scale_fill_manual(values = colorRampPalette(rev(brewer.pal(8, "RdYlBu")))(colourCount)) +
+  scale_fill_manual(values = colorRampPalette(brewer.pal(8, "RdYlBu"))(colourCount)) +
+  # scale_fill_tableau() +
+  theme(legend.position="none") +
+  xlab("") +
+  ylab("Reported") +
+  coord_flip() +
+  geom_blank()
+
+ggplotly(counts)
 ```
 
 (ref:pgroups) Common physiological response variables reported in marine global change research articles published from 1970 -- 2017 and indexed by Clarivate Web of Science. Papers may report more than one response variable, thus the percentage values are based on the proportion of all reported response variables ($n =$ 2,239), not the number of publications selected ($n$ = 2,766). Numbers are tallied based on specific keywords used to describe experimental results and outcomes (e.g. 'survivorship' or 'survival rate' instead of 'survival'). Less common or species-specific response variables (e.g. coelomocyte counts in sea urchins) are not included.

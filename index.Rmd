@@ -14,21 +14,21 @@ mathfont: Minion Pro
 ---
 
 ```{r, echo = FALSE, include = FALSE}
-# Settings
 
+# Let's make this document reproducible
+# req <- substitute(require(x, character.only = TRUE))
+# lbs <- c("tidyverse", "knitr", "kableExtra", "plotly", "ggthemes", "RColorBrewer")
+# sapply(lbs, function(x) eval(req) || {install.packages(x); eval(req)})
+
+library(tidyverse); library(knitr) ; library(kableExtra); library(plotly)
+library(ggthemes); library(RColorBrewer)
+
+# Options
 options(knitr.kable.NA = '')
 knitr::opts_chunk$set(echo = FALSE,
                       out.width = '100%', 
                       comment = "#>")
-
-library(tidyverse)
-library(knitr)
-library(kableExtra)
-library(snipR)
-library(plotly)
-library(ggthemes)
-library(RColorBrewer)
-
+output <- knitr::opts_knit$get("rmarkdown.pandoc.to")
 ```
 
 <!-- Add more stuff before the main text: -->
@@ -96,7 +96,13 @@ pcounts_plot <- ggplot(dt) +
   cowplot::theme_cowplot() +
   geom_blank()
 
-ggplotly(pcounts_plot)
+if(output %in% c("latex","docx")){
+  pcounts_plot
+} else if(output == "html"){
+  ggplotly(pcounts_plot)
+} else(print("No format defined for this output filetype"))
+
+
 
 ```
 
@@ -156,7 +162,12 @@ counts <-
   coord_flip() +
   geom_blank()
 
-ggplotly(counts)
+if(output %in% c("latex","docx")){
+  counts
+} else if(output == "html"){
+  ggplotly(counts)
+} else(print("No format defined for this output filetype"))
+
 ```
 
 (ref:pgroups) Common physiological response variables reported in marine global change research articles published from 1970 -- 2017 and indexed by Clarivate Web of Science. Papers may report more than one response variable, thus the percentage values are based on the proportion of all reported response variables ($n =$ 2,239), not the number of publications selected ($n$ = 2,766). Numbers are tallied based on specific keywords used to describe experimental results and outcomes (e.g. 'survivorship' or 'survival rate' instead of 'survival'). Less common or species-specific response variables (e.g. coelomocyte counts in sea urchins) are not included.

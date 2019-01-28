@@ -1,15 +1,25 @@
 
 ```{r, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE, comment = "#>")
-
-options(knitr.kable.NA = '') 
-options(kableExtra.auto_format = TRUE)
 
 library(knitr)
 library(tidyverse)
 library(data.table)
 library(kableExtra)
 library(pander)
+library(plotly)
+library(lubridate)
+library(viridis)
+library(scales)
+library(cowplot)
+
+knitr::opts_chunk$set(echo = FALSE, comment = "#>")
+options(knitr.kable.NA = '') 
+options(kableExtra.auto_format = TRUE)
+options(readr.num_columns = 0) # hide readr output messages
+
+output <- knitr::opts_knit$get("rmarkdown.pandoc.to")
+
+
 ```
 
 \SingleSpacing
@@ -103,8 +113,37 @@ Temperatures were then kept constant and sea urchins were acclimated for a furth
 The control 20 \degree C group were held at spring/early summer temperature approximating field conditions after the temperature adjustment period. 
 This temperature treatment also represented the annual mean temperature of the habitat (Figure \@ref(fig:c2harbourtemps)). 
 
-```{r c2harbourtemps, fig.cap='(ref:c2harbourtemps)', fig.scap='(ref:sc2harbourtemps)', fig.pos='p'}
-knitr::include_graphics("figs/ch_warming/c2harbourtemps.png")
+```{r c2harbourtemps, echo=FALSE, message=FALSE, warning=FALSE, fig.cap='(ref:c2harbourtemps)', fig.scap='(ref:sc2harbourtemps)', fig.pos='p'}
+
+# knitr::include_graphics("figs/ch_warming/c2harbourtemps.png")
+
+ptemp <- read_csv("input/ch_warming/sims13-17cal.csv") %>%
+  mutate(month = month.abb[month(time)],  # extract month char using month.abb
+    month = factor(month, levels = month.abb)) %>% # order the months
+  ggplot() +
+  geom_boxplot(aes(month, temp, group = month), 
+    alpha = .6, fill = "lightyellow",width = .8, show.legend = F) +
+  # scale_fill_manual(values=c(coloura, coloura, coloura, coloura,
+  #   coloura, coloura, colourb, colourb,
+  #   colourb, colourb, colourb, colourb)) +
+  geom_hline(yintercept = 19.66975, linetype = 2, alpha = .5) +  # mean
+  geom_hline(yintercept = 19.81, linetype = 3, alpha = .5) +  # median
+  xlab("2013 - 2017") +
+  ylab("Temperature °C") +
+  scale_y_continuous(breaks = seq(0,40,2)) +
+  cowplot::theme_cowplot() +
+  geom_blank()
+
+
+if(output %in% c("latex","docx")){
+  ptemp
+} else if(output == "html"){
+  ggplotly(ptemp, height = 600)
+} else(print("No format defined for this output filetype"))
+
+
+
+
 ```
 
 (ref:c2harbourtemps) Monthly temperature at the habitat of *Heliocidaris erythrogramma* in Chowder Bay, NSW, Australia, averaged over 5 years (2013--2017). The horizontal line represents the median (Q2), and the vertical lines (whiskers) represent the range of the data computed as follows: $Q1 − 1.5\ IQR$ (bottom whisker); greater than $Q3 + 1.5\ IQR$ (top whisker). Data were recorded using in-situ loggers deployed at 3--5 m depth. The 5-year median (19.8 \degree C, dotted line) and mean (19.7 \degree C, dashed line) are shown. Outliers are included (dots). 
@@ -194,7 +233,53 @@ All other tests were performed using the default `stats` package provided in R.
 Analysis of the temperatures recorded between 2013--2017 at the Chowder Bay site showed that the mean annual temperature was 19.7 \degree C (Figure 1), similar to our control treatment at 20 \degree C. Temperature exceeded 22 \degree C and 24 \degree C for an average of 8.8 $\pm$ 4.1 (s.d.) and 0.4 $\pm$ 0.9 (s.d.) consecutive weeks a year, respectively, for the period which we had complete records (2014--2016, Figure \@ref(fig:heatmap). The highest temperature level, 26 \degree C, was not reached in our records, although there were two separate days exceeding 25.5 \degree C in Feb 2015 and Feb 2017 (see Figure \@ref(fig:heatmap)).
 
 ```{r heatmap, fig.cap="(ref:heatmap)", fig.scap="(ref:sheatmap)", fig.pos="p"}
-knitr::include_graphics("figs/ch_warming/c2heatmap.png")
+# knitr::include_graphics("figs/ch_warming/c2heatmap.png")
+
+dt <- read_csv("input/ch_warming/sims13-17cal.csv")
+
+# Manipulate data ----
+
+## summarise data for tile plot:
+
+daily <- dt %>%
+mutate(day = yday(time), year = year(time)) %>%
+  group_by(year, day) %>%
+  summarise(mean = mean(temp)) %>%
+  mutate(date = ymd_hms("2013-01-01 00:00:00") + days(day - 1))
+
+# Plotting ----
+
+heatmap <-
+  ggplot(daily, aes(date, year)) +
+  # Plots
+  geom_tile(aes(fill = mean), colour = "black", size = .04) +
+  # Theme
+  scale_fill_viridis(option = "B", name = "", limits = c(12, 26),
+    breaks = seq(10, 26, by = 2)) +
+  background_grid(major = "xy", minor = "none") +
+  # theme(panel.grid.minor = element_line(colour = "black", size = 0.5,
+  #   linetype = 3)) +
+  # Axes (scale)
+  scale_x_datetime(date_breaks = "1 month", labels = date_format("%m"),
+    expand = c(0, 0)) +
+  # theme(plot.margin=grid::unit(c(0,0,0,0), "mm")) +
+  scale_y_continuous(expand = c(0, 0)) +
+  # Labels (title, x & y)
+  xlab("Month") +
+  ylab("") +
+  # legend
+  theme(legend.position = "bottom") +
+  guides(fill = guide_colorbar(barwidth = 20, barheight = 1)) +
+  cowplot::theme_cowplot() +
+  geom_blank()
+# END ggplot
+
+if(output %in% c("latex","docx")){
+  heatmap
+} else if(output == "html"){
+  ggplotly(heatmap, height = 600)
+} else(print("No format defined for this output filetype"))
+
 ```
 
 (ref:heatmap) Average daily seawater temperature at the habitat of *Heliocidaris erythrogramma* in Chowder Bay, NSW, Australia. There are 365–366 vertical tiles for each year, and each tile represents a day. Temperatures were recorded every 20 minutes using in-situ loggers at 3--5 m depth. Colour determines the average temperature for the day. Temperatures reached 25.5 \degree C in Feb 2015 and in Feb 2017.
@@ -239,13 +324,13 @@ Elevated temperature had a significant effect on the MO~2~ of *H. erythrogramma*
 knitr::include_graphics("figs/ch_warming/c2metabolic.png")
 ```
 
-(ref:c2mr) Weight-specific metabolic rate for *Heliocidaris erythrogramma* after a 12-week acclimation to elevated temperature treatments of 20 \degree C, 22 \degree C, 24 \degree C and 26 \degree C. The top and bottom of the boxes represent the interquartile range (IQR) between the 25th and 75th percentile (Q1 and Q3, respectively). The horizontal line represents the median (Q2), the horizontal dotted line represents the mean, and the vertical lines (whiskers) represent the range of the data computed as follows: Q1 $-$ 1.5IQR (bottom whisker); greater than Q3+1.5 IQR (top whisker). Letters denote significant differences between treatment groups (Tukey's HSD, $p <$ 0.05). $n =$ 6 treatment^-1^.
+(ref:c2mr) Weight-specific metabolic rate for *Heliocidaris erythrogramma* after a 12-week acclimation to elevated temperature treatments of 20 \degree C, 22 \degree C, 24 \degree C and 26 \degree C. The top and bottom of the boxes represent the interquartile range (IQR) between the 25th and 75th percentile (Q1 and Q3, respectively). The horizontal line represents the median (Q2), the horizontal dotted line represents the mean, and the vertical lines (whiskers) represent the range of the data computed as follows: Q1 $-$ 1.5IQR (bottom whisker); greater than Q3+1.5 IQR (top whisker). Letters denote significant differences between treatment groups (Tukey's HSD, p < 0.05). n = 6 treatment^-1^.
 
 (ref:sc2mr) Weight-specific metabolic rate for Heliocidaris erythrogramma after a 12-week acclimation to elevated temperature treatments.
 
 ### HSP70 expression
 
-Representative gel images are presented in Figure \@ref(fig:c2gels). HSP70 expression in the gonad tissue differed significantly between treatments (Kruskal-Wallis test, $\chi^2 =$ 10.293, $df =$ 3, $p =$ 0.016). Mean HSP70 protein expression was significantly higher in the 24 \degree C and 26 \degree C treatments compared with the control (+4 \degree C, $p =$ 0.0159; +6 \degree C, $p =$ 0.0147), but the +2 \degree C treatment did not differ from any treatment (Dunn’s test, 20 \degree C $=$ 22 \degree C; 20 \degree C $<$ 24 \degree C $=$ 26 \degree C; 22 \degree C $=$ 24 \degree C $=$ 26 \degree C; Figure \@ref(fig:c2hsp)).
+Representative gel images are presented in Figure \@ref(fig:c2gels). HSP70 expression in the gonad tissue differed significantly between treatments (Kruskal-Wallis test, $\chi^2$ = 10.293, df = 3, p = 0.016). Mean HSP70 protein expression was significantly higher in the 24 \degree C and 26 \degree C treatments compared with the control (+4 \degree C, $p =$ 0.0159; +6 \degree C, $p =$ 0.0147), but the +2 \degree C treatment did not differ from any treatment (Dunn’s test, 20 \degree C $=$ 22 \degree C; 20 \degree C $<$ 24 \degree C $=$ 26 \degree C; 22 \degree C $=$ 24 \degree C $=$ 26 \degree C; Figure \@ref(fig:c2hsp)).
 
 ```{r c2gels, fig.cap="(ref:c2gels)", fig.scap="(ref:sc2gels)", fig.pos="p"}
 knitr::include_graphics("figs/ch_warming/c2gels.png")

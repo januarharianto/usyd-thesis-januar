@@ -8,9 +8,9 @@ bibliography: [packages.bib, bibliography.bib]
 link-citations: yes
 always_allow_html: yes
 # Fonts (these are all paid fonts):
-mainfont: Minion Pro
-sansfont: Myriad Pro
-mathfont: Minion Pro
+# mainfont: Minion Pro
+# sansfont: Myriad Pro
+# mathfont: Minion Pro
 ---
 
 ```{r, echo = FALSE, include = FALSE}

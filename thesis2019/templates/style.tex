@@ -1,0 +1,521 @@
+% Januar's Thesis Template for R Bookdown
+\documentclass[a4paper,11pt, oneside]{memoir}
+
+\usepackage[usenames,dvipsnames,svgnames]{xcolor}
+\usepackage{ragged2e} % for marginnote
+
+%
+% FONT DEFINITIONS
+%
+
+% Use the following code for XeLaTeX
+\ifxetex
+
+% Setup microtype for XeLaTeX
+\usepackage[expansion=false,final]{microtype}
+
+% Load the texgyrepagella font as main font and set the ``mathpazo'' font as
+% math font
+\usepackage{fontspec}
+\setmonofont[Scale=0.9]{PT Mono}
+\setsansfont{texgyreadventor-regular.otf}
+\setmainfont%
+	[%
+		BoldFont       = texgyrepagella-bold.otf,
+		ItalicFont     = texgyrepagella-italic.otf,
+		BoldItalicFont = texgyrepagella-bolditalic.otf,
+		Ligatures      = TeX
+	]%
+	{texgyrepagella-regular.otf}
+
+% Define a new 'widespaced' font that is used in section headings
+% or chapter titles. For backwards compatibility reasons this uses
+% the old calling convention \newfontfamily\fontname[<options>{font}
+% instead of the newer \newfontfamily\fontname{font}[<options>]
+\newfontfamily\widespaced[%
+	LetterSpace=15,%
+	WordSpace={1.25, 1.25, 1.25}%
+]{texgyrepagella-regular.otf}%
+
+\DeclareRobustCommand{\spacedallcaps}[1]{%
+	{\Large{#1}}%
+}%
+\DeclareRobustCommand{\spacedlowsmallcaps}[1]{%
+	{\large{#1}}%
+}%
+\fi
+
+% Use the following code for pdfLaTex
+\ifpdf
+
+% Setup microtype for pdfLaTex
+\usepackage[final,tracking=true,kerning=true,spacing=nonfrench]{microtype}
+
+
+\usepackage[sc]{mathpazo}
+
+\DeclareRobustCommand{\spacedallcaps}[1]{\textls[160]{\oldstylenums{\textsc{\MakeTextUppercase{#1}}}}}%
+\DeclareRobustCommand{\spacedlowsmallcaps}[1]{\textls[80]{\oldstylenums{\textsc{\MakeTextLowercase{#1}}}}}%
+\fi
+
+% Increase linespread for Palatino
+\renewcommand{\linespread}{1.05}
+
+%
+% COLOR DEFINITIONS
+%
+
+\definecolor{smartgray}{gray}{0.55}
+\definecolor{smartred}{HTML}{800000}
+\definecolor{smartplum}{HTML}{47294F}
+\definecolor{smartblue}{HTML}{193A6B}
+\definecolor{smartorange}{HTML}{AA4C00}
+\definecolor{smartgreen}{HTML}{3C7705}
+\definecolor{smartbutter}{HTML}{A08300}
+
+\definecolor{tangored}{HTML}{CC0000}
+\definecolor{tangoplum}{HTML}{75507B}
+\definecolor{tangoblue}{HTML}{3465A4}
+\definecolor{tangoorange}{HTML}{F57900}
+\definecolor{tangogreen}{HTML}{73D216}
+\definecolor{tangobutter}{HTML}{EDD400}
+
+\definecolor{shadecolor}{gray}{0.95}
+
+\colorlet{heading}{smartgray}
+\colorlet{ref}{smartblue}
+\colorlet{cite}{smartgreen}
+\colorlet{url}{smartred}
+\colorlet{caption}{black}
+\colorlet{margincaption}{caption}
+
+
+
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{{#1}}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{{#1}}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{{#1}}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{{#1}}}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{{#1}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{{#1}}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{{#1}}}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{{#1}}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{{#1}}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{{#1}}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{{#1}}}
+\newcommand{\ImportTok}[1]{{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{{#1}}}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{{#1}}}}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{{#1}}}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{{#1}}}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{{#1}}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{{#1}}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{{#1}}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{{#1}}}}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{{#1}}}}
+\newcommand{\BuiltInTok}[1]{{#1}}
+\newcommand{\ExtensionTok}[1]{{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{{#1}}}
+\newcommand{\RegionMarkerTok}[1]{{#1}}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{{#1}}}}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{{#1}}}}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{{#1}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{{#1}}}}
+\newcommand{\NormalTok}[1]{{#1}}
+%% end of additions
+
+
+
+%
+% SECTIONING STYLES (toledo)
+%
+
+% See http://tex.stackexchange.com/questions/161577/memoir-hangnum-chapter-number-in-right-margin-switch for the inspiration
+
+\setsecnumdepth{subsection}
+
+\makeatletter
+\makechapterstyle{toledo}{%
+	\chapterstyle{default}
+
+	\renewcommand*{\chapterheadstart}{\vspace*{0.0cm}}
+
+	\renewcommand*{\chapnumfont}{\normalfont\color{heading}\addfontfeature{SizeFeatures={Size=110}}}
+	\newfont{\chapterNumber}{eurb10 scaled 7000}
+	\renewcommand*{\chapnumfont}{\chapterNumber\color{heading}}
+	\renewcommand*{\printchaptername}{}
+	\renewcommand*{\chapternamenum}{}
+	\renewcommand*{\printchapternum}{%
+		\raisebox{0pt}[0pt][0pt]{%
+		\makebox[0pt][l]{%
+		\makebox[\dimexpr\textwidth+5.45em\relax][l]{%
+			\parbox[t]{\textwidth}{\mbox{}}%
+			\parbox[t]{5.45em}{\hfill\chapnumfont \thechapter}}}}}%
+	\renewcommand*{\chapternamenum}{}
+	\renewcommand*{\afterchapternum}{}
+
+	\renewcommand*{\afterchaptertitle}{%
+	\par\parbox{\textwidth}{\hrulefill}\par%
+	\vspace*{4ex}}
+	\renewcommand*{\chaptitlefont}{\normalfont\large}
+	\renewcommand*{\printchaptertitle}[1]{%
+		\parbox[b]{\textwidth}{%
+			\raggedright\chaptitlefont\spacedallcaps{##1}%
+		}%
+	}
+
+	\setsecheadstyle{\spacedlowsmallcaps}
+	% \setsecindent{-3.5ex}
+	\setbeforesecskip{-4ex plus -1ex minus -.2ex}
+	\setaftersecskip{4ex plus 1ex minus .2ex}
+
+	\setsubsecheadstyle{\itshape}
+	\setbeforesubsecskip{-4ex plus -1ex minus -.2ex}
+	\setaftersubsecskip{4ex plus 1ex minus .2ex}
+	\setsecnumformat{\spacedlowsmallcaps{\csname the##1\endcsname\quad}}
+
+%	\setparaheadstyle{\normalsize\itshape}
+
+	\renewcommand*{\abstractnamefont}{\spacedlowsmallcaps}
+}
+\makeatother
+
+\chapterstyle{toledo}
+
+%
+% FIGURES
+%
+
+\captionstyle{\small}
+\captionnamefont{\slshape\color{caption}}
+
+\newsubfloat{figure}% Create subfloat in figure environment
+\newsubfloat{table}% Create subfloat in table environment
+
+%
+% ACKNOWLEDGEMENT
+%
+
+\makeatletter
+\newcommand{\acknowledgementname}{Acknowledgements}
+\newenvironment{acknowledgement}{%
+  \setup@bstract
+  \if@bsrunin\else
+    \ifnumber@bs \num@bs \else
+      \begin{\absnamepos}\abstractnamefont\acknowledgementname\end\absnamepos%
+      \vspace{\abstitleskip}%
+    \fi
+  \fi
+  \put@bsintoc%
+  \begin{@bstr@ctlist}\if@bsrunin\@bsrunintitle\fi\abstracttextfont}%
+  {\par\end{@bstr@ctlist}}
+
+\newcommand{\colophon}[1]{\begingroup%
+	\pagebreak%
+	\thispagestyle{empty}%
+	\footnotesize%
+	\par\vspace*{\fill}%
+	% \hspace{-1.1cm}%
+	\parbox{10cm}{%
+		\noindent%
+		\@title \\[0.3cm]%
+		Copyright \textcopyright\ \the\year\ \applytolist[, ]{}{\@author}\\[0.5cm]%
+		{#1}%
+	}%
+\endgroup}
+
+\newcommand{\smartinitialepigraph}[2]{\begingroup
+	\cleardoublepage
+	\thispagestyle{empty}
+	\vspace*{2cm}
+	\epigraph{#1}{#2}
+	\cleardoublepage
+\endgroup}
+
+\let\oldepigraph\epigraph
+\renewcommand{\epigraph}[2]{\oldepigraph{#1}{\spacedlowsmallcaps{#2}}}
+
+\makeatother
+
+%
+% MARGINNOTE
+%
+
+%
+% There are three commands for placing elements in the margin:
+%
+% \marginnote{<TEXT>}
+% Just like \marginpar but with correct formating
+%
+% \marginfig{<SHORT CAPTION>}{<FIGURE CONTENT>}{<LONG CAPTION>}{\label{<LABEL>}}
+% \margintbl{<SHORT CAPTION>}{<TABLE CONTENT>}{<LONG CAPTION>}{\label{<LABEL>}}
+% Places a figure/table in the margin
+% - <SHORT CAPTION> is the caption as it occurs in the list of figures/tables
+% - <FIGURE CONTENT>/<TABLE CONTENT> is the actual figure/table content
+% - <LONG CAPTION> is the caption below the figure
+% - <LABEL> is the label -- we decided to let you explicitly type "\label" here
+% as this allows LaTeX editors to index the label and provide auto completion.
+%
+
+% Define the "marginnote" command. For compatibility reasons
+% we do not override marginpar.
+\strictpagecheck
+\newcommand{\marginnote}[1]{\hspace*{0pt}\marginpar{
+	\microtypesetup{disable}%
+	\slshape\footnotesize%
+	\vspace*{-0.725em}%
+	\checkoddpage%
+	\ifoddpage%
+		\RaggedRight%
+	\else%
+		\RaggedLeft%
+	\fi%
+	{#1}%
+	\microtypesetup{enable}%
+}\ignorespaces}
+
+\newcommand{\marginfloat}[8]{\marginnote{{#1}%
+\par\refstepcounter{#4}\textcolor{margincaption}{#5 #6}: {#2}#3}%
+\addcontentsline{#7}{#4}{\protect\numberline {#6}{\ignorespaces #8}}\ignorespaces}
+
+\newcommand{\marginfig}[4]{\marginfloat{#2}{#3}{#4}{figure}{Figure}{\thefigure}{lof}{#1}}
+\newcommand{\margintbl}[4]{\marginfloat{#2}{#3}{#4}{table}{Table}{\thetable}{lot}{#1}}
+
+%
+% PAGE STYLE (headers, footers)
+%
+
+\makeatletter
+
+% Deactivate capitalization of headers.
+\nouppercaseheads
+
+% Define the new "berlin" style.
+\makepagestyle{berlin}
+
+% Display the page number in the footer.
+\makeevenfoot{berlin}{\thepage}{}{}
+\makeoddfoot{berlin}{}{}{\thepage}
+
+% Override the chapter style with the unfinished "berlin" style
+% to eliminate the header and to make sure a consistent footer
+% style is used.
+\copypagestyle{chapter}{berlin}
+
+% Define the "berlin" style
+\makepsmarks{berlin}{%
+	\def\chaptermark##1{%
+	\markboth{\memUChead{%
+		\ifnum \c@secnumdepth >\m@ne
+		\if@mainmatter
+			\@chapapp\ \thechapter. \ %
+		\fi
+		\fi
+		##1}}{}}%
+	\def\tocmark{\markboth{\memUChead{\contentsname}}{\memUChead{\contentsname}}}%
+	\def\lofmark{\markboth{\memUChead{\listfigurename}}{\memUChead{\listfigurename}}}%
+	\def\lotmark{\markboth{\memUChead{\listtablename}}{\memUChead{\listtablename}}}%
+	\def\bibmark{\markboth{\memUChead{\bibname}}{\memUChead{\bibname}}}%
+	\def\indexmark{\markboth{\memUChead{\indexname}}{\memUChead{\indexname}}}%
+	\def\sectionmark##1{%
+	\markright{\memUChead{%
+		\ifnum \c@secnumdepth > \z@
+		\thesection. \ %
+		\fi %
+		##1}}}}
+\makepsmarks{berlin}{%
+	\createmark{chapter}{left}{nonumber}{}{}
+	\createmark{section}{right}{shownumber}{}{\ }
+	\createplainmark{toc}{both}{\contentsname}
+	\createplainmark{lof}{both}{\listfigurename}
+	\createplainmark{lot}{both}{\listtablename}
+	\createplainmark{bib}{both}{\bibname}
+	\createplainmark{index}{both}{\indexname}
+	\createplainmark{glossary}{both}{\glossaryname}
+}
+
+% Discriminate between "oneside" and "twoside" documents.
+\if@twoside
+	\makeevenhead{berlin}{\spacedlowsmallcaps{\leftmark}}{}{}
+	\makeoddhead{berlin}{}{}{\spacedlowsmallcaps{\rightmark}}
+\else
+	\makeoddhead{berlin}{\spacedlowsmallcaps{\rightmark}}{}{}
+\fi
+
+% Use the berlin style.
+\pagestyle{berlin}
+
+\makeatother
+
+%
+% FOOTNOTES
+%
+
+\footmarkstyle{\textsc{#1}}
+\setlength{\footmarkwidth}{-0.5em}
+\setlength{\footmarksep}{0.5em}
+\setlength{\footparindent}{0em}
+
+%
+% EPIGRAPHS
+%
+\makeatletter
+
+% Make the epigraph span two third of the text width
+\setlength{\epigraphwidth}{0.66\textwidth}
+
+% Disable the rule below the epigraph
+\setlength{\epigraphrule}{0pt}
+
+% Use the normal font size
+\epigraphfontsize{\normalsize}
+
+% Style the epigraph itself -- use italic text and
+% flush it to the right
+\newenvironment{epigraphstyle}{
+%	\microtypesetup{disable}%
+	\small\slshape%
+%	\RaggedLeft%
+}{%
+%	\microtypesetup{enable}%
+}
+\epigraphtextposition{epigraphstyle}
+
+% Style the epigraph source -- prepend it with a em-dash
+% and make sure no indentation is added after the epigraph
+\newenvironment{epigraphsourcestyle}%
+{%#
+	--- \small\raggedleft\color{smartred}%
+}{%
+	\@afterindentfalse\@afterheading%
+}
+\epigraphsourceposition{epigraphsourcestyle}
+
+\makeatother
+
+
+\makeatletter
+
+% ------------------------------------------------------------------------------
+% Define metadata
+% ------------------------------------------------------------------------------
+\newcommand\degree[1]{\renewcommand\@degree{#1}}
+\newcommand\@degree{}
+\newcommand\school[1]{\renewcommand\@school{#1}}
+\newcommand\@school{}
+\newcommand\discipline[1]{\renewcommand\@discipline{#1}}
+\newcommand\@discipline{}
+\newcommand\institution[1]{\renewcommand\@institution{#1}}
+\newcommand\@institution{}
+\newcommand\supervisors[1]{\renewcommand\@supervisors{#1}}
+\newcommand\@supervisors{}
+\newcommand\version[1]{\renewcommand\@version{#1}}
+\newcommand\@version{}
+
+\newcommand{\applytolist}[3][{,\\\vspace{0.1cm}}]{%
+	\def\nextitem{\def\nextitem{#1}}%
+	\@for \el:=#3\do{\nextitem{#2{\el}}}%
+}
+
+% ------------------------------------------------------------------------------
+% Title page formatting
+% ------------------------------------------------------------------------------
+\newcommand{\frontpagetitle}{
+  {\begingroup
+  \thispagestyle{empty}
+  \makeatletter
+  \raggedright \vfill
+  {\Huge \textcolor{smartred}{\@title}\\} \vfill
+  {\LARGE \applytolist{\spacedallcaps}{\@author}\\} \vfill
+  {\Large \applytolist{\itshape}{A thesis submitted in fulfilment of the 
+    requirements\\ for the degree of}\\}
+  \vspace{0.2cm}
+  {\Large{\@degree}} \vfill
+  {\Large {\@school}\\}
+  {\Large {\@discipline}\\}
+  \vspace{0.1cm}
+  {\Large The University of Sydney} \vfill
+  {\Large {\@date}} \vfill
+  \makeatother
+  \endgroup}
+  }
+\makeatletter
+
+% PAGE LAYOUT
+%
+% \settypeblocksize{23.45cm}{11.85cm}{*}
+\settypeblocksize{23.45cm}{13cm}{*}
+\setlrmargins{3.141592653589793cm}{*}{*}
+\setulmargins{*}{*}{*}
+\setmarginnotes{0.8cm}{3.5cm}{1cm}
+\checkandfixthelayout
+
+\setlength{\parindent}{0em} % don't indent paragraphs
+\setlength{\parskip}{1.1em} % add space between paragraphs
+
+
+% \addtocontents{toc}{\protect\thispagestyle{empty}}
+
+
+% additional packages
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage[authoryear]{natbib}
+\usepackage[
+  unicode=true,
+  bookmarks=true,
+  bookmarksnumbered=false,
+  bookmarksopen=false,
+  breaklinks=true,
+  pdfborder={0 0 0},
+  pdfborderstyle={},
+  backref=false,
+  colorlinks=true
+  ]{hyperref}
+\hypersetup{
+  pdftitle={USYD Thesis Template},
+  pdfauthor={$author$},
+  pdfsubject={A Thesis},
+  urlcolor={black},
+  citecolor={black},
+  allcolors={black}
+  }
+  
+% Anchors links to the beginning of their respective floats. 
+% Load after hyperref.
+\usepackage[all]{hypcap}
+
+\usepackage{siunitx}
+
+% Metadata
+\degree{$degree$}
+\title{$title$}
+\author{$author$}
+\school{$school$}
+\discipline{$discipline$}
+\institution{University of GNU,Faculty of Templates,\TeX\ Group}
+\supervisors{Prof.\@~Dr.-Ing.\@~Jane Doe,M.Sc.\@~John Doe}
+\date{$date$}
+\version{$draftversion$}
+
+\begin{document}
+\frontmatter
+\frontpagetitle
+\colophon{This document is typeset in R Markdown and \LaTeX. The main typeface used is \TeX\ Gyre Pagella. Sans-serif text is typeset using \TeX\ Gyre Adventor while source code is typeset using PT Mono. R code, plots and tables are mostly generated in RStudio on macOS.}
+\cleardoublepage
+% \tableofcontents
+
+\OnehalfSpacing
+$body$
+\end{document}
+

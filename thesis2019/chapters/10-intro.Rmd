@@ -1,0 +1,16 @@
+# General Introduction{#intro}
+
+## The consequences of climate change
+
+Understanding the mechanisms by which climate change is affecting marine organisms is an area of increasing concern to ecophysiologists worldwide [@Dahlhoff2004; @Helmuth2005; @Chown2010; @Somero2017].
+As anthropogenic activities transform the ocean's natural systems, their impacts will continue to cascade through the marine biosphere across temporal and spatial scales, from organisms to whole ecosystems [@Munday2013; @Gattuso2015].
+
+It is now known that the increased concentration of atmospheric carbon dioxide ($\mathrm{CO_2}$) from human activity is contributing to rising global temperatures [@IPCC2014]. 
+The ocean acts as a climate buffer absorbing 25 \% to 40 \% of anthropogenic $\mathrm{CO_2}$ emissions and 90 \% of heat, and this is causing changes in ocean chemistry and physics [@Fletcher2006; @IPCC2014; @Gattuso2015]. 
+Climate-driven alterations in ocean temperature [@Mann2017; @Wijffels2016], carbonate chemistry [@Caldeira2003; @Hoegh-Guldberg2017], oxygen concentration [@Schmidtko2017; @Chu2017] and light availability [@Gattuso2006] are causing wide-ranging impacts on oceanic primary productivity [@Behrenfeld2016], trophic interactions [@Ullah2018], species distributions [@Molinos2015; @Brown2016; @Sommer2018] and survival [@Hughes2017].
+
+### Something else
+
+It is now known that the increased concentration of atmospheric carbon dioxide ($\mathrm{CO_2}$) from human activity is contributing to rising global temperatures [@IPCC2014]. 
+The ocean acts as a climate buffer absorbing 25 \% to 40 \% of anthropogenic $\mathrm{CO_2}$ emissions and 90 \% of heat, and this is causing changes in ocean chemistry and physics [@Fletcher2006; @IPCC2014; @Gattuso2015]. 
+Climate-driven alterations in ocean temperature [@Mann2017; @Wijffels2016], carbonate chemistry [@Caldeira2003; @Hoegh-Guldberg2017], oxygen concentration [@Schmidtko2017; @Chu2017] and light availability [@Gattuso2006] are causing wide-ranging impacts on oceanic primary productivity [@Behrenfeld2016], trophic interactions [@Ullah2018], species distributions [@Molinos2015; @Brown2016; @Sommer2018] and survival [@Hughes2017].

@@ -30,14 +30,14 @@ bookdown::gitbook:
 bookdown::pdf_book:
   includes:
     in_header:
-      - settings.tex
-      - 000_preamble.tex
+      - template.tex
+      - chapters/000_preamble.tex
     before_body:
-      - 001_frontpage.tex
-      - 002_statement.tex
-      - 003_abstract.tex
-      - 004_acknowledgements.tex
-      - 005_preface.tex
+      - chapters/001_frontpage.tex
+      - chapters/002_statement.tex
+      - chapters/003_abstract.tex
+      - chapters/004_acknowledgements.tex
+      - chapters/005_preface.tex
   latex_engine: xelatex
   citation_package: none
   pandoc_args: [ "--csl", "marine-biology.csl"]

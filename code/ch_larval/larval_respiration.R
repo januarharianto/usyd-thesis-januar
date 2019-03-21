@@ -15,7 +15,7 @@ dt_lowph <- dt %>%
   print()
 
 p1 <-
-ggplot(dt_lowph, aes(temp, mean, colour = factor(parent_temp))) +
+  ggplot(dt_lowph, aes(temp, mean, colour = factor(parent_temp))) +
   # data:
   geom_line(aes(linetype = parent_ph)) +
   geom_errorbar(aes(ymin = mean - se, ymax = mean + se), 
@@ -24,6 +24,9 @@ ggplot(dt_lowph, aes(temp, mean, colour = factor(parent_temp))) +
   # overall theme:
   cowplot::theme_cowplot() +
   scale_colour_manual(values = c("midnightblue", "orangered1")) +
+  scale_linetype_manual(name = "Parental pH", 
+                        labels = c("Acidic 7.6", "Ambient 8.0"),
+                        values = c(1,2)) + 
   # axis labels
   xlab("Temperature (°C)") +
   ylab("") +
@@ -48,7 +51,7 @@ ggplot(dt_ambph, aes(temp, mean, colour = factor(parent_temp))) +
                       values = c("midnightblue", "orangered1")) +
   scale_linetype_manual(name = "Parental pH", 
                         labels = c("Acidic 7.6", "Ambient 8.0"),
-                        values = c(1,6)) +
+                        values = c(1,2)) +
   theme(legend.key.size = unit(1.4,"line")) +
   # axis labels
   # xlab("Temperature (°C)") +

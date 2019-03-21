@@ -3,3 +3,13 @@ delete_merged_file: true
 language:
   ui:
     chapter_name: "Chapter "
+
+rmd_files: [
+  
+  "index.Rmd",
+  "chapters/01-warming.Rmd",
+  "chapters/02-multistressor.Rmd",
+  "chapters/03-larval.Rmd",
+  "chapters/04-application.Rmd",
+  "chapters/05-conclusion.Rmd"
+]

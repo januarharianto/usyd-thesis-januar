@@ -1,3 +1,2 @@
-# Final Words
-
-We have finished a nice book.
+# respR -- an R package for the analysis of respirometry data {#package}
+\chaptermark{respR -- an R package for respirometry}

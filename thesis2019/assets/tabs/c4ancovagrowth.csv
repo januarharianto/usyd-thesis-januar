@@ -1,0 +1,6 @@
+﻿Source,Sum sq.,d.f.,F-value,p
+Parental Env. (Temp.),6,1,0.0033,0.95
+Parental Env. (pH),3420,1,1.99,0.16
+Offspring Temp.,6837,3,1.32,0.27
+Offspring pH,65651,1,38.15,***
+Residuals,1640063,953,,

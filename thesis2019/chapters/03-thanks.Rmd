@@ -19,19 +19,18 @@ This thesis, and the work contained within, would not have been possible without
 
 Special thanks to Kevin Keay and Frank Lovicu, who helped with various PhD matters and funding. Thanks to the Professor NGW \& Mrs Ann Macintosh Memorial Scholarship for financial support.
 
-Last but not least, I would like to thank my wife, Cynthia, and my parents, Harianto and Lian Hiong for supporting me relentlessly throughout these years. I dedicate this thesis to my family. 
+Last but not least, I would like to thank my wife, Cynthia, and my parents, Harianto and Lian Hiong for supporting me relentlessly throughout these years. I dedicate this thesis to my family... including our newest addition, my beautiful daughter, Freya Harianto.
 
 \cleardoublepage
 
 \SingleSpacing
 \tableofcontents
 \clearpage
-\begin{KeepFromToc}
-  \listoffigures
-  \clearpage
-  \listoftables
-  \cleardoublepage
-\end{KeepFromToc}
+\listoffigures
+\clearpage
+\listoftables
+\cleardoublepage
+
 
 \OnehalfSpacing
 

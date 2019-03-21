@@ -11,3 +11,5 @@ _bookdown_files/
 /jh_thesis2018.acn
 /jh_thesis2018.glo
 /archive
+
+*.log

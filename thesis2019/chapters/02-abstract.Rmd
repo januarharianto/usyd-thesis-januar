@@ -40,7 +40,7 @@ These transgenerational carry-over effects are influenced by a combination of pa
 To investigate the influence of parental environment on offspring performance, adult *H. erythrogramma* were acclimated to OW and OA conditions over the gonad developmental period (winter to summer) and then spawned after 3 months in the adult treatments.
 The resulting embryos were incubated over 14 days to the juvenile stage at four temperatures (18 &deg;C, 20 &deg;C, 22 &deg;C, 24 &deg;C) and two pH~T~ levels (8.0, 7.6).
 Juvenile metabolic rate and test diameter (as a proxy for growth) were measured.
-Parental exposure to warming had a positive effect on the metabolic rate responses of juveniles to temperature, whereby they respired more (up to 30 \%) when incubated in warmer treatments.
+Parental exposure to warming had a net increased effect on the metabolic rate responses of juveniles to temperature, whereby they respired more (up to 30 \%) when incubated in warmer treatments.
 There were no effects of parental environment or juvenile thermal environment on growth.
 Parental exposure to low pH had no effect on metabolic rate or growth. 
 However, exposure to low pH during offspring development significantly affected the growth of the juveniles (up to 4 \% decrease).

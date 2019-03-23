@@ -1,3 +1,14 @@
-`r if (knitr::is_html_output()) '
-# References {-}
-'`
+# General discussion {#gendiscussion}
+
+
+
+# References {#bib}
+
+
+
+
+
+
+<!-- `r if (knitr::is_html_output()) ' -->
+<!-- # References {-} -->
+<!-- '` -->

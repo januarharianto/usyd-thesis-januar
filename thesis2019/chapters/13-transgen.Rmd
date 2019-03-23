@@ -61,7 +61,7 @@ These results suggest the importance of parental environmental history on the re
 
 <!-- to better visualise -->
 In this study, the carry-over effects of increased temperature and reduced pH were investigated in the sea urchin, *H. erythrogramma*.
-The adults were incubated for 3 months to temperature (ambient, +3 \degree C) which was modulated to follow an offset to the seasonal cycle to promote gonad development, and to two pH~T~ levels (8.0, 7.6).
+The adults were incubated for 3 months to temperature (ambient, +2 \degree C) which was modulated to follow an offset to the seasonal cycle to promote gonad development, and to two pH~T~ levels (8.0, 7.6).
 These urchins were then spawned to generate offspring which were incubated to 4 temperature (18 \degree C, 20 \degree C, 22 \degree C, 24 \degree C) and two pH~T~ (8.0, 7.6) treatments in a fully factorial design for 14 days.
 Interactions between parental treatments and offspring plastic responses were compared using general linear models of their thermal performances with metabolic rate and growth as performance traits. 
 Metabolic rate was used as it is a fundamental biological rate that modulates all other biological activities [@Brown2004]. 

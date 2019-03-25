@@ -481,13 +481,13 @@ Thus, understanding the effects of seasonal change on biology is vital for predi
 ### Effect on metabolism
 
 As single stressors, both increased temperature and reduced pH had a clear, positive effect on the metabolic rate of \textit{H. erythrogramma} after 4 and 12 weeks of acclimation. 
-This was expected – it is well-known that temperature modulates physiological activity in ectotherms [@Brown2004, Dillon2010, Hochachka2002, Somero2017}, and changes in oceanic pH alters biochemical pathways which affects acid-base relationships associated with maintaining physiological processes in echinoderms [@Catarino2012; @Collard2013; @Dupont2012; @Kurihara2008].
+This was expected – it is well-known that temperature modulates physiological activity in ectotherms [@Brown2004, @Dillon2010, @Hochachka2002, @Somero2017], and changes in oceanic pH alters biochemical pathways which affects acid-base relationships associated with maintaining physiological processes in echinoderms [@Catarino2012; @Collard2013; @Dupont2012; @Kurihara2008].
 
 Combined warming and acidification resulted in an increase in metabolic rate at 4 weeks when the treatments were at \SI{16.6}{\celsius}, \SI{18.6}{\celsius} and \SI{19.6}{\celsius}. 
 There were no interactions between both stressors, similar to that found by @Carey2016 where \textit{H. erythrogramma}, after 8 weeks in constant warming and low pH conditions (\SI{18}{\celsius}, \SI{23}{\celsius}; \si{pH_T} 8.0, 7.6). 
 However, after 12 weeks, antagonistic interactions between temperature and pH resulting in decreased metabolic rate (metabolic depression) of \textit{H. erythrogramma}.   
 Metabolic depression is a known stress response of many organisms when faced with stressful conditions [@Guppy1999] as lowering of metabolism is an effective mechanism to conserve energy and maximise fitness especially when exposed to extreme temperatures [@Guppy1999; @Guppy1994; @Storey1990]. 
-Similarly, \textit{Paracentrotus lividus} upregulated its metabolic rate in low pH conditions [@Catarino2012] and reduced pH has been shown to reduce ATP allocation in sea urchins [@Pan2015; Stumpp2011]. 
+Similarly, \textit{Paracentrotus lividus} upregulated its metabolic rate in low pH conditions [@Catarino2012] and reduced pH has been shown to reduce ATP allocation in sea urchins [@Pan2015; @Stumpp2011]. 
 Thus, the combined physiological impacts of warming and acidification have the potential to cause significant impacts to metabolic functioning [@Pan2015].
 Here, metabolic depression occurred as a clear stress response to combined warming and reduced pH. 
 This was not observed when the sea urchins were exposed to each stressor separately. 
@@ -495,13 +495,13 @@ This was not observed when the sea urchins were exposed to each stressor separat
 The metabolic depression response observed may be due to several factors. At 12 weeks, temperatures were at \SI{20.7}{\celsius}, \SI{22.7}{\celsius} and \SI{23.7}{\celsius}. 
 It appears that the higher temperature level was energetically demanding, but \textit{H. erythrogramma} was able to respond appropriately by increasing metabolic rates, although the high mortality showed that this was a stressful temperature level. 
 Since altered pH also influences metabolism in marine organisms [@Hendriks2010; @Melzner2009], the metabolic costs of maintaining physiological homeostasis -- in addition to the physiological stress from increased metabolism -- may have resulted in a forced depression of physiological activity. 
-This was reflected in the significant reduction in feeding rates, indicating ongoing energetic trade-offs between the needs of routine metabolism and important processes such as feeding, reproduction, and ATP allocation [@Pan2015; Portner2010].  
+This was reflected in the significant reduction in feeding rates, indicating ongoing energetic trade-offs between the needs of routine metabolism and important processes such as feeding, reproduction, and ATP allocation [@Pan2015; @Portner2010].  
 
 ### Long-term multistressor impacts
 
 Long-term exposure to low pH did not significantly affect feeding, excretion and survival rates of \textit{H. erythrogramma}, even when combined with warming, suggesting that this species was able to successfully compensate for the potential effects of ocean acidification on these traits. 
 Energetic trade-offs would be necessary to maintain acid-base balance, however metabolic rate did not increase with warming and low pH but was depressed as described above, limiting the energy available to maintain these processes. 
-While metabolic depression might be a necessary response to maintain the balance between energy supply and demand [@Guderley2002; @Guppy1999, @Guppy1994], in the longer term it can lead to a decrease in energy budget and reproduction as seen in gastropods and urchins [@Stumpp2011, Zhang2015]. 
+While metabolic depression might be a necessary response to maintain the balance between energy supply and demand [@Guderley2002; @Guppy1999, @Guppy1994], in the longer term it can lead to a decrease in energy budget and reproduction as seen in gastropods and urchins [@Stumpp2011, @Zhang2015]. 
 This depression of metabolic rate would be expected to impair the ability to persist in the face of ongoing ocean warming and acidification.
 
 Long-term multistressor experiments spanning months on adult echinoderms are limited to a few studies [@Suckling2015; @Morley2016; @Carey2016].

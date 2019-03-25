@@ -68,7 +68,7 @@ The chaperone heat-shock protein (HSP) response is an important trait in thermal
 By far the most-studied are HSPs of the 70-kDa size class, which consist of stress-inducible (HSP70) and constitutively-expressed (HSC70) isoforms. 
 Acute exposure to thermal shock results in an increase in HSP70 gene expression in sea urchins, indicating that the protein plays a crucial role in thermal tolerance [@Feder1999; @ODonnell2009; @Vergara2017]. 
 Long-term exposure to elevated temperature may result in accumulation of the constitutive HSP70 form in response to chronic stress, as shown in mussels [@Roberts1997; @Franzellitti2005]. 
-Few studies, however, have examined the effect of long-term acclimation to different thermal environments on the HSP70 response in sea urchins, although there are studies that demonstrated the importance of HSP70 in resisting long-term exposure to pollution [@Pinsino2008; @Pinsino2015]. 
+Few studies, however, have examined the effect of long-term acclimation to different thermal environments on the HSP70 response in sea urchins, although there are studies that demonstrate the importance of HSP70 in resisting long-term exposure to pollution [@Pinsino2008; @Pinsino2015]. 
 One study examined the acute HSP70 (one hour thermal shock) response in urchins to a range of temperatures (5 &deg;C to 36.5 &deg;C) in individuals that had been acclimated for 4 weeks in 5 &deg;C ($-9$ &deg;C) and 20 &deg;C (+6 &deg;C) treatments [@Osovitz2005].
 The synthesis of HSPs is energetically costly and the increased thermal resistance conveyed by upregulation of HSPs may come at a cost to metabolism, normal cell function and survival [@Krebs1997; @Hochachka2002; @Hoekstra2013]. 
 

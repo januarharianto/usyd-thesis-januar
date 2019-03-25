@@ -43,7 +43,7 @@ Changes in metabolic rate can provide vital insights to the compensatory mechani
 For adult *H. erythrogramma*, long-term exposure to warming had predictable effects on metabolic rates as the physiological responses of many marine ectotherms to temperature are well-characterised [reviewed by @Schulte2015].
 However, increased metabolism expends considerable energy, and when it becomes a burden, metabolic depression ensues as a mechanism to conserve energy.
 This effect may not be a voluntary response if there are unavoidable trade-offs from the lack of food or oxygen, often at the organism’s thermal tolerance limit which ultimately causes mortality [@Verberk2016].
-Thus when acclimated to 26 \degree C it was obvious that *H. erythrogramma* was at its thermal tolerance limit, since feeding rates decreased and survival was also significantly affected (Chapter \@ref(chapter2)).
+Thus when acclimated to 26 \degree C it was obvious that *H. erythrogramma* was at its long-term thermal tolerance limit, since feeding rates decreased and survival was also significantly affected (Chapter \@ref(chapter2)).
 This is an important finding with regards to predictions on the persistence of *H. erhythrogramma* populations in southeast Australia. 
 As seen in the recent El Nino year temperatures approached 25.5 \degree C in Sydney Harbour (Chapter \@ref(chapter2)).
 
@@ -62,7 +62,7 @@ It is important to note that the interpretation of metabolic depression as an un
 <!-- , thus indicating underlying obstacles affecting fitness and survival.  -->
 
 Metabolic rate is a vital component of scope for growth (SfG), providing valuable information about the changing energy budgets of organisms as they experience environmental stress to maintain physiological homeostasis at the expense of growth and reproduction [@Hoefnagel2017]. 
-*Heliocidaris erythrogramma* has a net positive scope for growth under all warming and acidification scenarios (Chapter \@ref(chapter3)).
+*Heliocidaris erythrogramma* had a net positive scope for growth under all warming and acidification scenarios (Chapter \@ref(chapter3)).
 Thus there was sufficient available energy for allocation to growth, reproduction and other physiological processes [@Filgueira2011].
 Despite available excess energy, the species suffered significant mortality at a +3 \degree C level of warming, which was unaffected by the inclusion of low pH.
 This indicated that while the species was not limited by energy availability, other underlying issues were impacting its fitness, which may include limitations to aerobic scope [@Verberk2016] or insufficient physiological plasticity to compensate for the negative effects of thermal stress [@Seebacher2014]. 

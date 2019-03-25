@@ -160,14 +160,14 @@ Temperature is probably the most important environmental factor affecting the ph
 Influencing virtually all levels of biological organisation, temperature forms the basis of biochemical adaptation since it physically modulates the rate of chemical reactions [@Hochachka2002; @Schulte2015; @Somero2017]. 
 Numerous studies have documented how temperature drives shifts in biogeographical distributions and phenology globally [@Brown2016; @Goldenberg2017; @Pecl2017]. 
 General observations include poleward shifts in distribution, reductions in overall body sizes and shifts in metabolic limits [@Verges2014; @Deutsch2015; @Pecl2017].
-However, not every species have responded as predicted, with some displaying signs of resilience (e.g. Sunday et al., 2015). 
+However, not every species has responded as predicted, with some displaying signs of resilience (e.g. Sunday et al., 2015). 
 There remains very little data on the biological responses of a vast majority of marine animals to increased temperature.
 This is partly due to a lack of information regarding the spatial and temporal details of current environmental conditions in marine environments, making it difficult to correlate organismal responses with their in situ habitats [@Johnston2008].
 
 The effects of global warming on the ocean are also not homogeneous. For example, subtropical western boundary currents are warming 2 to 3 times faster than the global average [@Wu2012].
 In Australia, the strengthening of the East Australian Current which carries tropical water south along the continent has resulted in warming at almost 4 times the global average rate [@Ridgway2007] and will continue to do so, with predictions of warming of up to +6 &deg;C above the pre-industrial value by the end of the century [@Lenton2015].
-Compounding to the issue is the mounting evidence that suggests that major impacts will be driven by extreme weather events [@Katz1992; @Jentsch2007; @Thompson2013; @Mann2017; @King2017; @Leung2017]. 
-Heat waves associated with the El Niño–Southern Oscillation (ENSO) events are of particular concern in Australia because they have caused unprecedented hot summers [@Cai2014; @Harris2018] leading to widespread coral bleaching and mortality in the Great Barrier Reef [@Hughes2017; @Hughes2017a] while changes to east Australian midlatitude cyclones have been responsible significant storm events in Australia's east coast [@Harley2016; @Pepler2016].
+Compounding the issue is the mounting evidence that suggests that major impacts will be driven by extreme weather events [@Katz1992; @Jentsch2007; @Thompson2013; @Mann2017; @King2017; @Leung2017]. 
+Heat waves associated with the El Niño–Southern Oscillation (ENSO) events are of particular concern in Australia because they have caused unprecedented hot summers [@Cai2014; @Harris2018] leading to widespread coral bleaching and mortality in the Great Barrier Reef [@Hughes2017; @Hughes2017a] while changes to east Australian midlatitude cyclones have been responsible for significant storm events in Australia's east coast [@Harley2016; @Pepler2016].
 Extreme events such as these are random and, by definition, rare, but appear to be increasing in frequency [@Katz1992; @Mann2017; @King2017].
 So far, we have a poor understanding of how anthropogenic change influences extreme weather events, yet many marine organisms are already living close to their thermal limits [@Angilletta2002; @Portner2010]. 
 The biological impacts of these events vary by taxa and several studies show marked changes in physiological responses, which are sometimes catastrophic, such as the widespread disappearance of the European purple sea urchin (*Paracentrotus lividus*) in the Eastern Mediterranean [@Yeruham2015] and the mass bleaching of coral reefs worldwide during the 2016--2017 El Niño heatwave [@Normile2016; @Hughes2017a; @Ampou2017]. 
@@ -244,7 +244,7 @@ Their larvae are morphologically simple and transparent, while adults are relati
 As habitat-modifying organisms that often occur in large numbers, sea urchins are also ecologically significant -- changes in their distribution can potentially affect the structure of marine benthic communities at distinctly local scales [@Ling2010; @Steneck2002].
 Sea urchins have also been identified to be vulnerable to climate change, especially in pre-metamorphic stages [@Kroeker2010; @Byrne2013; @Przeslawski2015].
 
-To date, a large proportion of studies on the impacts of climate change stressors on sea urchins are focused on development due to the fragile nature of their skeletons while still in larval stages [@Byrne2013a; @Byrne2013; @Przeslawski2015], with the analysis of physiological responses of both sea urchin larvae and adults in several recent studies [e.g. @Stumpp2011; @Dorey2013]. 
+To date, a large proportion of studies on the impacts of climate change stressors on sea urchins are focused on development due to the fragile nature of their skeletons while still in larval stages [@Byrne2013a; @Byrne2013; @Przeslawski2015], with the analysis of physiological responses of both sea urchin larvae and adults in several studies [e.g. @Stumpp2011; @Dorey2013]. 
 Focus on early life stages are common as they are particularly sensitive to environmental stress, which may represent key barriers to long-term species persistence [@Przeslawski2015].
 In contrast, studies on adult sea urchins are more focused on the measurement of physiological traits such as metabolic, feeding and growth rates [@Moulin2015; @Delorme2016]. 
 There are also numerous studies that utilise sea urchins as bioindicators of environmental pollution and stress [@Chiarelli2014; @Savriama2015; @Pinsino2015].
@@ -257,12 +257,14 @@ Long-term studies such as these show how poor our understanding of the role of p
 
 ### Effects of warming and acidification on *H. erythrogramma*
 
-There are 17 publications so far documenting the effects of climate change stress on *H. erythrogramma*. Of these, many are studies on the embryo and early-stage larvae [8 papers, e.g. @Byrne2009; @Hardy2014; @Foo2016]. Four papers involved post-settlement juveniles [@Byrne2011; @Byrne2011a; @Wolfe2013; @Foo2016], and 5 papers were on adults [@Nguyen2013; @Carey2016; @Brothers2016; @Sweet2016; @Harianto2018]. Three additional studies focused on sperm or egg performance under ocean future OA conditions [@Havenhand2008; @Schlegel2012; @Foo2018]. 
+There are 17 publications so far documenting the effects of climate change stress on *H. erythrogramma*. Of these, many are studies on the embryo and early-stage larvae [8 papers, @Byrne2009; @Hardy2014; @Foo2016; @Wolfe2013; @Byrne2010; @Lymbery2013; @Byrne2011; @Byrne2011a]. 
+Four papers involved post-settlement juveniles [@Byrne2011; @Byrne2011a; @Wolfe2013; @Foo2016], and 5 papers were on adults [@Nguyen2013; @Carey2016; @Brothers2016; @Sweet2016; @Harianto2018]. 
+Three additional studies focused on sperm or egg performance under ocean future OA conditions [@Havenhand2008; @Schlegel2012; @Foo2018]. 
 These studies investigated the effect of temperature, pH, or their interactions on the urchin.
 In the embryo to juvenile, response variables included normal/abnormal growth, morphometrics and survival.
 For adults, studies were more focused on physiology, immune response and skeletal integrity. 
 
-Decreased pH reduces sperm density and swimming speed [@Havenhand2008; @Schlegel2012] but increased sperm motility [@Foo2018]. 
+Decreased pH of -0.3 to -0.5 units reduced sperm density, motility and swimming speed, and had variable effects on fertilisation success [-44 \% to + 14 \%, @Havenhand2008; @Schlegel2012], although @Foo2018 observed increased velocity and motility at -0.4 pH units. 
 Eggs of *H. erythrogramma* retained their jelly coat even under OA conditions [pH 7.6--7.8, @Foo2018].
 Thus, fertilisation is robust to both decreased pH and warming [@Byrne2010; @Byrne2010a], but was compromised at high temperature [26 &deg;C, @Byrne2011].
 At early development, temperature significantly affected normal development and survival from the embryo to pre-metamorphic stages, but decreased pH did not [@Byrne2009; @Hardy2014].
@@ -271,7 +273,7 @@ Upon reaching early juvenile stage, acidification becomes a key driver as *H. er
 However, temperature, when included as an additional stressor, diminished the negative effects of OA in both studies.
 In addition, warming had a positive effect on juvenile spine length, but no effect on survival, and while decreased pH did not affect either response, electron microscopy showed blunting of spine structures due to dissolution [@Wolfe2013].
 
-There was evidence that the immune response (i.e. the phagocytic activity of coelomocyte cells) of *H. erythrogramma* is affected by decreased pH, but warming interacted with pH and alleviated those negative effects [@Brothers2016].
+There is evidence that the immune response (i.e. the phagocytic activity of coelomocyte cells) of *H. erythrogramma* is affected by decreased pH, but warming interacted with pH and alleviated those negative effects [@Brothers2016].
 @Carey2016 found that *H. erythrogramma* increased its metabolic response by up to 20 \% when exposed to either warming (23 &deg;C to control 17 &deg;C) and acidification (pH 7.6), but the two stressors did not interact.
 However, the combined effect of both stressors was additive resulting in a 44 \% increase in the metabolic rate on the species.
 In addition, @Harianto2018 found that long-term exposure (3-month) to increased temperature resulted in increased mortality risk (6--9 times higher) for urchins acclimated at 24 &deg;C to 26 &deg;C. 

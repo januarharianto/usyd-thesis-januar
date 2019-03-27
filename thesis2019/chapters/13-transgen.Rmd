@@ -214,9 +214,9 @@ knitr::include_graphics("assets/figs/c4juvrates.png")
 
 ```
 
-(ref:juvrates) Mean metabolic rate ($\pm SE$) of 14-day, juvenile *Heliocidaris erythrogramma* in response to rearing at a range of temperatures (18 &deg;C, 20 &deg;C, 22 &deg;C, 24 &deg;C) under constant *(A)* ambient pH~T~ (8.0); and *(B)* low pH~T~ (7.6) conditions. The juveniles were generated from parents acclimated for 3 months to two temperature (blue: ambient +0 &deg;C, red: elevated +2 &deg;C) and two pH~T~ levels (dashed: ambient 8.0, line: 7.6).
+(ref:juvrates) Mean metabolic rate ($\pm$SE) of 14-day, juvenile *Heliocidaris erythrogramma* in response to rearing at a range of temperatures (18 &deg;C, 20 &deg;C, 22 &deg;C, 24 &deg;C) under constant *(A)* ambient pH~T~ (8.0); and *(B)* low pH~T~ (7.6) conditions. The juveniles were generated from parents acclimated for 3 months to two temperature (blue: ambient +0 &deg;C, red: elevated +2 &deg;C) and two pH~T~ levels (dashed: ambient 8.0, line: 7.6).
 
-(ref:sjuvrates) Mean metabolic rate ($\pm SE$) of 14-day, juvenile *Heliocidaris erythrogramma* in response rearing at a range of temperatures under constant *(A)* ambient pH~T~; and *(B)* low pH~T~ conditions.
+(ref:sjuvrates) Mean metabolic rate ($\pm$SE) of 14-day, juvenile *Heliocidaris erythrogramma* in response rearing at a range of temperatures under constant *(A)* ambient pH~T~; and *(B)* low pH~T~ conditions.
 
 ### Growth
 
@@ -250,7 +250,7 @@ knitr::include_graphics("assets/figs/c4juvgrowth.png")
 
 ```
 
-(ref:juvgrowth) Mean test diameter ($\mu m \pm$ SD) of juvenile *Heliocidaris erythrogramma* following rearing to a range of temperatures (18 &deg;C, 20 &deg;C, 22 &deg;C, 24 &deg;C) under constant *(A)* ambient pH~T~ (8.0); and *(B)* low pH~T~ (7.6) conditions. The juveniles were generated from parents that had been acclimated for 3 months to two temperature (blue: ambient +0 &deg;C, red: elevated +2 &deg;C) and two pH~T~ levels (8.0, 7.6).
+(ref:juvgrowth) Mean test diameter (µm $\pm$ SD) of juvenile *Heliocidaris erythrogramma* following rearing to a range of temperatures (18 &deg;C, 20 &deg;C, 22 &deg;C, 24 &deg;C) under constant *(A)* ambient pH~T~ (8.0); and *(B)* low pH~T~ (7.6) conditions. The juveniles were generated from parents that had been acclimated for 3 months to two temperature (blue: ambient +0 &deg;C, red: elevated +2 &deg;C) and two pH~T~ levels (8.0, 7.6).
 
 (ref:sjuvgrowth) Mean test diameter ($\mu m \pm$ SD) of juvenile *Heliocidaris erythrogramma* following rearing to a range of temperatures under constant *(A)* ambient pH~T~; and *(B)* low pH~T~ conditions.
 

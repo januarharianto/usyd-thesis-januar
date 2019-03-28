@@ -150,11 +150,4 @@ The results of this thesis provide guidance for future research to obtain a bett
 
 <!-- END -->
 
-# References {#bib}
 
-\OnehalfSpacing
-
-
-<!-- `r if (knitr::is_html_output()) ' -->
-<!-- # References {-} -->
-<!-- '` -->

@@ -20,5 +20,6 @@ rmd_files: [
   "chapters/12-multi.Rmd",
   "chapters/13-transgen.Rmd",
   "chapters/14-app.Rmd",
-  "chapters/15-discussion.Rmd"
+  "chapters/15-discussion.Rmd",
+  "chapters/99-references.Rmd"
 ]

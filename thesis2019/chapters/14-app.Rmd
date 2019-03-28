@@ -41,9 +41,9 @@ Dedicated software are also available to perform metabolic rate analyses, but ma
 
 A number of open-source R software packages have recently become available which are designed for, or are suitable to analyse data from respirometry.
 The \texttt{respirometry} package (\url{https://CRAN.R-project.org/package=respirometry}) contains a comprehensive collection of tools to explore and evaluate experimental parameters in aquatic respirometry and is useful for the design and diagnosis of experimental setups.
-The \texttt{rMR} package (\url{https://CRAN.R-project.org/package=rMR}) performs interval-based metabolic rate calculations and has a method to analyse P\textsubscript{crit} using the ``broken-stick'' regression method (Yeager \& Ultsch, 1989).
+The \texttt{rMR} package (\url{https://CRAN.R-project.org/package=rMR}) performs interval-based metabolic rate calculations and has a method to analyse P\textsubscript{crit} using the "broken-stick" regression method (Yeager \& Ultsch, 1989).
 \texttt{FishResp} (\url{https://CRAN.R-project.org/package=FishResp}) is focused on the analysis of intermittent respirometry and performs background respiration corrections.
-The package \texttt{LoLinR} [@Olito2017], while not specifically coded for respirometry, provides a statistically robust method of detecting a ``best-fit'' regression, and performs well at identifying truly linear subsets of a data series.
+The package \texttt{LoLinR} [@Olito2017], while not specifically coded for respirometry, provides a statistically robust method of detecting a "best-fit" regression, and performs well at identifying truly linear subsets of a data series.
 
 Here we describe \texttt{respR}, an open-source R package designed to provide an efficient and reproducible workflow for the analysis of respirometry data (Table \ref{funlist}).
 The package contains utilities to: (1) analyse closed, intermittent, flow-through and open-tank respirometry data \citep[see][]{Lighton2008, Svendsen2016}, (2) determine volume and mass specific oxygen uptake rates, (3) automatically detect maximal and minimal rates, P\textsubscript{crit}, and (4) detect the most linear sections of data using novel rolling regression and kernel density estimation techniques.
@@ -63,14 +63,16 @@ Installation of \texttt{respR} can be performed directly via the R console using
 <!-- \begin{lstlisting} -->
 <!-- # install.packages("devtools") # uncomment to run -->
 <!-- devtools::install_github("januarharianto/respR") # install -->
-<!-- library(respR) # load  -->
+<!-- library(respR) # load -->
 <!-- \end{lstlisting} -->
 
-```{r, eval=FALSE}
+
+```{r, echo=TRUE, eval=FALSE}
 # install.packages("devtools") # uncomment to run
 devtools::install_github("januarharianto/respR") # install
 library(respR) # load package
 ```
+
 
 To illustrate the main features of the package, five example datasets, (\texttt{sardine.rd}, \texttt{urchin.rd}, \texttt{intermittent.rd}, \texttt{squid.rd} and \texttt{zeb\_intermittent.rd}) are distributed with  \texttt{respR}.
 
@@ -100,8 +102,15 @@ Running \texttt{inspect()} is an exploratory step that flags potential issues be
 <!-- #> evenly-spaced pass    - -->
 <!-- \end{lstlisting} -->
 
-```{r}
+```{r, echo=TRUE, eval=FALSE}
 inspect(squid.rd, plot = FALSE)
+#> # inspect # -----------------------------
+#>               Time   o2
+#> NA/NAN        pass pass
+#> sequential    pass    -
+#> duplicated    pass    -
+#> evenly-spaced pass    -
+
 ```
 
 
@@ -130,10 +139,10 @@ Here, we can obtain maximum and minimum rate values of width \(n\) by ranking th
 
 The \texttt{auto\_rate()} function can also automatically select the most stable (i.e. most linear) sections of noisy data by applying additional analytical techniques.
 First, we take advantage of the key assumption that linear sections of a data series are reflected by stable parameters across the rolling estimates, a property that is often applied in financial statistics to evaluate model stability and make forward predictions on time-series data [@Zivot2006].
-We use kernel density estimation (KDE) techniques, often applied in various inference procedures such as machine learning, pattern recognition and computer vision, to automatically aggregate stable (i.e.~linear) segments as they naturally form one or more local maximums (``modes'') in the probability density estimate.
+We use kernel density estimation (KDE) techniques, often applied in various inference procedures such as machine learning, pattern recognition and computer vision, to automatically aggregate stable (i.e. linear) segments as they naturally form one or more local maximums (``modes'') in the probability density estimate.
 
 KDE requires no assumption that the data is from a parametric family, and learns the shape of the density automatically without supervision.
-KDE can be expressed as: \[\hat{f}(x) = \frac{1}{nh^d}\sum_{i = 1}^{n} K \left(\frac{x - X_i}{h} \right)\] where \(f\) is the density function from an unknown distribution \(P\) for \(X_1,...,X_n\), \(K\) is the kernel function and \(h\) is the optimal smoothing bandwidth. The smoothing bandwidth is computed using the solve-the-equation plug-in method [Sheather1991, Jones1996} which works well with multimodal or non-normal densities [@Raykar2006].
+KDE can be expressed as: \[\hat{f}(x) = \frac{1}{nh^d}\sum_{i = 1}^{n} K \left(\frac{x - X_i}{h} \right)\] where \(f\) is the density function from an unknown distribution \(P\) for \(X_1,...,X_n\), \(K\) is the kernel function and \(h\) is the optimal smoothing bandwidth. The smoothing bandwidth is computed using the solve-the-equation plug-in method [@Sheather1991; @Jones1996] which works well with multimodal or non-normal densities [@Raykar2006].
 
 We then use \(h\) to select all values in the rolling regression output that match the range of values around each mode (\(\theta_n\)) of the KDE (i.e. \(\theta_n \pm h\)). These rolling estimates are grouped and ranked by size, and the upper and lower bounds of the data windows they represent are used to re-select linear segments from the original data series. The rolling estimates are then discarded while the ranked data segments are analysed using linear regression. Summary diagnostics and visual plots provide supporting information on the technique and the validity of the results (Figs. \ref{autorate1} \& \ref{autorate2}).
 <!-- The performance of this particular method is further discussed in the Supplementary Material. -->
@@ -176,10 +185,8 @@ For example, measurements of respiration can be scaled to surface area [e.g. dia
 Thus any respirometry data may still be analysed without any restriction until conversion is required, in which users at this point perform those conversions manually.
 
 The function \texttt{convert\_DO()} is used to convert units of oxygen concentration only (e.g. \(\mathrm{mg/L}\) or \%; Table 2).
-For ease of use, we implemented a simple fuzzy string-matching algorithm to match relevant units (e.g. ``\(\mathrm{mg/L}\)'', ``\(\mathrm{mg/l}\)'', ``\(\mathrm{mg\ L^{-1}}\)'' and ``\(\mathrm{mg\ l^{-1}}\)'' are identified as the same units).
+For ease of use, we implemented a simple fuzzy string-matching algorithm to match relevant units (e.g. "\(\mathrm{mg/L}\)", "\(\mathrm{mg/l}\)", "\(\mathrm{mg\ L^{-1}}\)" and "\(\mathrm{mg\ l^{-1}}\)" are identified as the same units).
 The function \texttt{convert\_rate()} is conceptually similar to \texttt{convert\_DO()}, but it focuses on volumetric and mass-specific conversions (e.g. \(\mathrm{mg\ h^{-1}\ kg^{-1}}\)).
-
-
 
 \section{Concluding remarks and future improvements}
 
@@ -192,26 +199,25 @@ The \texttt{respR} package allows for more effective and less time-consuming han
 
 
 
-\section{Acknowledgements}
+<!-- \section{Acknowledgements} -->
 
-This work was supported by an NSW Environmental Trust grant (MB), and Endeavour Postdoctoral Fellowship (NC) and a Professor NGW \& Mrs Ann Macintosh Memorial Scholarship from the University of Sydney (JH).
-Some experimental data were obtained from experiments performed at the  Sydney Institute of Marine Science (SIMS).
-This manuscript is SIMS  contribution number 240. We thank our reviewers, whose comments have  greatly improved the manuscript.
+<!-- This work was supported by an NSW Environmental Trust grant (MB), and Endeavour Postdoctoral Fellowship (NC) and a Professor NGW \& Mrs Ann Macintosh Memorial Scholarship from the University of Sydney (JH). -->
+<!-- Some experimental data were obtained from experiments performed at the  Sydney Institute of Marine Science (SIMS). -->
+<!-- This manuscript is SIMS  contribution number 240. We thank our reviewers, whose comments have  greatly improved the manuscript. -->
 
 
+<!-- \section{Data Accessibility} -->
 
-\section{Data Accessibility}
+<!-- The \texttt{respR} R package is open-source and available on GitHub (\url{https://github.com/januarharianto/respR}). -->
+<!-- Package vignettes are also open-source, accessible at \url{https://januarharianto.github.io/respR/index.html}. -->
+<!-- Installing and loading \texttt{respR} will automatically load all example  data used in this paper. -->
+<!-- Alternatively, the data may be downloaded manually from GitHub at \url{https://github.com/januarharianto/respR/tree/master/data}. -->
+<!-- Since the package is updated regularly, all code, data and documentation used to reproduce this manuscript have been archived at \url{http://doi.org/10.5281/zenodo.2548602} as \texttt{respR} v.1.5.1. -->
 
-The \texttt{respR} R package is open-source and available on GitHub (\url{https://github.com/januarharianto/respR}).
-Package vignettes are also open-source, accessible at \url{https://januarharianto.github.io/respR/index.html}.
-Installing and loading \texttt{respR} will automatically load all example  data used in this paper.
-Alternatively, the data may be downloaded manually from GitHub at \url{https://github.com/januarharianto/respR/tree/master/data}.
-Since the package is updated regularly, all code, data and documentation used to reproduce this manuscript have been archived at \url{http://doi.org/10.5281/zenodo.2548602} as \texttt{respR} v.1.5.1.
+<!-- \section{Author contributions}\label{author-contributions} -->
 
-\section{Author contributions}\label{author-contributions}
-
-JH, NC and MB conceived the ideas and designed methodology; JH wrote the code, NC edited code and analysed the example data; JH, NC and  MB led the writing of the manuscript.
-All authors contributed critically  to the drafts and gave final approval for publication.
+<!-- JH, NC and MB conceived the ideas and designed methodology; JH wrote the code, NC edited code and analysed the example data; JH, NC and  MB led the writing of the manuscript. -->
+<!-- All authors contributed critically  to the drafts and gave final approval for publication. -->
 
 
 <!-- TABLE 1 ============================================================== -->
@@ -243,7 +249,7 @@ Treatment A&Treatment B\\
 \texttt{zeb\_intermittent.rd.rda} & Multiple measurements (106 replicates, plus initial and end background measurements) of oxygen consumption in a zebrafish, \textit{Danio rerio}, obtained using intermittent flow respirometry. \\
 \bottomrule
 \end{tabular}
-\end{table}%
+\end{table}
 
 <!-- % TABLE 2 ============================================================= -->
 
@@ -271,7 +277,7 @@ A comparison of \texttt{respR} with other R packages & Comparing outputs of \tex
 When to use \texttt{respR} & A discussion of what \texttt{respR} offers and when users should consider using the package for respirometry analyses. \\
 \bottomrule
 \end{tabular}
-\end{table}%
+\end{table}
 
 <!-- % TABLE 3 ============================================================= -->
 

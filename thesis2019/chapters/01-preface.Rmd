@@ -5,7 +5,7 @@ Because they have been prepared as stand-alone manuscripts, repetition of import
 In addition, all references have been re-formatted and compiled at the end of the thesis for easier cross-referencing.
 
 This thesis has been saved as a PDF file and is submitted digitally. I have enabled hyperlinks in the document for the table of contents, cross-references, geographic locations, citations and the bibliography. 
-These links are obvious -- they are coloured. On the PDF, links in blue are cross-references within the document; links in green point to websites, and will open in a web browser.
+These links are obvious -- they are coloured. On the PDF, links in \textcolor{cobalt}{blue} are cross-references within the document; links in \textcolor{cadmiumgreen}{green} point to websites, and will open in a web browser.
 Clicking on any section heading in the table of contents will bring the reader to the relevant page, likewise, clicking on a citation will bring the reader directly to the relevant reference.
 Where possible, every reference has a DOI link that can be clicked to access the online version of that reference through a web browser.
 Clicking on a figure or table cross-reference links directly to the page containing that figure/table, and clicking on a GPS coordinate will automatically launch a web browser pinning that location on Google Maps.

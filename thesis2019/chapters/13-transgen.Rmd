@@ -80,13 +80,13 @@ It was hypothesised that interactions between parental acclimation environments 
 <!-- *Heliocidaris erythrogramma* (35--44 $mm$ test diameter) were collected from Milk Beach ([-33.856478, 151.266958](https://www.google.com/maps/?q=-33.856478,151.266958)) in Sydney Harbour during low tide. -->
 *Heliocidaris erythrogramma* (35--44 mm test diameter) were collected from three locations within Sydney Harbour: Milk Beach ([-33.856478, 151.266958](https://www.google.com/maps/?q=-33.856478,151.266958)), Bottle and Glass Point ([-33.847960, 151.270122](https://www.google.com/maps/?q=-33.847960,151.270122)) and Chowder Bay ([-33.841657, 151.253677](https://www.google.com/maps/?q=-33.847960,151.270122)).
 The sea urchins were collected in the subtidal zone (2--3 m) in June 2015 in mid-winter when the gonads were in the resting stage [@Laegdsgaard1991] and transported to the Sydney Institute of Marine Science (SIMS) in Chowder Bay, Australia.
-There, they were maintained at the ambient flowthrough facility with filtered seawater (FSW, 70 $\mu$m, 1.5 L min^-`^) for 2 weeks before they were transferred into acclimation treatments.
+There, they were maintained at the ambient flowthrough facility with filtered seawater (FSW, 70 µm, 1.5 L min^-1^) for 2 weeks before they were transferred into acclimation treatments.
 
 ### Experimental design
 
 All experiments were performed in a climate-controlled room which was capable of adjusting room temperature, lighting, seawater temperature and pH. 
 Room lights were corrected weekly to follow the diurnal sunrise/sunset cycle.
-A thermocouple-solenoid feedback system controlled seawater temperature by automatically mixing warm (26 &deg;C) and cold (14.5 &deg;C) filtered FSW (20 $\mu$m) to produce water at a constant temperature. 
+A thermocouple-solenoid feedback system controlled seawater temperature by automatically mixing warm (26 &deg;C) and cold (14.5 &deg;C) filtered FSW (20 µm) to produce water at a constant temperature. 
 The water was stored in insulated header tanks, and each header tank was further equipped with a submersible heater (200 W, Blue Sea, Guangdong, China) attached to a temperature controller (model 7028/3, TUNZE Aqraientechnik GmbH, Germany) to maintain stable temperature.
 
 Seawater pH control was performed separately for adult treatments and larval cultures.
@@ -104,11 +104,11 @@ The dye indicator used for spectrophotometric measurements was m-cresol (Acros A
 
 ### Adult treatment setup
 
-Sea urchins were randomly assigned to 4 treatments of two temperatures (ambient, elevated +2 &deg;C) and two pH levels (ambient 8.0 pH~T~, 7.6pH~T~). 
+Sea urchins were randomly assigned to 4 treatments of two temperatures (ambient, elevated +2 &deg;C) and two pH levels (ambient 8.0 pH~T~, 7.6 pH~T~). 
 Each treatment combination consists of five replicate tanks (4 L) with three sea urchins per tank for a total of 15 sea urchins per treatment.
 <!-- The temperatures and pH levels were selected based on projections of OA conditions predicted for the region by the year 2100 [@Lenton2015]. -->
-To minimise physiological stress, all treatments were at ambient temperature and pH followed by an adjustment period during which temperature and pH changes were carried out slowly at +1 *&deg;C* week^-1^ and -0.1 pH week^-1^.
-Once treatment levels were established the acclimation period started and continued for 3 months during which pH was kept constant while temperature was adjusted weekly based on the natural temperature profile of Chowder Bay, determined using *in situ* loggers previously deployed in sea urchin habitats from 2009--2014 (See \autoref{chapter3}, Figure \@ref(fig:harbour)). 
+To minimise physiological stress, all treatments were at ambient temperature and pH followed by an adjustment period during which temperature and pH changes were carried out slowly at +1 &deg;C week^-1^ and -0.1 pH week^-1^.
+Once treatment levels were established the acclimation period started and continued for 3 months during which pH was kept constant while temperature was adjusted weekly based on the natural temperature profile of Chowder Bay, determined using in situ loggers previously deployed in sea urchin habitats from 2009--2014 (See Figure \ref{suppfig2}). 
 
 
 ### Larval kreisel setup
@@ -117,8 +117,8 @@ Embryos were incubated in custom-built, mini-kreisels of similar design to those
 <!-- as these tanks allow us to culture larvae in flowthrough conditions. -->
 Each kriesel was constructed by mounting a cylindrical acrylic tube (10 cm diameter, 4 cm wide) between two acrylic panels (12 $\times$ 11 $\times$ 0.3 cm) using acetone adhesive (Figure \@ref(fig:kreisel)).
 An inflow tubing leading into the kreisel provided continuous laminar flow in a circular motion within the kreisel.
-As the seawater input was flowthrough, it was delivered through a series of three filters (70 $\mu$m $\Rightarrow$ 20 $\mu$m $\Rightarrow$ 1 $\mu$m) to prevent pelagic organisms in the flowthrough system from interacting with the specimens.
-The outflow was covered with a 50 $\mu$m mesh to prevent escape.
+As the seawater input was flowthrough, it was delivered through a series of three filters (70 µm $\Rightarrow$ 20 µm $\Rightarrow$ 1 µm) to prevent pelagic organisms in the flowthrough system from interacting with the specimens.
+The outflow was covered with a 50 µm mesh to prevent escape.
 
 There were 10 treatments of 4 temperatures (18 &deg;C, 20 &deg;C, 22 &deg;C, 24 &deg;C) and two pH levels (8.0, 7.6). Each treatment contained three experimental kreisels, supplied with flow-through seawater at a rate of 50 mL min^-1^. 
 <!-- The flow rate was adjusted slightly ($\pm 5\ mL\ min^{-1}$) for each kreisel to ensure that the larva were not pressed against the outflow mesh. -->
@@ -136,7 +136,7 @@ knitr::include_graphics("assets/figs/c4kreisel.png")
 <!-- To accommodate all treatments in the larval culture system, larval spawning was performed sequentially for each adult treatment. -->
 <!-- The selection of treatment group was performed at random and incubations lasted 14 days each, starting in October 2015 and ending in December 2015. -->
 After ca. 3 months, during the spawning season the sea urchins were used to generate larval cultures.
-Spawning was induced in October 2015 by injection of 1--2 $mL$ of 0.5 M potassium chloride (KCl).
+Spawning was induced in October 2015 by injection of 1--2 mL of 0.5 M potassium chloride (KCl).
 <!-- During spawning, all treatments were held at their temepratures (ambient: 18.2 &deg;C, elevated 20.2 &deg;C) and the weekly adjustments to temperature were halted. -->
 To better represent population-level repsonses to treatments, gametes from at least 3 females and 2 males were pooled, and eggs were pooled at their parental conditions.
 Approximately 1000--1500 unfertilised eggs were transferred directly into each kreisel.
@@ -148,25 +148,26 @@ The embryos left to develop and incubate in the kreisels into settled juveniles,
 
 ### Metabolic rate and growth
 
-Metabolic rate, MO~2~, was estimated using constant-volume respirometry. 
+Metabolic rate (MO~2~) was estimated using constant-volume respirometry. 
 The respirometry chambers used were 2 mL borosilicate glass vials with silicon septum lids (Mfr. No. CERT97E-12, Thomas Scientific, NJ, USA).
 Oxygen concentration within the glass vials was measured using needle-type microsensors (NTH-PSt1, PreSens GmbH, Regensburg, Germany) attached to 4-channel and 10-channel meters (OXY-10 micro and OXY-4 micro, PreSens GmbH).
 <!-- We used 9 vials for larvae while the other 5 contained only treatment water to account for the presence of background respiration. -->
 From each kreisel, 50 juveniles were collected at random and placed into a respirometry vial for measurement of oxygen uptake to obtain a collective respirometry value.
-Each respirometry vial was rinsed at least two times and filled with 0.22 $\mu$m FSW at the same treatment conditions as the source juveniles before the specimens were transferred for measurement.
-To account for background respiration, 4-6 vials containing only treatment water were measured separately for each larval group.
+Each respirometry vial was rinsed at least two times and filled with 0.22 µm FSW at the same treatment conditions as the source juveniles before the specimens were transferred for measurement.
+To account for background respiration, 4 to 6 vials containing only treatment water were measured separately for each larval group.
 Respirometry experiments ran for 12 to 15 hours in the dark and oxygen concentrations did not drop below 85 \% air saturation when the experiments were completed.
 Temperature was kept constant throughout the experiment using a water bath.
 
 After respirometry, juveniles were collected and photographed under a compound microscope. 
-To test for the effects of parental and offspring treatments on growth, 30 photographed juveniles were randomly sampled for measurements of test diameter ($\mu$m) as a proxy for growth (Figure \@ref(fig:juvdiam)).
-Metabolic rate results were scaled to the average test diameter per larvae based on the juveniles measured [pmol O2 H^-1^ larvae^-1^ $\mu$m^-1^, @Dorey2013].
+To test for the effects of parental and offspring treatments on growth, 30 photographed juveniles were randomly sampled for measurements of test diameter (µm) as a proxy for growth (Figure \@ref(fig:juvdiam)).
+A total of 960 juveniles were measured for test diameter.
+Metabolic rate results were scaled to the average test diameter per larvae based on the juveniles measured [pmol O2 h^-1^ larvae^-1^ µm^-1^, @Dorey2013].
 
 ```{r juvdiam, fig.cap="(ref:juvdiam)", fig.pos="p"}
 knitr::include_graphics("assets/figs/c4juvdiam.png")
 ```
 
-(ref:juvdiam) Micrograph of a juvenile *Heliocidaris erythrogramma* after 14 days in treatments. Juveniles that were used for metabolic rate analysis were measured on the oral surface as indicated by the lines to obtain estimates of test diameter (yellow lines) using the image analysis software ImageJ. Scale = 200 $\mu$m.
+(ref:juvdiam) Micrograph of a juvenile *Heliocidaris erythrogramma* after 14 days in treatments. Juveniles that were used for metabolic rate analysis were measured on the oral surface as indicated by the lines to obtain estimates of test diameter (yellow lines) using the image analysis software ImageJ. Scale = 200 µm.
 
 ### Data analyses
 
@@ -180,11 +181,11 @@ All data were analysed in R (version 3.5.0) using the `car` package for ANCOVA a
 
 ### Metabolic Rate
 
-We found a significant interaction between parental temperature treatment and offspring metabolic response to temperature (GLMM ANCOVA, $F_{3,22} =$ 24.04, $p<$ 0.001). 
-Juvenile metabolic rate increased significantly with temperature ($F_{1,22} =$ 20.41, $p<$ 0.001), but parental acclimation to warmer warmer treatments (+2 &deg;C) resulted in increased metabolism at higher temperatures. 
+We found a significant interaction between parental temperature treatment and offspring metabolic response to temperature (GLMM ANCOVA, F~3,\ 22~ = 24.04, p < 0.001). 
+Juvenile metabolic rate increased significantly with temperature (F~1,\ 22~ = 20.41, p < 0.001), but parental acclimation to warmer warmer treatments (+2 &deg;C) resulted in increased metabolism at higher temperatures. 
 At 24 &deg;C, the difference in metabolic rates between larval groups was up to $\sim$ 30 \% depending on whether their parents had been acclimated to increased temperature.
-Parental acclimation to low pH (7.6) did not have an effect on metabolic rate responses of the offspring ($F_{1,22} =$ 1.63, $p=$ 0.22). 
-Offspring exposure to low pH, regardless of parental environment, also did not significantly affect metabolic rate responses ($F_{1,22} =$ 0.65, $p=$ 0.43).
+Parental acclimation to low pH (7.6) did not have an effect on metabolic rate responses of the offspring (F~1,\ 22~ = 1.63, p = 0.22). 
+Offspring exposure to low pH, regardless of parental environment, also did not significantly affect metabolic rate responses (F~1,\ 22~ = 0.65, p = 0.43).
 
 ```{r c4ancovamr, message=FALSE}
 
@@ -203,7 +204,7 @@ kable(c4ancovamr, "latex", caption = "(ref:c4ancovamr)",
 
 ```
 
-(ref:c4ancovamr) Generalised linear mixed model (GLMM) analyses of covariance (ANCOVA, Type III) on the effect of parental environments (ambient, +2 &deg;C, pH~T~ 8.0, pH~T~ 7.6) and offspring treatments (18 &deg;C, 20 &deg;C, 22 &deg;C, 24 &deg;C, pH~T~ 8.0, pH~T~ 7.6) on juvenile (14-day) metabolic rate in *Heliocidaris erythrogramma*. Non-significant three-way interactions were removed from the model. \*\*\*: $p <$ 0.001; \*\*: $p <$ 0.01.
+(ref:c4ancovamr) Generalised linear mixed model (GLMM) analyses of covariance (ANCOVA, Type III) on the effect of parental environments (ambient, +2 &deg;C, pH~T~ 8.0, pH~T~ 7.6) and offspring treatments (18 &deg;C, 20 &deg;C, 22 &deg;C, 24 &deg;C, pH~T~ 8.0, pH~T~ 7.6) on juvenile (14-day) metabolic rate in *Heliocidaris erythrogramma*. Non-significant three-way interactions were removed from the model. \*\*\*: p < 0.001; \*\*: $p <$ 0.01.
 
 (ref:sc4ancovamr) Generalised linear mixed model (GLMM) analyses of covariance (ANCOVA, Type III) on the effect of parental environments and offspring treatments on juvenile metabolic rate in *Heliocidaris erythrogramma*. 
 
@@ -214,13 +215,13 @@ knitr::include_graphics("assets/figs/c4juvrates.png")
 
 ```
 
-(ref:juvrates) Mean metabolic rate ($\pm$SE) of 14-day, juvenile *Heliocidaris erythrogramma* in response to rearing at a range of temperatures (18 &deg;C, 20 &deg;C, 22 &deg;C, 24 &deg;C) under constant *(A)* ambient pH~T~ (8.0); and *(B)* low pH~T~ (7.6) conditions. The juveniles were generated from parents acclimated for 3 months to two temperature (blue: ambient +0 &deg;C, red: elevated +2 &deg;C) and two pH~T~ levels (dashed: ambient 8.0, line: 7.6).
+(ref:juvrates) Mean metabolic rate ($\pm$SE) of 14-day, juvenile *Heliocidaris erythrogramma* in response to rearing at a range of temperatures (18 &deg;C, 20 &deg;C, 22 &deg;C, 24 &deg;C) under constant **(A)** ambient pH~T~ (8.0); and **(B)** low pH~T~ (7.6) conditions. The juveniles were generated from parents acclimated for 3 months to two temperature (blue: ambient +0 &deg;C, red: elevated +2 &deg;C) and two pH~T~ levels (dashed: ambient 8.0, line: 7.6).
 
-(ref:sjuvrates) Mean metabolic rate ($\pm$SE) of 14-day, juvenile *Heliocidaris erythrogramma* in response rearing at a range of temperatures under constant *(A)* ambient pH~T~; and *(B)* low pH~T~ conditions.
+(ref:sjuvrates) Mean metabolic rate ($\pm$SE) of 14-day, juvenile *Heliocidaris erythrogramma* in response rearing at a range of temperatures under constant **(A)** ambient pH~T~; and **(B)** low pH~T~ conditions.
 
 ### Growth
 
-Juveniles grew less under acidified (7.6 pH~T~) conditions ($F_{1,953} =$ 38.1, $p<$ 0.001, Table \@ref(tab:juvgrowthancova)), but there was no evidence of any effect of parental acclimation to temperature ($F_{1,953} =$ 0.003, $p=$ 0.95, Table \@ref(tab:juvgrowthancova)) or pH ($F_{1,953} =$ 1.99, $p=$ 0.16, Table \@ref(tab:juvgrowthancova)) on juvenile test diameter.
+Juveniles grew less under acidified (7.6 pH~T~) conditions (F~1,\ 953~ = 38.1, p < 0.001, Table \@ref(tab:juvgrowthancova)), but there was no evidence of any effect of parental acclimation to temperature (F~1,\ 953~ = 0.003, p = 0.95, Table \@ref(tab:juvgrowthancova)) or pH (F~1,\ 953~ = 1.99, p =  0.16, Table \@ref(tab:juvgrowthancova)) on juvenile test diameter.
 Overall, there was a 4\% decrease in the mean test diameter of juveniles across all four temperature treatments at ambient pH~T~ (8.0) and low pH~T~ (7.6).
 
 
@@ -238,7 +239,7 @@ kable(gdt, "latex", caption = "(ref:juvgrowthancova)",
 
 ```
 
-(ref:juvgrowthancova) Generalised linear mixed model (GLMM) analyses of covariance (ANCOVA, Type II) on the effect of parental environments (ambient, +2 &deg;C, pH~T~ 8.0, pH~T~ 7.6) and offspring treatments (18 &deg;C, 20 &deg;C, 22 &deg;C, 24 &deg;C, pH~T~ 8.0, pH~T~ 7.6) on juvenile (14-day) test diameter of *Heliocidaris erythrogramma*. Only main effects were analsed as interactions were all not significant. Significant differences are indicated with asterisks. ***: $p <$ 0.001.
+(ref:juvgrowthancova) Generalised linear mixed model (GLMM) analyses of covariance (ANCOVA, Type II) on the effect of parental environments (ambient, +2 &deg;C, pH~T~ 8.0, pH~T~ 7.6) and offspring treatments (18 &deg;C, 20 &deg;C, 22 &deg;C, 24 &deg;C, pH~T~ 8.0, pH~T~ 7.6) on juvenile (14-day) test diameter of *Heliocidaris erythrogramma*. Only main effects were analsed as interactions were all not significant. Significant differences are indicated with asterisks. ***: p < 0.001.
 
 (ref:sjuvgrowthancova) Generalised linear mixed model (GLMM) analyses of covariance (ANCOVA, Type II) on the effect of parental environments and offspring treatments on juvenile test diameter of *Heliocidaris erythrogramma*.
 
@@ -263,8 +264,8 @@ Parental acclimation to warming, but not pH, significantly altered offspring the
 In contrast, offspring growth was not influenced by parental temperature, parental pH environment, or offspring temperature.
 However, offspring incubation to low pH (7.6 pH~T~) significantly reduced the test size of the juveniles, which was expected as low pH has been shown to affect calcification in post-metamorphic juveniles as they begin to calcify to produce their skeleton [@Wolfe2013; @Byrne2011].
 
-The physiological responses of adult *H. erythrogramma* and their resilience to increased temperature and low pH are well-understood from previous studies [Chapter \@ref(chapter3); @Byrne2009; @Byrne2011; @Carey2016; @Harianto2018].
-This sea urchin is able to withstand long-term exposure to increased temperature of up to 24 &deg;C without significant mortality [@Byrne2011; @Harianto2018] and it is more sensitive to warming than low pH [\@ref(chapter3); @Byrne2009].
+The physiological responses of adult *H. erythrogramma* and their resilience to increased temperature and low pH are well-understood from previous studies [[Chapter 3](#multistressor); @Byrne2009; @Byrne2011; @Carey2016; @Harianto2018].
+This sea urchin is able to withstand long-term exposure to increased temperature of up to 24 &deg;C without significant mortality [@Byrne2011; @Harianto2018] and it is more sensitive to warming than low pH [[Chapter 3](#multistressor); @Byrne2009].
 It was expected that the progeny of *H. erythrogramma* would respond to warmer temperature by increasing their metabolic rates as a potential means to sustain energy balance to support increased growth and development in response to warming, as this was found for *Strongylocentrotus purpuratus* larvae [@Stumpp2011]. 
 This was evident from their thermal performances which showed significant increases in metabolic rate with warming.
 Whether the increased metabolic performance is beneficial to the fitness of the juveniles is not known from the available data that we have collected.

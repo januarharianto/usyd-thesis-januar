@@ -24,28 +24,28 @@ Changes in metabolic rate can provide vital insights to the compensatory mechani
 For adult *H. erythrogramma*, long-term exposure to warming had predictable effects on metabolic rates as the physiological responses of many marine ectotherms to temperature are well-characterised [reviewed by @Schulte2015].
 However, increased metabolism expends considerable energy, and when it becomes a burden, metabolic depression ensues as a mechanism to conserve energy.
 This effect may not be a voluntary response if there are unavoidable trade-offs from the lack of food or oxygen, often at the organism’s thermal tolerance limit which ultimately causes mortality [@Verberk2016].
-Thus when acclimated to 26 \degree C it was obvious that *H. erythrogramma* was at its thermal tolerance limit, since feeding rates decreased and survival was also significantly affected ([Chapter 2](#warming)).
+Thus when acclimated to 26 &deg;C it was obvious that *H. erythrogramma* was at its thermal tolerance limit, since feeding rates decreased and survival was also significantly affected ([Chapter 2](#warming)).
 This is an important finding with regards to predictions on the persistence of *H. erhythrogramma* populations in southeast Australia. 
-As seen in the recent El Nino year temperatures approached 25.5 \degree C in Sydney Harbour ([Chapter 2](#warming)).
+As seen in the recent El Nino year temperatures approached 25.5 &deg;C in Sydney Harbour ([Chapter 2](#warming)).
 
-Multi-stressor effects could further reduce metabolic performance as metabolic depression occurred at a lower temperature threshold (23.7 \degree C) when low pH stress was included as an additional stressor ([Chapter 3](#multistressor)).
+Multi-stressor effects could further reduce metabolic performance as metabolic depression occurred at a lower temperature threshold (23.7 &deg;C) when low pH stress was included as an additional stressor ([Chapter 3](#multistressor)).
 It is important to note that the interpretation of metabolic depression as an unpreventable, stressful response was only possible when data from other physiological traits (HSP70 expression, feeding rate, scope for growth, excretion) were available as all these processes depend on adequate metabolism to function properly.
 
 <!-- such as HSP70 protein expression ([Chapter 2](#warming)), feeding rates ([Chapter 2](#warming), [Chapter 3](#multistressor)) and scope for growth (SfG) parameters of assimilation and excretion ([Chapter 3](#multistressor)), all of which depend on proper metabolism to function properly. -->
 
-<!-- Thus when significant metabolic depression was experienced when the species acclimated to the warmest treatment of 26 \degree C ([Chapter 2](#warming)) or acclimated to the combined effects of warming (+3 \degree C) and acidification (7.6 pH~T~), metabolic depression was observed at a lower temperature threshold of 23.7 \degree C. -->
+<!-- Thus when significant metabolic depression was experienced when the species acclimated to the warmest treatment of 26 &deg;C ([Chapter 2](#warming)) or acclimated to the combined effects of warming (+3 &deg;C) and acidification (7.6 pH~T~), metabolic depression was observed at a lower temperature threshold of 23.7 &deg;C. -->
 <!-- The sea urchin appears to adopt different strategies depending on the types and magnitude of stress experienced in its environmental history,  -->
 <!-- Warmer conditions often require increased metabolism due to increased oxygen demand [@Verberk2016], thus metabolic depression often signals important trade-offs between the need to regulate respiratory physiology and other physiological functions which are necessary for the organisms to survive.  -->
 <!-- Processes such as HSP70 protein expression ([Chapter 2](#warming)), feeding rates ([Chapter 2](#warming), [Chapter 3](#multistressor)) and scope for growth (SfG, Chapter [Chapter 3](#multistressor)) are determined by the availability of energy which is regulated by rates of individual metabolism. -->
-<!-- Thus the combined responses of decreased metabolic rate, reduced feeding and high mortality for *H. erythrogramma* when acclimated to both warming and low pH conditions (+3 \degree C, pH 7.6 was obviously very stressful to the sea urchin ([Chapter 3](#multistressor)). -->
-<!-- Similarly, observed metabolic depression due to exposure to high levels of warming (+6 \degree C at 26 \degree C, [Chapter 2](#warming)) would indicate an active suppression of metabolic processes affecting all other physiological processes, and provided a physiological basis for the interpretation of other physiological responses.  -->
+<!-- Thus the combined responses of decreased metabolic rate, reduced feeding and high mortality for *H. erythrogramma* when acclimated to both warming and low pH conditions (+3 &deg;C, pH 7.6 was obviously very stressful to the sea urchin ([Chapter 3](#multistressor)). -->
+<!-- Similarly, observed metabolic depression due to exposure to high levels of warming (+6 &deg;C at 26 &deg;C, [Chapter 2](#warming)) would indicate an active suppression of metabolic processes affecting all other physiological processes, and provided a physiological basis for the interpretation of other physiological responses.  -->
 <!-- Of these, high mortality and greatly increased mortality indicated that the conditions mentioned above were deleterious. -->
 <!-- , thus indicating underlying obstacles affecting fitness and survival.  -->
 
 Metabolic rate is a vital component of scope for growth (SfG), providing valuable information about the changing energy budgets of organisms as they experience environmental stress to maintain physiological homeostasis at the expense of growth and reproduction [@Hoefnagel2017]. 
 *Heliocidaris erythrogramma* has a net positive scope for growth under all warming and acidification scenarios ([Chapter 3](#multistressor)).
 Thus there was sufficient available energy for allocation to growth, reproduction and other physiological processes [@Filgueira2011].
-Despite available excess energy, the species suffered significant mortality at a +3 \degree C level of warming, which was unaffected by the inclusion of low pH.
+Despite available excess energy, the species suffered significant mortality at a +3 &deg;C level of warming, which was unaffected by the inclusion of low pH.
 This indicated that while the species was not limited by energy availability, other underlying issues were impacting its fitness, which may include limitations to aerobic scope [@Verberk2016] or insufficient physiological plasticity to compensate for the negative effects of thermal stress [@Seebacher2014]. 
 
 As SfG models integrate multiple growth components into a single performance metric of energy acquisition (feeding, assimilation) and expenditure (respiration, excretion), they are a useful approach to quantify the effects of environmental stress on organisms.
@@ -70,20 +70,20 @@ It would be useful to determine SfG for individual *H. erythrogramma* and other 
 ## Timing and magnitude of stress events can influence the outcome of stressor experiments
 
 <!-- To be ecologically relevant, experiments that aim to determine the stress responses of an organism to environmental stressors must first consider the spatial and temporal nature of the natural environment that the organism occupies. -->
-All adult acclimation experiments in this thesis (Chapters \@ref(chapter2) to \@ref(chapter4)) were performed with careful consideration of the natural thermal environment inhabited by *H. erythrogramma*.
+All adult acclimation experiments in this thesis (Chapters [Chapter 2](#warming) to [Chapter 4](#transgen)) were performed with careful consideration of the natural thermal environment inhabited by *H. erythrogramma*.
 <!-- Temperature levels were determined based on in situ loggers deployed at collection sites, and  -->
 The first study ([Chapter 2](#warming)) used the annual mean temperature of the sea urchin habitat in Sydney Harbour.
 This provided the contextual baseline to establish warming treatments and to determine long-term thermal limits.
-Subsequent studies (Chapters \@ref(chapter3), \@ref(chapter4)) incorporated a seasonal thermal flux component to mimic the natural cycle, and is a highly novel feature of the thesis.
+Subsequent studies (Chapters [Chapter 3](#multistressor), [Chapter 4](#transgen)) incorporated a seasonal thermal flux component to mimic the natural cycle, and is a highly novel feature of the thesis.
 <!-- a baseline representation of temperature conditions with weekly adjustments, based on logger data to reflect the realistic pattern of seasonal change experienced by the sea urchins. -->
 This consideration was critical in disentangling the chronic effects of environmental stress on the physiological responses of *H. erythrogramma*. 
 
-The results of [Chapter 2](#warming) showed that the upper thermal tolerance limit of *H. erythrogramma* was 26 \degree C, but [Chapter 3](#multistressor) showed that significant mortality occurred at lower temperature levels (20 \degree C to 24 \degree C).
+The results of [Chapter 2](#warming) showed that the upper thermal tolerance limit of *H. erythrogramma* was 26 &deg;C, but [Chapter 3](#multistressor) showed that significant mortality occurred at lower temperature levels (20 &deg;C to 24 &deg;C).
 This difference emphasised several important findings: (1) the importance of long-term acclimation, (2) that the timing of stress can strongly influence physiological processes (e.g. gonad growth), and (3) inclusion of a natural temperature cycle was essential to interpret the significance of ocean warming to the fitness of this species in nature.
-<!-- In contrast, at those same temperature levels (20 \degree C to 24 \degree C) under constant temperature conditions ([Chapter 2](#warming)), survivorship was not significantly affected. -->
+<!-- In contrast, at those same temperature levels (20 &deg;C to 24 &deg;C) under constant temperature conditions ([Chapter 2](#warming)), survivorship was not significantly affected. -->
 <!-- Because all studies in this thesis involved long-term experiments, it was important that  -->
 
-It appears that the experimental simulation of an early arrival of summer temperatures from weekly adjustments of temperature was more stressful to *H. erythrogramma* than if it were acclimated constantly to the same summer-level (i.e 22 \degree C) temperature.
+It appears that the experimental simulation of an early arrival of summer temperatures from weekly adjustments of temperature was more stressful to *H. erythrogramma* than if it were acclimated constantly to the same summer-level (i.e 22 &deg;C) temperature.
 The results underline the importance of seasonal dynamics on organismal responses, and the consequences of exposure to climate change stressors depend critically on the timing of introduction of stressors.
 <!-- Further, the sea urchins were collected at the beginning of winter in June, which was at the beginning of *H. erythrogramma's* peak gonadal developmental season before spawning [@Williams1975; @Laegdsgaard1991]. -->
 Gametogenesis is an energetically demanding biological process [@Marsh2007] that can potentially be an important factor affecting metabolic and physiological responses to stressors at its seasonal peak.
@@ -138,7 +138,7 @@ For sea urchins such as *H. erythrogramma*, there is potential for resilience th
 The work presented here provides an experimental framework with which to undertake long-term climate change research using multiple stressors under a unifying theme of metabolic rate response, and delivers novel methods in the analysis of physiological rates in a new, open-source R package that has the potential use across multiple disciplines.
 The investigation of phenotypic plasticity and trans-generational carry-over effects remains largely unexplored, but are crucial to understand, to better predict the impacts of climate change on populations.
 Incorporating temporal variations in environmental conditions is also an important consideration as shown here.
-The results of this thesis provide guidance for fauture research to obtain a better, ecologically relevant understanding of species resilience to climate change.
+The results of this thesis provide guidance for future research to obtain a better, ecologically relevant understanding of species resilience to climate change.
 <!-- to future changes in our marine environments. In addition, while briefly explored in this thesis, understanding the dynamics of temporal variations in environmental conditions is also an important consideration as different responses can occur if experiments incorporate realistic experimental conditions that better reflect the variations in stress patterns experienced by organisms in their natural environments. -->
 <!-- Anticipating these future directions will provide better ecological interpretations of species resilience to climate change stress. -->
 

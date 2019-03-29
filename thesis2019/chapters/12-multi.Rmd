@@ -574,7 +574,7 @@ Despite using a slow acclimation approach to expose this species to increased te
 
 <!-- Figure  3.6 ----------------------------------------------------------- -->
 \begin{figure}[t]
-{\noindent\centering\includegraphics[width=350pt]{assets/figs/c3respire}}
+{\noindent\centering\includegraphics[width=330pt]{assets/figs/c3respire}}
 \caption{Metabolic rate of \textit{Heliocidaris erythrogramma} acclimated for (A) 4 weeks, and (B) 12 weeks in six treatments of three temperatures (ambient, +\SI{2}{\celsius}, +\SI{3}{\celsius}) and two pH\textsubscript{T} levels (white: 8.0, blue: 7.6). The top and bottom of the boxes represent the interquartile range (IQR) between the 25th and 75th percentile (Q1 and Q3, respectively). The horizontal line represents the median (Q2), the horizontal dotted line represents the mean, and the vertical lines (whiskers) represent the range of the data computed as follows: less than Q1 - 1.5IQR (bottom whisker); greater than Q3 + 1.5 IQR (top whisker).}
 \label{respire}
 \end{figure}

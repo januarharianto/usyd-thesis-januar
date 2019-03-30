@@ -255,7 +255,7 @@ Treatment A&Treatment B\\
 
 \begin{table}[ht]
 \centering
-\caption{R Vignettes for the \texttt{respR} package, with worked examples, discussions and comparisons to other R package functions. Available online: https://januarharianto.github.io/respR/articles/respR.html.}
+\caption[R Vignettes for the \texttt{respR} package, with worked examples, discussions and comparisons to other R package functions.]{R Vignettes for the \texttt{respR} package, with worked examples, discussions and comparisons to other R package functions. Available online: https://januarharianto.github.io/respR/articles/respR.html.}
 \label{vignettelist}
 \begin{tabular}[t]{>{\raggedright}p{0.4\linewidth}p{0.6\linewidth}}
 \toprule
@@ -304,7 +304,7 @@ Time & \texttt{convert\_rate()} & second, minute, hour \\
 
 }
 
-\caption{Diagram showing steps in a typical workflow in the analysis of respirometry data using \texttt{respR}.
+\caption[Diagram showing steps in a typical workflow in the analysis of respirometry data using \texttt{respR}.]{Diagram showing steps in a typical workflow in the analysis of respirometry data using \texttt{respR}.
 \textbf{(A)} Data are first checked for errors before \textbf{(B)} main functions are used to extract and analyse segments of the data.
 \textbf{(C)} Summarised results and diagnostic plots provide immediate visual feedback on the outcome of the analyses. \textbf{(D)} Once the rate estimates are obtained, they can be converted into volume and/or mass-specific rates.}\label{diagram}
 \end{figure}
@@ -317,7 +317,7 @@ Time & \texttt{convert\_rate()} & second, minute, hour \\
 
 }
 
-\caption{Illustration showing the sampling method used by \texttt{auto\_rate()} during \textbf{(A)} interval regression analysis, where sample windows do not overlap and \textbf{(B)} rolling regression analysis, where sample windows overlap and move forward by one sample unit at a time.}\label{rollvsint}
+\caption[Illustration showing the sampling methods used by \texttt{auto\_rate()}.]{Illustration showing the sampling method used by \texttt{auto\_rate()} during \textbf{(A)} interval regression analysis, where sample windows do not overlap and \textbf{(B)} rolling regression analysis, where sample windows overlap and move forward by one sample unit at a time.}\label{rollvsint}
 \end{figure}
 
 <!-- % FIGURE 3 ============================================================ -->
@@ -328,7 +328,7 @@ Time & \texttt{convert\_rate()} & second, minute, hour \\
 
 }
 
-\caption{Depending on the \texttt{method} input, the function, \texttt{auto\_rate()} is able to show: (A) the maximum rate detected; (B) the minimum rate detected; (C) the most linear region as determined by kernel density estimates; and (D) calculation of rate by fixed-width intervals.
+\caption[Output plots produced by \texttt{auto\_rate()}.]{Depending on the \texttt{method} input, the function, \texttt{auto\_rate()} is able to show: (A) the maximum rate detected; (B) the minimum rate detected; (C) the most linear region as determined by kernel density estimates; and (D) calculation of rate by fixed-width intervals.
 Data obtained from analysis of the \texttt{sardine.rd} dataset.}\label{autorate1}
 \end{figure}
 
@@ -340,7 +340,7 @@ Data obtained from analysis of the \texttt{sardine.rd} dataset.}\label{autorate1
 
 }
 
-\caption{Diagnostic plots produced by the function, \texttt{auto\_rate()}: (A) the rolling regression of rate as a function of time, with dotted lines indicating the region used to estimate the parameter; (B) a kernel density plot that shows only when the \texttt{linear} method is called; (C) a residual plot of the regression; and (D) a normal Q-Q plot of the residuals of the regression.
+\caption[Diagnostic plots produced by the function, \texttt{auto\_rate()}.]{Diagnostic plots produced by the function, \texttt{auto\_rate()}: (A) the rolling regression of rate as a function of time, with dotted lines indicating the region used to estimate the parameter; (B) a kernel density plot that shows only when the \texttt{linear} method is called; (C) a residual plot of the regression; and (D) a normal Q-Q plot of the residuals of the regression.
 Data obtained from analysis of the \texttt{sardine.rd} dataset.}\label{autorate2}
 \end{figure}
 
@@ -352,21 +352,9 @@ Data obtained from analysis of the \texttt{sardine.rd} dataset.}\label{autorate2
 
 }
 
-\caption{Output plots of the function \texttt{pcrit()}, used in the
-calculation of critical oxygen tension, P\(_{crit}\). \textbf{(A)} To
-determine P\(_{crit}\) in a regular \(O_2\) time series, the
-function performs a rolling regression against the rolling mean of the
-data. This step is skipped if similar data is already provided, and the
-argument \texttt{has.rate\ =\ TRUE} is used in the function. This
-produces \textbf{(B, C)} data that represents the rate of
-\(O_2\) consumption as a function of \(O_2\)
-concentration. Regression lines are then fitted iteratively, based on
-the broken-stick methods of Yeager and Ultsch (1989) and the segmented
-approach of Muggeo (2003), until convergence is achieved. The output
-then highlights the critical points as indicated by the coloured lines.
-\textbf{(D)} A close-up plot of the results in B and C is provided for
-the user to visualise the positions of the dotted lines relative to the
-x-axis.}\label{fpcrit}
+\caption[Output plots of the function \texttt{pcrit()}, used in the calculation of critical oxygen tension, P\(_{crit}\).]{Output plots of the function \texttt{pcrit()}, used in the calculation of critical oxygen tension, P\(_{crit}\). \textbf{(A)} To determine P\(_{crit}\) in a regular \(O_2\) time series, the function performs a rolling regression against the rolling mean of the data. This step is skipped if similar data is already provided, and the
+argument \texttt{has.rate\ =\ TRUE} is used in the function. This produces \textbf{(B, C)} data that represents the rate of \(O_2\) consumption as a function of \(O_2\) concentration. Regression lines are then fitted iteratively, based on the broken-stick methods of Yeager and Ultsch (1989) and the segmented approach of Muggeo (2003), until convergence is achieved. The output then highlights the critical points as indicated by the coloured lines.
+\textbf{(D)} A close-up plot of the results in B and C is provided for the user to visualise the positions of the dotted lines relative to the x-axis.}\label{fpcrit}
 \end{figure}
 
 

@@ -9,8 +9,8 @@ language:
 rmd_files: [
   
   "index.Rmd",
-  "chapters/00-statement.Rmd",
-  "chapters/01-preface.Rmd",
+  "chapters/00-preface.Rmd",
+  "chapters/01-statement.Rmd",
   "chapters/02-abstract.Rmd",
   "chapters/03-thanks.Rmd",
 

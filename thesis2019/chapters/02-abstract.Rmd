@@ -31,7 +31,7 @@ There was no evidence of interaction between the two stressors for feeding rate,
 Thus, while pH influenced metabolic rate causing metabolic depression at +3 &deg;C, there was no evidence of pH affecting the other parameters measured. 
 Survival was significantly reduced at +3 &deg;C, regardless of pH, but not at +2 &deg;C. 
 It appeared that the earlier arrival of warmer temperature in the +3 &deg;C treatment was stressful, especially during a time of increasing gonad development. 
-It appears that *H. erythrogramma* may be living close to its lethal limit in Sydney Harbour since it already experiences the temperatures used in the study.
+*H. erythrogramma* may be living close to its lethal limit in Sydney Harbour since it already experiences the temperatures used in the study.
 This study highlighted the importance of investigating multiple physiological traits in characterising organism responses to climate change.
 Current populations are likely to be vulnerable to the combined stress of OW and OA in the near future.
 

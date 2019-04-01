@@ -119,7 +119,7 @@ The carbonate chemistry parameters \textit{p}CO\textsubscript{2}, calcite and ar
 <!-- \begin{landscape} -->
 \begin{table}[tb]
 \centering
-\caption{Carbonate system conditions (\si{\pm SD}) during the 22 weeks of acclimation of \textit{Heliocidaris erythrogramma} in six treatments of three temperatures (ambient, +\SI{2}{\celsius}, +\SI{3}{\celsius}) and two pH\textsubscript{T} levels (8.0, 7.6), including pH on the total scale (pH\textsubscript{T}), total alkalinity (A\textsubscript{T}, $\mu$mol kg\textsuperscript{-1}), dissolved inorganic carbon (DIC, $\mu$mol kg\textsuperscript{-1}), calcite saturation state ($\Omega$Ca) and aragonite saturation state ($\Omega$Ar). There were 6 samples per treatment.}
+\caption[Carbonate system conditions during the 22 weeks of acclimation of \textit{Heliocidaris erythrogramma} in six treatments of three temperatures and two pH\textsubscript{T} levels.]{Carbonate system conditions (\si{\pm SD}) during the 22 weeks of acclimation of \textit{Heliocidaris erythrogramma} in six treatments of three temperatures (ambient, +\SI{2}{\celsius}, +\SI{3}{\celsius}) and two pH\textsubscript{T} levels (8.0, 7.6), including pH on the total scale (pH\textsubscript{T}), total alkalinity (A\textsubscript{T}, $\mu$mol kg\textsuperscript{-1}), dissolved inorganic carbon (DIC, $\mu$mol kg\textsuperscript{-1}), calcite saturation state ($\Omega$Ca) and aragonite saturation state ($\Omega$Ar). There were 6 samples per treatment.}
 \label{carbchemtab}
 \begin{tabular}{rrrrrrr}
 \toprule
@@ -292,7 +292,7 @@ At 12 weeks of acclimation, metabolic rate responses were significantly affected
 
 \begin{table}[tb]
 
-\caption{\label{mranovatab}Analysis of Variance (ANOVA) of the effects of increased temperature and decreased pH, and their interaction on the metabolic rate of \emph{Heliocidaris erythrogramma}. Data were analysed separately for 4-week and 12-week acclimation periods. There were no significant interactions at 4 weeks, and thus the interaction term was removed and the data re-analysed. Significant differences are indicated with asterisks. ***: \(p <\) 0.001.}
+\caption[Analysis of Variance (ANOVA) of the effects of increased temperature and decreased pH, and their interaction on the metabolic rate of \emph{Heliocidaris erythrogramma}.]{\label{mranovatab}Analysis of Variance (ANOVA) of the effects of increased temperature and decreased pH, and their interaction on the metabolic rate of \emph{Heliocidaris erythrogramma}. Data were analysed separately for 4-week and 12-week acclimation periods. There were no significant interactions at 4 weeks, and thus the interaction term was removed and the data re-analysed. Significant differences are indicated with asterisks. ***: \(p <\) 0.001.}
 \centering
 \begin{tabular}[t]{lrrrl}
 \toprule
@@ -319,7 +319,7 @@ Thus, while warming increased metabolic rate by 9 \%, and decreased pH elevated 
 
 \begin{table}[tb]
 
-\caption{\label{mrcontraststab}P-values from post hoc Tukey's Honest Significant Difference test performed on the estimated marginal means of treatment group results, for comparisons of performance of metabolic rate in six treatments of three temperatures (ambient, +\SI{2}{\celsius}, +\SI{3}{\celsius}) and two pH\textsubscript{T} levels (8.0, 7.6). Significant differences were found between treatments at 4 weeks of acclimation, but not at 12 weeks. ***: p \textless{} 0.001; **: p \textless{} 0.01; *: p
+\caption[Comparisons of performance of metabolic rate for \textit{H. erythrogramma} acclimated to six treatments of three temperatures and two pH\textsubscript{T} levels.]{\label{mrcontraststab}P-values from post hoc Tukey's Honest Significant Difference test performed on the estimated marginal means of treatment group results, for comparisons of performance of metabolic rate in six treatments of three temperatures (ambient, +\SI{2}{\celsius}, +\SI{3}{\celsius}) and two pH\textsubscript{T} levels (8.0, 7.6). Significant differences were found between treatments at 4 weeks of acclimation, but not at 12 weeks. ***: p \textless{} 0.001; **: p \textless{} 0.01; *: p
 \textless{} 0.05; .: p \textless{} 0.1.}
 \centering
 \begin{tabular}[t]{lrrrrrl}
@@ -371,12 +371,7 @@ Tukey’s HSD pairwise comparisons showed that feeding tended to decrease with i
 
 \begin{table}[tb]
 
-\caption{\label{feedanovatab}Analysis of Variance (ANOVA) test on the effects of
-temperature or pH on the feeding rate of \emph{H. erythrogramma} after
-12 weeks of incubation to six treatments of three temperatures (ambient,
-+\SI{2}{\celsius}, +\SI{3}{\celsius}) and two pH\textsubscript{T} levels (8.0,
-7.6). The ANOVA was performed with the non-significant interaction terms
-removed. n = 10.}
+\caption[Analysis of Variance (ANOVA) test on the effects of temperature or pH on the feeding rate of \emph{H. erythrogramma} after 12 weeks of incubation to six treatments of three temperatures and two pH\textsubscript{T} levels.]{\label{feedanovatab}Analysis of Variance (ANOVA) test on the effects of temperature or pH on the feeding rate of \emph{H. erythrogramma} after 12 weeks of incubation to six treatments of three temperatures (ambient, +\SI{2}{\celsius}, +\SI{3}{\celsius}) and two pH\textsubscript{T} levels (8.0, 7.6). The ANOVA was performed with the non-significant interaction terms removed. n = 10.}
 \centering
 \begin{tabu} to \linewidth {>{\raggedright}X>{\raggedleft}X>{\raggedleft}X>{\raggedleft}X>{\raggedright}X}
 \toprule
@@ -397,12 +392,8 @@ At low pH (7.6), acclimation to +\SI{2}{\celsius} did not significantly affect a
 
 \begin{table}[tb]
 
-\caption{\label{nh3anovatab}Analysis of Variance (ANOVA) test on the effects of
-temperature or pH on the ammonia excretion rate of \emph{H.
-erythrogramma} after 12 weeks of incubation to six treatments of three
-temperatures (ambient, +\SI{2}{\celsius}, +\SI{3}{\celsius}) and two
-pH\textsubscript{T} levels (8.0, 7.6). The ANOVA was performed with the
-non-significant interaction terms removed. n = 10.}
+\caption[Analysis of Variance (ANOVA) test on the effects of temperature or pH on the ammonia excretion rate of \emph{H. erythrogramma} after 12 weeks of incubation to six treatments of three temperatures and two pH\textsubscript{T} levels.]{\label{nh3anovatab}Analysis of Variance (ANOVA) test on the effects of temperature or pH on the ammonia excretion rate of \emph{H. erythrogramma} after 12 weeks of incubation to six treatments of three
+temperatures (ambient, +\SI{2}{\celsius}, +\SI{3}{\celsius}) and two pH\textsubscript{T} levels (8.0, 7.6). The ANOVA was performed with the non-significant interaction terms removed. n = 10.}
 \centering
 \begin{tabu} to \linewidth {>{\raggedright}X>{\raggedleft}X>{\raggedleft}X>{\raggedleft}X>{\raggedright}X}
 \toprule
@@ -426,7 +417,7 @@ In urchins acclimated to both stressors, mean SfG was reduced the most by 42 to 
 
 \begin{table}[tb]
 
-\caption{\label{sfgtab}Scope for growth (SfG) parameters, standardised to the same unit (kJ g\textsuperscript{-1} day\textsuperscript{-1}). Each parameter was obtained after 12--13 weeks of acclimation to six treatments of three temperatures (ambient, +\SI{2}{\celsius}, +\SI{3}{\celsius}) and two pH\textsubscript{T} levels (8.0, 7.6).}
+\caption[Scope for growth (SfG) parameters, standardised to the same unit (kJ g\textsuperscript{-1} day\textsuperscript{-1}).]{\label{sfgtab}Scope for growth (SfG) parameters, standardised to the same unit (kJ g\textsuperscript{-1} day\textsuperscript{-1}). Each parameter was obtained after 12--13 weeks of acclimation to six treatments of three temperatures (ambient, +\SI{2}{\celsius}, +\SI{3}{\celsius}) and two pH\textsubscript{T} levels (8.0, 7.6).}
 \centering
 \begin{tabular}[t]{lrrrrr}
 \toprule
@@ -536,14 +527,14 @@ Despite using a slow acclimation approach to expose this species to increased te
 {\centering \includegraphics[width=0.8\linewidth]{assets/figs/c3edesign}
 
 }
-\caption{Diagram of the experimental setup used to control both temperature (\si{\celsius}) and pH (\textit{p}CO\textsubscript{2}) in flowthrough filtered seawater. Briefly, filtered seawater (20 $\mu$m) was stored in warm (\SI{25}{\celsius}) and cold (\SI{14.5}{\celsius}) sumps and mixed to target temperatures via solenoid valves controlled by custom software. At the same time, food-grade carbon dioxide (CO\textsubscript{2}) was injected into CO\textsubscript{2}-scrubbed air to the desired ppm and bubbled vigorously into header tanks using 20 cm ceramic diffusers.}
+\caption[Diagram of the experimental setup used to control both temperature (\si{\celsius}) and pH (\textit{p}CO\textsubscript{2}) in flowthrough filtered seawater.]{Diagram of the experimental setup used to control both temperature (\si{\celsius}) and pH (\textit{p}CO\textsubscript{2}) in flowthrough filtered seawater. Briefly, filtered seawater (20 $\mu$m) was stored in warm (\SI{25}{\celsius}) and cold (\SI{14.5}{\celsius}) sumps and mixed to target temperatures via solenoid valves controlled by custom software. At the same time, food-grade carbon dioxide (CO\textsubscript{2}) was injected into CO\textsubscript{2}-scrubbed air to the desired ppm and bubbled vigorously into header tanks using 20 cm ceramic diffusers.}
 \label{suppfig1}
 \end{figure}
 
 <!-- Figure  3.2 ----------------------------------------------------------- -->
 \begin{figure}[t]
 {\noindent\centering\includegraphics[width=350pt]{assets/figs/c3acclim}}
-\caption{Temperature and pH in treatment tanks, measured daily. Only one replicate tank for every treatment was selected at random for daily measurements. Shaded regions are the pre-acclimation adjustment periods for temperature (pink) and pH (blue), respectively. (A) Coloured lines represent the planned temperature profiles (ambient, +\SI{2}{\celsius}, +\SI{3}{\celsius}), which change every week, while coloured dots represent the actual temperatures measured. Black dots are the reference temperatures collected from in situ loggers deployed in Chowder Bay from 2009 to 2014, averaged by day. (B) Black lines represent the reference constant pH\textsubscript{T} levels, with the initial adjustments (ambient 8.0, acidic 7.6). Shapes represent the pH treatment group (triangle: ambient 8.0; circle: acidic 7.6), colours represent the temperature treatment group (ambient, +\SI{2}{\celsius}, +\SI{3}{\celsius}).}
+\caption[Temperature and pH in treatment tanks, measured daily.]{Temperature and pH in treatment tanks, measured daily. Only one replicate tank for every treatment was selected at random for daily measurements. Shaded regions are the pre-acclimation adjustment periods for temperature (pink) and pH (blue), respectively. (A) Coloured lines represent the planned temperature profiles (ambient, +\SI{2}{\celsius}, +\SI{3}{\celsius}), which change every week, while coloured dots represent the actual temperatures measured. Black dots are the reference temperatures collected from in situ loggers deployed in Chowder Bay from 2009 to 2014, averaged by day. (B) Black lines represent the reference constant pH\textsubscript{T} levels, with the initial adjustments (ambient 8.0, acidic 7.6). Shapes represent the pH treatment group (triangle: ambient 8.0; circle: acidic 7.6), colours represent the temperature treatment group (ambient, +\SI{2}{\celsius}, +\SI{3}{\celsius}).}
 \label{acclim}
 \end{figure}
 
@@ -552,7 +543,7 @@ Despite using a slow acclimation approach to expose this species to increased te
 {\centering \includegraphics[width=0.85\linewidth]{assets/figs/c3htemp}
 
 }
-\caption{Mean weekly-averaged temperature (\si{\pm SD}) for Chowder Bay, NSW, Australia, from 2009 to 2014. Data were obtained from loggers deployed in situ at 3 m depth at the level of the sea urchin habitat. Colours represent the adjustment (blue) and acclimation (red) periods of the experimental treatments, respectively. The shaded region is the max/min of the temperatures recorded. These data were used to design the temperature profile of the elevated temperature treatments.}
+\caption[Mean weekly-averaged temperature (\si{\pm SD}) for Chowder Bay, NSW, Australia, from 2009 to 2014.]{Mean weekly-averaged temperature (\si{\pm SD}) for Chowder Bay, NSW, Australia, from 2009 to 2014. Data were obtained from loggers deployed in situ at 3 m depth at the level of the sea urchin habitat. Colours represent the adjustment (blue) and acclimation (red) periods of the experimental treatments, respectively. The shaded region is the max/min of the temperatures recorded. These data were used to design the temperature profile of the elevated temperature treatments.}
 \label{suppfig2}
 \end{figure}
 
@@ -561,21 +552,21 @@ Despite using a slow acclimation approach to expose this species to increased te
 {\centering \includegraphics[width=0.85\linewidth]{assets/figs/c3eggs}
 
 }
-\caption{Eggs of \textit{Heliocidaris erythrogramma}, floating near the surface of the tank. Mass spawning occurred in all treatments, spontaneously. As the eggs were buoyant, they were not immediately flushed by the flowthrough system. It was not possible to determine which urchins spawned as the spawning events were not directly observed.}
+\caption[Eggs of \textit{Heliocidaris erythrogramma}, floating near the surface of the tank.]{Eggs of \textit{Heliocidaris erythrogramma}, floating near the surface of the tank. Mass spawning occurred in all treatments, spontaneously. As the eggs were buoyant, they were not immediately flushed by the flowthrough system. It was not possible to determine which urchins spawned as the spawning events were not directly observed.}
 \label{suppfig3}
 \end{figure}
 
 <!-- Figure  3.5 ----------------------------------------------------------- -->
 \begin{figure}[t]
 {\noindent\centering\includegraphics[width=350pt]{assets/figs/c3surv}}
-\caption{Survival in \textit{Heliocidaris erythrogramma} acclimated to combinations of increased temperature (ambient, +\SI{2}{\celsius}, +\SI{3}{\celsius}) and two pH\textsubscript{T} levels (ambient 8.0, decreased 7.6) in 6 treatments. Letters indicate treatments that differed (pairwise tests, with Benjamini-Hochberg [BH] false discovery rate corrections, p < 0.05). The horizontal line is the median survival threshold; vertical lines highlight periods of data collection at 4 and 12 weeks of acclimation.}
+\caption[Survival in \textit{Heliocidaris erythrogramma} acclimated to combinations of increased temperature and two pH\textsubscript{T} levels in 6 treatments.]{Survival in \textit{Heliocidaris erythrogramma} acclimated to combinations of increased temperature (ambient, +\SI{2}{\celsius}, +\SI{3}{\celsius}) and two pH\textsubscript{T} levels (ambient 8.0, decreased 7.6) in 6 treatments. Letters indicate treatments that differed (pairwise tests, with Benjamini-Hochberg [BH] false discovery rate corrections, p < 0.05). The horizontal line is the median survival threshold; vertical lines highlight periods of data collection at 4 and 12 weeks of acclimation.}
 \label{surv}
 \end{figure}
 
 <!-- Figure  3.6 ----------------------------------------------------------- -->
 \begin{figure}[t]
 {\noindent\centering\includegraphics[width=330pt]{assets/figs/c3respire}}
-\caption{Metabolic rate of \textit{Heliocidaris erythrogramma} acclimated for (A) 4 weeks, and (B) 12 weeks in six treatments of three temperatures (ambient, +\SI{2}{\celsius}, +\SI{3}{\celsius}) and two pH\textsubscript{T} levels (white: 8.0, blue: 7.6). The top and bottom of the boxes represent the interquartile range (IQR) between the 25th and 75th percentile (Q1 and Q3, respectively). The horizontal line represents the median (Q2), the horizontal dotted line represents the mean, and the vertical lines (whiskers) represent the range of the data computed as follows: less than Q1 - 1.5IQR (bottom whisker); greater than Q3 + 1.5 IQR (top whisker).}
+\caption[Metabolic rate of \textit{Heliocidaris erythrogramma} acclimated for 4 weeks and 12 weeks in six treatments of three temperatures and two pH\textsubscript{T} levels.]{Metabolic rate of \textit{Heliocidaris erythrogramma} acclimated for (A) 4 weeks, and (B) 12 weeks in six treatments of three temperatures (ambient, +\SI{2}{\celsius}, +\SI{3}{\celsius}) and two pH\textsubscript{T} levels (white: 8.0, blue: 7.6). The top and bottom of the boxes represent the interquartile range (IQR) between the 25th and 75th percentile (Q1 and Q3, respectively). The horizontal line represents the median (Q2), the horizontal dotted line represents the mean, and the vertical lines (whiskers) represent the range of the data computed as follows: less than Q1 - 1.5IQR (bottom whisker); greater than Q3 + 1.5 IQR (top whisker).}
 \label{respire}
 \end{figure}
 
@@ -589,21 +580,21 @@ Despite using a slow acclimation approach to expose this species to increased te
 <!-- Figure  3.8 ----------------------------------------------------------- -->
 \begin{figure}[t]
 {\noindent\centering\includegraphics[width=350pt]{assets/figs/c3feeding}}
-\caption{ Feeding rate, in dry food weight of \textit{Heliocidaris erythrogramma} acclimated for 12 weeks to six treatments of three temperatures (ambient, +\SI{2}{\celsius}, +\SI{3}{\celsius}) and two pHT levels (white: 8.0, blue: 7.6). The top and bottom of the boxes represent the interquartile range (IQR) between the 25th and 75th percentile (Q1 and Q3, respectively). The horizontal line represents the median (Q2), the horizontal dotted line represents the mean, and the vertical lines (whiskers) represent the range of the data computed as follows: Q1 - 1.5IQR (bottom whisker); greater than Q3 + 1.5 IQR (top whisker).}
+\caption[Feeding rate, in dry food weight of \textit{Heliocidaris erythrogramma} acclimated for 12 weeks to six treatments of three temperatures and two pHT levels.]{Feeding rate, in dry food weight of \textit{Heliocidaris erythrogramma} acclimated for 12 weeks to six treatments of three temperatures (ambient, +\SI{2}{\celsius}, +\SI{3}{\celsius}) and two pHT levels (white: 8.0, blue: 7.6). The top and bottom of the boxes represent the interquartile range (IQR) between the 25th and 75th percentile (Q1 and Q3, respectively). The horizontal line represents the median (Q2), the horizontal dotted line represents the mean, and the vertical lines (whiskers) represent the range of the data computed as follows: Q1 - 1.5IQR (bottom whisker); greater than Q3 + 1.5 IQR (top whisker).}
 \label{feeding}
 \end{figure}
 
 <!-- Figure  3.9 ----------------------------------------------------------- -->
 \begin{figure}[t]
 {\noindent\centering\includegraphics[width=350pt]{assets/figs/c3ammonia}}
-\caption{Ammonia (\si{NH_3}) excretion rate of \textit{Heliocidaris erythrogramma} acclimated for 12 weeks to to six treatments of three temperatures (ambient, +\SI{2}{\celsius}, +\SI{3}{\celsius}) and two pH\textsubscript{T} levels (white: 8.0, blue: 7.6). The top and bottom of the boxes represent the interquartile range (IQR) between the 25th and 75th percentile (Q1 and Q3, respectively). The horizontal line represents the median (Q2), the horizontal dotted line represents the mean, and the vertical lines (whiskers) represent the range of the data computed as follows: less than Q1 - 1.5IQR (bottom whisker); greater than Q3 + 1.5 IQR (top whisker).}
+\caption[Ammonia (\si{NH_3}) excretion rate of \textit{Heliocidaris erythrogramma} acclimated for 12 weeks to to six treatments of three temperatures and two pH\textsubscript{T} levels.]{Ammonia (\si{NH_3}) excretion rate of \textit{Heliocidaris erythrogramma} acclimated for 12 weeks to to six treatments of three temperatures (ambient, +\SI{2}{\celsius}, +\SI{3}{\celsius}) and two pH\textsubscript{T} levels (white: 8.0, blue: 7.6). The top and bottom of the boxes represent the interquartile range (IQR) between the 25th and 75th percentile (Q1 and Q3, respectively). The horizontal line represents the median (Q2), the horizontal dotted line represents the mean, and the vertical lines (whiskers) represent the range of the data computed as follows: less than Q1 - 1.5IQR (bottom whisker); greater than Q3 + 1.5 IQR (top whisker).}
 \label{ammonia}
 \end{figure}
 
 <!-- Figure  3.10----------------------------------------------------------- -->
 \begin{figure}[t]
 {\noindent\centering\includegraphics[width=350pt]{assets/figs/c3sfg}}
-\caption{Scope for growth (\si{\pm SD}) in the sea urchin, \textit{Heliocidaris erythrogramma} acclimated to to six treatments of three temperatures (ambient, +\SI{2}{\celsius}, +\SI{3}{\celsius}) and two pH\textsubscript{T} levels (white: 8.0, blue: 7.6). The model was determined from measurements of metabolic rate, feeding rate, ammonia excretion rate and assimilation efficiency. n = 10.}
+\caption[Scope for growth (\si{\pm SD}) in the sea urchin, \textit{Heliocidaris erythrogramma} acclimated to to six treatments of three temperatures and two pH\textsubscript{T} levels.]{Scope for growth (\si{\pm SD}) in the sea urchin, \textit{Heliocidaris erythrogramma} acclimated to to six treatments of three temperatures (ambient, +\SI{2}{\celsius}, +\SI{3}{\celsius}) and two pH\textsubscript{T} levels (white: 8.0, blue: 7.6). The model was determined from measurements of metabolic rate, feeding rate, ammonia excretion rate and assimilation efficiency. n = 10.}
 \label{sfg}
 \end{figure}
 

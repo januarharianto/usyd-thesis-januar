@@ -89,7 +89,7 @@ Room lights were corrected weekly to follow the diurnal sunrise/sunset cycle.
 A thermocouple-solenoid feedback system controlled seawater temperature by automatically mixing warm (26 &deg;C) and cold (14.5 &deg;C) filtered FSW (20 µm) to produce water at a constant temperature. 
 The water was stored in insulated header tanks, and each header tank was further equipped with a submersible heater (200 W, Blue Sea, Guangdong, China) attached to a temperature controller (model 7028/3, TUNZE Aqraientechnik GmbH, Germany) to maintain stable temperature.
 
-Seawater pH control was performed separately for adult treatments and larval cultures.
+seawater pH control was performed separately for adult treatments and larval cultures.
 In the adult treatments, pre-mixed CO~2~ gas was bubbled vigorously into header tanks using a venturi injector.
 <!-- which allows the flowthrough system to maintain stable pH rapidly. -->
 The gas was prepared real-time using a proportional–integral–derivative controller which injects food-grade CO~2~ (BOC, Australia) into scrubbed ambient air through a control valve (Parker Hannifin, OH, USA).

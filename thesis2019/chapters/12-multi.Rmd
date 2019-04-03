@@ -21,7 +21,7 @@ Many of the key challenges in predicting the ecological consequences of climate 
 For the world's oceans, the impacts of global warming and ocean acidification (OA) are intricately linked as approximately 90 \% of the Earth's heat and 25 \% of anthropogenic CO\textsubscript{2} emissions are absorbed directly into the ocean [@Fletcher2006; @Gattuso2015; @Wanninkhof2013].
 
 Ocean warming (OW) increases the body temperature of marine ectotherms, affecting metabolism and most biological processes [@Brown2004; @Hochachka2002].
-Concurrently, OA alters the balance of carbonate saturation states in sea water, increasing the metabolic costs associated with acid-base regulation, calcification and skeletogenesis [@Doney2009; @Kroeker2013; @Portner2008; @Thomsen2015].
+Concurrently, OA alters the balance of carbonate saturation states in seawater, increasing the metabolic costs associated with acid-base regulation, calcification and skeletogenesis [@Doney2009; @Kroeker2013; @Portner2008; @Thomsen2015].
 Given that both stressors influence important metabolic processes, interactions are inevitable and these can affect biological responses in unexpected ways [@Boyd2015; @Kordas2011], highlighting the uncertainty surrounding our understanding of the drivers of ecosystem change.   
 For example, ocean warming affects both oxygen demand and the supply of oxygen in water [@Christensen2011; @Portner2010; @Schulte2015] and may limit oxygen delivery restricting metabolism, exacerbating the increased energetic demands elicited by ocean acidification [@Deutsch2015; @Dillon2010; @Lefevre2016].
 
@@ -80,14 +80,14 @@ Adjustments to water parameters were made in header tanks before the water was c
 Each header tank was supplied with FSW (\SI{20}{\micro\m}) using a thermocouple-solenoid feedback system that automatically mixed warm (\SI{25}{\celsius}) and cold (\SI{14.5}{\celsius}) filtered FSW (\SI{20}{\micro\m}) in a 2 L mixing chamber to supply temperature-controlled water consistently.
 Each header tank was also equipped with a heater (75 W, EHEIM GmbH \& Co KG, Germany) attached to a temperature controller (model 7028/3, TUNZE Aqraientechnik GmbH, Germany) as a second level of temperature control.
 
-Sea water pH was maintained using a mixed CO\textsubscript{2} system, where a thermally-compensated, low-flow controller valve (Parker Hannifin, OH, USA) and a proportional–integral–derivative controller, updated every 10 s, were used to precisely inject food-grade CO\textsubscript{2} (BOC, Australia) into ambient air that had been scrubbed of CO\textsubscript{2}.
+seawater pH was maintained using a mixed CO\textsubscript{2} system, where a thermally-compensated, low-flow controller valve (Parker Hannifin, OH, USA) and a proportional–integral–derivative controller, updated every 10 s, were used to precisely inject food-grade CO\textsubscript{2} (BOC, Australia) into ambient air that had been scrubbed of CO\textsubscript{2}.
 The CO\textsubscript{2}-mix was bubbled vigorously and continuously into header tanks using \SI{20}{\cm} ceramic diffusers.
 
 ### Gradual adjustment to treatment conditions and acclimation
 
 To minimise physiological shock to altered conditions, warming and acidification levels were changed gradually over 7 weeks, where no mortality occurred.
 Temperature was increased at a rate of +\SI{1}{\celsius} every 6 days until target elevated temperatures were achieved.
-Sea water pH was decreased at a rate of -0.1 pH units every week.
+seawater pH was decreased at a rate of -0.1 pH units every week.
 These manipulations were performed on a staggered schedule such that all treatments achieved target conditions in the same week (Fig. 1 A).
 Adjustments were made at the level of the header tanks such that the experimental tanks reached the new conditions within 1 to 2 days.
 Once the treatment conditions were established, treatment temperatures were at \SI{15.6(4)}{\celsius} for the ambient, \SI{17.6(4)}{\celsius} for +\SI{2}{\celsius} and \SI{18.6(3)}{\celsius} for the +\SI{3}{\celsius} treatments, respectively (\si{\pm SD}).
@@ -106,13 +106,13 @@ Spawning was easily detected as \textit{H. erythrogramma} releases large, buoyan
 Spawning occurred overnight in all treatments but as we could not determine how many individuals released gametes, the observations were recorded but not analysed.
 
 Temperature was recorded daily in all treatments.
-Sea water pH was measured spectrophotometrically on the total scale (\si{pH_T}) with a custom-built pH sampling system connected to an Ocean Optics USB4000+ fiber optic spectrometer, using m-Cresol dye indicator (Acros Argonics, catalogue number 110585000, Lot A0321770) and calculated according to @Liu2011.
+seawater pH was measured spectrophotometrically on the total scale (\si{pH_T}) with a custom-built pH sampling system connected to an Ocean Optics USB4000+ fiber optic spectrometer, using m-Cresol dye indicator (Acros Argonics, catalogue number 110585000, Lot A0321770) and calculated according to @Liu2011.
 The measurements were calibrated to certified reference material (CRM) for CO\textsubscript{2} in seawater (Batch 139) following SOP 6b in @Dickson2007.
 During the adjustment period the pH sampling system automatically measured pH in one ambient and one low pH treatment every two hours to characterise pH via sampling tubes connected to the tanks.
 Once treatment pH was established, pH was monitored daily from random treatment tanks (Figure \ref{acclim}b).
 
-For total alkalinity (A\textsubscript{T}) measurements, sea water samples (330 mL) were taken randomly from experimental tanks every 2 to 3 weeks (total n = 36 samples across all treatments).
-A\textsubscript{T} was determined by potentiometric titration (907 Titrando, Metrohm), calibrated using sea water CRMs (Batch 139, Dickson et al., 2007).
+For total alkalinity (A\textsubscript{T}) measurements, seawater samples (330 mL) were taken randomly from experimental tanks every 2 to 3 weeks (total n = 36 samples across all treatments).
+A\textsubscript{T} was determined by potentiometric titration (907 Titrando, Metrohm), calibrated using seawater CRMs (Batch 139, Dickson et al., 2007).
 The carbonate chemistry parameters \textit{p}CO\textsubscript{2}, calcite and aragonite saturation states \si{\ohm}Ca and \si{\ohm}Ar were calculated by running the data in the “seacarb” package in R [@Gattuso2018] using the constants for K\textsubscript{1} and K\textsubscript{2} from [@Lueker2000], the constant for K\textsubscript{f} from @Perez1987 and the constant for K\textsubscript{s} from @Dickson1990, as recommended by @Dickson2007 (Table \ref{carbchemtab}).
 
 
@@ -165,10 +165,10 @@ A magnetic stirrer ensured even mixing of water. The specimens were allowed to a
 To measure oxygen uptake, chambers were sealed in treatment water, transferred to water baths and dissolved oxygen (DO, \SI{}{mgO_2.L^{-1}}) was measured every 10 seconds until a 10 \% decrease in DO was recorded.
 The chamber was then flushed, and the measurement repeated.
 Background respiration was determined by recording FSW-only blanks (n = 8) to correct the recordings for background respiration and instrument drift.
-At the end of each measurement, sea water weight was calculated by deducting chamber, stir bar and urchin wet weights from the total weight of the chamber, and then converted to volume using sea water density estimated from current temperature, salinity and barometric air pressure [@Fofonoff1983].
+At the end of each measurement, seawater weight was calculated by deducting chamber, stir bar and urchin wet weights from the total weight of the chamber, and then converted to volume using seawater density estimated from current temperature, salinity and barometric air pressure [@Fofonoff1983].
 Weight-specific MO\textsubscript{2} (\SI{}{mgO_2.L^{-1}}) was calculated using the equation [@Lighton2008]:
 \[MO_2=(\Delta O_2 V)/W\] 
-where $\Delta$O\textsubscript{2} is the linear regression of O\textsubscript{2} concentration over time (\SI{}{mgO_2.L^{-1}}), V is the volume of the sea water available (L) and W is the wet weight of the urchin (g).
+where $\Delta$O\textsubscript{2} is the linear regression of O\textsubscript{2} concentration over time (\SI{}{mgO_2.L^{-1}}), V is the volume of the seawater available (L) and W is the wet weight of the urchin (g).
 
 ### Ammonia excretion
 

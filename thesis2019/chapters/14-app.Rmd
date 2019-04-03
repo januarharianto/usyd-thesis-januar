@@ -1,4 +1,4 @@
-# respR -- an R package for the analysis of respirometry data {#package}
+# `respR` -- an R package for the analysis of respirometry data {#package}
 \chaptermark{respR -- an R package for respirometry}
 
 
@@ -14,15 +14,14 @@ library(respR)
 
 ## Abstract {-}
 
-\begin{enumerate}
-	\item Respirometry is a ubiquitous practice in experimental biology, but there is a lack of standard practices when analysing the resulting data, limiting transparency and reproducibility. As respirometry datasets become increasingly large and analytical approaches more complex, manipulating the data remains a challenge and often intractable with existing tools.
-	\item Here we describe the \texttt{respR} R package, a collection of functions that implement a workflow-based approach to automate the analysis and visualisation of respirometry data. The package can be used for closed, intermittent flow, flow-through and open-tank respirometry and uses well-defined sets of rules to reliably and rapidly generate reproducible results.
-	\item We demonstrate how \texttt{respR} uses novel computing methods such as rolling regressions and kernel density estimates to reliably detect maximum, minimum and most linear sections of the data, and critical oxygen tension, P\textsubscript{crit}.
-	\item Although designed specifically with aquatic respirometry in mind, the object-oriented approach of the package and the unit-less nature of its analytical functions mean that parts of the package can easily be used to estimate linear relationships from a range of applications in many research disciplines.
-\end{enumerate}
+1. Respirometry is a ubiquitous practice in experimental biology, but there is a lack of standard practices when analysing the resulting data, limiting transparency and reproducibility. As respirometry datasets become increasingly large and analytical approaches more complex, manipulating the data remains a challenge and often intractable with existing tools.
+2. Here we describe the \texttt{respR} R package, a collection of functions that implement a workflow-based approach to automate the analysis and visualisation of respirometry data. The package can be used for closed, intermittent flow, flow-through and open-tank respirometry and uses well-defined sets of rules to reliably and rapidly generate reproducible results.
+3. We demonstrate how \texttt{respR} uses novel computing methods such as rolling regressions and kernel density estimates to reliably detect maximum, minimum and most linear sections of the data, and critical oxygen tension, P\textsubscript{crit}.
+4. Although designed specifically with aquatic respirometry in mind, the object-oriented approach of the package and the unit-less nature of its analytical functions mean that parts of the package can easily be used to estimate linear relationships from a range of applications in many research disciplines.
 
 
-\section{Introduction}
+
+##   Introduction
 
 Metabolic rate is a fundamental trait associated with virtually all biological functions and is key in predicting patterns in ecology and conservation biology, from populations [@Seibel2007; @Barneche2014] to ecosystems [@Brown2004].
 It has been widely investigated in studies of the effects of external stressors on organisms and is increasingly used to study resilience in climate change-related studies where warming is expected to drive increased metabolism in ectotherms [e.g. @Portner2002; @Carey2016; @Delorme2016].
@@ -300,7 +299,7 @@ Time & \texttt{convert\_rate()} & second, minute, hour \\
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.85\linewidth]{assets/figs/c5fig1}
+{\centering \includegraphics[width=1\linewidth]{assets/figs/c5fig1}
 
 }
 

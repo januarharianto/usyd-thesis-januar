@@ -73,6 +73,7 @@ One study examined the acute HSP70 (one hour thermal shock) response in urchins 
 The synthesis of HSPs is energetically costly and the increased thermal resistance conveyed by upregulation of HSPs may come at a cost to metabolism, normal cell function and survival [@Krebs1997; @Hochachka2002; @Hoekstra2013]. 
 
 We investigated the effects of long-term acclimation to elevated temperatures on the sea urchin *Heliocidaris erythrogramma* through determination of survivorship, metabolic rate, HSP70 expression, gonad index and gonad histology. 
+The gonad index (GI) is a well-known measure of changes in sea urchin reproductive capacity [@Ebert2011] and is used as a proxy for fitness in past studies on effects of climate change stressors on sea urchins [e.g. @Dworjanyn2018; @Uthicke2014].
 To place our experiment in an ecologically relevant context, we characterised the thermal environment of the source populations of *H. erythrogramma* in Sydney Harbour by compiling in situ temperature data over 5 years.
 This region is located in an ocean warming hotspot due to warming of the continent and climate-driven intensified, poleward flow of the East Australian Current [@Hill2008; @Hobday2011; @IPCC2013; @Lenton2015]. 
 In the Sydney region, *H. erythrogramma* has a 6-month spawning season from October/November to March/April with episodic gamete release [Byrne, pers comm; @Laegdsgaard1991]. 
@@ -85,7 +86,7 @@ It was predicted that *H. erythrogramma* exposed to elevated temperature would e
 ### Collection
 
 Adult *Heliocidaris erythrogramma* (54.4 $\pm$ 6.1 mm diameter) were collected at a depth of 2--3 m from three locations in Sydney Harbour, Australia: Chowder Bay ([\ang{33;50;27.6}S \ang{151;15;9.8}E](https://www.google.com/maps/?q=-33.840986,151.252714)), Milk Beach ([\ang{33;51;23.3}S \ang{151;16;0.7}E](https://www.google.com/maps/?q=-33.856467,151.266856))  and Bottle and Glass Point ([\ang{33;50;55.2}S \ang{151;16;11.5}E](https://www.google.com/maps/?q=-33.848678,151.269870)) during winter in July 2013. 
-The urchins were transported to the Sydney Institute of Marine Science (SIMS) and held in aquaria (80 L) supplied with ambient ($\sim 18$ &deg;C) flow-through filtered sea water (FSW; 70 $\mu$m; 1.5 L min^-1^) for up to 4 weeks before being acclimated to the four temperature treatments (see below).
+The urchins were transported to the Sydney Institute of Marine Science (SIMS) and held in aquaria (80 L) supplied with ambient ($\sim 18$ &deg;C) flow-through filtered seawater (FSW; 70 $\mu$m; 1.5 L min^-1^) for up to 4 weeks before being acclimated to the four temperature treatments (see below).
 
 ### Habitat temperature profile
 
@@ -165,7 +166,7 @@ Dissolved oxygen (DO) was recorded using an optical fluorescence quenching probe
 FSW-only blanks were measured routinely ($n =$ 16) to correct the recordings for background respiration and instrument drift. 
 After each measurement, the chamber was removed from the system, wiped dry and weighed. 
 The urchin was then taken out of the chamber, blotted dry with tissue, and weighed for wet-weight.
-The weight of the sea water was calculated by deducting pre-weighed chamber, stir-bar and urchin wet-weight from the total weight of the chamber, and then converted to volume by multiplying it with its density adjusted based on current treatment temperature, salinity and barometric air pressure [@Fofonoff1983]. 
+The weight of the seawater was calculated by deducting pre-weighed chamber, stir-bar and urchin wet-weight from the total weight of the chamber, and then converted to volume by multiplying it with its density adjusted based on current treatment temperature, salinity and barometric air pressure [@Fofonoff1983]. 
 MO~2~ was calculated using the equation based on @Lighton2008: $$MO_2 = \frac{\Delta O_2 V}{W}$$ where $\Delta O_2$ is the local linear regression (i.e. slope) of oxygen concentration over time (mg L^-1^ h^-1^), $V$ is the volume of seawater (L), and $W$ is the wet weight of the urchin (g).
 
 Thermal sensitivity, $Q_{10}$, was determined as a function of mean temperature across a 10 &deg;C range using the equation provided by @Prosser1991: $$Q_{10} =\left( \frac{R_1}{R_2} \right)^{10/T_1-T_2}$$ where $R_1$ and $R_2$ are the MO~2~ at their corresponding lower and higher temperatures, $T_1$ (20 &deg;C) and $T_2$ (22 &deg;C, 24 &deg;C or 26 &deg;C), respectively.
@@ -192,7 +193,7 @@ After blocking, the membranes were incubated for 1 hour in a solution of the app
 
 After washing, membranes were incubated for 1 hour with a secondary antibody, an anti-mouse IgG conjugated with horseradish peroxidase (Santa Cruz Biotechnology, Catalog. No. sc-516102, Santa Cruz Biotechnology, Dallas, Texas, United States) diluted at 1:10,000 in antibody buffer. 
 The membranes were rinsed and washed in TPBS as before. Finally, membranes were incubated in SuperSignal West Pico chemiluminescent substrate (Pierce, Catalog. No. 34080, Thermo Fisher) for 1 minute and the chemiluminescent signal was detected using an imaging densitometer (ChemiDocMP System, Bio-Rad Laboratories, Inc.). 
-Image analysis to determine relative HSP70 levels in arbitrary units (AU) was done using ImageJ [@Abramoff2004].
+Image analysis to determine relative HSP70 levels in arbitrary units (AU) was done using ImageJ [@Abramoff2004] by selecting grey and black segments for both HSP70 and HSC70.
 Band densities of the samples were normalised to $\beta$-actin and the positive control to account for differences in total protein loaded in the gels and to allow for comparisons between blots.
 
 ### Gonad Histology

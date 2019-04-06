@@ -21,6 +21,6 @@ rmd_files: [
   "chapters/13-transgen.Rmd",
   "chapters/14-app.Rmd",
   "chapters/15-discussion.Rmd",
-  "chapters/31-appendix1.Rmd",
-  "chapters/99-references.Rmd"
+  "chapters/21-references.Rmd",
+  "chapters/31-appendix1.Rmd"
 ]

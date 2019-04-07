@@ -315,7 +315,7 @@ Source & Sum sq. & df & F value & p \\
 
 
 
-Thus, while warming increased metabolic rate by 9 \%, and decreased pH elevated metabolic rate by 18 \%, in combination these stressors acted antagonistically and reduced metabolic rate to levels similar to controls. Tukey’s HSD showed no differences between groups at 12 weeks (Table \ref{mrcontraststab}).
+Thus, while warming increased metabolic rate by 9 \%, and decreased pH elevated metabolic rate by 18 \%, in combination these stressors interacted antagonistically and reduced metabolic rate to levels similar to controls. Tukey’s HSD showed no differences between groups at 12 weeks (Table \ref{mrcontraststab}).
 
 \begin{table}[tb]
 

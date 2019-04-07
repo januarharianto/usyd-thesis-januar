@@ -90,57 +90,6 @@
 
 % ------------------------------------------------------------------------------
 % Section styles ---------------------------------------------------------------
-% See http://tex.stackexchange.com/questions/161577/memoir-hangnum-chapter-number-in-right-margin-switch for the inspiration
-
-% \setsecnumdepth{subsection}
-% 
-% \makeatletter
-% \makechapterstyle{toledo}{%
-% 	\chapterstyle{default}
-% 
-% 	\renewcommand*{\chapterheadstart}{\vspace*{0.0cm}}
-% 
-% 	\renewcommand*{\chapnumfont}{\normalfont\color{heading}\addfontfeature{SizeFeatures={Size=110}}}
-% 	\newfont{\chapterNumber}{eurb10 scaled 7000}
-% 	\renewcommand*{\chapnumfont}{\chapterNumber\color{heading}}
-% 	\renewcommand*{\printchaptername}{}
-% 	\renewcommand*{\chapternamenum}{}
-% 	\renewcommand*{\printchapternum}{%
-% 		\raisebox{0pt}[0pt][0pt]{%
-% 		\makebox[0pt][l]{%
-% 		\makebox[\dimexpr\textwidth+5.45em\relax][l]{%
-% 			\parbox[t]{\textwidth}{\mbox{}}%
-% 			\parbox[t]{5.45em}{\hfill\chapnumfont \thechapter}}}}}%
-% 	\renewcommand*{\chapternamenum}{}
-% 	\renewcommand*{\afterchapternum}{}
-% 
-% 	\renewcommand*{\afterchaptertitle}{%
-% 	\par\parbox{\textwidth}{\hrulefill}\par%
-% 	\vspace*{4ex}}
-% 	\renewcommand*{\chaptitlefont}{\normalfont\large}
-% 	\renewcommand*{\printchaptertitle}[1]{%
-% 		\parbox[b]{\textwidth}{%
-% 			\SingleSpacing\raggedright\chaptitlefont\huge{##1}%
-% 		}%
-% 	}
-% 
-% 	% \setsecheadstyle{\large}
-% 	% \setsecindent{-5.39ex}
-% 	\setbeforesecskip{-4ex plus -1ex minus -.2ex}
-% 	\setaftersecskip{4ex plus 1ex minus .2ex}
-% 
-% 	% \setsubsecheadstyle{\itshape}
-% 	\setbeforesubsecskip{-4ex plus -1ex minus -.2ex}
-% 	\setaftersubsecskip{4ex plus 1ex minus .2ex}
-% 	\setsecnumformat{\large{\csname the##1\endcsname\quad}}
-% 
-% %	\setparaheadstyle{\normalsize\itshape}
-% 
-% 	\renewcommand*{\abstractnamefont}{\large}
-% }
-% \makeatother
-% 
-% \chapterstyle{toledo}
 
 \chapterstyle{veelo} % set chapter style 
 \renewcommand*{\chaptitlefont}{\normalfont\huge} % resize chapter title font
@@ -305,7 +254,8 @@
 \makeatletter
 
 % PAGE LAYOUT
-%
+
+% \usepackage[document]{ragged2e}
 % \settypeblocksize{23.45cm}{11.85cm}{*}
 \settypeblocksize{23.45cm}{12.85cm}{*}
 \setlrmargins{3.141592653589793cm}{*}{*}

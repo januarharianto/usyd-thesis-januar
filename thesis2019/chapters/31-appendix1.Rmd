@@ -1,13 +1,9 @@
 \appendix
 
-# Appendix A
+# A: Extracting and analysing data from Clarivate Web of Science to determine trends
 
 
-# Appendix B
+# B: Agar-based feed formulation for *Heliocidaris erythrogramma*
 
 
-# Appendix C
-
-# Appendix D
-
-# Appendix E
+# C: Assessing the performance of `auto_rate()` in the R package, `respR`

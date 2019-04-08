@@ -23,6 +23,7 @@
 \setmainfont{Minion Pro}
 \setmonofont[Scale=0.8]{PT Mono}
 \setsansfont{Myriad Pro}
+\usepackage{amsmath} % load befre unicode-math
 \usepackage{unicode-math}
 \setmathfont{Minion Math}[math-style=upright]
 
@@ -163,8 +164,6 @@
 
 \makeatother
 
-
-% 
 % % Deactivate capitalization of headers.
 \nouppercaseheads
 
@@ -214,6 +213,28 @@
 
 
 \makeatletter
+
+% ------------------------------------------------------------------------------
+% In-text Quotes----------------------------------------------------------------
+\usepackage[many]{tcolorbox}
+\definecolor{block-gray}{gray}{0.95}
+
+\newtcolorbox{cipher}[2][]{%
+    colback=block-gray,
+    grow to right by=-10mm,
+    grow to left by=-10mm,
+    boxrule=0pt,
+    boxsep=0pt,
+    breakable,
+    enhanced jigsaw,
+    borderline west={4pt}{0pt}{gray},
+    title={#2\par},
+    colbacktitle={block-gray},
+    coltitle={black},
+    fonttitle={\large\bfseries},
+    attach title to upper={},
+    #1,
+}
 
 % ------------------------------------------------------------------------------
 % Define metadata

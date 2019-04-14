@@ -1,0 +1,34 @@
+
+# Treatment conditions in larval kreisel experiments{#appendixb}
+
+
+
+<!-- ```{r juvtemps, fig.height=4, fig.cap = "(ref:juvtemps)",fig.scap="(ref:sjuvtemps)",fig.pos="ht"} -->
+
+<!-- dt <- read_excel("assets/data_in/c4_krieseltemps.xlsx") %>% -->
+<!--   group_by(Day, Treatment) %>% -->
+<!--   summarise(mean = mean(Temp), sd = sd(Temp)) -->
+
+
+<!-- juvtemp <- ggplot(dt, aes(Day, mean, col = Treatment)) + -->
+<!--   geom_errorbar(aes(ymin = mean-sd, ymax = mean+sd), width = 0) + -->
+<!--   geom_line() + -->
+<!--   scale_colour_brewer(palette = "Paired") + -->
+<!--   scale_x_continuous(name= "Days", limits=c(0, 17)) + -->
+<!--   scale_y_continuous(name= "Temperature (°C)",  -->
+<!--     limits=c(16, 26),  -->
+<!--     breaks = seq(16, 26, by = 2)) + -->
+<!--   theme(legend.position= "bottom") + -->
+<!--   geom_blank() -->
+
+<!-- if(output %in% c("latex","docx")){ -->
+<!--   juvtemp -->
+<!-- } else if(output == "html"){ -->
+<!--   ggplotly(juvtemp) -->
+<!-- } else(print("No format defined for this output filetype")) -->
+
+<!-- ``` -->
+
+<!-- (ref:juvtemps) Treatment temperature (), logged every 4 hours from juvenile kreisel experiments (see Chapter \@ref(transgen)). -->
+
+<!-- (ref:sjuvtemps) Something short -->

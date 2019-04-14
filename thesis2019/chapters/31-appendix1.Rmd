@@ -1,9 +1,64 @@
+
 \appendix
 
-# A: Extracting and analysing data from Clarivate Web of Science to determine trends
+# Search terms used for Figures \@ref(fig:pcount) and \@ref(fig:pgroups){#appendixa}
+
+To create Figure \@ref(fig:pcount), the Clarivate Web of Science database was searched on 27 May 2018, using the following keywords:
+
+\begin{cipher}{}
+\texttt{"climate*change" or "environmental change" or "climate*driven" AND marine or ocean or sea or coastal or *tidal AND physiolog* or ecophysiolog* or "evolutionary physiolog*" or *toleran* or metabolic or biomarker or respirat* or heat*shock AND respirometry or respiration or "metabolic rate" or "oxygen uptake" or "oxygen consumption" or BMR or *energetics}
+\end{cipher}
+
+Publications were searched by "Topic" and results were counted per publication by year from 1970 to 2017. Data was then saved to a .csv file and plotted in R.
 
 
-# B: Agar-based feed formulation for *Heliocidaris erythrogramma*
+To create Figure \@ref(fig:pgroups), the Clarivate Web of Science database was searched on 27 May 2018 using the following keywords:
 
+\begin{cipher}{}
+\texttt{"climate*change" or "environmental change" or "climate*driven" AND marine or ocean or sea or coastal or *tidal}
+\end{cipher}
 
-# C: Assessing the performance of `auto_rate()` in the R package, `respR`
+<!-- Search results were then narrowed down to specific, pre-determined categories to include physiological markers: -->
+
+Search results were narrowed down to specific, pre-determined topics using the most common keywords. These keywords are not exhaustive and may not capture all related topics. However, they provide a reasonable snapshot of the number of publications per topic, per year from 1970 to 2017. The data was saved to a .csv file and plotted in R.
+
+\begin{cipher}{Physiological markers}
+\texttt{AND physiolog* or ecophysiolog* or "evolutionary physiolog*" or *toleran* or metabolic or biomarker or respirat* or heat*shock}
+\end{cipher}
+
+\begin{cipher}{Metabolic rate}
+\texttt{respirometry or respiration or metabolic or metabolism or "oxygen uptake" or "oxygen consumption" or BMR or ctmax or ctmin or Q10 or "O2 uptake" or "critical o* tension"}
+\end{cipher}
+
+\begin{cipher}{Heat shock proteins}
+\texttt{heat*shock or hsp* or hsc*}
+\end{cipher}
+
+\begin{cipher}{Feeding}
+\texttt{"feeding rate" or feeding}
+\end{cipher}
+
+\begin{cipher}{Survival}
+\texttt{"survival rate" or "survivorship" or "increase* survival" or "decrease* survival" or "reduce* survival" or "increase* mortality" or "decrease* mortality" or "reduce* mortality" or "surviving"}
+\end{cipher}
+
+\begin{cipher}{Immune response}
+\texttt{antibacterial or immune or disease}
+\end{cipher}
+
+\begin{cipher}{Calcification}
+\texttt{calcification or dissolution}
+\end{cipher}
+
+\begin{cipher}{Lipid or fatty acid}
+\texttt{lipid* or fatty*acid*}
+\end{cipher}
+
+\begin{cipher}{ATP}
+\texttt{ATP* or "ATP concentration" or "ATP activity"}
+\end{cipher}
+
+\begin{cipher}{Assimilation Efficiency}
+\texttt{assimilation*efficiency}
+\end{cipher}
+

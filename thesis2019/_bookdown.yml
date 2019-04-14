@@ -22,5 +22,7 @@ rmd_files: [
   "chapters/14-app.Rmd",
   "chapters/15-discussion.Rmd",
   "chapters/21-references.Rmd",
-  "chapters/31-appendix1.Rmd"
+  "chapters/31-appendix1.Rmd",
+  "chapters/32-appendix2.Rmd",
+  "chapters/33-appendix3.Rmd"
 ]

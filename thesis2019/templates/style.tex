@@ -116,6 +116,12 @@
 \usepackage{lscape} % enable landscape mode, mostly for long figs or tables
 \usepackage{tabu} % extra table options
 
+% fix memoir issue with Rmarkdown where dot between chapter numbers and figure 
+% numbers may disappear if knitted using pdfLaTeX.
+\makeatletter
+\renewcommand{\counterwithin}{\@ifstar{\@csinstar}{\@csin}}
+\makeatother
+
 % ------------------------------------------------------------------------------
 % Acknowledgements -------------------------------------------------------------
 \makeatletter

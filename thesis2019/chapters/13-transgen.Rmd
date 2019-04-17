@@ -89,7 +89,7 @@ Room lights were corrected weekly to follow the diurnal sunrise/sunset cycle.
 A thermocouple-solenoid feedback system controlled seawater temperature by automatically mixing warm (26 &deg;C) and cold (14.5 &deg;C) filtered FSW (20 µm) to produce water at a constant temperature. 
 The water was stored in insulated header tanks, and each header tank was further equipped with a submersible heater (200 W, Blue Sea, Guangdong, China) attached to a temperature controller (model 7028/3, TUNZE Aqraientechnik GmbH, Germany) to maintain stable temperature.
 
-seawater pH control was performed separately for adult treatments and larval cultures.
+Seawater pH control was performed separately for adult treatments and larval cultures.
 In the adult treatments, pre-mixed CO~2~ gas was bubbled vigorously into header tanks using a venturi injector.
 <!-- which allows the flowthrough system to maintain stable pH rapidly. -->
 The gas was prepared real-time using a proportional–integral–derivative controller which injects food-grade CO~2~ (BOC, Australia) into scrubbed ambient air through a control valve (Parker Hannifin, OH, USA).
@@ -98,8 +98,9 @@ The pH was adjusted to the total scale (pH~T~) by an offset to spectrophotometri
 The control modules automatically injected CO~2~ micro-bubbles via solenoid valves into CO~2~ reactors (Max Mix 2000 L hr^-1^, Ista Professional Aquarium System, Taiwan) attached to submersible pumps (model AP550LV, Aquatec Equipment, Perth, Australia) inside each header tank.
 <!-- that run continuously to mix the CO~2~-infused water into header tank. -->
 
-Treatment temperature was logged daily in all treatments using PT1000 resistance temperature detectors (RTDs) attached to a Graphtec Multifunction logger (model: GL840, Graphtec). 
+Treatment temperature was logged daily (adults: every 2 hours; juveniles: every 4 hours) in all treatments using PT1000 resistance temperature detectors (RTDs) attached to a Graphtec Multifunction logger (model: GL840, Graphtec; Appendix Figure \@ref(fig:juvtemps)). 
 Treatment pH on the total scale was measured spectrophotometrically using a custom-built automated sampling system connected to an optic-fibre spectrophotometer (model: USB4000+, Ocean Optics, Inc., FL, USA).
+Spectrophotometric pH sampling was performed once daily for each treatment from any randomly selected tank or kreisel (Appendix Figure ).
 The dye indicator used for spectrophotometric measurements was m-cresol (Acros Argonics, catalogue number 110585000, Lot A0321770) and all measurements were calibrated to certified reference material (CRM) for CO~2~ in seawater obtained from the Scripps Institution of Oceanography (University of California, San Diego, USA) following SOP 6b in @Dickson2007. Calculations of pH were based on @Liu2011.
 
 ### Adult treatment setup
@@ -120,7 +121,7 @@ An inflow tubing leading into the kreisel provided continuous laminar flow in a 
 As the seawater input was flowthrough, it was delivered through a series of three filters (70 µm $\Rightarrow$ 20 µm $\Rightarrow$ 1 µm) to prevent pelagic organisms in the flowthrough system from interacting with the specimens.
 The outflow was covered with a 50 µm mesh to prevent escape.
 
-There were 10 treatments of 4 temperatures (18 &deg;C, 20 &deg;C, 22 &deg;C, 24 &deg;C) and two pH levels (8.0, 7.6). Each treatment contained three experimental kreisels, supplied with flow-through seawater at a rate of 50 mL min^-1^. 
+There were 8 treatments of 4 temperatures (18 &deg;C, 20 &deg;C, 22 &deg;C, 24 &deg;C) and two pH levels (8.0, 7.6). Each treatment contained three experimental kreisels, supplied with flow-through seawater at a rate of 50 mL min^-1^. 
 <!-- The flow rate was adjusted slightly ($\pm 5\ mL\ min^{-1}$) for each kreisel to ensure that the larva were not pressed against the outflow mesh. -->
 
 ```{r kreisel, fig.cap = "(ref:kreisel)", fig.scap = "(ref:skreisel)", fig.pos="p"}
@@ -140,7 +141,7 @@ Spawning was induced in October 2015 by injection of 1--2 mL of 0.5 M potassium 
 <!-- During spawning, all treatments were held at their temepratures (ambient: 18.2 &deg;C, elevated 20.2 &deg;C) and the weekly adjustments to temperature were halted. -->
 To better represent population-level repsonses to treatments, gametes from at least 3 females and 2 males were pooled, and eggs were pooled at their parental conditions.
 Approximately 1000--1500 unfertilised eggs were transferred directly into each kreisel.
-Sperm was introduced to all 10 treatment after 15 minutes at a pre-diluted sperm concentration of approximately 2 $\times$ 10^5^ sperm mL^-1^.
+Sperm was introduced to all 8 treatment after 15 minutes at a pre-diluted sperm concentration of approximately 2 $\times$ 10^5^ sperm mL^-1^.
 <!-- to avoid polyspermy (cite?). -->
 The flowthrough system was not turned off during fertilisation, but fertilisation success was checked for each treatment after 20 minutes (98--100 \% for all treatments). 
 The embryos left to develop and incubate in the kreisels into settled juveniles, over 14 days, under constant temperature (18 &deg;C to 24 &deg;C) and pH levels (8.0, 7.6), before metabolic rate measurements were made.
@@ -151,7 +152,6 @@ The embryos left to develop and incubate in the kreisels into settled juveniles,
 Metabolic rate (MO~2~) was estimated using constant-volume respirometry. 
 The respirometry chambers used were 2 mL borosilicate glass vials with silicon septum lids (Mfr. No. CERT97E-12, Thomas Scientific, NJ, USA).
 Oxygen concentration within the glass vials was measured using needle-type microsensors (NTH-PSt1, PreSens GmbH, Regensburg, Germany) attached to 4-channel and 10-channel meters (OXY-10 micro and OXY-4 micro, PreSens GmbH).
-<!-- We used 9 vials for larvae while the other 5 contained only treatment water to account for the presence of background respiration. -->
 From each kreisel, 50 juveniles were collected at random and placed into a respirometry vial for measurement of oxygen uptake to obtain a collective respirometry value.
 Each respirometry vial was rinsed at least two times and filled with 0.22 µm FSW at the same treatment conditions as the source juveniles before the specimens were transferred for measurement.
 To account for background respiration, 4 to 6 vials containing only treatment water were measured separately for each larval group.

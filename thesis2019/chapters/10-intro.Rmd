@@ -111,7 +111,7 @@ if(output %in% c("latex","docx")){
 
 ```
 
-(ref:pgroups) Common physiological response variables reported in marine global change research articles published from 1970 -- 2017 and indexed by Clarivate Web of Science. Papers may report more than one response variable, thus the percentage values are based on the proportion of all reported response variables ($n =$ 2,239), not the number of publications selected ($n$ = 2,766). Numbers are tallied based on specific keywords used to describe experimental results and outcomes (e.g. 'survivorship' or 'survival rate' instead of 'survival'). Less common or species-specific response variables (e.g. coelomocyte counts in sea urchins) are not included.
+(ref:pgroups) Common physiological response variables reported in marine global change research articles published from 1970 -- 2017 and indexed by Clarivate Web of Science. Papers may report more than one response variable, thus the percentage values are based on the proportion of all reported response variables (n = 2,766), not the number of publications selected (n = 2,239). Where possible, publications are tallied based on specific keywords used to describe experimental results and outcomes (e.g. 'survivorship' or 'survival rate' instead of 'survival'). Less common or species-specific response variables (e.g. coelomocyte counts in sea urchins) are not included. Data collected on 27 May, 2018. See Appendix \@ref(appendixa) for methodlogy.
 
 (ref:spgroups) Common physiological response variables reported in marine global change research articles published from 1970 -- 2017 and indexed by Clarivate Web of Science.
 
@@ -127,10 +127,10 @@ Patterns in metabolic rate responses from respirometry can provide deep insights
 When stressed, most organisms present either elevated [@Ko2014; @Pan2015; @Morley2016] or depressed [@Anestis2007; @Kelly2014; @Harianto2018] metabolic rates as they divert resources to maintain physiological balance.
 Increased metabolism may divert energy away from essential functions such as growth and reproduction and can, therefore, reduce the fitness of the organism -- as shown in molluscs [@Marshall2011; @Hoefnagel2017], echinoderms [@Stumpp2011; @Delorme2016; @Harianto2018], crustaceans [@Whiteley1997; @Magozzi2015] and fish [@Seth2013; @Stoffels2015]. 
 Alternatively, an increase in metabolic rate could also mean that the organism's aerobic scope has been increased for it to grow or reproduce as shown for fish [@Portner2006; @Sandblom2014; @Hansen2017].
-On the other hand, depressed metabolism (metabolic depression)is also used as a means to conserve energy during hibernation, torpor, aestivation or diapause [@Storey1990; @Guppy1999; @Storey2004]. 
-Metabolic depression can also be a result of insufficient capacity for energy delivery due to either insufficient food or oxygen availability, which ultimately lead to lethal responses [@Bozinovic2015; @Lefevre2016].
+Depressed metabolism (metabolic depression), on the other hand, is known to occurs as a means to conserve energy during hibernation, torpor, aestivation or diapause [@Storey1990; @Guppy1999; @Storey2004]. 
+However, metabolic depression may also be a result of insufficient capacity for energy delivery, due to either insufficient food or oxygen availability, which ultimately leads to lethal consequences [@Bozinovic2015; @Lefevre2016].
 
-As metabolic responses vary and the physiological basis for these responses differ among organisms, it is important to understand the context behind metabolic rate responses *beyond* oxygen consumption rates since physiological trade-offs may exist in ways that cannot be assessed by metabolic rate data.
+As metabolic responses vary and the physiological basis for these responses differ among organisms, it is important to understand the context behind metabolic rate responses beyond oxygen consumption rates since physiological trade-offs may exist in ways that cannot be assessed by metabolic rate data.
 Thus, assessing the sensitivity of metabolism to stressors should be accompanied by other measures of physiological function.
 Integrating multiple physiological responses to assess the challenge of understanding the impacts of climate change stressors has been shown to be important in understanding overall impacts on organisms, as shown by studies that integrate metabolic rate data together with data from other response variables such as feeding, excretion, reproductive or survival rates [e.g. @Calosi2013; @Magozzi2015; @Harianto2018].
 This approach provides integrative insights that are not possible to achieve with single-trait analyses.
@@ -146,7 +146,7 @@ Survival analysis methods such as the Kaplan-Meier product-limit model [@Kaplan1
 This allows us to predict mortality risk in terms of abiotic factors such as temperature, pH and light, and include climate-change related covariates such as density or calcification simultaneously as shown for corals, fish, crustaceans and urchins [@Anthony2007; @Geange2009; @Vasquez2015; @Harianto2018].
 
 However, most marine global change experiments do not monitor survival rates over time in an integrated manner, or subject experimental organisms to lethal stressor combinations to allow for such analyses.
-A search on Web of Science yielded 54 publications since 1981 which analysed survival metrics from experimental data, making up just $\sim 2\%$ of the total published literature.
+A search on Web of Science yielded 54 publications since 1981 which analysed survival metrics from experimental data, making up just $\sim 2\%$ of the total published literature (Figure \@ref(fig:pgroups)).
 In recent years a significant effort has been put into conducting marine global change experiments that span months to years as a key approach to understand more recent, persistent responses to climate change that cannot be observed in short-term, acute stress-response studies [@Suckling2015; @Morley2016; @Harianto2018].
 Importantly, these longer-term studies provide the opportunity to document detailed physiological performances over time, including survival.
 It is crucial that we document mortality in these experiments so that we can to characterise survival as a function of environmental and physiological variables for organisms [@Anthony2007].
@@ -160,7 +160,7 @@ Temperature is probably the most important environmental factor affecting the ph
 Influencing virtually all levels of biological organisation, temperature forms the basis of biochemical adaptation since it physically modulates the rate of chemical reactions [@Hochachka2002; @Schulte2015; @Somero2017]. 
 Numerous studies have documented how temperature drives shifts in biogeographical distributions and phenology globally [@Brown2016; @Goldenberg2017; @Pecl2017]. 
 General observations include poleward shifts in distribution, reductions in overall body sizes and shifts in metabolic limits [@Verges2014; @Deutsch2015; @Pecl2017].
-However, not every species has responded as predicted, with some displaying signs of resilience (e.g. Sunday et al., 2015). 
+However, not every species has responded as predicted, with some displaying signs of resilience [e.g. @Sunday2015].
 There remains very little data on the biological responses of a vast majority of marine animals to increased temperature.
 This is partly due to a lack of information regarding the spatial and temporal details of current environmental conditions in marine environments, making it difficult to correlate organismal responses with their in situ habitats [@Johnston2008].
 
@@ -223,7 +223,7 @@ In particular, long-term marine global change experiments should at least consid
 For example, intertidal environments are characterised by daily fluctuations in temperature and pH due to the tidal cycle, which may override any effect that would be expected when determining responses based on latitudinal effects [@Sunday2011; @Lathlean2014].
 Subtidal habitats, in contrast, are characterised by less variable thermal environments as they are permanently submerged.
 Continuous records of environmental carbonate chemistry are rare, although the deployment of sensors in recent years have begun to improve our understanding of the natural variability in many marine coastal environments [e.g. Antarctica: @Matson2011; coastal current ecosystems: @Chan2017; coral reefs: @Rivest2015].
-Temperature data, by contrast, is more commonly available as *in situ* temperature loggers are relatively inexpensive in comparison to sensors that measure ocean carbonate chemistry [@Glenn2000].
+Temperature data, by contrast, is more commonly available as in situ temperature loggers are relatively inexpensive in comparison to sensors that measure ocean carbonate chemistry [@Glenn2000].
 However, currently available data is still lacking and we have, for instance, little information for iconic regions such as Sydney Harbour [but see @Mayer-Pinto2015; @Tanner2017], even though it has been identified as a major climate change and biodiversity hotspot [@Sunday2015 ; @Johnston2015; @Popova2016].
 Marine global change experiments need to incorporate the temporal variability of environmental conditions -- a challenging endeavour considering the fact that we do not have baseline data on the environmental conditions that many organisms experience in nature. 
 

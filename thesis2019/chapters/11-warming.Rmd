@@ -141,9 +141,9 @@ if(output %in% c("latex","docx")){
 
 ```
 
-(ref:c2harbourtemps) Monthly temperature at the habitat of *Heliocidaris erythrogramma* in Chowder Bay, NSW, Australia, averaged over 5 years (2013--2017). The horizontal line represents the median (Q2), and the vertical lines (whiskers) represent the range of the data computed as follows: $Q1 − 1.5\ IQR$ (bottom whisker); greater than $Q3 + 1.5\ IQR$ (top whisker). Data were recorded using in-situ loggers deployed at 3--5 m depth. The 5-year median (19.8 &deg;C, dotted line) and mean (19.7 &deg;C, dashed line) are shown. Outliers are included (dots). 
+(ref:c2harbourtemps) Monthly temperature at the habitat of *Heliocidaris erythrogramma* in Chowder Bay, NSW, Australia, averaged over 5 years (2013--2017). The horizontal line represents the median (Q2), and the vertical lines (whiskers) represent the range of the data computed as follows: $Q1 − 1.5\ IQR$ (bottom whisker); greater than $Q3 + 1.5\ IQR$ (top whisker). Data were recorded using in-situ loggers deployed at 3--5 m depth. The 5-year median (19.8 &deg;C, dotted line) and mean (19.7 &deg;C, dashed line) are shown. Outliers are included (dots).
 
-(ref:sc2harbourtemps) Monthly temperature at the habitat of Heliocidaris erythrogramma in Chowder Bay, NSW, Australia, averaged over 5 years (2013--2017).
+(ref:sc2harbourtemps) Monthly temperature at the habitat of Heliocidaris erythrogramma in Chowder Bay, NSW, Australia, averaged over 5 years (2013--2017)
 
 Treatment stability was monitored by checking temperatures daily using a temperature probe (Vernier TMP-BTA, Beaverton, Oregon, USA). 
 Temperature loggers (IBCod Type G, Alpha Mach, Bombardier, Quebec, Canada) were also randomly deployed between 6 treatment tanks. 
@@ -225,7 +225,7 @@ All other tests were performed using the default `stats` package provided in R.
 
 ### Habitat temperature profile
 
-Analysis of the temperatures recorded between 2013--2017 at the Chowder Bay site showed that the mean annual temperature was 19.7 &deg;C (Figure \@ref{fig:c2harbourtemps}), similar to our control treatment at 20 &deg;C. Temperature exceeded 22 &deg;C and 24 &deg;C for an average of 8.8 $\pm$ 4.1 (s.d.) and 0.4 $\pm$ 0.9 (s.d.) consecutive weeks a year, respectively, for the period which we had complete records (2014--2016, Figure \@ref(fig:heatmap). The highest temperature level, 26 &deg;C, was not reached in our records, although there were two separate days exceeding 25.5 &deg;C in Feb 2015 and Feb 2017 (see Figure \@ref(fig:heatmap)).
+Analysis of the temperatures recorded between 2013--2017 at the Chowder Bay site showed that the mean annual temperature was 19.7 &deg;C (Figure \@ref(fig:c2harbourtemps)), similar to our control treatment at 20 &deg;C. Temperature exceeded 22 &deg;C and 24 &deg;C for an average of 8.8 $\pm$ 4.1 (s.d.) and 0.4 $\pm$ 0.9 (s.d.) consecutive weeks a year, respectively, for the period which we had complete records (2014--2016, Figure \@ref(fig:heatmap). The highest temperature level, 26 &deg;C, was not reached in our records, although there were two separate days exceeding 25.5 &deg;C in Feb 2015 and Feb 2017 (see Figure \@ref(fig:heatmap)).
 
 ```{r heatmap, fig.cap="(ref:heatmap)", fig.height=6, fig.pos="p", fig.scap="(ref:sheatmap)"}
 # knitr::include_graphics("figs/ch_warming/c2heatmap.png")
@@ -280,7 +280,7 @@ if(output %in% c("latex","docx")){
 
 (ref:heatmap) Average daily seawater temperature at the habitat of *Heliocidaris erythrogramma* in Chowder Bay, NSW, Australia. There are 365–366 vertical tiles for each year, and each tile represents a day. Temperatures were recorded every 20 minutes using in-situ loggers at 3--5 m depth. Colour determines the average temperature for the day. Temperatures reached 25.5 &deg;C in Feb 2015 and in Feb 2017.
 
-(ref:sheatmap) Average daily seawater temperature at the habitat of *Heliocidaris erythrogramma* in Chowder Bay, NSW, Australia.
+(ref:sheatmap) Average daily seawater temperature at the habitat of *Heliocidaris erythrogramma* in Chowder Bay, NSW, Australia
 
 ### Survival
 
@@ -293,7 +293,7 @@ knitr::include_graphics("assets/figs/c2survival.png")
 
 (ref:c2survival) Survival in *Heliocidaris erythrogramma* over 14 weeks of acclimation to elevated temperature treatments of 20 &deg;C, 22 &deg;C, 24 &deg;C and 26 &deg;C. Day zero is the time when target temperature was reached after temperature adjustments (+1 &deg;C every 6 days). Survival was significantly lower in the high temperature treatments (24 &deg;C, 26 &deg;C: log-rank test, Bonferroni-corrected, $p <$ 0.0083), but not for 22 &deg;C. Shaded regions denote 95 \% confidence interval. $n =$ 48 treament^-1^.
 
-(ref:sc2survival) Survival in *Heliocidaris erythrogramma* over 14 weeks of acclimation to elevated temperature treatments of 20 &deg;C, 22 &deg;C, 24 &deg;C and 26 &deg;C.
+(ref:sc2survival) Survival in *Heliocidaris erythrogramma* over 14 weeks of acclimation to elevated temperature treatments of 20 &deg;C, 22 &deg;C, 24 &deg;C and 26 &deg;C
 
 ```{r c2coxtab, message=FALSE, out.extra=''}
 
@@ -322,7 +322,7 @@ knitr::include_graphics("assets/figs/c2metabolic.png")
 
 (ref:c2mr) Weight-specific metabolic rate for *Heliocidaris erythrogramma* after a 12-week acclimation to elevated temperature treatments of 20 &deg;C, 22 &deg;C, 24 &deg;C and 26 &deg;C. The top and bottom of the boxes represent the interquartile range (IQR) between the 25th and 75th percentile (Q1 and Q3, respectively). The horizontal line represents the median (Q2), the horizontal dotted line represents the mean, and the vertical lines (whiskers) represent the range of the data computed as follows: Q1 $-$ 1.5IQR (bottom whisker); greater than Q3+1.5 IQR (top whisker). Letters denote significant differences between treatment groups (Tukey's HSD, p < 0.05). n = 6 treatment^-1^.
 
-(ref:sc2mr) Weight-specific metabolic rate for Heliocidaris erythrogramma after a 12-week acclimation to elevated temperature treatments.
+(ref:sc2mr) Weight-specific metabolic rate for *Heliocidaris erythrogramma* after a 12-week acclimation to elevated temperature treatments
 
 ### HSP70 expression
 
@@ -334,7 +334,7 @@ knitr::include_graphics("assets/figs/c2gels.png")
 
 (ref:c2gels) Levels of HSP70 and n the gonad tissue of *Heliocidaris erythrogramma* after 14 weeks of acclimation to 20 &deg;C, 22 &deg;C, 24 &deg;C and 26 &deg;C treatments. Representative blots are shown for each acclimation temperature. Blots are quantified manually using ImageJ.
 
-(ref:sc2gels) Levels of HSP70 and n the gonad tissue of *Heliocidaris erythrogramma* after 14 weeks of acclimation temperature treatments.
+(ref:sc2gels) Levels of HSP70 and n the gonad tissue of *Heliocidaris erythrogramma* after 14 weeks of acclimation temperature treatments
 
 
 ```{r c2hsp, fig.height=6, fig.cap="(ref:c2hsp)", fig.scap="(ref:sc2hsp)", fig.pos="p"}
@@ -343,19 +343,19 @@ knitr::include_graphics("assets/figs/c2hsp.png")
 
 (ref:c2hsp) Relative HSP70 levels expressed in the gonad tissue of *Heliocidaris erythrogramma* after 14 weeks of acclimation in constant temperature treatments at 20 &deg;C, 22 &deg;C, 24 &deg;C and 26 &deg;C. The top and bottom of the boxes represent the interquartile range (IQR) between the 25th and 75th percentile (Q1 and Q3, respectively). The horizontal line represents the median (Q2), the horizontal dotted line represents the mean, and the vertical lines (whiskers) represent the range of the data computed as follows: Q1 $-$ 1.5 IQR (bottom whisker); greater than Q3+1.5 IQR (top whisker). Outliers that fall outside of the whiskers are included (dots). Letters indicate treatments that differed (Dunn’s test). 20 &deg;C, n = 13; 22 &deg;C, n = 15; 24 &deg;C, n = 14; 26 &deg;C, n = 12.
 
-(ref:sc2hsp) Relative HSP70 levels expressed in the gonad tissue of *Heliocidaris erythrogramma* after 14 weeks of acclimation in constant temperature treatments.
+(ref:sc2hsp) Relative HSP70 levels expressed in the gonad tissue of *Heliocidaris erythrogramma* after 14 weeks of acclimation in constant temperature treatments
 
 ### Gonad index
 
-All urchins had gonads and there were no significant differences in gonad index between treatments (ANOVA, F~1,55~ = 0.899, p = 0.35; Figure \@ref{c2gi}). Partially spawned gonads were observed in 67 \%, 71 \%, 73 \% and 81 \% of gonad samples for the control, +2 &deg;C, +4 &deg;C and +6 &deg;C treatments, respectively. The remaining gonad samples had few or no gametes evident and were scored as "spent" (Figure \@ref(fig:c2histo)).
+All urchins had gonads and there were no significant differences in gonad index between treatments (ANOVA, F~1,55~ = 0.899, p = 0.35; Figure \@ref(fig:c2gi)). Partially spawned gonads were observed in 67 \%, 71 \%, 73 \% and 81 \% of gonad samples for the control, +2 &deg;C, +4 &deg;C and +6 &deg;C treatments, respectively. The remaining gonad samples had few or no gametes evident and were scored as "spent" (Figure \@ref(fig:c2histo)).
 
 ```{r c2gi, fig.height=6, fig.cap="(ref:c2gi)", fig.scap="(ref:sc2gi)", fig.pos="p"}
 knitr::include_graphics("assets/figs/c2gindex.png")
 ```
 
-(ref:c2gi) Gonad index of *H. erythrogramma* after 14 weeks of acclimation in constant temperature treatments at 20, 22, 24 and 26 &deg;C. The top and bottom of the boxes represent the interquartile range (IQR) between the 25th and 75th percentile (Q1 and Q3, respectively). The horizontal line represents the median (Q2) and the vertical lines (whiskers) represent the range of the data computed as follows: Q1−1.5 IQR (bottom whisker); greater than Q3+1.5 IQR (top whisker). Outliers that fall outside of the whiskers are included (dots). There were no significant differences between treatments. n = 15 treatment^−1^
+(ref:c2gi) Gonad index of *H. erythrogramma* after 14 weeks of acclimation in constant temperature treatments at 20, 22, 24 and 26 &deg;C. The top and bottom of the boxes represent the interquartile range (IQR) between the 25th and 75th percentile (Q1 and Q3, respectively). The horizontal line represents the median (Q2) and the vertical lines (whiskers) represent the range of the data computed as follows: Q1−1.5 IQR (bottom whisker); greater than Q3+1.5 IQR (top whisker). Outliers that fall outside of the whiskers are included (dots). There were no significant differences between treatments. n = 15 treatment^−1^.
 
-(ref:sc2gi) Gonad index of *H. erythrogramma* after 14 weeks of acclimation in constant temperature treatments.
+(ref:sc2gi) Gonad index of *H. erythrogramma* after 14 weeks of acclimation in constant temperature treatments
 
 
 ```{r c2histo, fig.height=6, fig.cap="(ref:c2histo)", fig.scap="(ref:sc2histo)", fig.pos="p"}
@@ -364,7 +364,7 @@ knitr::include_graphics("assets/figs/c2histol.png")
 
 (ref:c2histo) Histology of the gonads of female (A, B, D, E, G, J, L) and male (C, F, H, K) *Heliocidaris erythrogramma* after 14 weeks of acclimation in experimental treatments. The gonads were in a range of conditions with a few remaining unspawned gametes (top row; A–J), a mixture of intact and degenerating (arrows) gametes (second row; B–K) or spent with few or no gametes (bottom row; C–L) some with lipofuschin-like degradation pigment (arrows). Scale bars = 50 $\mu$m.
 
-(ref:sc2histo) Histology of the gonads of female and male *Heliocidaris erythrogramma* after 14 weeks of acclimation in experimental treatments.
+(ref:sc2histo) Histology of the gonads of female and male *Heliocidaris erythrogramma* after 14 weeks of acclimation in experimental treatments
 
 ## Discussion
 
@@ -393,7 +393,7 @@ Regardless of what isoform is expressed, it is clear that the upregulation of HS
 This suggests that there may be a trade-off between respiratory physiology and the heat-shock response to maintain a compromised level of fitness, especially when held at sub-lethal (e.g. +6 &deg;C) temperature as seen in the survivors, which appear to be heat-tolerant in our experiment.
 Also, it was possible that at 26 &deg;C, the ability of *H. erythrogramma* to maintain physiological function and maximise survival was impaired, perhaps due to a reduced capacity of its coelomic and respiratory systems to meet energetic and oxygen demands [@Portner2010].
 This is significant, as warming of +6 &deg;C (from 17 &deg;C) has been known to diminish the physiological capacity of *H. erythrogramma* to maintain its cellular immune response and antibacterial resistance to disease [@Brothers2016].
-The increased incidence of bald sea urchin disease which is known to be lethal in wild populations of H. erythrogramma over recent decades had also been ascribed to climate warming [@Sweet2016].
+The increased incidence of bald sea urchin disease which is known to be lethal in wild populations of *H. erythrogramma* over recent decades had also been ascribed to climate warming [@Sweet2016].
 
 Few other studies have taken the gradual approach to introduce elevated temperatures followed by an acclimation period as we did for *H. erythrogramma* to measure HSP70 levels.
 For example, @Buckley2001 acclimated the mussel *Mytilus trossulus* for 6 weeks to their winter-collected temperature, but measured HSP gene expression on isolated gill tissue following a 2-hour exposure to a range of elevated temperatures (14--35 &deg;C).

@@ -70,7 +70,7 @@ We hypothesised that:
 
 \textit{Heliocidaris erythrogramma} (\SI{44.15(325)}{\mm} test diameter) were collected from the subtidal (2-3 m depth) at low tide, at Milk Beach ([\ang{33;51;23.3}S, \ang{151;16;1.1}E](https://www.google.com/maps/?q=-33.856478,151.266958)) and Bottle and Glass Point ([\ang{33;50;52.7}S, \ang{151;16;12.4}E](https://www.google.com/maps/?q=-33.847960,151.270122)) in June, 2014. Sea surface temperature (SST) at the time was \SI{15.3}{\celsius}.
 The urchins were transported to the Sydney Institute of Marine Science (SIMS) in Chowder Bay and were held in aquaria (80 L) supplied with ambient flow-through, filtered seawater (FSW, \SI{70}{\micro\m}, \SI{1.5}{L.min^{-1}}).
-After one week, they were randomly allocated into six treatments, based on three temperature profiles (ambient +\SI{0}{\celsius}, elevated +\SI{2}{\celsius} and +\SI{3}{\celsius}), adjusted weekly with regard to the mean recent SST profile (Fig S1) and two constant total pH (pH\textsubscript{T}, on the total hydrogen scale) levels (ambient: 8.0, low: 7.6). For each treatment, we used three replicate tanks (28 L) with 10 urchins per tank.
+After one week, they were randomly allocated into six treatments, based on three temperature profiles (ambient +\SI{0}{\celsius}, elevated +\SI{2}{\celsius} and +\SI{3}{\celsius}), adjusted weekly with regard to the mean recent SST profile (Figure \ref{suppfig2}) and two constant total pH (pH\textsubscript{T}, on the total hydrogen scale) levels (ambient: 8.0, low: 7.6). For each treatment, we used three replicate tanks (28 L) with 10 urchins per tank.
 
 ### Experimental setup
 

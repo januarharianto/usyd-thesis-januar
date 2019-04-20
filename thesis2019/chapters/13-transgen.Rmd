@@ -100,7 +100,8 @@ The control modules automatically injected CO~2~ micro-bubbles via solenoid valv
 
 Treatment temperature was logged daily (adults: every 2 hours; juveniles: every 4 hours) in all treatments using PT1000 resistance temperature detectors (RTDs) attached to a Graphtec Multifunction logger (model: GL840, Graphtec; Appendix Figure \@ref(fig:juvtemps)). 
 Treatment pH on the total scale was measured spectrophotometrically using a custom-built automated sampling system connected to an optic-fibre spectrophotometer (model: USB4000+, Ocean Optics, Inc., FL, USA).
-Spectrophotometric pH sampling was performed once daily for each treatment from any randomly selected tank or kreisel (Appendix Figure ).
+Spectrophotometric pH sampling was performed once daily for each treatment from any randomly selected tank or kreisel.
+(Appendix Figure ).
 The dye indicator used for spectrophotometric measurements was m-cresol (Acros Argonics, catalogue number 110585000, Lot A0321770) and all measurements were calibrated to certified reference material (CRM) for CO~2~ in seawater obtained from the Scripps Institution of Oceanography (University of California, San Diego, USA) following SOP 6b in @Dickson2007. Calculations of pH were based on @Liu2011.
 
 ### Adult treatment setup

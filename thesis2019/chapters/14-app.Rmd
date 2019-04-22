@@ -155,7 +155,7 @@ The function \texttt{calc\_rate.ft()} is used to specifically analyse flow-throu
 \subsection{Estimating critical oxygen tension, P\textsubscript{crit}}
 
 We provide two methods of estimating P\textsubscript{crit}. The first is a "broken-stick" regression (BSR) approach, adopted from @Yeager1989 in which two segments of the data are iteratively fitted and the intersection with the smallest sum of the residual sum of squares between the two linear models is the estimated critical point.
-The second method is a wrapper for the segmented, or non-linear "broken-line" regression approach, presented by \cite{Muggeo2003} and available as part of the \texttt{segmented} R package [@Muggeo2008], which estimates the critical point by iteratively fitting two intersecting models on the data and selecting the point that minimises the ``gap'' between the two fitted lines.
+The second method is a wrapper for the segmented, or non-linear "broken-line" regression approach, presented by @Muggeo2003 and available as part of the \texttt{segmented} R package [@Muggeo2008], which estimates the critical point by iteratively fitting two intersecting models on the data and selecting the point that minimises the ``gap'' between the two fitted lines.
 Both methods are well-used in the literature [@Labra2016; @Chu2017; @Hansen2017; @Svendsen2016; @Regan2017].
 Note that the accuracy of the BSR method to describe non-linear traits is increasingly being debated [@Marshall2013] and is discussed in greater detail in our vignettes (see Supplementary Material).
 

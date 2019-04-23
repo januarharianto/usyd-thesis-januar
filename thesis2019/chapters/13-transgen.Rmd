@@ -100,8 +100,7 @@ The control modules automatically injected CO~2~ micro-bubbles via solenoid valv
 
 Treatment temperature was logged daily (adults: every 2 hours; juveniles: every 4 hours) in all treatments using PT1000 resistance temperature detectors (RTDs) attached to a Graphtec Multifunction logger (model: GL840, Graphtec; Appendix Figure \@ref(fig:juvtemps)). 
 Treatment pH on the total scale was measured spectrophotometrically using a custom-built automated sampling system connected to an optic-fibre spectrophotometer (model: USB4000+, Ocean Optics, Inc., FL, USA).
-Spectrophotometric pH sampling was performed once daily for each treatment from any randomly selected tank or kreisel.
-(Appendix Figure ).
+Spectrophotometric pH sampling was performed once daily for each treatment from any randomly selected tank or kreisel (see Appendix Table \ref{juvcarbchem} for treatment carbonate chemistry parameters).
 The dye indicator used for spectrophotometric measurements was m-cresol (Acros Argonics, catalogue number 110585000, Lot A0321770) and all measurements were calibrated to certified reference material (CRM) for CO~2~ in seawater obtained from the Scripps Institution of Oceanography (University of California, San Diego, USA) following SOP 6b in @Dickson2007. Calculations of pH were based on @Liu2011.
 
 ### Adult treatment setup
@@ -326,6 +325,8 @@ The experimental design allowed us to realistically quantify performance through
 Our results indicated that there was an effect of parental acclimation on the physiological responses of their offspring to increased temperature.
 Trans-generational effects through phenotypic plasticity are well known to occur through a generation and can play a major role in determining the range of acclimatory responses to temperature, and other environmental variables including ocean acidification [@Zhao2018a], pollution [@Duan2018; @Scanes2018] and ultraviolet radiation [@Kazerouni2017].
 A multitude of other environmental variables remain unexplored and it is still unclear how interactions between parents and offspring environments influence adaptation, especially in the context of TGP [@Donelson2018; @Luquet2016].
+In addition, inter-individual variation and how it affects selection responses has not been tested in the current study.
+Investigating this variation will be essential in determining if there are individuals within the population which may be pre-adapted to future climate change.
 For ecologically-important sea urchins such as *H. erythrogramma*, further research is required to better understand the potential for multi-generational TGP effects in which germ-line effects can be discerned, and how these mechanisms will facilitate persistence in a rapidly changing ocean.
 
 

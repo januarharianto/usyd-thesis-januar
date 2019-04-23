@@ -154,7 +154,7 @@ The carbonate chemistry parameters \textit{p}CO\textsubscript{2}, calcite and ar
 <!-- \begin{landscape} -->
 \begin{table}[tb]
 \centering
-\caption[Carbonate system conditions during the 22 weeks of acclimation of \textit{Heliocidaris erythrogramma} in six treatments of three temperatures and two pH\textsubscript{T} levels.]{Carbonate system conditions (\si{\pm SD}) during the 22 weeks of acclimation of \textit{Heliocidaris erythrogramma} in six treatments of three temperatures (ambient, +\SI{2}{\celsius}, +\SI{3}{\celsius}) and two pH\textsubscript{T} levels (8.0, 7.6), including pH on the total scale (pH\textsubscript{T}), total alkalinity (A\textsubscript{T}, $\mu$mol kg\textsuperscript{-1}), dissolved inorganic carbon (DIC, $\mu$mol kg\textsuperscript{-1}), calcite saturation state ($\Omega$Ca) and aragonite saturation state ($\Omega$Ar). There were 6 samples per treatment.}
+\caption[Carbonate system conditions during the 22 weeks of acclimation of \textit{Heliocidaris erythrogramma} in six treatments of three temperatures and two pH\textsubscript{T} levels.]{Carbonate system conditions (\si{\pm SD}) during the 22 weeks of acclimation of \textit{Heliocidaris erythrogramma} in six treatments of three temperatures (ambient, +\SI{2}{\celsius}, +\SI{3}{\celsius}) and two pH\textsubscript{T} levels (8.0, 7.6), including pH on the total scale (pH\textsubscript{T}), total alkalinity (A\textsubscript{T}, $\mu$mol kg\textsuperscript{-1}), dissolved inorganic carbon (DIC, $\mu$mol kg\textsuperscript{-1}) and calcite saturation state ($\Omega$Ca). There were 6 samples per treatment.}
 \label{carbchemtab}
 \begin{tabular}{rrrrrrr}
 \toprule
@@ -185,7 +185,7 @@ To prepare the food, \textit{E. radiata}, and \textit{Sargassum} spp. were washe
 The food was mixed with agar powder to a ratio of 1:4 by weight, and then mixed with FSW (\SI{20}{\micro\m}) to a ratio of 1:10 by weight at \si{\sim}\SI{80}{\celsius}. The agar was left to cool and solidify for 45 min before it was cut into 1 to 2 cm\textsuperscript{2} cubes and fed to the specimens.
 We fed the specimens twice a week by placing 3 to 4 cubes on top of each individual urchin.
 This approach ensured that each animal received the same amount of food in excess during the entire experimental period.
-All treatment tanks were syphoned every two days and wiped weekly to remove faecal matter and minimise algal growth.
+All treatment tanks were siphoned every two days to remove faecal matter and wiped weekly to minimise algal growth.
 All CO\textsubscript{2} diffusers were scrubbed and replaced every 3 to 5 days.
 Header tanks were cleaned of algal growth once a month.
 

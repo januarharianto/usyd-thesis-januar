@@ -24,17 +24,21 @@
 # U   :  Energy lost due to ammonia excretion in J/g/day
 
 
-# Pre-processing
-library(snipR)
-snipR::refresh()
+# # Pre-processing
+# library(snipR)
+# snipR::refresh()
+# 
+# # Load libraries
+# 
+# snipR::pkgs(
+#   tidyverse,
+#   readxl,
+#   huxtable
+# )
 
-# Load libraries
-
-snipR::pkgs(
-  tidyverse,
-  readxl,
-  huxtable
-)
+library(tidyverse)
+library(readxl)
+library(huxtable)
 
 # Load data ----
 load(file = "output/ch_multistressor/feeding.RData") # feeding data
@@ -86,7 +90,8 @@ sfg_ammo <- summarise(sfg_ammo_raw,
 ##
 
 # Feeding data ----
-
+# initial unit for feeding rate is mg/day/kg
+# multiplied by 
 sfg_feed_raw <-
   feeding_rate %>%
   mutate(feed = rate * 12.674) %>% # conversion: g/day/g to kJ/day/g
@@ -114,6 +119,7 @@ sfg_assi <- read_excel("input/ch_multistressor/assimilation.xlsx", skip = 2) %>%
     A_se = A_sd / sqrt(length(calc))
   ) %>%
   print()
+# assimilation efficiency is between 64 % and 68 %
 
 # Calculate scope for growth ----
 
@@ -134,7 +140,11 @@ sfg <- list(sfg_resp, sfg_ammo, sfg_feed, sfg_assi) %>%
   print()
 
 # Check summary ----
+# check equation coefficients:
+sfg %>%
+  select(A, Ce, Re, Ue)
 
+# check sfg values:
 sfg %>%
   select(sfg, sfg_sd, sfg_se) %>%
   print()
@@ -143,26 +153,37 @@ sfg %>%
 ## Plot sfg - but don't use this for the manuscript. Just do the table.
 sfgplot <- ggplot(sfg, aes(temp, sfg, fill = factor(ph))) +
   # aes(fill = as.factor(ph)) +
-  facet_wrap(.~ ph, strip.position = "bottom") +
+  # facet_wrap(.~ ph, strip.position = "bottom") +
   # Plots
-  geom_bar(stat = "identity", colour = "black", alpha = .25) +
-  geom_errorbar(aes(ymin = (sfg - sfg_se), ymax = (sfg + sfg_se)), width = 0) +
+  geom_bar(stat = "identity", colour = "black", position = "dodge") +
+  geom_errorbar(aes(ymin = (sfg - sfg_se), ymax = (sfg + sfg_se)), 
+    position=position_dodge(width=0.9),
+    width = 0) +
   # Theme
   cowplot::theme_cowplot() +
-  scale_fill_manual(values = c("white", "steelblue3")) +
+  scale_fill_manual(
+    name = "Treatment pH",
+    values = c("white", "steelblue3")
+  ) +
   # Axes (scale)
   theme(
     panel.border = element_rect(color = "black", fill = NA, size = 1),
     strip.background = element_rect(colour = "black", fill = NA)
   ) +
+  theme(
+    legend.position = c(.95, .95),
+    legend.justification = c("right", "top"),
+    legend.box.just = "right",
+    legend.margin = margin(6, 6, 6, 6)
+  ) +
   # make facet labels bold:
-  theme(strip.text = element_text(size = 13),
-  legend.position = "none") +
-  theme(strip.background = element_blank(), strip.placement = "outside") +
+  # theme(strip.text = element_text(size = 13),
+  # legend.position = "none") +
+  # theme(strip.background = element_blank(), strip.placement = "outside") +
   # Labels (title, x & y)
   # annotate("segment",x=-Inf,xend=-Inf,y=-Inf,yend=-Inf,color="black",lwd=1) +
   xlab("") +
-  ylab(expression("SfG ("*kJ~h^{-1}~kg^{-1}*")")) +
+  ylab(expression("SfG ("*kJ~g^{-1}~day^{-1}*")")) +
   # change x axis labels:
   # scale_x_discrete(labels = c("Ambient\n(20.1 °C)", "+2\n(22.1 °C)", "+3 \n(23.1°C)")) +
   # Legend
@@ -173,7 +194,15 @@ sfgplot
 ## save plot ----
 cowplot::save_plot(
   "figs/ch_multistressor/sfg_plot.png", sfgplot,
-  base_height = 8, base_width = 8
+  base_height = 6, base_width = 8
+)
+cowplot::save_plot(
+  "figs/ch_multistressor/sfg_plot.pdf", sfgplot,
+  base_height = 6, base_width = 8
+)
+cowplot::save_plot(
+  "figs/fms/fig5_sfg_plot.pdf", sfgplot,
+  base_height = 6, base_width = 8
 )
 
 save.image(file ="output/ch_multistressor/sfg.RData")

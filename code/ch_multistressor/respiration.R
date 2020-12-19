@@ -1,14 +1,9 @@
-# Pre-processing ----
-library(snipR) # my personal package
-snipR::refresh()
-
 # Load packages ----
-snipR::pkgs(
-  tidyverse,
-  readxl,
-  car,
-  emmeans
-)
+library(tidyverse)
+library(readxl)
+library(car)
+library(emmeans)
+
 
 # Load data ----
 
@@ -49,7 +44,6 @@ resp_anova <- lm(rate ~ Temperature * pH * Time, data = resp_df) %>%
 model <- lm(rate ~ Temperature*pH*Time - Temperature:pH:Time, data = resp_df)
 Anova(model, type = 3, contrasts=list(topic=contr.sum, sys=contr.sum))
 
-
 ## Run ANOVA on Temperature:Time
 lm(rate ~ Temperature*Time, data = resp_df) %>%
   Anova()
@@ -66,6 +60,8 @@ emmeans(model, ~ Temperature:pH:Time) %>%
 emmeans(model, pairwise ~ Temperature:pH:Time)
 emmresp <- emmeans(model, pairwise ~ Temperature:pH | Time)
 CLD(emmeans(model, pairwise ~ Temperature:pH | Time))
+pwpp(emmeans(model, ~ Temperature:pH | Time)) +
+  geom_vline(aes(xintercept = 0.05), size = .3, linetype = 2)
 
 pairs(emmeans(model, ~ Temperature*pH*Time), simple = "Time", combine = T)
 
@@ -142,17 +138,30 @@ anova_wk4 <-
   print()
 wk4_lm <- lm(rate ~ Temperature + pH, data = resp_w4) 
 emmeans(wk4_lm, pairwise~Temperature:pH)
+
 # Analyse week 12
 anova_wk12 <-
   lm(rate ~ Temperature * pH, data = resp_w12) %>%
   # Anova() %>%
   Anova(type = 3, contrasts=list(topic=contr.sum, sys=contr.sum)) %>%
   print()
-#Anova(model, type = 3, contrasts=list(topic=contr.sum, sys=contr.sum))
-wk12_lm <- lm(rate ~ Temperature + pH, data = resp_w12) 
+wk12_lm <- lm(rate ~ Temperature * pH, data = resp_w12) 
+Anova(wk12_lm)
+
 emmeans(wk12_lm, pairwise~Temperature:pH)
 emmeans(wk12_lm, pairwise~Temperature | pH)
 emmeans(wk12_lm, pairwise~pH | Temperature)
+
+
+# plot
+# pwpp(emmeans(wk4_lm,~Temperature:pH))
+# pwpp(emmeans(wk12_lm,~Temperature:pH))
+
+# use this ----
+library(cowplot)
+plot_grid(pwpp(emmeans(wk4_lm,~Temperature:pH)),
+          pwpp(emmeans(wk12_lm,~Temperature:pH)),
+          align = "hv", nrow = 2)
 
 library(agricolae)
 # HSD.test(wk12_lm, "Temperature", group = TRUE, console=TRUE)

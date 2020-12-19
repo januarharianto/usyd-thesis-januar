@@ -1,6 +1,6 @@
-# Pre-processing
-library(snipR)
-snipR::refresh()
+# # Pre-processing
+# library(snipR)
+# snipR::refresh()
 
 # Load packages
 library(tidyverse)
@@ -72,6 +72,7 @@ Anova(mxmodel)
 mxmodel <- lmer(rate ~ temp*ph - temp:ph + (1|tank) + (temp|tank) + (ph|tank), 
   data = fd) %>% 
   print()
+anova(mxmodel)
 Anova(mxmodel)
 ## Test for random effects:
 rand(mxmodel)

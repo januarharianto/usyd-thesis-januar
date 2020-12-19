@@ -1,20 +1,14 @@
 # Survival 2014 data. This is the survival data for urchins in the temp X pH
 # experiment in 2014. The data collection started in August and ended in
-# December before feeding experiments started.
-
-# Pre-processing
-library(snipR)
-refresh()
-
+# December.
 
 # Load required packages
-pkgs(
-  tidyverse,
-  readxl,
-  survival,
-  survminer,
-  texreg
-)
+library(tidyverse)
+library(readxl)
+library(survival)
+library(survminer)
+library(texreg)
+library(cowplot)
 
 
 # Load data ----
@@ -39,56 +33,97 @@ surv_summary(s)
 
 
 # Plot the graph (kaplan-meier)
-init_plot <- ggsurvplot(s, size = 2,
+init_plot <- ggsurvplot(s, 
+  size = .5,
   surv.scale = "percent",
+  # conf.int = TRUE,
   # pval = TRUE,
   # pval.coord = c(1,.4),
   ## censoring
+  censor = FALSE,
   censor.shape = "|",
   censor.size = 4,
   ## legend
-  # legend = "bottom",
-  legend.title = "",
-  legend.labs = c("0A", "0C", "2A", "2C", "3A", "3C"),
+  legend = "none",
+  # legend.title = "",
+  # legend.labs = c("0A", "0C", "2A", "2C", "3A", "3C"),
   ## x and y axis
   xscale = 7,
   xlab = "Weeks",
   ylab = "Survival",
   xlim = c(0,180),
-  break.time.by = 7
-  # surv.median.line = "h"
+  break.time.by = 7,
+  # surv.median.line = "hv"
   ## colours
-  # palette = "npg" # "npg", "aaas", "lancet", "jco", "ucscgb", "uchicago", "simpsons" and "rickandmorty"
+  linetype = c("strata"),
+  palette = "aaas" # "npg", "aaas", "lancet", "jco", "ucscgb", "uchicago", "simpsons" and "rickandmorty"
 )
 init_plot
 
 s1 <- 4 # label size
+xpos = 173
 # Add on to the plot!
 surv_plot_pre <- init_plot$plot +
-  ggplot2::annotate("text", x = 170, y = .933, label = "A  (0A)", size = s1) +
-  ggplot2::annotate("text", x = 170, y = .967, label = "A  (0C)", size = s1) +
-  ggplot2::annotate("text", x = 170, y = .833, label = "A  (2A)", size = s1) +
-  ggplot2::annotate("text", x = 170, y = .900, label = "A  (2C)", size = s1) +
-  ggplot2::annotate("text", x = 170, y = .459, label = "B  (3C)", size = s1) +
-  ggplot2::annotate("text", x = 170, y = .376, label = "B  (3A)", size = s1)
+  ggplot2::annotate("text", x = xpos, y = .967, label = "a (+0°C; pH 8.0)", size = s1) +
+  ggplot2::annotate("text", x = xpos, y = .933, label = "a (+0°C; pH 7.6)", size = s1) +
+  ggplot2::annotate("text", x = xpos, y = .900, label = "a (+2°C; pH 8.0)", size = s1) +
+  ggplot2::annotate("text", x = xpos, y = .833, label = "a (+2°C; pH 7.6)", size = s1) +
+  ggplot2::annotate("text", x = xpos, y = .459, label = "b (+3°C; pH 8.0)", size = s1) +
+  ggplot2::annotate("text", x = xpos, y = .376, label = "b (+3°C; pH 7.6)", size = s1) 
 surv_plot_pre
+
 surv_plot <- surv_plot_pre +
-  ggsci::scale_color_npg(
-    labels = c(
-      expression(bold("0A") ~ "(+0"~degree * C * ", pH 7.6)"),
-      expression(bold("0C") ~ "(+0"~degree * C * ", pH 8.0)"),
-      expression(bold("2A") ~ "(+2"~degree * C * ", pH 7.6)"),
-      expression(bold("2C") ~ "(+2"~degree * C * ", pH 8.0)"),
-      expression(bold("3A") ~ "(+3"~degree * C * ", pH 7.6)"),
-      expression(bold("3C") ~ "(+3"~degree * C * ", pH 8.0)")
-    )
-  ) +
+  # ggsci::scale_color_npg(
+  #   labels = c(
+  #     expression(bold("0A") ~ "(+0"~degree * C * ", pH 7.6)"),
+  #     expression(bold("0C") ~ "(+0"~degree * C * ", pH 8.0)"),
+  #     expression(bold("2A") ~ "(+2"~degree * C * ", pH 7.6)"),
+  #     expression(bold("2C") ~ "(+2"~degree * C * ", pH 8.0)"),
+  #     expression(bold("3A") ~ "(+3"~degree * C * ", pH 7.6)"),
+  #     expression(bold("3C") ~ "(+3"~degree * C * ", pH 8.0)")
+  #   )
+  # ) +
   geom_hline(yintercept = .5, linetype = 1, size =.2) +
   geom_vline(xintercept = 28, linetype = 3, size = .2) +
   geom_vline(xintercept = 84, linetype = 3, size = .2) +
-  cowplot::theme_cowplot() +
-  theme(legend.position = "bottom")
+  scale_linetype_manual(values = rep(1,6)) +
+  # scale_color_manual(values = linecolours) +
+  scale_y_continuous(
+    # don't expand y scale at the lower end
+    expand = expansion(mult = c(0, 0.05))
+  ) +
+  # theme_minimal_hgrid() +
+  theme_half_open() +
+  theme(legend.position= "none") +
+  geom_blank()
 surv_plot
+
+
+surv_plot2 <- surv_plot_pre +
+  # ggsci::scale_color_npg(
+  #   labels = c(
+  #     expression(bold("0A") ~ "(+0"~degree * C * ", pH 7.6)"),
+  #     expression(bold("0C") ~ "(+0"~degree * C * ", pH 8.0)"),
+  #     expression(bold("2A") ~ "(+2"~degree * C * ", pH 7.6)"),
+  #     expression(bold("2C") ~ "(+2"~degree * C * ", pH 8.0)"),
+  #     expression(bold("3A") ~ "(+3"~degree * C * ", pH 7.6)"),
+  #     expression(bold("3C") ~ "(+3"~degree * C * ", pH 8.0)")
+  #   )
+  # ) +
+  geom_hline(yintercept = .5, linetype = 1, size =.2) +
+  geom_vline(xintercept = 28, linetype = 3, size = .2) +
+  geom_vline(xintercept = 84, linetype = 3, size = .2) +
+  scale_linetype_manual(values = c(1,1,5,5,4,4)) +
+  scale_color_manual(values = rep(c("black", "steelblue2"), 3)) +
+  scale_y_continuous(
+    # don't expand y scale at the lower end
+    expand = expansion(mult = c(0, 0.05))
+  ) +
+  # theme_minimal_hgrid() +
+  theme_half_open() +
+  theme(legend.position= "none") +
+  geom_blank()
+surv_plot2
 
 # Analyse data ----
 ## We hav the model "s" from above
@@ -149,9 +184,27 @@ cox_assumption$table[3,3] # this is the overall p value
 ggcoxzph(cox.zph(cox))
 
 # Export ----
+# cowplot::save_plot(
+#   "figs/ch_multistressor/surv_plot.tiff", surv_plot,
+#   base_height = 8, base_width = 8
+# )
+# cowplot::save_plot(
+#   "figs/ch_multistressor/surv_plot.png", surv_plot,
+#   base_height = 8, base_width = 8
+# )
 cowplot::save_plot(
-  "figs/ch_multistressor/surv_plot.png", surv_plot,
-  base_height = 8, base_width = 8
+  "figs/fms/fig2_surv_plot.pdf", surv_plot,
+  base_height = 6, base_width = 8
 )
+
+cowplot::save_plot(
+  "figs/fms/fig2_surv_plotv2.pdf", surv_plot2,
+  base_height = 6, base_width = 8
+)
+
 save.image(file = "output/ch_multistressor/survival.RData")
+# 
+# cowplot::save_plot(
+#   "figs/ch_multistressor/surv_plot.tiff", surv_plot
+# )
 

@@ -96,6 +96,7 @@ summary(model_lmer)
 Anova(model_lmer, type = 3, contrasts=list(topic=contr.sum, sys=contr.sum)) 
 ## Quick anova shows marginal 3-way interaction (ns, 0.09)
 
+
 ## Refine the mixed model to remove 3-way interactions:
 model_lmer <- lmer(rate ~ temp*ph*time - temp:ph:time + (1|tank) + (temp|tank) + (ph|tank), 
   data = rd) %>%
@@ -131,6 +132,6 @@ Anova(model_nlme, type = 3, contrasts=list(topic=contr.sum, sys=contr.sum))
 model_fx <- gls(rate ~ temp*ph*time - temp:ph:time, data = rd) %>% print()
 ## Compare the 2 models using quick anova:
 anova(model_nlme, model_fx)
-## Same p-value as lme4 method! STEVE HALP
+## Same p-value as lme4 method! 
 
 

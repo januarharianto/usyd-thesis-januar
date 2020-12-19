@@ -3,17 +3,12 @@
 # Weekly temperature averaged from 2009, 2010, 2013 and 2014. Data for 2011-12
 # are not available.
 
-# Pre-processing ----
-library(snipR) # my personal package
-snipR::refresh()
-
 # Load packages ----
-snipR::pkgs(
-  tidyverse,
-  readxl,
-  lubridate,
-  scales
-)
+
+library(tidyverse)
+library(readxl)
+library(lubridate)
+library(scales)
 
 # Load data ----
 
@@ -145,5 +140,11 @@ cowplot::save_plot(
   "figs/ch_multistressor/harbour.png", harbour_plot,
   base_height = 8, base_width = 8
 )
+
+cowplot::save_plot(
+  "figs/fms/suppfig1_harbour.pdf", harbour_plot,
+  base_height = 8, base_width = 8
+)
+
 
 save.image("output/ch_multistressor/harbourtemps.RData")

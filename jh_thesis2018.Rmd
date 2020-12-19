@@ -1,0 +1,164 @@
+--- 
+author: "Januar Harianto"
+site: bookdown::bookdown_site
+documentclass: memoir
+classoption: oneside, 11pt, a4paper
+bibliography: [packages.bib, bibliography.bib]
+# biblio-style: apalike
+link-citations: yes
+always_allow_html: yes
+# Fonts (these are all paid fonts):
+mainfont: Minion Pro
+sansfont: Myriad Pro
+mathfont: Minion Pro
+---
+
+# biblio-style: apalike
+
+Placeholder
+
+
+## The consequences of climate change
+## Predicting resilience to environmental stress through investigation of physiology
+## Metabolic rate -- the most fundamental bioindicator
+## Survivorship
+## Key anthropogenic drivers of marine physiological function
+### Increased temperature
+### Increased carbon dioxide concentration, *p*CO~2~
+## On the complexities of climate change manipulation experiments
+## Study animal
+### Effects of warming and acidification on H. *erythrogramma*
+## Thesis aims and outline
+
+<!--chapter:end:index.Rmd-->
+
+
+# The effect of warming on mortality, metabolic rate, heat-shock protein response and gonad growth in thermally acclimated sea urchins (*Heliocidaris erythrogramma*) {#chapter2}
+
+Placeholder
+
+
+## Abstract {-}
+## Introduction
+## Materials and methods
+### Collection
+### Habitat temperature profile
+### Acclimation setup and maintenance
+### Survival
+### Metabolic rate
+### Gonad index and HSP70 expression
+### Gonad Histology
+### Data analyses
+## Results
+### Habitat temperature profile
+### Survival
+### Metabolic Rate
+### HSP70 expression
+### Gonad index
+## Discussion
+
+<!--chapter:end:chapters/01-warming.Rmd-->
+
+
+# Long-term study of the multistressor impacts of ocean warming and acidification on the physiology of the sea urchin, *Heliocidaris erythrogramma* {#chapter3}
+
+Placeholder
+
+
+## Abstract{-}
+## Introduction
+## Methods 
+### Collection
+### Experimental setup
+### Gradual adjustment to treatment conditions and acclimation
+### Monitoring and survival
+### Maintenance
+### Metabolic rate
+### Feeding rate and assimilation efficiency
+### Ammonia excretion
+### Scope for growth (SfG) parameters
+### Statistical analyses
+## Results
+### Survival
+### Metabolic rate
+### Feeding rate 
+### Ammonia excretion rate
+### Scope for growth
+### Spawning activity
+## Discussion
+### Effect on survival
+### Effect on metabolism
+### Long-term multistressor impacts
+### Conclusions
+
+<!--chapter:end:chapters/02-multistressor.Rmd-->
+
+
+# Offspring metabolic performance to ocean warming and acidification are shaped by parental environment in the sea urchin, *Heliocidaris erythrogramma* {#chapter4}
+
+Placeholder
+
+
+## Abstract {-}
+## Introduction
+## Methods
+### Collection of adults
+### Experimental design
+### Adult treatment setup
+### Larval kreisel setup
+### Spawning and incubation
+### Metabolic rate and growth
+### Data analyses
+## Results
+### Metabolic Rate
+### Growth
+## Discussion
+
+<!--chapter:end:chapters/03-larval.Rmd-->
+
+
+# respR -- an R package for the analysis of respirometry data {#chapter5}
+
+Placeholder
+
+
+## Abstract {-}
+## Introduction
+## Package overview
+## Data import and exploration
+### Data analysis
+#### Calculating background rate
+#### Processing respirometry data
+#### Estimating rate from flow-through respirometry
+#### Estimating critical oxygen tension, P$_{crit}$
+## Correcting, converting and scaling data
+### Corrections for background respiration
+### Rate conversions
+## Assessing performance in detecting linear data
+### Generating simulated data for tests
+#### "Default" data
+#### "Corrupted" data
+#### "Segmented" data
+### Test conditions
+## Results
+### "Default" data
+### "Corrupted" data
+### "Segmented" data
+## Concluding remarks and future improvements
+
+<!--chapter:end:chapters/04-application.Rmd-->
+
+
+# General discussion
+
+Placeholder
+
+
+## Metabolic rate is a key physiological response variable
+## Timing and magnitude of stress events can influence the outcome of stressor experiments
+## Offspring responses are influenced by parental environments
+## Modern analytical techniques to improve the analysis respirometry data
+## Concluding remarks and future directions
+
+<!--chapter:end:chapters/05-conclusion.Rmd-->
+

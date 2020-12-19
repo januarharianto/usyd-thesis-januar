@@ -3,16 +3,10 @@
 ## Description
 
 # Pre-processing ----
-library(snipR) # my personal package
-snipR::refresh()
-
-# Load packages ----
-snipR::pkgs(
-  tidyverse,
-  readxl,
-  scales,
-  cowplot
-)
+library(tidyverse)
+library(readxl)
+library(scales)
+library(cowplot)
 
 # Load data ----
 
@@ -21,6 +15,17 @@ dt <- read_excel("input/ch_multistressor/acclimation.xlsx", 2) %>%
   mutate_at(3:8, funs(as.numeric)) %>%
   print()
 
+library(lubridate)
+dt %>%
+  mutate(mon = month(date)) %>%
+  group_by(mon) %>%
+  drop_na() %>%
+  summarise(c1 = mean(c1),
+            c2 = mean(c2),
+            c3 = mean(c3),
+            a1 = mean(a1),
+            a2 = mean(a2), 
+            a3 = mean(a3))
 # Plotting ----
 
 phacclim_p <- ggplot(dt) +
@@ -100,6 +105,11 @@ phacclim_p
 ## Create AB plot
 
 load("output/ch_multistressor/temp_acclim.RData")
+
+tacp <- 
+  tempacclim_p +
+  theme_cowplot()
+
 acclim <- plot_grid(tempacclim_p, phacclim_p, ncol = 1, labels = "AUTO")
 acclim
 

@@ -44,11 +44,15 @@ dtb <-
 
 dta %>%
   group_by(f0_ph) %>%
-  summarise(average = mean(mean))
+  summarise(average = mean(mean),
+    sd = sd(mean), 
+    se = sd/sqrt(n())) 
 
 dtb %>%
   group_by(f0_ph) %>%
-  summarise(average = mean(mean))
+  summarise(average = mean(mean), 
+    sd = sd(mean),
+    se = sd/sqrt(n()))
 
 # Data plotting -----
 

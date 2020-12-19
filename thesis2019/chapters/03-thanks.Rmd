@@ -22,7 +22,7 @@ Additional thanks to:
 
 Special thanks to **Dr. Kevin Keay** and **Dr. Frank Lovicu**, who helped with various PhD matters and funding. Thanks to the Professor NGW \& Mrs Ann Macintosh Memorial Scholarship for financial support.
 
-Last but not least, I would like to thank my wife, **Cynthia**, and my parents, **Harianto** and **Lian Hiong** for their relentless support throughout these years. I dedicate this thesis to my family... including our newest addition, my beautiful daughter, **Freya Harianto**. Cockatoo!
+Last but not least, I would like to thank my wife, **Cynthia**, and my parents, **Harianto** and **Lian Hiong** for their relentless support throughout these years. I dedicate this thesis to my family... including our newest addition, my beautiful daughter, **Freya Harianto**. 
 
 \cleardoublepage
 

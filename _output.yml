@@ -1,56 +1,22 @@
 #bookdown::gitbook:
-#  css: style.css
-#  pandoc_args: [ "--csl", "marine-biology.csl"]
+#  css: templates/style.css
 #  config:
 #    toc:
-#      collapse: subsection
-#      scroll_highlight: yes
-#      before: null
-#      after: null
-#    toolbar:
-#      position: fixed
-#   edit : null
-#    download: ["pdf"]
-#    search: yes
-#    fontsettings:
-#      theme: white
-#      family: sans
-#      size: 2
-#    sharing:
-#      facebook: no
-#      twitter: no
-#      google: no
-#      linkedin: no
-#      weibo: no
-#      instapper: no
-#      vk: no
-#      all: no
+#      before: |
+#        <li><a href="./">A Minimal Book Example</a></li>
+#      after: |
+#        <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+#    download: ["pdf", "epub"]
+
 
 
 bookdown::pdf_book:
+  template: templates/style.tex
   includes:
-    in_header:
-      - template.tex
-      - chapters/000_preamble.tex
-    before_body:
-      - chapters/001_frontpage.tex
-      - chapters/002_statement.tex
-      - chapters/003_abstract.tex
-      - chapters/004_acknowledgements.tex
-      - chapters/005_preface.tex
+    in_header: preamble.tex
   latex_engine: xelatex
   citation_package: none
-  pandoc_args: [ "--csl", "marine-biology.csl"]
+  pandoc_args: [ "--csl", "chapters/marine-biology.csl"]
   keep_tex: yes
-
-
-
-#bookdown::epub_book: default
-
-
-#bookdown::word_document2:
-#  fig_caption: true
-#  reference_docx: template.docx
-#  pandoc_args: [ "--csl", "marine-biology.csl"]
 
 

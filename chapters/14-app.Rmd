@@ -1,0 +1,356 @@
+# `respR` -- an R package for the analysis of respirometry data {#package}
+\chaptermark{respR -- an R package for respirometry}
+
+
+
+<!-- {\small -->
+<!-- This chapter is formatted for Methods in Ecology and Evolution. It is under review as "Harianto J, Carey N and Byrne M (2018). respR -- an R package for the analysis of respirometry data." The R package, \texttt{respR}, has been published on GitHub as an open-source project. -->
+<!-- } -->
+
+
+
+## Abstract {-}
+
+1. Respirometry is a ubiquitous practice in experimental biology, but there is a lack of standard practices when analysing the resulting data, limiting transparency and reproducibility. As respirometry datasets become increasingly large and analytical approaches more complex, manipulating the data remains a challenge and often intractable with existing tools.
+2. Here we describe the \texttt{respR} R package, a collection of functions that implement a workflow-based approach to automate the analysis and visualisation of respirometry data. The package can be used for closed, intermittent flow, flow-through and open-tank respirometry and uses well-defined sets of rules to reliably and rapidly generate reproducible results.
+3. We demonstrate how \texttt{respR} uses novel computing methods such as rolling regressions and kernel density estimates to reliably detect maximum, minimum and most linear sections of the data, and critical oxygen tension, P\textsubscript{crit}.
+4. Although designed specifically with aquatic respirometry in mind, the object-oriented approach of the package and the unit-less nature of its analytical functions mean that parts of the package can easily be used to estimate linear relationships from a range of applications in many research disciplines.
+
+
+
+##   Introduction
+
+Metabolic rate is a fundamental trait associated with virtually all biological functions and is key in predicting patterns in ecology and conservation biology, from populations [@Seibel2007; @Barneche2014] to ecosystems [@Brown2004].
+It has been widely investigated in studies of the effects of external stressors on organisms and is increasingly used to study resilience in climate change-related studies where warming is expected to drive increased metabolism in ectotherms [e.g. @Portner2002; @Carey2016; @Delorme2016].
+It is also is by far the most common metric used to assess physiological performance in whole organisms, tissues and cells [@White2013].
+While there are other methods such as monitoring heart or ventilatory rates, metabolic rate is typically quantified using respirometry, which measures the rate of oxygen uptake over time [@Lighton2008].
+
+Depending on the experiment, different metabolic rate parameters may be of interest to researchers.
+These include maximum metabolic rate (MMR, or \(\dot{M}\mathrm{O_{2,max}}\)), rates under high activity or exhaustive exercise, and minimal metabolic rate (\(\dot{M}\mathrm{O_{2,min}}\)), which may be termed standard (SMR), basal (BMR), or resting metabolic rate, and typically represents the minimum metabolic cost of maintaining biological functioning [@White2013; @Chabot2016].
+Routine metabolic rate (RMR) is similar to \(\dot{M}\mathrm{O_{2,min}}\), but takes into account that in some organisms energy is expended on small, spontaneous movements to maintain posture or position [@Rogers2016].
+Another metric of interest is the critical oxygen tension, which represents the lowest level of oxygen at which aerobic metabolism is independent of the ambient partial pressure of oxygen [P~crit~; @Yeager1989; @Hochachka2002].
+
+Respirometry studies are increasingly outputting large, high-resolution data conducted over long periods [e.g.~20 h; @Norin2012].
+In many cases, processing the data involves an ad hoc selection of data points with poorly reported criteria, and subsequent manual processing of the data subset(s) using a spreadsheet program (e.g.~Microsoft Excel) or an integrated development environment (IDE, e.g.~R or Matlab).
+These approaches can be tedious and time-consuming especially when spreadsheet programs struggle with the vast datasets that are generated, while IDEs require a degree of expertise to use and have substantial learning curves.
+Dedicated software are also available to perform metabolic rate analyses, but many have costly licensing requirements (e.g.~AutoResp by Loligo Systems), complicating or preventing their use on multiple machines, and are proprietary and closed-source, hindering scientific reproducibility and transparency.
+
+A number of open-source R software packages have recently become available which are designed for, or are suitable to analyse data from respirometry.
+The \texttt{respirometry} package (\url{https://CRAN.R-project.org/package=respirometry}) contains a comprehensive collection of tools to explore and evaluate experimental parameters in aquatic respirometry and is useful for the design and diagnosis of experimental setups.
+The \texttt{rMR} package (\url{https://CRAN.R-project.org/package=rMR}) performs interval-based metabolic rate calculations and has a method to analyse P\textsubscript{crit} using the "broken-stick" regression method (Yeager \& Ultsch, 1989).
+\texttt{FishResp} (\url{https://CRAN.R-project.org/package=FishResp}) is focused on the analysis of intermittent respirometry and performs background respiration corrections.
+The package \texttt{LoLinR} [@Olito2017], while not specifically coded for respirometry, provides a statistically robust method of detecting a "best-fit" regression, and performs well at identifying truly linear subsets of a data series.
+
+Here we describe \texttt{respR}, an open-source R package designed to provide an efficient and reproducible workflow for the analysis of respirometry data (Table \ref{funlist}).
+The package contains utilities to: (1) analyse closed, intermittent, flow-through and open-tank respirometry data [see @Lighton2008; @Svendsen2016], (2) determine volume and mass specific oxygen uptake rates, (3) automatically detect maximal and minimal rates, P\textsubscript{crit}, and (4) detect the most linear sections of data using novel rolling regression and kernel density estimation techniques.
+In addition, the package contains "housekeeping" functions for data import and export as supplementary material at all stages of respirometry analysis, including saving raw data, subsetting criteria, background corrections, units of measure, and resulting metabolic rates.
+This streamlines the reporting of analytical methods and allows reviewers or other investigators to fully reproduce or scrutinise the results.
+Additional functions useful in processing respirometry data are available, and are described in more detail in our online documentation (\url{https://januarharianto.github.io/respR/}).
+A comprehensive series of vignettes, which explain all package functions, discuss best practices and alternative methods are also available (Table \ref{vignettelist}).
+
+\section{Package overview}\label{package-overview}
+
+The \texttt{respR} package streamlines the analysis of respirometry data by partitioning the data processing workflow into several independent actions: (1) initially, data are imported, checked for common errors, plotted for visual inspection and exported as an object; (2) the object is then analysed to estimate the desired rate parameter; (3) diagnostic plots are automatically generated and the data can be further explored using the generic S3 \texttt{print()}, \texttt{plot()}, and \texttt{summary()} commands to verify the results; (4) adjustments to the data from background respiration are applied; (5) volume or mass-specific rate conversions, specific to the respiratory chamber and specimen(s), are calculated where necessary (Fig. \ref{diagram}).
+By design, each step of the workflow requires minimal manual manipulation of the data, and the user can pass the output of each function to the next.
+This object-oriented approach makes \texttt{respR} easy to use, even for novice users of R, and allows R programmers to extend the functionality of the package easily.
+Note, we use \(\dot{O} \mathrm{_2}\) in the text to represent the unit-less rate of O\textsubscript{2} use with regard to the time unit, and to distinguish it from other commonly reported metrics (e.g. \(\dot{M}\mathrm{O_2}\), \(\dot{V}\mathrm{O_2}\)).
+Installation of \texttt{respR} can be performed directly via the R console using \texttt{devtools}:
+
+<!-- \begin{lstlisting} -->
+<!-- # install.packages("devtools") # uncomment to run -->
+<!-- devtools::install_github("januarharianto/respR") # install -->
+<!-- library(respR) # load -->
+<!-- \end{lstlisting} -->
+
+
+```{r, echo=TRUE, eval=FALSE}
+# install.packages("devtools") # uncomment to run
+devtools::install_github("januarharianto/respR") # install
+library(respR) # load package
+```
+
+
+To illustrate the main features of the package, five example datasets, (\texttt{sardine.rd}, \texttt{urchin.rd}, \texttt{intermittent.rd}, \texttt{squid.rd} and \texttt{zeb\_intermittent.rd}) are distributed with  \texttt{respR}.
+
+
+
+\section{Data import and exploration}\label{data-import-and-exploration}
+
+Data should be formatted correctly before use in \texttt{respR}. The function \texttt{inspect()} extracts a two-column data frame from a multi-column dataset and performs error checks while plotting the data for quick data visualisation.
+Time data, being a continuous variable, should be sequential, without duplicates.
+Ideally, sampling frequency will be monotonic, but in many instances this may not be the case, such as experiments with irregular sampling intervals, or because machine drift and/or data dropouts frequently occur during regular sampling.
+The information obtained from the checks allow us to make informed decisions on how to best analyse the data, and fix any cryptic errors (e.g.~non-numeric data) easily.
+In particular, knowing whether a timeseries is irregular, or not, will allow us to decide whether to use time-based data extraction methods to obtain data segments of predetermined time intervals.
+
+Using \texttt{inspect()} is optional -- the main functions in our package will readily work with data frames that were not processed by the function.
+Running \texttt{inspect()} is an exploratory step that flags potential issues before analysis. Error check results are summarised in the R console and all tests are saved in the output object with the locations (i.e.~row numbers), if any, of the errors:
+
+<!-- \begin{lstlisting} -->
+<!-- inspect(squid.rd, plot = F) -->
+
+<!-- #> No issues detected while inspecting data frame. -->
+<!-- #>  -->
+<!-- #> # inspect # ----------------------------- -->
+<!-- #>               Time   o2 -->
+<!-- #> NA/NAN        pass pass -->
+<!-- #> sequential    pass    - -->
+<!-- #> duplicated    pass    - -->
+<!-- #> evenly-spaced pass    - -->
+<!-- \end{lstlisting} -->
+
+```{r, echo=TRUE, eval=FALSE}
+inspect(squid.rd, plot = FALSE)
+#> # inspect # -----------------------------
+#>               Time   o2
+#> NA/NAN        pass pass
+#> sequential    pass    -
+#> duplicated    pass    -
+#> evenly-spaced pass    -
+
+```
+
+
+\section{Data analysis}\label{data-analysis}
+
+
+
+\subsection{Calculating background rate}\label{calculating-background-rate}
+
+Background oxygen consumption rate is often measured to account for the contribution of microbial respiration, and applied as a correction to experimental rates [@Rogers2016].
+Background rates typically account for a small percentage of experimental rates, and multiple ``blank'' experiments are usually conducted and the rates averaged to obtain a more accurate estimate of the correction [e.g. @Daoud2007; @Carey2014a].
+The function \texttt{calc\_rate.bg()} uses simple linear regression to process multiple background rate measurements simultaneously.
+Data segments can be truncated before analysis by time period or row numbers. The results are stored as an object for later use.
+
+
+\subsection{Processing respirometry data}\label{processing-respirometry-data}
+
+Typically, the analysis of respirometry data requires the selection one or more linear sections of the data for more accurate calculations of \(\dot{O} \mathrm{_2}\) [e.g. @Gordon1989; @Carey2016; @Chu2017].
+The function \texttt{calc\_rate()} can manually extract and process data subset from respirometry data. Data subsets can be selected by (1) time period, (2) row numbers, (3) O\textsubscript{2} decrease or (4) proportion, which should accommodate most, if not all, manual data selection requirements and allow for consistent reporting of methods and results.
+Rates are determined using linear regression.
+
+For more complex respirometry parameters, the function \texttt{auto\_rate()} uses a novel method of combining rolling regression and kernel density estimate algorithms to detect patterns in respirometry data.
+First, \texttt{auto\_rate()} always performs a rolling linear regression on the data before additional methods are applied.
+The rolling regression runs all possible ordinary least-squares (OLS) linear regressions \((y=\beta_0+\beta_1X+\epsilon)\) of a fixed sample width across the entire data series, and is expressed as: \[y_t(n)=X_t(n)\beta(n)+\epsilon_t(n), t=n,...,T\] where \(n\) is the window of width \(n < T\), \(T\) is the total length of the dataset, \(y_t(n)\) is the vector of observations (e.g.~oxygen concentration), \(X_t(n)\) is the matrix of explanatory variables, \(\beta (n)\) is a vector of regression paramters and \(\epsilon_t(n)\) is a vector of error terms. Thus, a total of \((T - n) + 1\) number of overlapping regressions are fitted.
+Here, we can obtain maximum and minimum rate values of width \(n\) by ranking the regressions, and if a periodic, interval-based regression is required, the function automatically selects regression metrics for non-overlapping sections of the data (Fig. \ref{rollvsint}).
+
+The \texttt{auto\_rate()} function can also automatically select the most stable (i.e. most linear) sections of noisy data by applying additional analytical techniques.
+First, we take advantage of the key assumption that linear sections of a data series are reflected by stable parameters across the rolling estimates, a property that is often applied in financial statistics to evaluate model stability and make forward predictions on time-series data [@Zivot2006].
+We use kernel density estimation (KDE) techniques, often applied in various inference procedures such as machine learning, pattern recognition and computer vision, to automatically aggregate stable (i.e. linear) segments as they naturally form one or more local maximums (``modes'') in the probability density estimate.
+
+KDE requires no assumption that the data is from a parametric family, and learns the shape of the density automatically without supervision.
+KDE can be expressed as: \[\hat{f}(x) = \frac{1}{nh^d}\sum_{i = 1}^{n} K \left(\frac{x - X_i}{h} \right)\] where \(f\) is the density function from an unknown distribution \(P\) for \(X_1,...,X_n\), \(K\) is the kernel function and \(h\) is the optimal smoothing bandwidth. The smoothing bandwidth is computed using the solve-the-equation plug-in method [@Sheather1991; @Jones1996] which works well with multimodal or non-normal densities [@Raykar2006].
+
+We then use \(h\) to select all values in the rolling regression output that match the range of values around each mode (\(\theta_n\)) of the KDE (i.e. \(\theta_n \pm h\)). These rolling estimates are grouped and ranked by size, and the upper and lower bounds of the data windows they represent are used to re-select linear segments from the original data series. The rolling estimates are then discarded while the ranked data segments are analysed using linear regression. Summary diagnostics and visual plots provide supporting information on the technique and the validity of the results (Figs. \ref{autorate1} \& \ref{autorate2}).
+The performance of this particular method is further discussed in Appendix C.
+
+
+\subsection{Estimating rate from flow-through respirometry}
+
+The function \texttt{calc\_rate.ft()} is used to specifically analyse flow-through respirometry data, and is similar to \texttt{calc\_rate()} in functionality. However it accepts additional inputs of incurrent and excurrent oxygen concentration, and flow rate, based on the equation: \[\dot O_2 = (C_iO_2 - C_eO_2)FR\] where \(\dot{O} \mathrm{_2}\) is the rate of O\textsubscript{2} uptake over time, \(C_iO_2\) and \(C_eO_2\) are the incurrent and excurrent O\textsubscript{2} concentrations, and \(FR\) is the flow rate of water through the system [@Lighton2008].
+
+
+\subsection{Estimating critical oxygen tension, P\textsubscript{crit}}
+
+We provide two methods of estimating P\textsubscript{crit}. The first is a "broken-stick" regression (BSR) approach, adopted from @Yeager1989 in which two segments of the data are iteratively fitted and the intersection with the smallest sum of the residual sum of squares between the two linear models is the estimated critical point.
+The second method is a wrapper for the segmented, or non-linear "broken-line" regression approach, presented by @Muggeo2003 and available as part of the \texttt{segmented} R package [@Muggeo2008], which estimates the critical point by iteratively fitting two intersecting models on the data and selecting the point that minimises the ``gap'' between the two fitted lines.
+Both methods are well-used in the literature [@Labra2016; @Chu2017; @Hansen2017; @Svendsen2016; @Regan2017].
+Note that the accuracy of the BSR method to describe non-linear traits is increasingly being debated [@Marshall2013] and is discussed in greater detail in our vignettes (see Supplementary Material).
+
+As P\textsubscript{crit} is the break-point in the relationship between ambient dissolved oxygen (O\textsubscript{2}) and rate of oxygen uptake (\(\dot{O} \mathrm{_2}\)), the user has two options to input data.
+With an \(O_2 \sim\) timeseries dataset, the function will automatically perform both a rolling mean and a rolling regression of O\textsubscript{2} data over time to produce the required \(\bar O_2 \sim \dot O_2\) dataset (Fig. \ref{fpcrit}).
+This computationally intensive, but fast, method is unique to \texttt{respR} as most other methods use non-overlapping intervals to characterise their data, but rolling metrics are more sensitive to P\textsubscript{crit} analysis due to their high resolution.
+Alternatively, the user can input previously-determined rate \(\sim \dot{O}\)\textsubscript{2} data and the function will determine P\textsubscript{crit} using the input data directly.
+
+
+
+\section{Correcting, converting and scaling data}
+
+
+\subsection{Corrections for background respiration}
+
+The function \texttt{adjust.rate()} can be used to correct \(\dot{O} \mathrm{_2}\) estimates for background respiration.
+As the oxygen consumption units are not mass-specific at the point of correction, the function adjusts \(\dot{O} \mathrm{_2}\) directly without bias using the equation: \[\dot O_{2(correction)} = \dot O_2 - (\phi_d + \dot O_{2(bg)})\] where \(\phi_d\) is the air-water oxygen flux as determined by Fick's Law [@Leclercq1999] and \(\dot O_{2(bg)}\) is background respiration.
+
+
+\subsection{Rate conversions}\label{rate-conversions}
+
+Because \texttt{respR} does not make any underlying assumptions on the units used to calculate metabolic rate, we provide two functions, \texttt{convert\_DO()} and \texttt{convert\_rate()}, to transform \(\dot{O} \mathrm{_2}\) into volume-adjusted or mass-specific units.
+These functions are comprehensive and can currently convert between 168 combinations of units and has support for changes in temperature, salinity and pressure (Table \ref{convertlist}).
+This unique approach has the advantage of allowing rate calculations for data that may not be entirely supported by the \texttt{respR} workflow.
+For example, measurements of respiration can be scaled to surface area [e.g. diatoms \& coral; @Iversen2013; @Naumann2014], volume [e.g. copepod eggs, @Hammervold2015], or density [e.g. sea urchin larvae, @Stumpp2011], all of which are not yet supported in \texttt{respR}'s conversion functions.
+Thus any respirometry data may still be analysed without any restriction until conversion is required, in which users at this point perform those conversions manually.
+
+The function \texttt{convert\_DO()} is used to convert units of oxygen concentration only (e.g. \(\mathrm{mg/L}\) or \%; Table 2).
+For ease of use, we implemented a simple fuzzy string-matching algorithm to match relevant units (e.g. "\(\mathrm{mg/L}\)", "\(\mathrm{mg/l}\)", "\(\mathrm{mg\ L^{-1}}\)" and "\(\mathrm{mg\ l^{-1}}\)" are identified as the same units).
+The function \texttt{convert\_rate()} is conceptually similar to \texttt{convert\_DO()}, but it focuses on volumetric and mass-specific conversions (e.g. \(\mathrm{mg\ h^{-1}\ kg^{-1}}\)).
+
+\section{Concluding remarks and future improvements}
+
+The package \texttt{respR} implements a number of methods not available in any other R package or software.
+These include the use of rolling regression techniques to estimate \(\dot{M}\mathrm{O_{2,max}}\), \(\dot{M}\mathrm{O_{2,min}}\), and P\textsubscript{crit}, the use of kernel density estimation techniques to detect and rank linear segments of the data, support for unevenly-spaced time data, and the ability to extract and analyse data precisely by time, row, or O\textsubscript{2} concentration.
+It is important to note, however, that while \texttt{respR} contains automated methods to assist in processing difficult data, no amount of data manupilation can fix poor data.
+Users should still ensure that their data has been collected using acceptable methods [e.g. closed respirometry setups should always be equipped with mixing devices, see @Clark2013] before performing analyses of any kind.
+Nevertheless, \texttt{respR} adheres to well-defined rules to obtain rates of interest, is extensively documented online, and its methods and results are transparent and fully reproducible.
+The \texttt{respR} package allows for more effective and less time-consuming handling and processing of the broad datasets that are increasingly common in respirometry research.
+
+
+
+<!-- \section{Acknowledgements} -->
+
+<!-- This work was supported by an NSW Environmental Trust grant (MB), and Endeavour Postdoctoral Fellowship (NC) and a Professor NGW \& Mrs Ann Macintosh Memorial Scholarship from the University of Sydney (JH). -->
+<!-- Some experimental data were obtained from experiments performed at the  Sydney Institute of Marine Science (SIMS). -->
+<!-- This manuscript is SIMS  contribution number 240. We thank our reviewers, whose comments have  greatly improved the manuscript. -->
+
+
+<!-- \section{Data Accessibility} -->
+
+<!-- The \texttt{respR} R package is open-source and available on GitHub (\url{https://github.com/januarharianto/respR}). -->
+<!-- Package vignettes are also open-source, accessible at \url{https://januarharianto.github.io/respR/index.html}. -->
+<!-- Installing and loading \texttt{respR} will automatically load all example  data used in this paper. -->
+<!-- Alternatively, the data may be downloaded manually from GitHub at \url{https://github.com/januarharianto/respR/tree/master/data}. -->
+<!-- Since the package is updated regularly, all code, data and documentation used to reproduce this manuscript have been archived at \url{http://doi.org/10.5281/zenodo.2548602} as \texttt{respR} v.1.5.1. -->
+
+<!-- \section{Author contributions}\label{author-contributions} -->
+
+<!-- JH, NC and MB conceived the ideas and designed methodology; JH wrote the code, NC edited code and analysed the example data; JH, NC and  MB led the writing of the manuscript. -->
+<!-- All authors contributed critically  to the drafts and gave final approval for publication. -->
+
+
+<!-- TABLE 1 ============================================================== -->
+
+\begin{table}[ht]
+\centering
+\caption{Main functions available in \texttt{respR}.}
+\label{funlist}
+\begin{tabular}[t]{p{0.3\linewidth}p{0.7\linewidth}}
+\toprule
+Treatment A&Treatment B\\
+\midrule
+\texttt{import\_data()} & Automatically import and format raw data files from commonly-used respirometry devices. \\
+\texttt{inspect()} & Checks data for errors, extracts a two-column dataframe for analysis, and plots the data for quick visualisation. \\
+\texttt{calc\_rate.bg()} & Calculates background oxygen uptake rate. \\
+\texttt{calc\_rate()} & Calculates oxygen uptake rate from precise segment(s) of the data. \\
+\texttt{calc\_rate.ft()} & Calculates oxygen uptake rate in flowthrough experiments. \\
+\texttt{auto\_rate()} & Calculates ``max'', ``min'', ``interval'' or ``best-fit'' rates. \\
+\texttt{adjust\_rate()} & Corrects data for background changes in oxygen concentration. \\
+\texttt{convert\_DO()} & Converts between units of oxygen concentration. \\
+\texttt{convert\_rate()} & Converts experimental rates to specific units. \\
+\texttt{pcrit()} & Calculates critical oxygen tension, P\textsubscript{crit}. \\
+\texttt{subsample()} & Reduces the size of a large data frame, by extracting every n-th row. \\
+\texttt{subset\_data()} & Extract a subset of a data frame. \\
+\texttt{intermittent.rd.rda} & Respirometry data for a single sea urchin~specimen (\textit{Heliocidaris erythrogramma}) collected using intermittent respirometry. Data were collected over 80 minutes. \\
+\texttt{sardine.rd.rda} & Respirometry data for a single sardine specimen, \textit{Sardinops sagax}. Data were collected over 2 hours. \\
+\texttt{squid.rd.rda} & Respirometry data for a single squid specimen, \textit{Doryteuthis opalescens}, to determine P\textsubscript{crit}. Data were collected over a 9-hour period. \\
+\texttt{urchins.rd.rda} & Multi-column dataset containing respirometry and background respirometry data for 16 sea urchin specimens (\textit{Heliocidaris erythrogramma}). Data for each urchin were collected over 45 minutes. \\
+\texttt{zeb\_intermittent.rd.rda} & Multiple measurements (106 replicates, plus initial and end background measurements) of oxygen consumption in a zebrafish, \textit{Danio rerio}, obtained using intermittent flow respirometry. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+<!-- % TABLE 2 ============================================================= -->
+
+\begin{table}[ht]
+\centering
+\caption[R Vignettes for the \texttt{respR} package, with worked examples, discussions and comparisons to other R package functions.]{R Vignettes for the \texttt{respR} package, with worked examples, discussions and comparisons to other R package functions. Available online: https://januarharianto.github.io/respR/articles/respR.html.}
+\label{vignettelist}
+\begin{tabular}[t]{>{\raggedright}p{0.4\linewidth}p{0.6\linewidth}}
+\toprule
+Treatment A&Treatment B\\
+\midrule
+Getting Started & Introduction to respirometry and \texttt{respR}. \\
+Importing your data & How to import and format data using \texttt{respR}. \\
+Closed-chamber respirometry & A typical workflow example that introduces the main functions of \texttt{respR}. \\
+\texttt{auto\_rate()}: Automatic detection of metabolic rates & Introduction to the \texttt{auto\_rate()} function. \\
+Performance of \texttt{auto\_rate()} in detecting linear regions & Assessing the accuracy of \texttt{auto\_rate()} using custom performance tests. \\
+Comparative performance of \texttt{auto\_rate()} and LoLinR & A comparison of \texttt{auto\_rate()} with a similar function in \texttt{LoLinR} (Olito et al., 2017). \\
+Intermittent-flow respirometry: Simple example & How to analyse simple intermittent-flow data. \\
+Intermittent-flow respirometry: Complex example & A more complex example on the analysis of intermittent-flow data from a larger experiment. \\
+Flowthrough respirometry & How to analyse flowthrough respirometry data. \\
+P\textsubscript{crit} analysis & How to estimate P\textsubscript{crit}. \\
+Reproducibility & Using \texttt{respR} to promote open, reproducible respirometry analyses. \\
+respR and the tidyverse & A quick guide on how to integrate \texttt{respR} functions with the popular \texttt{dplyr} package, and more. \\
+A comparison of \texttt{respR} with other R packages & Comparing outputs of \texttt{respR} to other R package functions, and a discussion of the advantages of using \texttt{respR}. \\
+When to use \texttt{respR} & A discussion of what \texttt{respR} offers and when users should consider using the package for respirometry analyses. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+<!-- % TABLE 3 ============================================================= -->
+
+\begin{table}[tbp]
+\centering
+\caption{Units available for conversions in \texttt{convert\_DO()} and \texttt{convert\_rate()} functions in \texttt{respR}.}
+\label{convertlist}
+\begin{tabular}{p{0.2\linewidth}p{0.3\linewidth}p{0.5\linewidth}}
+\toprule
+\textbf{Parameter} & \textbf{Used in} & \textbf{Units} \\
+\midrule
+Oxygen; O\textsubscript{2} & \texttt{convert\_DO()}, \texttt{convert\_rate()} & mg L\textsuperscript{-1}, $\mu$g L\textsuperscript{-1},  $\mu$mol L\textsuperscript{-1}, mL L\textsuperscript{-1}, $\mu$g kg\textsuperscript{-1}, mg kg\textsuperscript{-1}, $\mu$mol kg\textsuperscript{-1}, mmol kg\textsuperscript{-1}, mL kg\textsuperscript{-1}, hPa, kPa, mmHg, inHg\\
+Mass & \texttt{convert\_rate()} & $\mu$g, mg, g, kg \\
+Time & \texttt{convert\_rate()} & second, minute, hour \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+<!-- % FIGURE 1 ============================================================ -->
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{assets/figs/c5fig1}
+
+}
+
+\caption[Diagram showing steps in a typical workflow in the analysis of respirometry data using \texttt{respR}.]{Diagram showing steps in a typical workflow in the analysis of respirometry data using \texttt{respR}.
+\textbf{(A)} Data are first checked for errors before \textbf{(B)} main functions are used to extract and analyse segments of the data.
+\textbf{(C)} Summarised results and diagnostic plots provide immediate visual feedback on the outcome of the analyses. \textbf{(D)} Once the rate estimates are obtained, they can be converted into volume and/or mass-specific rates.}\label{diagram}
+\end{figure}
+
+<!-- % FIGURE 2 ============================================================ -->
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.85\linewidth]{assets/figs/c5fig2}
+
+}
+
+\caption[Illustration showing the sampling methods used by \texttt{auto\_rate()}.]{Illustration showing the sampling method used by \texttt{auto\_rate()} during \textbf{(A)} interval regression analysis, where sample windows do not overlap and \textbf{(B)} rolling regression analysis, where sample windows overlap and move forward by one sample unit at a time.}\label{rollvsint}
+\end{figure}
+
+<!-- % FIGURE 3 ============================================================ -->
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.7\linewidth]{assets/figs/c5fig3}
+
+}
+
+\caption[Output plots produced by \texttt{auto\_rate()}.]{Depending on the \texttt{method} input, the function, \texttt{auto\_rate()} is able to show: (A) the maximum rate detected; (B) the minimum rate detected; (C) the most linear region as determined by kernel density estimates; and (D) calculation of rate by fixed-width intervals.
+Data obtained from analysis of the \texttt{sardine.rd} dataset.}\label{autorate1}
+\end{figure}
+
+<!-- % FIGURE 4 ============================================================ -->
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.7\linewidth]{assets/figs/c5fig4}
+
+}
+
+\caption[Diagnostic plots produced by the function, \texttt{auto\_rate()}.]{Diagnostic plots produced by the function, \texttt{auto\_rate()}: (A) the rolling regression of rate as a function of time, with dotted lines indicating the region used to estimate the parameter; (B) a kernel density plot that shows only when the \texttt{linear} method is called; (C) a residual plot of the regression; and (D) a normal Q-Q plot of the residuals of the regression.
+Data obtained from analysis of the \texttt{sardine.rd} dataset.}\label{autorate2}
+\end{figure}
+
+<!-- % FIGURE 5 ============================================================ -->
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.85\linewidth]{assets/figs/c5fig5}
+
+}
+
+\caption[Output plots of the function \texttt{pcrit()}, used in the calculation of critical oxygen tension, P\(_{crit}\).]{Output plots of the function \texttt{pcrit()}, used in the calculation of critical oxygen tension, P\(_{crit}\). \textbf{(A)} To determine P\(_{crit}\) in a regular \(O_2\) time series, the function performs a rolling regression against the rolling mean of the data. This step is skipped if similar data is already provided, and the
+argument \texttt{has.rate\ =\ TRUE} is used in the function. This produces \textbf{(B, C)} data that represents the rate of \(O_2\) consumption as a function of \(O_2\) concentration. Regression lines are then fitted iteratively, based on the broken-stick methods of Yeager and Ultsch (1989) and the segmented approach of Muggeo (2003), until convergence is achieved. The output then highlights the critical points as indicated by the coloured lines.
+\textbf{(D)} A close-up plot of the results in B and C is provided for the user to visualise the positions of the dotted lines relative to the x-axis.}\label{fpcrit}
+\end{figure}
+
+

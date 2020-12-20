@@ -1,5 +1,7 @@
-book_filename: "jh_thesis2018"
+
+book_filename: "thesis2019"
 delete_merged_file: true
+
 language:
   ui:
     chapter_name: "Chapter "
@@ -7,9 +9,20 @@ language:
 rmd_files: [
   
   "index.Rmd",
-  "chapters/01-warming.Rmd",
-  "chapters/02-multistressor.Rmd",
-  "chapters/03-larval.Rmd",
-  "chapters/04-application.Rmd",
-  "chapters/05-conclusion.Rmd"
+  "chapters/00-preface.Rmd",
+  "chapters/01-statement.Rmd",
+  "chapters/02-abstract.Rmd",
+  "chapters/03-thanks.Rmd",
+
+  # mainmatter----------
+  "chapters/10-intro.Rmd",
+  "chapters/11-warming.Rmd",
+  "chapters/12-multi.Rmd",
+  "chapters/13-transgen.Rmd",
+  "chapters/14-app.Rmd",
+  "chapters/15-discussion.Rmd",
+  "chapters/21-references.Rmd",
+  "chapters/31-appendix1.Rmd",
+  "chapters/32-appendix2.Rmd",
+  "chapters/33-appendix3.Rmd"
 ]

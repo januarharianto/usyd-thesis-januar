@@ -1,447 +1,65 @@
 --- 
+title: "Physiological response of adult and juvenile sea urchins (*Heliocidaris erythrogramma*) to warming and acidification"
 author: "Januar Harianto"
+degree: "Doctor of Philosophy"
+school: "School of Medical Sciences"
+discipline: "Discipline of Anatomy and Histology"
+date: "Feb 2019"
 site: bookdown::bookdown_site
-documentclass: memoir
-classoption: oneside, 11pt, a4paper
-bibliography: [packages.bib, bibliography.bib]
-# biblio-style: apalike
+knit: (function(inputFile, encoding) { bookdown::render_book(inputFile, "bookdown::pdf_book") })
+documentclass: book
+bibliography: [chapters/refs.bib]
+biblio-style: apalike
 link-citations: yes
-always_allow_html: yes
-# Fonts (these are all paid fonts):
-mainfont: Minion Pro
-sansfont: Myriad Pro
-mathfont: Minion Pro
+description: "Januar's PhD Thesis."
 ---
 
-```{r, echo = FALSE, include = FALSE}
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  out.width = '100%',
+  comment = "#>",
+  echo = FALSE,
+  warning = FALSE,
+  message = FALSE,
+  error = FALSE,
+  cache = FALSE
+  # fig.ext = "png",
+  # fig.path = "figure/"
+)
 
-# Let's make this document reproducible
-# req <- substitute(require(x, character.only = TRUE))
-# lbs <- c("tidyverse", "knitr", "kableExtra", "plotly", "ggthemes", "RColorBrewer")
-# sapply(lbs, function(x) eval(req) || {install.packages(x); eval(req)})
-
-library(tidyverse); library(knitr) ; library(kableExtra); library(plotly)
-library(ggthemes); library(RColorBrewer)
-
-# Options
-options(knitr.kable.NA = '')
-knitr::opts_chunk$set(echo = FALSE,
-                      out.width = '100%', 
-                      comment = "#>")
+# What is the documenty output? Feed this to `if()` commands.
 output <- knitr::opts_knit$get("rmarkdown.pandoc.to")
-```
-
-<!-- Add more stuff before the main text: -->
-\hypersetup{linkcolor=black}
-\clearpage
-\listoffigures
-\clearpage
-\listoftables
-\hypersetup{linkcolor=ref}
-\cleardoublepage
-
-<!-- Add glossary or list of abbreviations. -->
-
-<!-- \printglossaries -->
-<!-- \cleardoublepage -->
-
-
-\SingleSpacing
-
-# General Introduction {#chapter1}
-
-\OnehalfSpacing
-
-## The consequences of climate change
-
-Understanding the mechanisms by which climate change is affecting marine organisms is an area of increasing concern to ecophysiologists worldwide [@Dahlhoff2004; @Helmuth2005; @Chown2010; @Somero2017].
-As anthropogenic activities transform the ocean's natural systems, their impacts will continue to cascade through the marine biosphere across temporal and spatial scales, from organisms to whole ecosystems [@Munday2013; @Gattuso2015].
-
-It is now known that the increased concentration of atmospheric carbon dioxide ($\mathrm{CO_2}$) from human activity is contributing to rising global temperatures [@IPCC2014]. 
-The ocean acts as a climate buffer absorbing 25 \% to 40 \% of anthropogenic $\mathrm{CO_2}$ emissions and 90 \% of heat, and this is causing changes in ocean chemistry and physics [@Fletcher2006; @IPCC2014; @Gattuso2015]. 
-Climate-driven alterations in ocean temperature [@Mann2017; @Wijffels2016], carbonate chemistry [@Caldeira2003; @Hoegh-Guldberg2017], oxygen concentration [@Schmidtko2017; @Chu2017] and light availability [@Gattuso2006] are causing wide-ranging impacts on oceanic primary productivity [@Behrenfeld2016], trophic interactions [@Ullah2018], species distributions [@Molinos2015; @Brown2016; @Sommer2018] and survival [@Hughes2017].
-
-Without mitigation measures, global $\mathrm{CO_2}$ levels will continue to increase from the current 410 ppm to 985 ppm and the average global temperature increase will likely exceed +2 \degree C relative to 1986--2005 by the end of this century [RCP8.5 scenario, @Riahi2011; @IPCC2014].
-In particular, ocean temperatures under the current high-emissions trajectory are expected to warm by an average of 2.73 \degree C, with many marine organisms at *very high* risk of impacts by 2050 [@Gattuso2015].
-These changes are expected to amplify the ecological impacts currently observed on both our natural and human ecosystems globally [@Howes2015].
-
-## Predicting resilience to environmental stress through investigation of physiology
- 
-While the broad consequences of ocean change stressors on marine species continue to be documented in the literature, the challenge remains to understand the underlying mechanisms that drive their impact.
-This is required to understand the linkages between ecosystem effects and the physiological processes that occur at the level of organism and cell [@Portner2002; @Somero2005; @Somero2012]. 
-Climate manipulation experiments are valuable tools for understanding these links.
-By subjecting organisms to current and future scenarios of ocean change, we can predict, based on experimental evidence, which species within ecosystems are most vulnerable [@Munday2013; @Sinclair2016; @Verberk2016]. 
-However, this is not a trivial task due to the diverse and multi-stressor nature of environmental stress [@Byrne2013; @Boyd2015].
-In addition, it is often difficult to deduce the adaptive potential of organisms from physiological responses due to the intrinsic phenotypic plasticity of individuals as they modify their growth, development and behaviour dynamically in response to environmental cues [@Forsman2015; @Murren2015]. 
-
-Studies that quantify the physiological responses of marine organisms to climate change stressors provide critical insights into the tolerance of animals to environmental stress [@Somero2012; @Bozinovic2015; @Verberk2016; @Sinclair2016]. 
-Publications in marine global change physiology are increasing tremendously, from <10 papers published per year before 1990, to approximately 250 papers published per year making up at least 42 \% of marine-related climate change publications between 2013 and 2017 (Figure \@ref(fig:pcount)).
-Central to the outcomes of many of these studies has been the use of physiological traits and molecular or genetic biomarkers to quantify responses of marine species to current and future scenarios of environmental stress, such as growth and feeding rates [@Clements2018], metabolic performance [@White2013; @Carey2016], immune response [@Pinsino2015; @Brothers2016], and molecular/gene expression [e.g. heat shock proteins/genes, @Osovitz2005; @Tomanek2008]. 
-As the data generated are typically measured at specific experimental time points, these studies provide snapshots of organism responses to changes in abiotic conditions across temporal and spatial scales [e.g. @Sunday2012].
-    
-```{r pcount, fig.height =8, fig.cap = "(ref:pcount)", fig.scap="(ref:spcount)", fig.pos = "p"}
-# knitr::include_graphics("figs/ch_intro/pcount.png")
-library(readxl)
-dt <- read_excel("input/ch_intro/physiol_count.xlsx", skip = 2) %>%
-  select(-4)
-
-pcounts_plot <- ggplot(dt) +
-  geom_bar(aes(year, total), stat = "identity", fill = "firebrick2") +
-  geom_bar(aes(year, phys), stat = "identity", fill = "goldenrod2") +
-  # geom_bar(aes(year, total), stat = "identity", fill = "black") +
-  # geom_bar(aes(year, phys), stat = "identity", fill = "grey") +
-  scale_x_continuous(breaks = scales::pretty_breaks(n = 10)) +
-  xlab("Year") +
-  ylab("No. of published studies") +
-  cowplot::theme_cowplot() +
-  geom_blank()
-
-if(output %in% c("latex","docx")){
-  pcounts_plot
-} else if(output == "html"){
-  ggplotly(pcounts_plot)
-} else(print("No format defined for this output filetype"))
-
-
 
 ```
 
-(ref:pcount) Trends in the number of marine climate change research publications using metrics related to physiological traits, indexed by Clarivate Web of Science from 1970 to 2017. Including reviews, over 7,118 papers were published (red bars). Yellow bars show the proportion of those papers that collected or mentioned physiological metrics or biomarkers, amounting to 2,766 publications. Data is extracted from a search of topics and abstracts using the keywords: ('climate\*change' or 'environmental change' or 'climate\*driven') AND (marine or ocean or sea or coastal or \*tidal). To filter papers that use or mention physiological metrics, common keywords associated with physiological measures were added: (physiolog\* or ecophysiolog\* or 'evolutionary physiolog\*' or \*toleran\* or metabolic or biomarker or respirat\* or heat\*shock). Note that the keywords used are not exhaustive and do not include many other common physiological terms, and are thus an underestimate the size of the dataset. Search was performed on 27 May 2018.
+\frontmatter
+
+# Author Attribution {-}
+
+The work contained in the body of this thesis, except otherwise acknowledged, is the result of my own investigations. 
+
+**[Chapter 2](#warming)** is [published](https://doi.org/10/gdqdv4) in Marine Biology. 
+Januar Harianto (JH) designed and conducted the experiment with help from Sebastian Holmes (SH) and Maria Byrne (MB).
+Hong Dao Nguyen (HDN) assisted with the collection of samples for protein analysis and SH helped with the experimental design of respirometry analyses. 
+The manuscript was written by JH but all co-authors contributed intellectually to the drafts.
+
+**[Chapter 3](#multistressor)** is under review at the Journal of Experimental Biology. 
+JH designed and conducted the experiment. 
+The co-authors of this study include Sergio Torres-Gabarda (STG), Joshua Aldridge (JA), Richard Grainger (RG), and MB. 
+RG contributed to the collection of feeding rate data. 
+All co-authors provided important feedback to manuscript drafts.
+
+**[Chapter 4](#transgen)** is being prepared for submission.
+The co-authors of this study are JH, STG, JA and MB. 
+JH designed the experiment and conducted all the analyses. 
+STG and JA contributed to the construction of the larval incubation system.
+MB assisted in the collection of data from the larvae/juveniles.
+All co-authors have reviewed drafts for the manuscript in preparation for submission.
+
+**[Chapter 5](#package)** is [published](https://doi.org/10.1111/2041-210X.13162) in Methods in Ecology and Evolution.
+Januar Harianto wrote the R code and code documentation. 
+NC assisted in coding, tested data and fixed errors.
+NC and JH co-wrote the 15 vignettes for the package. 
+Nicholas Carey (NC) and JH co-wrote the manuscript. 
+MB provided vital contribution to the manuscript.
 
-(ref:spcount) Trends in the number of marine climate change research publications using metrics related to physiological traits, indexed by Clarivate Web of Science from 1970 to 2017.
-
-
-
-
-In particular, protein and genetic biomarkers that are sensitive to stress are increasingly used in marine global change physiology as they yield important insights into the influence of abiotic conditions on cellular physiology [@Helmuth2005; @Stillman2015].
-These new insights are particularly useful for echinoderms, the taxon in the focus of this thesis, where many studies have used heat shock protein (HSP) expression as a biomarker to quantify tolerance to warming, acidification and pollution [@Osovitz2005; @Pinsino2008; @ODonnell2009; @Dong2011; @Nguyen2013; @Harianto2018].
-Thus, molecular and genomic techniques provide an unprecedented opportunity for marine scientists to collect multiple biomarkers and characterise the effects of multiple stressors in natural environments, where collecting physiological responses such as feeding rates and metabolic rates may prove less efficient, or even logistically challenging.
-When these physiological responses are placed in context with data on field conditions obtained from remote sensing and in-situ measurements [@Smit2013; @Goela2016; @King2017; @Mann2017], we have the means to explore patterns of resilience in individuals and populations realistically within the context of their environments [@Chu2012; @Davis2013; @Fischer2014; @Paganini2014].
-
-<!-- Increasing in popularity are  -->
-<!-- For echinoderms, which are the focus of this thesis, many studies have used heat shock proteins (HSPs) to quantify physiological stress [] -->
-
-
-<!-- used HSP expression as a measure to assess physiological stress. NB to integrate a suite of physiological traits as seen in recent trends in trait-based analyses. -->
-
-<!-- ## Trends in physiological metrics used in climate manipulation studies -->
-
-## Metabolic rate -- the most fundamental bioindicator
-
-Physiologists have long recognised the importance of metabolic rate as a core response to assess tolerance in marine organisms. 
-Metabolic rate is a fundamental biological trait that is sensitive to changes in the biophysical environment [@Newell1980; @Portner2004; @Dillon2010], and changes in metabolism can be used to infer biological and ecological consequences of stress to environmental change [@Somero2017]. 
-<!-- A reduction in metabolic index worldwide has been attributed to a vertical contraction of metabolically viable habitats and shift populations to the poles [@Deutsch2015]. Useful for multistresors.. -->
-It is well-established that metabolic rate performance is mediated by temperature, thus understanding the limitations of an organism's metabolic rate to thermal stress is the foundation of the metabolic theory of ecology [@Brown2004] and the theory of oxygen and capacity-limited thermal tolerance [OCLTT, @Verberk2016].
-Quantifying metabolic rate is a key focus of an increasing number of studies where it is the main topic of investigation [e.g. @Daoud2007; @Marshall2011; @Watson2014; @Carey2016; @Hoshijima2017], or it is one metric of several being investigated [e.g. @Magozzi2015; @Tateda2015; @Suckling2015; @Hoefnagel2017; @Harianto2018]. 
-Metabolic rate is the most commonly reported response variable when physiological measures are used in marine-related climate change publications, appearing in 16 \% of publications and consisting of at least 19.8 \% of all reported response variables from 1970 to 2017 (Figure \@ref(fig:pgroups)). 
-
-```{r pgroups, fig.height=6, fig.cap = "(ref:pgroups)",fig.scap="(ref:spgroups)", fig.pos="p"}
-# knitr::include_graphics("figs/ch_intro/pgroups.png")
-
-dt <- read_excel("input/ch_intro/physiol_count.xlsx", sheet = 2) %>%
-  # select(-c(2,4)) %>%
-  gather(group, no) %>%
-  transform(group = reorder(group, -no)) %>%
-  mutate(pct = round(prop.table(no) * 100, 1))
-
-colourCount <- length(unique(dt$group))
-
-g <- ggplot(dt, aes(group, no, fill = group))
-counts <- 
-  g + 
-  geom_bar(stat = "identity") +
-  geom_text(aes(y = no + 30, label = paste0(pct, '%')), size = 3.5) +
-  cowplot::theme_cowplot() +
-  # scale_fill_brewer(palette = "RdGy") +
-  # scale_fill_manual(values = colorRampPalette(rev(brewer.pal(8, "RdYlBu")))(colourCount)) +
-  scale_fill_manual(values = colorRampPalette(brewer.pal(8, "RdYlBu"))(colourCount)) +
-  # scale_fill_tableau() +
-  theme(legend.position="none") +
-  xlab("") +
-  ylab("Reported") +
-  coord_flip() +
-  geom_blank()
-
-if(output %in% c("latex","docx")){
-  counts
-} else if(output == "html"){
-  ggplotly(counts)
-} else(print("No format defined for this output filetype"))
-
-```
-
-(ref:pgroups) Common physiological response variables reported in marine global change research articles published from 1970 -- 2017 and indexed by Clarivate Web of Science. Papers may report more than one response variable, thus the percentage values are based on the proportion of all reported response variables ($n =$ 2,239), not the number of publications selected ($n$ = 2,766). Numbers are tallied based on specific keywords used to describe experimental results and outcomes (e.g. 'survivorship' or 'survival rate' instead of 'survival'). Less common or species-specific response variables (e.g. coelomocyte counts in sea urchins) are not included.
-
-(ref:spgroups) Common physiological response variables reported in marine global change research articles published from 1970 -- 2017 and indexed by Clarivate Web of Science.
-
-The most accepted method to investigate metabolic rate is through respirometry.
-The methodological approaches to measuring respirometry are broad, but most protocols measure a decrease in oxygen concentration from a well-mixed, hermetically sealed chamber of known volume [@Lighton2008].
-It is important to recognise that modern technologies such as fibre optic oxygen microsensors [@Klimant1995; @Wolfbeis2015] have allowed for the development of new methods for determining changes in oxygen over time, and has driven the collection of increasingly large datasets with multiple experimental variables and sample sizes [e.g. 20 hours: @Lefevre2015; 24-h: @Seth2013; 48-h: @Tirsgaard2015; 1 week: @Portner2001].
-Despite this, there is still considerable obscurity in the manner in which metabolic rate data are extracted from these datasets.
-In most cases, respirometry data is noisy, so only certain segments of the data are analysed [see @Chabot2016].
-Few studies report how sections of the data are selected for analysis, or provide the data publicly so that their analyses can be assessed independently for the benefit of reproducibility [@Olito2017].
-Recent research has highlighted the need to consolidate and standardise both the measurement and reporting of this popular metric for consistent and comparable data reporting [@Svendsen2016; @Chabot2016; @Olito2017].
-<!-- Perhaps the greatest challenge in analysing respirometry for metabolic rate measurements is in the selection of appropriate data sections for analysis. -->
-<!-- In most cases, respirometry data is noisy, as is the nature of biological data, and it is rare to find published studies that provide the specific methods used to handle noisy data or the raw data itself. -->
-<!-- This needs to be addressed as metabolic rate measurements become more popular and advances in technology allow for cost-effective methods of measuring respirometry. -->
-<!-- While metabolic rate has been measured in response to a variety of environmental stressors, it is influenced greatly by temperature and body size, and the relationships between the two continue to be an area of active research [@West1997; @Carey2014]. -->
-
-Patterns in metabolic rate responses from respirometry can provide deep insights into the physiological condition of an organism, since metabolism moderates almost all other biological activities [@Brown2004], from individual traits such as growth and feeding rate [@Kiorboe2014], to ecological interactions [@Seibel2007], to the dynamics of communities [@Barneche2014], and even whole ecosystems [@Brown2004].
-When stressed, most organisms present either elevated [@Ko2014; @Pan2015; @Morley2016] or depressed [@Anestis2007; @Kelly2014; @Harianto2018] metabolic rates as they divert resources to maintain physiological balance.
-<!-- These responses have their pros and cons. -->
-Increased metabolism may divert energy away from essential functions such as growth and reproduction and can, therefore, reduce the fitness of the organism -- as shown in molluscs [@Marshall2011; @Hoefnagel2017], echinoderms [@Stumpp2011; @Delorme2016; @Harianto2018], crustaceans [@Whiteley1997; @Magozzi2015] and fish [@Seth2013; @Stoffels2015]. 
-Alternatively, an increase in metabolic rate could also mean that the organism's aerobic scope has been increased for it to grow or reproduce as shown for fish [@Portner2006; @Sandblom2014; @Hansen2017].
-On the other hand, depressed metabolism (metabolic depression)is also used as a means to conserve energy during hibernation, torpor, aestivation or diapause [@Storey1990; @Guppy1999; @Storey2004]. 
-Metabolic depression can also be a result of insufficient capacity for energy delivery due to either insufficient food or oxygen availability, which ultimately lead to lethal responses [@Bozinovic2015; @Lefevre2016].
-
-As metabolic responses vary and the physiological basis for these responses differ among organisms, it is important to understand the context behind metabolic rate responses *beyond* oxygen consumption rates since physiological trade-offs may exist in ways that cannot be assessed by metabolic rate data.
-Thus, assessing the sensitivity of metabolism to stressors should be accompanied by other measures of physiological function.
-<!-- (i.e. feeding/excretion rates, reproductive capacity, etc.). -->
-Integrating multiple physiological responses to assess the challenge of understanding the impacts of climate change stressors has been shown to be important in understanding overall impacts on organisms, as shown by studies that integrate metabolic rate data together with data from other response variables such as feeding, excretion, reproductive or survival rates [e.g. @Calosi2013; @Magozzi2015; @Harianto2018].
-This approach provides integrative insights that are not possible to achieve with single-trait analyses.
-
-
-
-<!-- Current methods to analyse respirometry data ..... add a paragraph. -->
-
-<!-- ### Protein and gene expression -->
-
-<!-- These bioindicators are increasingly used to determine resilience and energy metabolism from enzyme activity and the expression of genes specific to events e.g. thermal stress. -->
-
-<!-- Talk about HSPs here. -->
-
-## Survivorship
-
-A common verdict from studies of climate change effects on ecosystem biodiversity is that there will be major shifts in the distribution of life on Earth driven by migration, adaptation, and extinction [@Verges2014; @Molinos2015; @Pecl2017; @Ramirez2017; @Hughes2017; @Sommer2018].
-Despite the scale of these perturbations, climate manipulation studies to date have mostly focused on behavioural and physiological responses to stressors [reviewed by @Helmuth2009; @Hofmann2010; @Somero2012; @Byrne2013; @Lefevre2016; @Boyd2017; @Gunderson2017], while there is less focus on understanding how the multitude of physiological responses could directly influence the long-term persistence of species in their natural habitats.
-<!-- This is because many experiments are short-term, which subject specimens to experimental conditions that were associated with little or no mortality [e.g. @Dupont2013; @Zhang2015]. -->
-
-Survival analysis is one key metric that allows for a formal examination of the relationships among environmental variables, specimen attributes and survival rates [e.g. @Westbrook2015; @Yeruham2015; @Leung2017; @Harianto2018].
-This is different from the calculation of survival or mortality rates, which are commonly analysed by comparing the differences between one rate and another [e.g. @Sewell1999; @Stumpp2011; @Gianguzza2014].
-Survival analysis methods such as the Kaplan-Meier product-limit model [@Kaplan1958; @Rich2010] and the Cox proportional hazards model [@Cox1992; @Fisher1999] provide a means to assess the cumulative probability of surviving a given time [i.e. point survival, @Rich2010] or the risks associated with exposure to a single or combination of abiotic stressors [i.e. hazard ratio, @Tenhumberg2001].
-This allows us to predict mortality risk in terms of abiotic factors such as temperature, pH and light, and include climate-change related covariates such as density or calcification simultaneously as shown for corals, fish, crustaceans and urchins [@Anthony2007; @Geange2009; @Vasquez2015; @Harianto2018].
-
-However, most marine global change experiments do not monitor survival rates over time in an integrated manner, or subject experimental organisms to lethal stressor combinations to allow for such analyses.
-<!-- [e.g. @Dupont2013; @Zhang2015; @Carey2016].  -->
-<!-- In addition, even if exposure to OA is not lethal to an individual during a period of experimental exposure, it cannot preclude populations of that species from being vulnerable to extinction.  -->
-Since 1981, only 54 publications have performed survival analyses from experimental data in marine global change research.
-In recent years a significant effort has been put into conducting marine global change experiments that span months to years as a key approach to understand more recent, persistent responses to climate change that cannot be observed in short-term, acute stress-response studies [@Suckling2015; @Morley2016; @Harianto2018].
-Importantly, these longer-term studies provide the opportunity to document detailed physiological performances over time, including survival.
-It is crucial that we document mortality in these experiments so that we can to characterise survival as a function of environmental and physiological variables for organisms [@Anthony2007].
-<!-- This approach will enhance our ability to predict the consequences due to altered physiological responses to changing environmental conditions. -->
-
-<!-- even though it is a key metric that can potentially influence experimental outcomes.  -->
-<!-- A search on Web of Science yielded 54 publications since 1981 which analysed survival metrics from experimental data, a very small ($\sim 2\%$) proportion of the total published literature. -->
-
-## Key anthropogenic drivers of marine physiological function
-
-### Increased temperature
-<!-- check harley 2006 -->
-
-Temperature is probably the most important environmental factor affecting the physiology of organisms [@Portner2002; @Brown2004]. 
-Influencing virtually all levels of biological organisation, temperature forms the basis of biochemical adaptation since it physically modulates the rate of chemical reactions [@Hochachka2002; @Schulte2015; @Somero2017]. 
-<!-- As the principle stress factor of climate change, temperature is a key component of marine biodiversity (Huey and Kingsolver 1989; Brown et al. 2004; Sunday et al. 2012; Poloczanska et al. 2016).  -->
-Numerous studies have documented how temperature drives shifts in biogeographical distributions and phenology globally [@Brown2016; @Goldenberg2017; @Pecl2017]. 
-General observations include poleward shifts in distribution, reductions in overall body sizes and shifts in metabolic limits [@Verges2014; @Deutsch2015; @Pecl2017].
-However, not every species have responded as predicted, with some displaying signs of resilience (e.g. Sunday et al., 2015). 
-There remains very little data on the biological responses of a vast majority of marine animals to increased temperature.
-This is partly due to a lack of information regarding the spatial and temporal details of current environmental conditions in marine environments, making it difficult to correlate organismal responses with their *in situ* habitats [@Johnston2008].
-
-The effects of global warming on the ocean are also not homogeneous. For example, subtropical western boundary currents are warming 2 to 3 times faster than the global average [@Wu2012].
-In Australia, the strengthening of the East Australian Current which carries tropical water south along the continent has resulted in warming at almost 4 times the global average rate [@Ridgway2007] and will continue to do so, with predictions of warming of up to $+6 ^{\circ}C$ above the pre-industrial value by the end of the century [@Lenton2015].
-Compounding to the issue is the mounting evidence that suggests that major impacts will be driven by extreme weather events [@Katz1992; @Jentsch2007; @Thompson2013; @Mann2017; @King2017; @Leung2017]. 
-Heat waves associated with the El Niño–Southern Oscillation (ENSO) events are of particular concern in Australia because they have caused unprecedented hot summers [@Cai2014; @Harris2018] leading to widespread coral bleaching and mortality in the Great Barrier Reef [@Hughes2017; @Hughes2017a] while changes to east Australian midlatitude cyclones have been responsible significant storm events in Australia's east coast [@Harley2016; @Pepler2016].
-Extreme events such as these are random and, by definition, rare, but appear to be increasing in frequency [@Katz1992; @Mann2017; @King2017].
-So far, we have a poor understanding of how anthropogenic change influences extreme weather events, yet many marine organisms are already living close to their thermal limits [@Angilletta2002; @Portner2010]. 
-The biological impacts of these events vary by taxa and several studies show marked changes in physiological responses, which are sometimes catastrophic, such as the widespread disappearance of the European purple sea urchin (*Paracentrotus lividus*) in the Eastern Mediterranean [@Yeruham2015] and the mass bleaching of coral reefs worldwide during the 2016--2017 El Niño heatwave [@Normile2016; @Hughes2017a; @Ampou2017]. 
-These events highlight the critical need to understand long-term stress responses in climate hotspots and how extreme events may exacerbate these responses to abiotic stress.
-
-<!-- though advances in satellite sensing and in-situ data logging have recently become cost-effective methods to capture environmental. -->
-
-In most cases, the performance of an organism due to temperature will depend greatly on their thermal sensitivity [@Kordas2011; @Sinclair2016]. 
-For ectotherms, increasing temperature is directly associated with an increase in basal metabolic rate and the rate at which stored energy is used [@Hochachka2002; @Brown2004; @Dillon2010; @Somero2012].
-Metabolic rates have already increased worldwide in the past three decades due to ocean warming, especially in tropical and north temperate organisms [@Dillon2010]. 
-Temperature controls growth and reproductive processes like gonad development [e.g. urchins, @Delorme2016] and sex determination [e.g. sea turtles, @Tomillo2015].
-All of these changes will have ecological and physiological impacts; increased metabolism in affected ectotherms will result in a greater need for food to maintain physiological function, thus causing increased foraging or hunting as shown for a diversity of herbivorous species [@Verges2016]. In turn, trade-offs in energetics may alter the allocation of resources needed for reproduction as shown for sea urchins [@Uthicke2014; @Delorme2016].
-Understanding the fundamental mechanisms behind temperature’s effects on organism physiology will help improve predictions of physiological tolerance to environmental stress and better understand the impacts species-level changes have on the world's marine ecosystems.
-
-
-### Increased carbon dioxide concentration, *p*CO~2~
-
-A pervasive effect of rising *p*CO~2~ levels in the oceans is the chemical alteration of the carbonate system of seawater from ocean acidification (OA), which causes a general decline of surface ocean pH [@IPCC2013]. 
-A considerable body of data exists on the effect of OA on marine organisms, as detailed in many reviews [@Byrne2013; @Sunday2014; @Przeslawski2015; @Nagelkerken2015; @Howes2015; @Poloczanska2016; @Clements2018]. 
-There is also substantial interest in predicting the extent to which organisms will be able to respond or adapt to changes in seawater chemistry and other abiotic factors [@Hendriks2015; @Popova2016].
-OA influences a wide range of basic physiological functions in organisms such as membrane transport [@Moulin2015], photosynthesis [@Gao2010], growth [@Pistevos2015], reproduction [@Boulais2017] and calcification [@Thomsen2015]. 
-In particular, reduced pH will challenge the resilience of marine calcifiers [@Cyronak2016] where reduced rates of calcification (or increased dissolution) affects the growth and maintenance of both larval and adult stages of the life cycle, which is already well-documented in corals [@Hoegh-Guldberg2007; @Gao2010; @Form2012; @Hoegh-Guldberg2017], molluscs [@Mackenzie2014; @Thomsen2015; @Waldbusser2015; @Parker2017], echinoderms [@Wolfe2013; @Yuan2016; @Collard2016; @Manriquez2017] and planktonic calcifiers such as coccolithophores and foraminifera [@Schmidt2014; @Riebesell2017].
-<!-- For those animals, experimental studies have generally shown negative effects of OA, although results become highly variable when other abiotic stressors such as increased temperature come into play [refs]. -->
-
-Importantly, OA affects metabolism because of its effect upon biochemical pathways, resulting in altered metabolic costs to maintain physiological homeostasis [@Melzner2009; @Hendriks2015].
-Thus, in some species, increased pH is accompanied by elevated metabolic rate due to the substantially increased energetic costs of maintaining calcium carbonate skeletons or to preserve acid-base balance, as shown for echinoderms, molluscs and crustaceans [e.g. @Stumpp2011; @Catarino2012; @Calosi2013; @Collard2013; @Parker2017; @Hoefnagel2017].
-However, in some species, OA alone or under combined effects with other stressors may have the opposite effect and may prompt metabolic depression, because of disruptions in metabolic pathways [e.g. mussels, @Anestis2007] or trade-offs in energy allocation to conserve energy [e.g. oysters, @Pan2015].
-<!-- Determining the specific cause of OA on organismal performance, therefore, requires an integration of metabolic performance and the plasticity of  -->
-If the impact is severe, acidification could further reduce an organism's tolerances to other environmental stressors such as temperature [@ODonnell2009; @Lischka2012; @Ko2014; @Schmidt2014], salinity [@Egilsdottir2009; @Parker2017a; @Bautista-Chamizo2018] and pollution [@Zeng2015; @Ivanina2015; @Lewis2016].
-
-So far, our understanding of OA-induced responses are based mostly on experimental studies which expose organisms to constant pH or *p*CO~2~ conditions over time [@Gunderson2016]. 
-Constant pH may be an appropriate estimate for open ocean systems, but coastal regions are a lot more complex, both biogeochemically and structurally, with vastly dynamic variability in pH due to interactions within and between benthic species that can alter their immediate regions physically and chemically [@Hendriks2015]. 
-In many cases, the pH variability experienced in coastal habitats exceed the magnitude of long-term projections for open-ocean regions [@Duarte2013].
-<!-- Thus, like temperature, variability in pH is also an important consideration when predicting tolerance to OA, and the challenge is to incorporate realistic environmental flux when conducting stress-response experiments to better estimate impacts due to changes in pH and other stressors. -->
-
-<!-- the field of marine global change physiology is currently increasing its focus on more realistic experiments that include the incorporation of multiple stressors and their interaction [@Boyd2015; @Boyd2017] as well as natural environmental flux [@Paganini2014; @Gunderson2016]. -->
-
-## On the complexities of climate change manipulation experiments
-
-<!-- ### Multistressor effects and their interactions -->
-
-The marine world is affected by multiple stressors, with durations and severity that vary across multiple spatial and temporal scales.
-These stressors often interact to produce additive, synergistic or antagonistic effects on biological processes, which can result in positive or negative impacts [reviews: @Byrne2013; @Gunderson2016].
-<!-- To accurately estimate the response of organisms under future anthropogenic change, the effect of interactions between multiple stressors must be incorporated into experimental designs (Wernberg et al. 2012\*).  -->
-Most experimental scientists now understand the necessity of incorporating more than a single stressor to obtain responses from organisms that are more realistic to the natural environments, as seen in recent studies [ @Collard2016; @Parker2017; @Hoshijima2017; @Hoegh-Guldberg2017; @Bausch2018].
-However, we still have limited understanding of the consequences behind currently observed responses of marine taxa to multiple stressors due to the lack of mechanistic understanding of the physiological traits that underpin those responses [@Portner2004; @Portner2008; @Gunderson2016].
-<!-- For many of those studies, temperature is investigated the most in combination to other abiotic factors such as salinity, acidification and hypoxia [@Gunderson2016]. -->
-
-<!-- For most marine invertebrates, recent meta-analyses show that synergistic effects were the most common outcome [@Przeslawski2015; @Lefevre2016; @Clements2016], with warming and OA being the two most important stressors  -->
-Recent meta-analyses show that warming and OA appear to be the most important stressors affecting marine invertebrates because of their pervasive nature, and their synergistic effects on physiology and biochemical pathways [@Przeslawski2015; @Lefevre2016; @Clements2016].
-However, the interactions between stressors vary depending on the life stage of the organism. 
-For example, in sea urchins, elevated temperature can buffer the negative effects of decreased pH on larval calcification [e.g. @Byrne2009; @Wolfe2013], but in later juvenile and adult stages, temperature and pH did not interact in some studies, and warming affected sea urchin responses more than acidification [e.g. @Carey2016; @Harianto2018].
-Thus different responses to the same stressor combinations can occur in the same organism depending on its life history [@Byrne2013].
-<!-- ### Integration of different physiological traits -->
-Further, changes in energetics due to physiological compensation or depression may interact with biological processes such as growth and reproduction, which is still poorly understood and requires more study [@Newell1980; @Parry1983; @Angilletta2010; @Coggan2011].
-As a result, climate change studies that integrate multiple physiological parameters are important in predicting vulnerability to environmental stress [@Magozzi2015].
-<!-- Explaining a species' performance from its metabolic rate is less than straightforward (reword). -->
-
-<!-- An understanding of the effects of environmental stress on metabolic rate can provide insights for the interpretation of other physiological responses, since …trade-offs… etc.  -->
-
-<!-- ### Long-term experiments and the artificial constraints of constant conditions -->
-
-In addition to the increased attention to multiple stressors, focus on the temporal dynamics of environmental stress has started to be of growing interest to climate biologists.
-<!-- It is still difficult to predict future ecosystem-level responses of organisms to climate change, partly because -->
-Most multi-stressor experiments have used constant parameter conditions, although environmental conditions can fluctuate on multiple time scales, from hours to months and years [@Hendriks2010; @Duarte2013].
-<!-- The majority of current experiments involved in the manipulation of constant conditions often do so without considering that environmental parameters fluctuate on multiple time scales, from hours to months and years [@Hendriks2010; @Duarte2013]. -->
-These variations are likely to be extremely important for dictating how organisms respond to current and future conditions [@Kreyling2013; @Thompson2013] as well as the press (i.e. long-term perturbation effects) and pulse (i.e. acute change effects) of extreme events [@Bender1984; @Harris2018].
-<!-- In addition, mean environmental conditions often adopted in marine global change experiments ignore spikes in environmental stress that may have extensive consequences on population dynamics, especially during extreme weather events [e.g. @Leung2017]. -->
-
-In particular, long-term marine global change experiments should at least consider the variability of environmental conditions depending on the thermal environments of study organisms.
-For example, intertidal environments are characterised by daily fluctuations in temperature and pH due to the tidal cycle, which may override any effect that would be expected when determining responses based on latitudinal effects [@Sunday2011; @Lathlean2014].
-Subtidal habitats, in contrast, are characterised by less variable thermal environments as they are permanently submerged.
-Continuous records of environmental carbonate chemistry are rare, although the deployment of sensors in recent years have begun to improve our understanding of the natural variability in many marine coastal environments [e.g. Antarctica: @Matson2011; coastal current ecosystems: @Chan2017; coral reefs: @Rivest2015].
-Temperature data, by contrast, is more commonly available as *in situ* temperature loggers are relatively inexpensive in comparison to sensors that measure ocean carbonate chemistry [@Glenn2000].
-However, currently available data is still lacking and we have, for instance, little information for iconic regions such as Sydney Harbour [but see @Mayer-Pinto2015; @Tanner2017], even though it has been identified as a major climate change and biodiversity hotspot [@Sunday2015 ; @Johnston2015; @Popova2016].
-Marine global change experiments need to incorporate the temporal variability of environmental conditions -- a challenging endeavour considering the fact that we do not have baseline data on the environmental conditions that many organisms experience in nature. 
-
-<!-- Thus, instead of maintaining constant conditions, climate manipulation experiments need to somehow incorporate the temporal variability of environmental conditions -- a challenging endeavour considering the fact that we still lack a baseline record of current environmental data in most marine habitats, even for some of the world's most iconic harbours [e.g. Sydney Harbour, @Mayer-Pinto2015; @Tanner2017]. -->
-
-
-<!-- Similarly, exposure to constant extreme stress ignores reprieves from stress that are likely important in allowing organisms to cope with these conditions. -->
-
-## Study animal
-
-The focus of this thesis is the sea urchin, *Heliocidaris erythrogramma* (Valenciennes, 1846). 
-Endemic to Australia, *H. erythrogramma* is distributed along the rocky reefs of Southern Australia south of $\sim$ 25 \degree S [@Keesing2013]. It inhabits the subtidal fringe of intertidal reefs at 1 to 5 m in depth [@Underwood1991], occupying burrows in kelp-dominated reefs but is also found in seagrass beds and barren areas [@Keesing2013].
-When present, the species is very abundant, occurring at high densities [$80 - 192\ indv \cdot m^2$, @Wright2005] and is a prominent component of the marine landscape.
-
-As with many other sea urchins, *H. erythrogramma* is a known ecosystem engineer.
-It is a vigorous herbivore, feeding mostly on the kelp *Ecklonia radiata* [@Vanderklift2005].
-However, at high population densities, there is evidence that it will consume algal species that they would normally avoid [@Wright2005]. 
-Thus, grazing pressure by the sea urchin can lead to significant effects on community assemblages [@Ling2010], as is common for many sea urchin species associated with sea urchin "barrens" [@Filbee-Dexter2014].
-
-<!-- , thus any environmental change that affects *H. erythrogramma* will affect the structure of marine benthic communities at distinctly local scales. -->
-
-In many ways, *H. erythrogramma* is the ideal candidate to study the effects of climate change on an ecologically important species. 
-Sea urchins have a long history of being used as model organisms in the study of developmental biology [@Horstadius1939; @Gustafson1963] and biomineralisation [@Beniash1999; @Wilt2002]. 
-Their larvae are morphologically simple and transparent, while adults are relatively sedentary in general [@Sanderson1996], easy to manipulate in the laboratory and in the field [e.g. @Yeruham2015; @Collard2016].
-As habitat-modifying organisms that often occur in large numbers, sea urchins are also ecologically significant -- changes in their distribution can potentially affect the structure of marine benthic communities at distinctly local scales [@Ling2010; @Steneck2002].
-Sea urchins have also been identified to be vulnerable to climate change, especially in pre-metamorphic stages [@Kroeker2010; @Byrne2013; @Przeslawski2015].
-
-To date, a large proportion of studies on the impacts of climate change stressors on sea urchins are focused on development due to the fragile nature of their skeletons while still in larval stages [@Byrne2013a; @Byrne2013; @Przeslawski2015], with the analysis of physiological responses of both sea urchin larvae and adults in several recent studies [e.g. @Stumpp2011; @Dorey2013]. 
-Focus on early life stages are common as they are particularly sensitive to environmental stress, which may represent key barriers to long-term species persistence [@Przeslawski2015].
-In contrast, studies on adult sea urchins are more focused on the measurement of physiological traits such as metabolic, feeding and growth rates [@Moulin2015; @Delorme2016]. 
-There are also numerous studies that utilise sea urchins as bioindicators of environmental pollution and stress [@Chiarelli2014; @Savriama2015; @Pinsino2015].
-
-Several recent studies have involved long-term investigations of the physiological responses of adult sea urchins in ocean warming and acidification conditions.
-They provide insights into acclimation capacity and physiological plasticity, which have an effect on tolerance to environmental stressors [@Suckling2015, @Morley2016; @Carey2016; @Harianto2018].
-These studies showed that physiological traits can adjust in response to long-term exposures to stress over time, although stress responses may not necessarily lead to improved fitness.
-For example, @Harianto2018 showed that long-term exposure to elevated temperature ($+4-6^{\circ}C$) increases the metabolic rate, immune response and mortality of *H. erythrogramma*, whereas @Morley2016 showed that the Antarctic sea urchin, *Sterechinus neumayeri*, after 40 months of acclimation to combined warming ($+2 ^{\circ}C$) and ocean acidification (−0.3 and −0.5 pH units), were generally unaffected by both stressors. 
-Long-term studies such as these show how poor our understanding of the role of plasticity on performance traits is, and that acclimation time is a crucial factor to consider when conducting experiments that investigate responses to climate change.
-
-<!-- @Delorme2016; @Morley2016; ADULTS -->
-
-### Effects of warming and acidification on H. *erythrogramma*
-
-There are 17 publications so far documenting the effects of climate change stress on *H. erythrogramma*. Of these, many are studies on the embryo and early-stage larvae [8 papers, e.g. @Byrne2009; @Hardy2014; @Foo2016]. Four papers involved post-settlement juveniles [@Byrne2011; @Byrne2011a; @Wolfe2013; @Foo2016], and 5 papers were on adults [@Nguyen2013; @Carey2016; @Brothers2016; @Sweet2016; @Harianto2018]. Three additional studies focused on sperm or egg performance under ocean future OA conditions [@Havenhand2008; @Schlegel2012; @Foo2018]. 
-These studies investigated the effect of temperature, pH, or their interactions on the urchin.
-In the embryo to juvenile, response variables included normal/abnormal growth, morphometrics and survival.
-For adults, studies were more focused on physiology, immune response and skeletal integrity. 
-<!-- Experiments on the embryo to juvenile stages focused mostly on developmental changes (e.g. normal/abnormal growth, morphometrics) and survival, whereas studies that focused on adults were more focused on physiological responses and some morphometrics. -->
-
-Decreased pH reduces sperm density and swimming speed [@Havenhand2008; @Schlegel2012] but increased sperm motility [@Foo2018]. 
-Eggs of *H. erythrogramma* retained their jelly coat even under OA conditions [pH $7.6-7.8$, @Foo2018].
-Thus, fertilisation is robust to both decreased pH and warming [@Byrne2010; @Byrne2010a], but was compromised at high temperature [$26 ^{\circ}C$, @Byrne2011].
-At early development, temperature significantly affected normal development and survival from the embryo to pre-metamorphic stages, but decreased pH did not [@Byrne2009; @Hardy2014].
-
-Upon reaching early juvenile stage, acidification becomes a key driver as *H. erythrogramma* begins to produce more calcified structures, and two studies demonstrated the presence of structural abnormalities in spines and tests when cultured from fertilisation to low pH [7.6--7.6, @Byrne2011a; @Wolfe2013]. 
-However, temperature, when included as an additional stressor, diminished the negative effects of OA in both studies.
-In addition, warming had a positive effect on juvenile spine length, but no effect on survival, and while decreased pH did not affect either response, electron microscopy showed blunting of spine structures due to dissolution [@Wolfe2013].
-
-There was evidence that the immune response (i.e. the phagocytic activity of coelomocyte cells) of *H. erythrogramma* is affected by decreased pH, but warming interacted with pH and alleviated those negative effects [@Brothers2016].
-@Carey2016 found that *H. erythrogramma* increased its metabolic response by up to 20 \% when exposed to either warming (23 \degree C to control 17 \degree C) and acidification (pH 7.6), but the two stressors did not interact.
-However, the combined effect of both stressors was additive resulting in a 44 \% increase in the metabolic rate on the species.
-In addition, @Harianto2018 found that long-term exposure (3-month) to increased temperature resulted in increased mortality risk (6--9 times higher) for urchins acclimated at 24 \degree C to 26 \degree C. 
-In addition, *H. erythrogramma* exhibited signs of metabolic depression, possibly due to disruptions in oxidative phosphorylation (Guderley and St-Pierre 2002), and elevated HSP70 protein expression [@Harianto2018], which suggest that temperatures close to 26 \degree C is thermally stressful.
-
-
-
-<!-- but it appeared that the underlying physiological mechanisms are relatively separated -- the combined effects of increased temperature and low pH had additive effects on metabolic rate [@Carey2016]. -->
-
-<!-- - From juveniles to adults, warming influences metabolism and has a positive effect (Carey et al. 2016) -->
-<!-- - Adult immune response is compromised by ocean acidification, but over time the effect was diminished partly due to interactions with temperature (Brothers et al. 2016) -->
-<!-- - For adults, extreme warming causes metabolic depression (Harianto et al. 2018). This has been shown in other sea urchin species with warming (Delrome and Sewell 2011). A similar pattern was also observed for temperate ophiuroids and asteroids (Christensen et al. 2011; McElroy et al. 2012). -->
-
-
-## Thesis aims and outline
-
-<!-- ### Study gaps -->
-
-
-<!-- ### Reproducibility -->
-
-<!-- ### Aims -->
-
-This thesis comprises of four data chapters. Chapter \@ref(chapter2) investigated the impact of OW as a single stressor, while Chapter \@ref(chapter3) investigated the multistressor impacts of both OW and OA, on the physiological responses of adult *H. erythrogramma*.
-Chapter \@ref(chapter4) investigated the transgenerational potential of *H. erythrogramma* to acclimate to OW and OA in the progeny. 
-Finally, Chapter \@ref(chapter5) describes a new method of analysing respirometry data using rolling regression techniques and machine learning.
-
-<!-- that investigated the impacts of OW (Chapter \@ref(chapter2)) and OW $\times$ OA (Chapter \@ref(chapter3)) on adults and the trans-generational potential to acclimate to OW and OA in progeny (Chapter \@ref(chapter4)). The final chapter describes a new method of analysing respirometry data using machine learning. -->
-
-<!-- ### Chapter 2: The effect of warming on mortality, metabolic rate, heat-shock protein response and gonad growth in thermally acclimated sea urchins (*Heliocidaris erythrogramma*) -->
-
-<!-- **Aim**: To determine the physiological limits of *H. erythrogramma* when exposed, over a long-term, to near future ocean warming conditions.  -->
-
-<!-- It was predicted that *H. erythrogramma* exposed to warming would exhibit: (1) an increase in metabolic rate, up to its upper critical thermal limit; (2) an increase in HSP70 expression with chronic exposure to increased temperature; (3) decreased survival; and (4) reduced gonad development following extended exposure to increased temperature.  -->
-
-
-<!-- 1. **Chapter 2**: The effect of warming on mortality, metabolic rate, heat-shock protein response and gonad growth in thermally acclimated sea urchins (*Heliocidaris erythrogramma*) -->
-
-<!--     The aim of this chapter was to determine the physiological limits of *H. erythrogramma* when exposed, over a long-term, to near future ocean warming conditions.  -->
-<!--     It was predicted that *H. erythrogramma* exposed to warming would exhibit: (1) an increase in metabolic rate, up to its upper critical thermal limit; (2) an increase in HSP70 expression with chronic exposure to increased temperature; (3) decreased survival; and (4) reduced gonad development following extended exposure to increased temperature. -->
-
-<!-- 1. **Chapter 2** investigated the long-term (>12-week), physiological impacts and trade-offs that may occur when adult *H. erythrogramma* was incubated to near-future warming of up to +6 \degree C. Survivorship, metabolic rate, HSP70 expression, gonad index and gonad histology data were collected. The aim of the study was to determine the physiological limits of the sea urchin when exposed, over a long-term, to near future ocean warming conditions. -->
-
-<!--     The predictions were that *H. erythrogramma* exposed to warming would exhibit: (1) an increase in metabolic rate, up to its upper critical thermal limit; (2) an increase in HSP70 expression with chronic exposure to increased temperature; (3) decreased survival; and (4) reduced gonad development following extended exposure to increased temperature. -->
-
-
-
-1. **Chapter \@ref(chapter2): The effect of warming on mortality, metabolic rate, heat-shock protein response and gonad growth in thermally acclimated sea urchins (*Heliocidaris erythrogramma*).** 
-
-    This chapter determined the long-term, physiological performance of *H. erythrogramma* when exposed to near-future ocean warming conditions. The predictions were that the species will exhibit: (1) an increase in metabolic rate, up to its upper critical thermal limit; (2) an increase in HSP70 expression with chronic exposure to increased temperature; (3) decreased survival; and (4) reduced gonad development following extended exposure to increased temperature.
-
-2. **Chapter \@ref(chapter3): Long-term study of the multistressor impacts of ocean warming and acidification on the physiology of the sea urchin, *Heliocidaris erythrogramma*.** 
-
-    This chapter investigated how the interactions between temperature and pH affect survivorship, metabolic rate, feeding rate and ammonia excretion rate. The predictions were that (1) survivorship would be impacted by both warming and acidification; and (2) overall physiological performance, will also be reduced from the combined, long-term impact from both stressors.
-
-3. **Chapter \@ref(chapter4): Offspring metabolic performance to ocean warming and acidification are shaped by the parental environment in the sea urchin, *Heliocidaris erythrogramma*.** 
-
-    This chapter determined whether conditioning adult *H. erythrogramma* to near-future warming and acidification over its gonad development period would have positive carry-over effects on the growth and metabolic response of its offspring faced with these stressors. It was predicted that positive carry-over effects from the parents would be reflected by the adjustment of growth and metabolic rate responses in the offspring.
-
-4. **Chapter \@ref(chapter5): respR -- an R package for the analysis of respirometry data.** 
-
-    This chapter presented new methods of analysing respirometry data using rolling regression algorithms and machine learning with the aim to streamline the analysis of respirometry data transparently and reproducibly. The methods are provided as an open-source software package for the statistical programming environment, R, and is already published online as `respR`.
